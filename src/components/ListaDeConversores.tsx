@@ -2,7 +2,7 @@
 
 import styled from "styled-components"
 import Card from "./Card";
-import { Console } from "console";
+import { useRouter } from "next/navigation";
 
 const UlStyled = styled.ul`
     display: flex;
@@ -16,51 +16,56 @@ const UlStyled = styled.ul`
 `
 
 function ListaDeConversores() {
+    const router = useRouter();
+    const handleClick = (title: string) => {
+        router.push(`/conversores/${title.toLowerCase()}`)
+    }
     return(
         <UlStyled>
             <Card 
                 img="../../images\icons\light-theme\tempo.png"
                 title="Tempo"
-                onClick={() => console.log('teste')} 
+                onClick={() => handleClick("tempo")} 
             />
             <Card 
                 img="../../images\icons\light-theme\peso.png"
                 title="Peso"
-                onClick={() => console.log('teste')} 
+                onClick={() => handleClick("peso")} 
             />
             <Card 
                 img="../../images\icons\light-theme\temperatura.png"
                 title="Temperatura"
-                onClick={() => console.log('teste')} 
+                onClick={() => handleClick("temperatura")} 
             />
             <Card 
                 img="../../images\icons\light-theme\moeda.png"
                 title="Moeda"
-                onClick={() => console.log('teste')} 
+                onClick={() => handleClick("moeda")} 
             />
             <Card 
                 img="../../images\icons\light-theme\velocidade.png"
-                title="velocidade"
-                onClick={() => console.log('teste')} 
+                title="Velocidade"
+                onClick={() => handleClick("velocidade")} 
             />
             <Card 
                 img="../../images\icons\light-theme\comprimento.png"
                 title="Comprimento"
+                onClick={() => handleClick("comprimento")} 
             />
             <Card 
                 img="../../images\icons\light-theme\documento.png"
                 title="Documento"
-                onClick={() => console.log('teste')} 
+                onClick={() => handleClick("documento")} 
             />
             <Card 
                 img="../../images\icons\light-theme\energia.png"
                 title="Energia"
-                onClick={() => console.log('teste')} 
+                onClick={() => handleClick("energia")} 
             />
             <Card 
                 img="../../images\icons\light-theme\midia.png"
                 title="Mídia"
-                onClick={() => console.log('teste')} 
+                onClick={() => handleClick("midia")} 
             />
         </UlStyled>
     )
