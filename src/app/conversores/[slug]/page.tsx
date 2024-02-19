@@ -1,7 +1,9 @@
 "use client"
 
+import Arrow from "@/components/Arrow";
 import Header from "@/components/Header";
 import InputConversor from "@/components/InputConversor";
+import Resultado from "@/components/Resultado";
 import SelectUnidade from "@/components/SelectUnidade";
 import ConversorContainer from "@/containers/ConversorContainer";
 import useConversorReducer from "@/hooks/useConversorReducer";
@@ -20,11 +22,13 @@ function Conversor({ params }: { params: { slug: string } }) {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        gap: "10px" 
+        gap: "30px" 
       }}>
+        
         <h2>Converter {params.slug}</h2>
+
         <ConversorContainer>
-          <div>
+          <div className="container">
             <label htmlFor="valor">Valor</label>
             <InputConversor 
               type="number" 
@@ -36,16 +40,33 @@ function Conversor({ params }: { params: { slug: string } }) {
               placeholder="Digite o valor a ser convertido"
             />
           </div>
-          <SelectUnidade
-            name="origem"
-            id="origem"
-            arrayDeUnidades={nomesDasUnidades}
-          />
-          <SelectUnidade
-            name="destino"
-            id="destino"
-            arrayDeUnidades={nomesDasUnidades}
-          />
+            <div className="container">
+              <label htmlFor="origem">Origem</label>
+              <SelectUnidade
+                name="origem"
+                id="origem"
+                arrayDeUnidades={nomesDasUnidades}
+              />
+            </div>
+            <Arrow src="../../images/icons/light-theme/arrow.png" alt="arrow" />
+            <div className="container">
+            <label htmlFor="origem">Destino</label>
+              <SelectUnidade
+                name="destino"
+                id="destino"
+                arrayDeUnidades={nomesDasUnidades}
+              />
+            </div>
+        </ConversorContainer>
+
+        <ConversorContainer>
+          <div className="container">
+            <p>Resultado</p>
+            <div>
+              <Resultado>0</Resultado>
+              <Resultado>metros</Resultado>
+            </div>
+          </div>
         </ConversorContainer>
       </main>
     </>

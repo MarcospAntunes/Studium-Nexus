@@ -8,11 +8,11 @@ type SelectUnidadeProps = {
 
 const SelectStyled = styled.select`
     border: none;
+    border-radius: 15px;
     width: 100px;
     padding: 8px;
-
     font-family: inherit;
-   
+
     &:focus {
         outline: none;
     }
