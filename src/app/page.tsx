@@ -1,7 +1,7 @@
 import CaixaDePesquisa from "@/components/CaixaDePesquisa";
 import Header from "@/components/Header";
 import ListaDeConversores from "@/components/ListaDeConversores";
-import AppContainer from "@/containers/appContainer";
+import AppContainer from "@/containers/AppContainer";
 
 export default function Home() {
   return (
