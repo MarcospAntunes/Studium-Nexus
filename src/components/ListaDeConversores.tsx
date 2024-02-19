@@ -46,7 +46,6 @@ function ListaDeConversores() {
             <Card 
                 img="../../images\icons\light-theme\comprimento.png"
                 title="Comprimento"
-                onClick={() => console.log('teste')} 
             />
             <Card 
                 img="../../images\icons\light-theme\documento.png"
