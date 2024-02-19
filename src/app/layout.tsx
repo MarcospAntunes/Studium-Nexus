@@ -1,8 +1,8 @@
+import GlobalStyles from "@/GlobalStyles";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { Montserrat_Alternates } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const Montz = Montserrat_Alternates({ weight: '300', subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +15,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="pt-br">
+      <GlobalStyles />
+      <body className={Montz.className}>{children}</body>
     </html>
   );
 }
