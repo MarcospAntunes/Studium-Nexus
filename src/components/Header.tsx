@@ -2,14 +2,19 @@
 "use client"
 
 import styled from "styled-components";
-import sun from '../../public/icones/light-theme/sol.png'
 
 const HeaderStyled = styled.header`
+    @font-face {
+        font-family: 'NicoMoji';
+        src: url('../../fonts/NicoMoji-Regular.ttf') format('truetype');
+    }
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    font-family: 'NicoMoji', sans-serif;
     text-align: center;
-    padding: 10px;
 `
 
 function Header() {
