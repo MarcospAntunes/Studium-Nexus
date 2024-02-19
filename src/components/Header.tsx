@@ -2,6 +2,7 @@
 "use client"
 
 import styled from "styled-components";
+import MenuMobile from "./MenuMobile";
 
 const HeaderStyled = styled.header`
     @font-face {
@@ -17,14 +18,35 @@ const HeaderStyled = styled.header`
     text-align: center;
 `
 
-function Header() {
-    return(
-        <HeaderStyled>
-            <span></span>
-            <h1>Fast Converter</h1>
-            <img src="../../images/icons/light-theme/sol.png" alt="" />
-        </HeaderStyled>
-    )
+const LineStyled = styled.hr`
+    height: 1px;
+    margin-bottom: 30px;
+    border: none;
+    color: black;
+    background-color: black;
+`
+
+function Header({ convertion = false }) {
+    if(convertion) {
+        return(
+            <>
+                <HeaderStyled>
+                    <h1>FC</h1>
+                    <MenuMobile />
+                </HeaderStyled>
+                <LineStyled />
+            </>
+            
+        )
+    } else {
+        return(
+            <HeaderStyled>
+                <span></span>
+                <h1>Fast Converter</h1>
+                <img src="../../images/icons/light-theme/sol.png" alt="" />
+            </HeaderStyled>
+        )
+    }
 }
 
 export default Header;
