@@ -4,6 +4,9 @@ import { useState } from "react";
 import styled, { StyleSheetManager } from "styled-components";
 import { MenuMobileButton } from "./MenuMobileButton";
 import { MenuMobileStyledProps } from "@/types";
+import { Montserrat_Alternates } from "next/font/google";
+
+const Montz = Montserrat_Alternates({ weight: '300', subsets: ["latin"] });
 
 const MenuMobileStyled = styled.nav<MenuMobileStyledProps>`
     position: fixed;
@@ -19,7 +22,7 @@ const MenuMobileStyled = styled.nav<MenuMobileStyledProps>`
     right: ${({ isopen }) => (isopen === "true" ? '0' : '-100vw')};
 
     backdrop-filter: blur(4px);
-    z-index: 1;
+    z-index: 2;
     transition: right .3s ease-in-out;
 
     a {
@@ -45,7 +48,7 @@ function MenuMobile() {
                 <div className="lines line3"></div>
             </MenuMobileButton>
 
-            <MenuMobileStyled isopen={isOpen.toString()}>
+            <MenuMobileStyled isopen={isOpen.toString()} className={Montz.className}>
                 <Link href={"/"}>Home</Link>
                 <Link 
                     className={`link ${pathname === '/conversores/tempo' ? 'active' : ''}`} 

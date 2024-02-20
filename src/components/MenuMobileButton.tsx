@@ -16,7 +16,7 @@ const MenuMobileButton = styled.button<MenuMobileStyledProps>`
         background-color: black;
         border: 1px solid black;
         border-radius: 15px;
-        z-index: 2;
+        z-index: 3;
     }
 
     .line1 {
