@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={Montz.className} style={{padding: '10px'}}>
+      <body className={Montz.className}>
         <GlobalStyles />
         {children}
       </body>
