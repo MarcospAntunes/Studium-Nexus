@@ -11,14 +11,22 @@ const HeaderStyled = styled.header`
     }
 
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    gap: 5px;
 
     font-family: 'NicoMoji', sans-serif;
     text-align: center;
+
+    & div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
 `
 
 const LineStyled = styled.hr`
+    width: 100%;
     height: 1px;
     margin-bottom: 30px;
     border: none;
@@ -31,10 +39,12 @@ function Header({ convertion = false }) {
         return(
             <>
                 <HeaderStyled>
-                    <h1>FC</h1>
-                    <MenuMobile />
-                </HeaderStyled>
-                <LineStyled />
+                    <div>
+                        <h1>FC</h1>
+                        <MenuMobile />
+                    </div>
+                    <LineStyled />
+                </HeaderStyled> 
             </>
             
         )

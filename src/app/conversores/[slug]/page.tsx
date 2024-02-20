@@ -5,7 +5,9 @@ import Header from "@/components/Header";
 import InputConversor from "@/components/InputConversor";
 import Resultado from "@/components/Resultado";
 import SelectUnidade from "@/components/SelectUnidade";
+import AppContainer from "@/containers/AppContainer";
 import ConversorContainer from "@/containers/ConversorContainer";
+import { FlexContainerCenter } from "@/containers/FlexContainer";
 import useConversorReducer from "@/hooks/useConversorReducer";
 import { useState } from "react";
 
@@ -15,15 +17,9 @@ function Conversor({ params }: { params: { slug: string } }) {
   const [valor, setValor] = useState<string>()
 
   return (
-    <>
+    <AppContainer>
       <Header convertion={true} />
-      <main style={{ 
-        display: 'flex', 
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        gap: "30px" 
-      }}>
+      <FlexContainerCenter>
         
         <h2>Converter {params.slug}</h2>
 
@@ -68,8 +64,8 @@ function Conversor({ params }: { params: { slug: string } }) {
             </div>
           </div>
         </ConversorContainer>
-      </main>
-    </>
+      </FlexContainerCenter>
+    </AppContainer>
   );
 }
 

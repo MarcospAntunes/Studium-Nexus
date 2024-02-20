@@ -2,6 +2,7 @@ import CaixaDePesquisa from "@/components/CaixaDePesquisa";
 import Header from "@/components/Header";
 import ListaDeConversores from "@/components/ListaDeConversores";
 import AppContainer from "@/containers/AppContainer";
+import { FlexContainerSpaceBTW } from "@/containers/FlexContainer";
 
 export default function Home() {
   return (
@@ -11,16 +12,10 @@ export default function Home() {
         <main>
           <section>
             <h2 style={{ marginBottom: '20px' }}>O seu Converor rápido e fácil de usar</h2>
-            <div
-              style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center'
-              }}
-            >
+            <FlexContainerSpaceBTW>
               <h3>Conversores</h3>
               <CaixaDePesquisa />
-            </div>
+            </FlexContainerSpaceBTW>
             <ListaDeConversores />
           </section>
         </main>
