@@ -1,15 +1,5 @@
-import { ChangeEventHandler } from "react";
+import { InputConversorProps } from "@/types";
 import styled from "styled-components";
-
-type InputConversorProps = {
-    type: string
-    name: string
-    id: string
-    placeholder?: string
-    required: boolean
-    onChange: ChangeEventHandler<HTMLInputElement>
-    value: string | number | readonly string[] | undefined
-}
 
 const InputConversorStyled = styled.input`
     font-family: inherit;

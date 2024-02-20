@@ -1,8 +1,5 @@
+import { MenuMobileStyledProps } from "@/types";
 import styled from "styled-components";
-
-type MenuMobileStyledProps = {
-    isopen: string
-} 
 
 const MenuMobileButton = styled.button<MenuMobileStyledProps>`
     display: flex;
@@ -50,4 +47,3 @@ const MenuMobileButton = styled.button<MenuMobileStyledProps>`
 `
 
 export { MenuMobileButton };
-export type { MenuMobileStyledProps }

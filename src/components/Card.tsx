@@ -1,14 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client"
 
-import { MouseEventHandler } from "react"
 import styled from "styled-components"
-
-type CardTypes = {
-    img: string
-    title: string
-    onClick: MouseEventHandler<HTMLLIElement>
-}
 
 const CardContainer = styled.li`
     display: flex;

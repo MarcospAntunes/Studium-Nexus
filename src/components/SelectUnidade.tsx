@@ -1,10 +1,5 @@
+import { SelectUnidadeProps } from "@/types";
 import styled from "styled-components"
-
-type SelectUnidadeProps = {
-    arrayDeUnidades: Array<string> 
-    name: string
-    id: string
-}
 
 const SelectStyled = styled.select`
     border: none;

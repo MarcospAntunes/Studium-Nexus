@@ -2,7 +2,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import styled, { StyleSheetManager } from "styled-components";
-import { MenuMobileButton, MenuMobileStyledProps } from "./MenuMobileButton";
+import { MenuMobileButton } from "./MenuMobileButton";
+import { MenuMobileStyledProps } from "@/types";
 
 const MenuMobileStyled = styled.nav<MenuMobileStyledProps>`
     position: fixed;
