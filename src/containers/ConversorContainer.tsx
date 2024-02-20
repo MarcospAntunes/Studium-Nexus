@@ -7,7 +7,7 @@ const ConversorContainer = styled.section`
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px;
 
     width: 350px;
     height: 200px;
@@ -17,6 +17,14 @@ const ConversorContainer = styled.section`
     background-color: #EFEFEF;
     box-shadow: -2px 2px 4px 1px rgba(0, 0, 0, 0.25);
 
+
+    & div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
 
     & .container {
         display: flex;

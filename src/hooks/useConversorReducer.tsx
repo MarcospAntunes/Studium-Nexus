@@ -13,7 +13,8 @@ function useConversorReducer(slug: string) {
 
     return {
         nomesDasUnidades,
-        abreviacaoDasUnidades
+        abreviacaoDasUnidades,
+        state
     }
 }
 
