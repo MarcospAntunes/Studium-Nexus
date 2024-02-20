@@ -11,9 +11,6 @@ import ConversorContainer from "@/containers/ConversorContainer";
 import { FlexContainerCenter } from "@/containers/FlexContainer";
 import useConversorReducer from "@/hooks/useConversorReducer";
 import useConverter from "@/hooks/useConverter";
-import useUnidadesSelecionadasContext from "@/hooks/useUnidadesSelecionadasContext";
-import converter from "@/utils/converter";
-import { useEffect, useState } from "react";
 
 function Conversor({ params }: { params: { slug: string } }) {
   const slug = params.slug

@@ -1,9 +1,6 @@
-type conversoresActionProps = {
-    type: string
-    payload?: any
-}
+import { ConversoresActionProps } from "@/types"
 
-function conversoresReducer( state: any, action: conversoresActionProps) {
+function conversoresReducer( state: any, action: ConversoresActionProps) {
     switch(state.slug) {
         case "tempo":
             return {
