@@ -7,7 +7,7 @@ type InputConversorProps = {
     placeholder?: string
     required: boolean
     onChange: ChangeEventHandler<HTMLInputElement>
-    value: string | number | readonly string[] | undefined
+    value: any
 }
 
 export default InputConversorProps;

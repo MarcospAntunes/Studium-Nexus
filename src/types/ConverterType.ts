@@ -1,6 +1,7 @@
 type ConverterProps = {
     unidade: string[] 
-    valor: string 
+    valor?: string
+    upload?: [File, string]
     state: any
 }
 

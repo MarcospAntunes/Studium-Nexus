@@ -69,7 +69,17 @@ function conversoresReducer( state: any, action: ConversoresActionProps) {
                 "microwatts": 1000000,
                 "nanowatts": 1000000000,
             }
-            
+        case "documento":
+            return {
+                "pdf": "pdf",
+                "docx": "docx",
+                "doc": "doc",
+                "xls": "xls",
+                "xlsx": "xlsx",
+                "ppt": "ppt",
+                "pptx": "pptx",
+                "txt": "txt",
+            }   
         default:
             return state
     }

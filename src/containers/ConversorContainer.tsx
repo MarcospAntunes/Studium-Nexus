@@ -37,6 +37,11 @@ const ConversorContainer = styled.section`
             display: flex;
             gap: 30px;
         }
+
+        & img {
+            width: 64px;
+            height: 64px;
+        }
     }
 `
 
