@@ -10,23 +10,29 @@ const CardContainer = styled.li`
     height: 115px;
     border-radius: 15px;
 
-    background-color: #f6f6f6;
-    box-shadow: -2px 2px 4px 1px rgba(0, 0, 0, 0.25);
+    background-color: ${({theme}) => theme.bgCard};
+    box-shadow: -2px 2px 4px 1px ${({theme}) => theme.shadown};
 
+    color: ${({theme}) => theme.text};
     font-size: 14px;
     transition: .3s;
     cursor: pointer;
-
-    &:hover {
-        background-color: #d6d6d6;
-        transition: .3s;
-    }
-
     img {
         width: 32px;
         height: 32px;
-        
+        filter: invert(${({theme}) => theme.invert});
     }
+
+    &:hover {
+        background-color: ${({theme}) => theme.bgCardHover};
+        color: ${({theme}) => theme.textHover};
+        transition: .3s;
+
+        & img {
+            filter: invert(${({theme}) => theme.invertHover}); 
+        }       
+    }
+    
 `
 
 export default CardContainer;

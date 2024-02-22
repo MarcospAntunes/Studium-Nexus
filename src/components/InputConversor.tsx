@@ -9,15 +9,16 @@ const InputConversorStyled = styled.input`
 
     width: 230px;
     padding: 8px;
-    background-color: white;
-    
+    background-color: ${({theme}) => theme.bgInput};
+    color: ${({theme}) => theme.text};
+    transition: .3s;
 
     &:focus {
         outline: none;
     }
 `
 
-function InputConversor({ type, name, id, placeholder, required, onChange, value }: InputConversorProps) {
+function InputConversor({ type, name, id, placeholder, required, onChange, value, theme }: InputConversorProps) {
     return(
         <InputConversorStyled 
             type={type} 
@@ -26,7 +27,8 @@ function InputConversor({ type, name, id, placeholder, required, onChange, value
             placeholder={placeholder} 
             value={value}
             onChange={onChange}
-            required={required} 
+            required={required}
+            theme={theme} 
         />
     )
 }

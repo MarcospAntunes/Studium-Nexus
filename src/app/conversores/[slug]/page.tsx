@@ -11,6 +11,8 @@ import ConversorContainer from "@/containers/ConversorContainer";
 import { FlexContainerCenter } from "@/containers/FlexContainer";
 import useConversorReducer from "@/hooks/useConversorReducer";
 import useConverter from "@/hooks/useConverter";
+import useTheme from "@/hooks/useTheme";
+import { darkTheme, lightTheme } from "@/themes";
 
 function Conversor({ params }: { params: { slug: string } }) {
   const slug = params.slug;
@@ -27,9 +29,11 @@ function Conversor({ params }: { params: { slug: string } }) {
     pegarValor,
   } = useConverter(slug)
 
+  const { theme } = useTheme();
+
   return (
     <AppContainer>
-      <Header convertion={true} />
+      <Header convertion={true}/>
       <FlexContainerCenter>
         <h2>Converter {params.slug}</h2>
 
@@ -45,6 +49,7 @@ function Conversor({ params }: { params: { slug: string } }) {
                   value={upload ? upload![1] : ""}
                   required={true}
                   onChange={(e) => setUpload([e.target.files![0], e.target.value])}
+                  theme={theme === "light" ? lightTheme : darkTheme}
                 />
               </div>
               <div>
@@ -56,9 +61,10 @@ function Conversor({ params }: { params: { slug: string } }) {
                       id="original"
                       arrayDeUnidades={nomesDasUnidades}
                       onChange={e => setOrigem(e.target.value)}
+                      theme={theme === "light" ? lightTheme : darkTheme}
                     />
                   </div>
-                  <Arrow src="../../images/icons/light-theme/arrow.png" alt="arrow" />
+                  <Arrow src={`../../images/icons/arrow.png`} alt="arrow" theme={theme === "light" ? lightTheme : darkTheme}/>
                   <div className="container">
                     <label htmlFor="destino">Formato destinado</label>
                     <SelectUnidade
@@ -66,12 +72,13 @@ function Conversor({ params }: { params: { slug: string } }) {
                       id="destino"
                       arrayDeUnidades={nomesDasUnidades}
                       onChange={e => setDestino(e.target.value)}
+                      theme={theme === "light" ? lightTheme : darkTheme}
                     />
                   </div>
                 </div>
               </div>
-              <Button onClick={() => pegarValor()}>Converter</Button>
-              <Button>Limpar</Button>
+              <Button onClick={() => pegarValor()} theme={theme === "light" ? lightTheme : darkTheme}>Converter</Button>
+              <Button theme={theme === "light" ? lightTheme : darkTheme}>Limpar</Button>
             </ConversorContainer>
 
             <ConversorContainer>
@@ -104,6 +111,7 @@ function Conversor({ params }: { params: { slug: string } }) {
                   required={true}
                   onChange={(e) => setValor(e.target.value)}
                   placeholder="Digite o valor a ser convertido"
+                  theme={theme === "light" ? lightTheme : darkTheme}
                 />
               </div>
               <div>
@@ -115,9 +123,10 @@ function Conversor({ params }: { params: { slug: string } }) {
                       id="origem"
                       arrayDeUnidades={nomesDasUnidades}
                       onChange={e => setOrigem(e.target.value)}
+                      theme={theme === "light" ? lightTheme : darkTheme}
                     />
                   </div>
-                  <Arrow src="../../images/icons/light-theme/arrow.png" alt="arrow" />
+                  <Arrow src={`../../images/icons/arrow.png`} alt="arrow" theme={theme === "light" ? lightTheme : darkTheme} />
                   <div className="container">
                     <label htmlFor="destino">Destino</label>
                       <SelectUnidade
@@ -125,20 +134,21 @@ function Conversor({ params }: { params: { slug: string } }) {
                         id="destino"
                         arrayDeUnidades={nomesDasUnidades}
                         onChange={e => setDestino(e.target.value)}
+                        theme={theme === "light" ? lightTheme : darkTheme}
                       />
                   </div>
                 </div>
               </div>
-              <Button onClick={() => pegarValor()}>Converter</Button>
-              <Button>Limpar</Button>
+              <Button onClick={() => pegarValor()} theme={theme === "light" ? lightTheme : darkTheme}>Converter</Button>
+              <Button theme={theme === "light" ? lightTheme : darkTheme}>Limpar</Button>
             </ConversorContainer>
 
             <ConversorContainer>
               <div className="container">
                 <p>Resultado</p>
                 <div>
-                  <Resultado>{resultadoDaConversao}</Resultado>
-                  <Resultado>{unidade ? unidade[1] : ""}</Resultado>
+                  <Resultado theme={theme === "light" ? lightTheme : darkTheme}>{resultadoDaConversao}</Resultado>
+                  <Resultado theme={theme === "light" ? lightTheme : darkTheme}>{unidade ? unidade[1] : ""}</Resultado>
                 </div>
               </div>
             </ConversorContainer>

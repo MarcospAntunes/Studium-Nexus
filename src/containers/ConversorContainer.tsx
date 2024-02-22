@@ -1,6 +1,8 @@
+import useTheme from "@/hooks/useTheme";
+import { darkTheme, lightTheme } from "@/themes";
 import styled from "styled-components";
 
-const ConversorContainer = styled.section`
+const ConversorContainerStyled = styled.section`
     position: relative;
     display: flex;
     flex-direction: row;
@@ -14,9 +16,10 @@ const ConversorContainer = styled.section`
     padding: 10px;
     border-radius: 15px;
 
-    background-color: #EFEFEF;
-    box-shadow: -2px 2px 4px 1px rgba(0, 0, 0, 0.25);
-
+    background-color: ${({theme}) => theme.bgConversor};
+    box-shadow: -2px 2px 4px 1px ${({theme}) => theme.shadown};
+    color: ${({theme}) => theme.text};
+    transition: .3s;
 
     & div {
         display: flex;
@@ -24,6 +27,7 @@ const ConversorContainer = styled.section`
         justify-content: center;
         align-items: center;
         width: 100%;
+        
     }
 
     & .container {
@@ -32,6 +36,7 @@ const ConversorContainer = styled.section`
         justify-content: center;
         align-items: center;
         gap: 5px;
+        
 
         & div {
             display: flex;
@@ -41,8 +46,19 @@ const ConversorContainer = styled.section`
         & img {
             width: 64px;
             height: 64px;
+            filter: invert(${({theme}) => theme.invert});
         }
     }
 `
+
+function ConversorContainer({children}: any) {
+    const { theme } = useTheme();
+
+    return(
+        <ConversorContainerStyled theme={theme === "light" ? lightTheme : darkTheme}>
+            {children}
+        </ConversorContainerStyled>
+    )
+}
 
 export default ConversorContainer;

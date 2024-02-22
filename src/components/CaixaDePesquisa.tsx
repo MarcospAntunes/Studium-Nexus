@@ -2,14 +2,17 @@
 "use client"
 
 import PesquisaContainer from "@/containers/PesquisaContainer";
+import useTheme from "@/hooks/useTheme";
+import { darkTheme, lightTheme } from "@/themes";
 import { useState } from "react";
 
 function CaixaDePesquisa() {
     const [busca, setBusca] = useState("")
+    const { theme } = useTheme();
 
     return(
-        <PesquisaContainer>
-            <img src="../../images/icons/light-theme/buscar.png" alt="buscar" />
+        <PesquisaContainer theme={theme === "light" ? lightTheme : darkTheme}>
+            <img src="../../images/icons/buscar.png" alt="buscar" />
             <input 
                 type="text" 
                 value={busca}

@@ -6,6 +6,7 @@ import UnidadesSelecionadasProps from "./UnidadesSelecionadasTypes";
 import ConverterProps from "./ConverterType";
 import ConversoresActionProps from "./ConversoresActionType";
 import HeaderStyledProps from "./HeaderStyledType";
+import ThemeProps from "./ThemeType";
 
 export type { 
     CardTypes, 
@@ -15,5 +16,6 @@ export type {
     UnidadesSelecionadasProps,
     ConverterProps,
     ConversoresActionProps,
-    HeaderStyledProps
+    HeaderStyledProps,
+    ThemeProps
 }

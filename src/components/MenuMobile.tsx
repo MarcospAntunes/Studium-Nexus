@@ -5,6 +5,8 @@ import styled, { StyleSheetManager } from "styled-components";
 import { MenuMobileButton } from "./MenuMobileButton";
 import { MenuMobileStyledProps } from "@/types";
 import { Montserrat_Alternates } from "next/font/google";
+import useTheme from "@/hooks/useTheme";
+import { darkTheme, lightTheme } from "@/themes";
 
 const Montz = Montserrat_Alternates({ weight: '300', subsets: ["latin"] });
 
@@ -27,7 +29,7 @@ const MenuMobileStyled = styled.nav<MenuMobileStyledProps>`
 
     a {
         text-decoration: none;
-        color: black;
+        color: ${({theme}) => theme.text};
         cursor: pointer;
     }
 
@@ -39,16 +41,25 @@ const MenuMobileStyled = styled.nav<MenuMobileStyledProps>`
 function MenuMobile() {
     const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
+    const { theme } = useTheme();
 
     return(
         <StyleSheetManager shouldForwardProp={(prop) => prop !== 'isopen'}>
-            <MenuMobileButton isopen={isOpen.toString()} onClick={() => setIsOpen(!isOpen)}>
+            <MenuMobileButton 
+                isopen={isOpen.toString()} 
+                onClick={() => setIsOpen(!isOpen)} 
+                theme={theme === "light" ? lightTheme : darkTheme}
+            >
                 <div className="lines line1"></div>
                 <div className="lines line2"></div>
                 <div className="lines line3"></div>
             </MenuMobileButton>
 
-            <MenuMobileStyled isopen={isOpen.toString()} className={Montz.className}>
+            <MenuMobileStyled 
+                isopen={isOpen.toString()} 
+                className={Montz.className} 
+                theme={theme === "light" ? lightTheme : darkTheme}
+            >
                 <Link href={"/"}>Home</Link>
                 <Link 
                     className={`link ${pathname === '/conversores/tempo' ? 'active' : ''}`} 

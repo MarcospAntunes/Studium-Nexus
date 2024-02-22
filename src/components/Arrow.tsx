@@ -7,6 +7,7 @@ const Arrow = styled.img`
     height: 50px;
     transform: rotate(180deg);
     z-index: 1;
+    filter: invert(${({theme}) => theme.invert});
 `
 
 export default Arrow;

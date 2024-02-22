@@ -8,17 +8,20 @@ const PesquisaContainer = styled.div`
     padding: 5px;
     border-radius: 15px;
     
-    background-color: #EFEFEF;
+    background-color: ${({theme}) => theme.bgSearch};
+    transition: .3s;
 
     img {
         width: 24px;
         height: 24px;
+        filter: invert(${({theme}) => theme.invert});filter: invert(${({theme}) => theme.invert});
     }
 
     input {
         width: 100%;
         border: none;
         background-color: transparent;
+        color: ${({theme}) => theme.text};;
         font-size: 14px;
 
         &:focus {

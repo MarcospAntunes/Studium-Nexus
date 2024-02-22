@@ -2,6 +2,8 @@ import { MenuMobileStyledProps } from "@/types";
 import styled from "styled-components";
 
 const MenuMobileButton = styled.button<MenuMobileStyledProps>`
+    width: 42px;
+    height: 32px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,11 +12,13 @@ const MenuMobileButton = styled.button<MenuMobileStyledProps>`
     gap: 5px;
     background-color: transparent;
     border: none;
+    cursor: pointer;
+    z-index: 9999;
     
 
     .lines {
-        background-color: black;
-        border: 1px solid black;
+        background-color: ${({theme}) => theme.text};
+        border: 1px solid ${({theme}) => theme.text};
         border-radius: 15px;
         z-index: 3;
     }

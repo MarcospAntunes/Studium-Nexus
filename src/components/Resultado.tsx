@@ -11,7 +11,8 @@ const Resultado = styled.p`
     word-break: break-all;
     padding: 20px;
     border-radius: 15px;
-    background-color: white;
+    background-color: ${({theme}) => theme.body};
+    transition: .3s;
 `
 
 export default Resultado;
