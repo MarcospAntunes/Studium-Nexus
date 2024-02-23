@@ -6,7 +6,7 @@ import UnidadesSelecionadasProps from "./UnidadesSelecionadasTypes";
 import ConversoresActionProps from "./ConversoresActionType";
 import HeaderStyledProps from "./HeaderStyledType";
 import ThemeProps from "./ThemeType";
-import { CriaTrabalhoProps, ImportarArquivoProps, ExportarArquivoProps } from './ConverterType'
+import { CriaTrabalhoProps, ImportarArquivoProps, ExportarArquivoProps, ConverterProps } from './ConverterType'
 
 export type { 
     CardTypes, 
@@ -17,6 +17,7 @@ export type {
     CriaTrabalhoProps,
     ImportarArquivoProps,
     ExportarArquivoProps,
+    ConverterProps,
     ConversoresActionProps,
     HeaderStyledProps,
     ThemeProps

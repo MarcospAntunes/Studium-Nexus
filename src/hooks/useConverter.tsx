@@ -46,6 +46,9 @@ function useConverter(slug: string) {
                 } catch (error) {
                     console.error('Erro durante a conversão:', error);
                 }
+            } else {
+                const resultado = converter({ unidade, valor, state })
+                setResultadoDaConversao(resultado);
             }
         } else {
             alert("Uma ou mais unidades não foram escolhidas");

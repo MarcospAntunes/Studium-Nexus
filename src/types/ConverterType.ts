@@ -15,5 +15,11 @@ type ExportarArquivoProps = {
     apiKey: string | undefined
 }
 
+type ConverterProps = {
+    unidade: string[]
+    valor:  string
+    state: any
+}
 
-export type {CriaTrabalhoProps, ImportarArquivoProps, ExportarArquivoProps};
+
+export type {CriaTrabalhoProps, ImportarArquivoProps, ExportarArquivoProps, ConverterProps};
