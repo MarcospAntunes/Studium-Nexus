@@ -1,19 +1,27 @@
 "use client"
 
-import Arrow from "@/components/Arrow";
-import Button from "@/components/Button";
-import Header from "@/components/Header";
-import InputConversor from "@/components/InputConversor";
-import LoadingConversao from "@/components/LoadingConversao";
-import Resultado from "@/components/Resultado";
-import SelectUnidade from "@/components/SelectUnidade";
-import AppContainer from "@/containers/AppContainer";
-import ConversorContainer from "@/containers/ConversorContainer";
-import { FlexContainerCenter } from "@/containers/FlexContainer";
-import useConversorReducer from "@/hooks/useConversorReducer";
-import useConverter from "@/hooks/useConverter";
-import useTheme from "@/hooks/useTheme";
+import { 
+  useConversorReducer, 
+  useConverter, 
+  useTheme 
+} from "@/hooks/@index";
+
 import { darkTheme, lightTheme } from "@/themes";
+import { 
+  Arrow, 
+  Button, 
+  Header, 
+  InputConversor, 
+  SelectUnidade, 
+  LoadingConversao, 
+  Resultado 
+} from '@/components/@index';
+
+import { 
+  AppContainer, 
+  ConversorContainer, 
+  FlexContainerCenter 
+} from "@/containers/@index";
 
 function Conversor({ params }: { params: { slug: string } }) {
   const slug = params.slug;

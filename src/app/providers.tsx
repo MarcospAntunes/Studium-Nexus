@@ -1,8 +1,6 @@
 "use client"
 
-import { darkTheme, lightTheme } from "@/themes";
-import useTheme from "@/hooks/useTheme";
-import { ThemeProvider } from "@/contexts/ThemeContext";
+import { ThemeProvider } from "@/contexts/@index";
 
 function Providers({ children }: any) {
     return(

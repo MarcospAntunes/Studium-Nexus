@@ -1,8 +1,12 @@
-import CaixaDePesquisa from "@/components/CaixaDePesquisa";
-import Header from "@/components/Header";
-import ListaDeConversores from "@/components/ListaDeConversores";
-import AppContainer from "@/containers/AppContainer";
-import { FlexContainerSpaceBTW } from "@/containers/FlexContainer";
+"use client"
+
+import { 
+  CaixaDePesquisa, 
+  Header, 
+  ListaDeConversores 
+} from "@/components/@index";
+
+import { AppContainer, FlexContainerSpaceBTW } from '@/containers/@index';
 
 export default function Home() {
   return (

@@ -1,11 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-"use client"
 
 import { StyleSheetManager } from "styled-components";
-import MenuMobile from "./MenuMobile";
-import useTheme from "@/hooks/useTheme";
+import { useTheme } from "@/hooks/@index";
 import { darkTheme, lightTheme } from "@/themes";
-import { HeaderStyled, LineStyled } from "@/styles/Header.style";
+import { HeaderStyled, LineStyled } from "@/styles/@index";
+import { MenuMobile } from "./@index";
 
 function Header({ convertion = false }) {
     const { theme, themeToggler } = useTheme();

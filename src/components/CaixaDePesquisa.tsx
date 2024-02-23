@@ -1,8 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
-"use client"
-
-import PesquisaContainer from "@/containers/PesquisaContainer";
-import useTheme from "@/hooks/useTheme";
+import { PesquisaContainer } from "@/containers/@index";
+import { useTheme } from "@/hooks/@index";
 import { darkTheme, lightTheme } from "@/themes";
 import { useState } from "react";
 

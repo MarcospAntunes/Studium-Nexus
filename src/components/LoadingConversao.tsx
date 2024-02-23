@@ -1,5 +1,5 @@
-import ProgressBar from "@/styles/LoadingConversao.style";
-import ProgressProps from "@/types/ProgessType";
+import { ProgressBar } from "@/styles/@index";
+import { ProgressProps } from "@/types/@index";
 
 function LoadingConversao({porcentagem}: ProgressProps) {
     console.log(porcentagem);

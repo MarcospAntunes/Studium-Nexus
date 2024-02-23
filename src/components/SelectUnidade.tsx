@@ -1,4 +1,4 @@
-import SelectStyled from "@/styles/SelectUnidade.style";
+import { SelectStyled } from "@/styles/@index";
 import { SelectUnidadeProps } from "@/types/@index";
 
 function SelectUnidade({arrayDeUnidades, name, id, onChange, theme}: SelectUnidadeProps) {

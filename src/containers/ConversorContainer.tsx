@@ -1,5 +1,5 @@
-import useTheme from "@/hooks/useTheme";
-import ConversorContainerStyled from "@/styles/ConversorContainer.style";
+import { useTheme } from "@/hooks/@index";
+import { ConversorContainerStyled } from "@/styles/@index";
 import { darkTheme, lightTheme } from "@/themes";
 
 function ConversorContainer({children}: any) {

@@ -1,4 +1,4 @@
-import InputConversorStyled from "@/styles/InputConversor.style";
+import { InputConversorStyled } from "@/styles/@index";
 import { InputConversorProps } from "@/types/@index";
 
 function InputConversor({ type, name, id, placeholder, required, onChange, value, theme }: InputConversorProps) {

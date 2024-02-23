@@ -1,11 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
-import useUnidadesSelecionadasContext from "./useUnidadesSelecionadasContext";
 import converter from "@/utils/converter";
-import useConversorReducer from "./useConversorReducer";
 import { criaTrabalho, exportarArquivo, importarArquivo } from "@/services/api";
 import dotenv from 'dotenv';
 import { v4 as uuidv4 } from 'uuid';
+import { useUnidadesSelecionadasContext, useConversorReducer } from "@/hooks/@index";
 
 dotenv.config();
 

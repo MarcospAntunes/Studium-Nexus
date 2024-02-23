@@ -1,7 +1,5 @@
-"use client"
-
-import UlStyled from "@/styles/ListaDeConversores.style";
-import Card from "./Card";
+import { UlStyled } from "@/styles/@index";
+import { Card } from "./@index";
 import { useRouter } from "next/navigation";
 
 function ListaDeConversores() {

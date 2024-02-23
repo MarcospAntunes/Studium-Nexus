@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
-import CardContainer from "@/containers/CardContainer";
-import useTheme from "@/hooks/useTheme";
+import { CardContainer } from "@/containers/@index";
+import { useTheme } from "@/hooks/@index";
 import { darkTheme, lightTheme } from "@/themes";
 import { CardTypes } from "@/types/@index";
 

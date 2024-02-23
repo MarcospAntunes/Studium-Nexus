@@ -1,6 +1,6 @@
 "use client"
 
-import { UnidadeSelecionadaProvider } from "@/contexts/UnidadesSelecionadasContext";
+import { UnidadeSelecionadaProvider } from "@/contexts/@index";
 
 function Providers({ children }: any) {
     return(

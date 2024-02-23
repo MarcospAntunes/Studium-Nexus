@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { UnidadeSelecionadaContext } from "@/contexts/UnidadesSelecionadasContext";
+import { UnidadeSelecionadaContext } from "@/contexts/@index";
 import { UnidadesSelecionadasProps } from "@/types/@index";
 
 function useUnidadesSelecionadasContext() {

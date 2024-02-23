@@ -1,7 +1,7 @@
 "use client"
 
-import useTheme from "@/hooks/useTheme";
-import AppContainerStyled from "@/styles/AppContainer.style";
+import { useTheme } from "@/hooks/@index";
+import{ AppContainerStyled } from "@/styles/@index";
 import { darkTheme, lightTheme } from "@/themes";
 
 function AppContainer({children}: any) {

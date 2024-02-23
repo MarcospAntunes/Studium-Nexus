@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import styled, { StyleSheetManager } from "styled-components";
-import { MenuMobileButton } from "./MenuMobileButton";
+import { StyleSheetManager } from "styled-components";
+import { MenuMobileButton } from "./@index";
 import { Montserrat_Alternates } from "next/font/google";
-import useTheme from "@/hooks/useTheme";
+import { useTheme } from "@/hooks/@index";
 import { darkTheme, lightTheme } from "@/themes";
-import MenuMobileStyled from "@/styles/MenuMobile.style";
+import { MenuMobileStyled } from "@/styles/@index";
 
 const Montz = Montserrat_Alternates({ weight: '300', subsets: ["latin"] });
 
