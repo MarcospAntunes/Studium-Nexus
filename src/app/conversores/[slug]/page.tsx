@@ -4,6 +4,7 @@ import Arrow from "@/components/Arrow";
 import Button from "@/components/Button";
 import Header from "@/components/Header";
 import InputConversor from "@/components/InputConversor";
+import LoadingConversao from "@/components/LoadingConversao";
 import Resultado from "@/components/Resultado";
 import SelectUnidade from "@/components/SelectUnidade";
 import AppContainer from "@/containers/AppContainer";
@@ -28,6 +29,9 @@ function Conversor({ params }: { params: { slug: string } }) {
     unidade, 
     pegarValor,
   } = useConverter(slug)
+
+  console.log(resultadoDaConversao[1])
+  const texto = resultadoDaConversao[1] === -1 ? "Erro ao converter arquivo" : "Clique em converter para inicar a conversão"
 
   const { theme } = useTheme();
 
@@ -83,18 +87,24 @@ function Conversor({ params }: { params: { slug: string } }) {
 
             <ConversorContainer>
               <div className="container">
-                {resultadoDaConversao ?
+                {resultadoDaConversao[1] > 0 && resultadoDaConversao[1] < 100 ?
+                    <LoadingConversao porcentagem={resultadoDaConversao[1]} />
+                :
+                  resultadoDaConversao[1] === 100 ?
                   <>
-                    <p>Convertido</p>
                     <div>
                       <img src="../../../images/icons/convertido.png" alt="Convertido" />
                     </div>
+                    <Button 
+                      onClick={() => window.open(resultadoDaConversao[0], "_blank")} 
+                      theme={theme === "light" ? lightTheme : darkTheme}
+                    >
+                      Download
+                    </Button>
                   </>
-                :
-                  <p>Convertendo...</p>
-                }
-                
-                
+                  :
+                    <p>{texto}</p>
+                } 
               </div>
             </ConversorContainer>
           </>

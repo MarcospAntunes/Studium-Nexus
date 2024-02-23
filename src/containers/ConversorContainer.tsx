@@ -18,6 +18,7 @@ const ConversorContainerStyled = styled.section`
 
     background-color: ${({theme}) => theme.bgConversor};
     box-shadow: -2px 2px 4px 1px ${({theme}) => theme.shadown};
+    text-align: center;
     color: ${({theme}) => theme.text};
     transition: .3s;
 

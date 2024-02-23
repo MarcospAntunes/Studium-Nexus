@@ -3,10 +3,10 @@ import InputConversorProps from "./InputConversorType";
 import MenuMobileStyledProps from "./MenuMobileType";
 import SelectUnidadeProps from "./SelectUnidadeType";
 import UnidadesSelecionadasProps from "./UnidadesSelecionadasTypes";
-import ConverterProps from "./ConverterType";
 import ConversoresActionProps from "./ConversoresActionType";
 import HeaderStyledProps from "./HeaderStyledType";
 import ThemeProps from "./ThemeType";
+import { CriaTrabalhoProps, ImportarArquivoProps, ExportarArquivoProps } from './ConverterType'
 
 export type { 
     CardTypes, 
@@ -14,7 +14,9 @@ export type {
     MenuMobileStyledProps, 
     SelectUnidadeProps, 
     UnidadesSelecionadasProps,
-    ConverterProps,
+    CriaTrabalhoProps,
+    ImportarArquivoProps,
+    ExportarArquivoProps,
     ConversoresActionProps,
     HeaderStyledProps,
     ThemeProps
