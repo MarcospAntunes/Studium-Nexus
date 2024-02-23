@@ -3,40 +3,12 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import styled, { StyleSheetManager } from "styled-components";
 import { MenuMobileButton } from "./MenuMobileButton";
-import { MenuMobileStyledProps } from "@/types";
 import { Montserrat_Alternates } from "next/font/google";
 import useTheme from "@/hooks/useTheme";
 import { darkTheme, lightTheme } from "@/themes";
+import MenuMobileStyled from "@/styles/MenuMobile.style";
 
 const Montz = Montserrat_Alternates({ weight: '300', subsets: ["latin"] });
-
-const MenuMobileStyled = styled.nav<MenuMobileStyledProps>`
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    right: ${({ isopen }) => (isopen === "true" ? '0' : '-100vw')};
-
-    backdrop-filter: blur(4px);
-    z-index: 2;
-    transition: right .3s ease-in-out;
-
-    a {
-        text-decoration: none;
-        color: ${({theme}) => theme.text};
-        cursor: pointer;
-    }
-
-    .active {
-        text-decoration: underline;
-    }
-`
 
 function MenuMobile() {
     const pathname = usePathname();

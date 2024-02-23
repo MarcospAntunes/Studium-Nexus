@@ -1,4 +1,4 @@
-import { ConverterProps } from "@/types";
+import { ConverterProps } from "@/types/@index";
 
 function converter({ unidade, valor, state }: ConverterProps): number {
     if(unidade) {

@@ -1,4 +1,4 @@
-import { CriaTrabalhoProps, ExportarArquivoProps, ImportarArquivoProps } from "@/types";
+import { CriaTrabalhoProps, ExportarArquivoProps, ImportarArquivoProps } from "@/types/@index";
 
 async function criaTrabalho({unidade, upload, taskID, apiKey}: CriaTrabalhoProps) {
     const formatoOriginal = unidade[0];

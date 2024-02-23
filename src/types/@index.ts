@@ -7,6 +7,7 @@ import ConversoresActionProps from "./ConversoresActionType";
 import HeaderStyledProps from "./HeaderStyledType";
 import ThemeProps from "./ThemeType";
 import { CriaTrabalhoProps, ImportarArquivoProps, ExportarArquivoProps, ConverterProps } from './ConverterType'
+import ProgressProps from "./ProgessType";
 
 export type { 
     CardTypes, 
@@ -20,5 +21,6 @@ export type {
     ConverterProps,
     ConversoresActionProps,
     HeaderStyledProps,
-    ThemeProps
+    ThemeProps,
+    ProgressProps
 }

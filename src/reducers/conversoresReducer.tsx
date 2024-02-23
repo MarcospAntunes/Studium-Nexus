@@ -1,4 +1,4 @@
-import { ConversoresActionProps } from "@/types"
+import { ConversoresActionProps } from "@/types/@index"
 
 function conversoresReducer( state: any, action: ConversoresActionProps) {
     switch(state.slug) {

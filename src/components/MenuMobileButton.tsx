@@ -1,4 +1,4 @@
-import { MenuMobileStyledProps } from "@/types";
+import { MenuMobileStyledProps } from "@/types/@index";
 import styled from "styled-components";
 
 const MenuMobileButton = styled.button<MenuMobileStyledProps>`

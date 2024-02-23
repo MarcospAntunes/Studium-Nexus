@@ -3,7 +3,7 @@
 import CardContainer from "@/containers/CardContainer";
 import useTheme from "@/hooks/useTheme";
 import { darkTheme, lightTheme } from "@/themes";
-import { CardTypes } from "@/types";
+import { CardTypes } from "@/types/@index";
 
 function Card({img, title, onClick}: CardTypes) {
     const { theme } = useTheme();  

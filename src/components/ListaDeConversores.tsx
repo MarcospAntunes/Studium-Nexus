@@ -1,19 +1,8 @@
 "use client"
 
-import styled from "styled-components"
+import UlStyled from "@/styles/ListaDeConversores.style";
 import Card from "./Card";
 import { useRouter } from "next/navigation";
-
-const UlStyled = styled.ul`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin: 15px 0px 15px 0px;
-
-    list-style: none;
-`
 
 function ListaDeConversores() {
     const router = useRouter();

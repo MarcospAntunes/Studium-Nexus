@@ -1,4 +1,4 @@
-import { UnidadesSelecionadasProps } from "@/types";
+import { UnidadesSelecionadasProps } from "@/types/@index";
 import { createContext, useState } from "react";
 
 const UnidadeSelecionadaContext = createContext<any>({});

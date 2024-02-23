@@ -1,21 +1,5 @@
-import { SelectUnidadeProps } from "@/types";
-import styled from "styled-components"
-
-const SelectStyled = styled.select`
-    border: none;
-    border-radius: 15px;
-    width: 120px;
-    padding: 8px;
-    font-family: inherit;
-    background-color: ${({theme}) => theme.body};
-    color: ${({theme}) => theme.text};
-    transition: .3s;
-    cursor: pointer;
-
-    &:focus {
-        outline: none;
-    }
-`
+import SelectStyled from "@/styles/SelectUnidade.style";
+import { SelectUnidadeProps } from "@/types/@index";
 
 function SelectUnidade({arrayDeUnidades, name, id, onChange, theme}: SelectUnidadeProps) {
     return(
