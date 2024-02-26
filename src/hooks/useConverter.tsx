@@ -16,7 +16,6 @@ function useConverter(slug: string) {
     const [resultadoDaConversao, setResultadoDaConversao] = useState<any>(0);
     const [origem, setOrigem] = useState("");
     const [destino, setDestino] = useState("");
-    console.log(resultadoDaConversao)
     const taskID = uuidv4();
 
     useEffect(() => {

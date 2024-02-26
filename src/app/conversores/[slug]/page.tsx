@@ -38,7 +38,6 @@ function Conversor({ params }: { params: { slug: string } }) {
     pegarValor,
   } = useConverter(slug)
 
-  console.log(resultadoDaConversao[1])
   const texto = resultadoDaConversao[1] === -1 ? "Erro ao converter arquivo" : "Clique em converter para inicar a conversão"
 
   const { theme } = useTheme();

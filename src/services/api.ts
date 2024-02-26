@@ -78,7 +78,6 @@ async function importarArquivo({ data, file }: ImportarArquivoProps) {
 async function exportarArquivo({data, apiKey}: ExportarArquivoProps) {
     try {
         const inputTaskIds = data.data.tasks[2].id
-        console.log(inputTaskIds)
         const endpoint = `https://sync.api.cloudconvert.com/v2/tasks/${inputTaskIds}?include=payload`
     
         const request = await fetch(endpoint, {
@@ -89,8 +88,6 @@ async function exportarArquivo({data, apiKey}: ExportarArquivoProps) {
         });
         if(request.ok) {
             const res = await request.json()
-            console.log(res)
-            console.log(res.data.result.files[0].url)
             const url = res.data.result.files[0].url;
             return [url, 100]
         }
