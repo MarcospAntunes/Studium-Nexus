@@ -119,7 +119,7 @@ function Conversor({ params }: { params: { slug: string } }) {
         :
           <>
             <ConversorContainer>
-              <div className="container">
+              <div className="divConversao container">
                 <label htmlFor="valor">Valor</label>
                 <InputConversor
                   type="number"
@@ -132,9 +132,9 @@ function Conversor({ params }: { params: { slug: string } }) {
                   theme={theme === "light" ? lightTheme : darkTheme}
                 />
               </div>
-              <div>
-                <div>
-                  <div className="container">
+              <div className="divConversao">
+                <div className="divConversao">
+                  <div className="divConversao container">
                     <label htmlFor="origem">Origem</label>
                     <SelectUnidade
                       name="origem"
@@ -145,7 +145,7 @@ function Conversor({ params }: { params: { slug: string } }) {
                     />
                   </div>
                   <Arrow src={`../../images/icons/arrow.png`} alt="arrow" theme={theme === "light" ? lightTheme : darkTheme} />
-                  <div className="container">
+                  <div className="divConversao container">
                     <label htmlFor="destino">Destino</label>
                       <SelectUnidade
                         name="destino"
@@ -162,9 +162,9 @@ function Conversor({ params }: { params: { slug: string } }) {
             </ConversorContainer>
 
             <ConversorContainer>
-              <div className="container">
+              <div className="divConversao container">
                 <p>Resultado</p>
-                <div>
+                <div className="divConversao">
                   <Resultado theme={theme === "light" ? lightTheme : darkTheme}>{resultadoDaConversao}</Resultado>
                   <Resultado theme={theme === "light" ? lightTheme : darkTheme}>{unidade ? unidade[1] : ""}</Resultado>
                 </div>
