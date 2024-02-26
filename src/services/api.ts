@@ -45,7 +45,7 @@ async function criaTrabalho({unidade, upload, taskID, apiKey}: CriaTrabalhoProps
             });
             const data = await response.json();
 
-            return [data, 50]
+            return [data, 35]
         
         } catch(error) {
             console.log("Erro ao criar trabalho", error)
@@ -68,7 +68,7 @@ async function importarArquivo({ data, file }: ImportarArquivoProps) {
             method: "POST",
             body: formData
         })
-        return [data, 75]
+        return [data, 90]
     } catch(error) {
         console.log("Erro ao importar arquivo", error)
         return ["", -1]

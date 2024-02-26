@@ -20,7 +20,7 @@ const ConversorContainerStyled = styled.section`
     color: ${({theme}) => theme.text};
     transition: .3s;
 
-    & div {
+    & .divConversao {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -37,7 +37,7 @@ const ConversorContainerStyled = styled.section`
         gap: 5px;
         
 
-        & div {
+        & .divConversao {
             display: flex;
             gap: 30px;
         }
@@ -46,6 +46,10 @@ const ConversorContainerStyled = styled.section`
             width: 64px;
             height: 64px;
             filter: invert(${({theme}) => theme.invert});
+        }
+
+        & .convertido {
+            filter: invert(0);
         }
     }
 `

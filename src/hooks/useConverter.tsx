@@ -26,6 +26,7 @@ function useConverter(slug: string) {
     const pegarValor = async () => {
         if(origem && destino) {
             if(slug === "documento" || slug === "midia") {
+                setResultadoDaConversao(["", 15])
                 try {
                     const apiKey = process.env.SECRET_KEY;
                     const resultadoCriaTrabalho = await criaTrabalho({unidade, upload, taskID, apiKey});

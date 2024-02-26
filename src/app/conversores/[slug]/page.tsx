@@ -52,7 +52,7 @@ function Conversor({ params }: { params: { slug: string } }) {
         {slug === "documento" || slug === "midia" ? 
           <>
             <ConversorContainer>
-              <div className="container">
+              <div className="divConversao container">
                 <label htmlFor="upload">Carregue o arquivo</label>
                 <InputConversor
                   type="file"
@@ -64,9 +64,9 @@ function Conversor({ params }: { params: { slug: string } }) {
                   theme={theme === "light" ? lightTheme : darkTheme}
                 />
               </div>
-              <div>
-                <div>
-                  <div className="container">
+              <div className="divConversao">
+                <div className="divConversao">
+                  <div className="divConversao container">
                     <label htmlFor="original">Formato original</label>
                     <SelectUnidade
                       name="original"
@@ -77,7 +77,7 @@ function Conversor({ params }: { params: { slug: string } }) {
                     />
                   </div>
                   <Arrow src={`../../images/icons/arrow.png`} alt="arrow" theme={theme === "light" ? lightTheme : darkTheme}/>
-                  <div className="container">
+                  <div className="divConversao container">
                     <label htmlFor="destino">Formato destinado</label>
                     <SelectUnidade
                       name="destino"
@@ -94,14 +94,14 @@ function Conversor({ params }: { params: { slug: string } }) {
             </ConversorContainer>
 
             <ConversorContainer>
-              <div className="container">
+              <div className="divConversao container">
                 {resultadoDaConversao[1] > 0 && resultadoDaConversao[1] < 100 ?
                     <LoadingConversao porcentagem={resultadoDaConversao[1]} />
                 :
                   resultadoDaConversao[1] === 100 ?
                   <>
-                    <div>
-                      <img src="../../../images/icons/convertido.png" alt="Convertido" />
+                    <div className="divConversao">
+                      <img src="../../../images/icons/convertido.png" alt="Convertido" className="convertido" />
                     </div>
                     <Button 
                       onClick={() => window.open(resultadoDaConversao[0], "_blank")} 
