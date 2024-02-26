@@ -32,6 +32,17 @@ const CardContainer = styled.li`
             filter: invert(${({theme}) => theme.invertHover}); 
         }       
     }
+
+    @media screen and (min-width: 541px) {
+        width: 205px;
+        height: 215px;
+        font-size: 18px;
+
+        img {
+            width: 64px;
+            height: 64px;
+        }
+    }
     
 `
 

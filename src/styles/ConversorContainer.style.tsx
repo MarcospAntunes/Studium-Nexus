@@ -16,6 +16,7 @@ const ConversorContainerStyled = styled.section`
 
     background-color: ${({theme}) => theme.bgConversor};
     box-shadow: -2px 2px 4px 1px ${({theme}) => theme.shadown};
+    font-size: 14px;
     text-align: center;
     color: ${({theme}) => theme.text};
     transition: .3s;
@@ -51,6 +52,16 @@ const ConversorContainerStyled = styled.section`
         & .convertido {
             filter: invert(0);
         }
+    }
+
+    .botoes {
+        gap: 5px;
+    }
+
+    @media screen and (min-width: 541px) {
+        width: 45vw;
+        height: 350px;
+        font-size: 16px;
     }
 `
 

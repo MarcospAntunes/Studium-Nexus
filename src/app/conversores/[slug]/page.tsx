@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client"
 
 import { 
@@ -20,6 +21,7 @@ import {
 import { 
   AppContainer, 
   ConversorContainer, 
+  FlexContainerAdapter, 
   FlexContainerCenter 
 } from "@/containers/@index";
 
@@ -49,7 +51,7 @@ function Conversor({ params }: { params: { slug: string } }) {
         <h2>Converter {params.slug}</h2>
 
         {slug === "documento" || slug === "midia" ? 
-          <>
+          <FlexContainerAdapter>
             <ConversorContainer>
               <div className="divConversao container">
                 <label htmlFor="upload">Carregue o arquivo</label>
@@ -114,9 +116,9 @@ function Conversor({ params }: { params: { slug: string } }) {
                 } 
               </div>
             </ConversorContainer>
-          </>
+          </FlexContainerAdapter>
         :
-          <>
+          <FlexContainerAdapter>
             <ConversorContainer>
               <div className="divConversao container">
                 <label htmlFor="valor">Valor</label>
@@ -156,8 +158,10 @@ function Conversor({ params }: { params: { slug: string } }) {
                   </div>
                 </div>
               </div>
-              <Button onClick={() => pegarValor()} theme={theme === "light" ? lightTheme : darkTheme}>Converter</Button>
-              <Button theme={theme === "light" ? lightTheme : darkTheme}>Limpar</Button>
+              <div className="divConversao botoes">
+                <Button onClick={() => pegarValor()} theme={theme === "light" ? lightTheme : darkTheme}>Converter</Button>
+                <Button theme={theme === "light" ? lightTheme : darkTheme}>Limpar</Button>
+              </div>
             </ConversorContainer>
 
             <ConversorContainer>
@@ -169,7 +173,7 @@ function Conversor({ params }: { params: { slug: string } }) {
                 </div>
               </div>
             </ConversorContainer>
-          </>
+          </FlexContainerAdapter>
         }
       </FlexContainerCenter>
     </AppContainer>

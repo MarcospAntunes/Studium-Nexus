@@ -9,7 +9,7 @@ const ProgressBar = styled.div<ProgressProps>`
     span {
         display: block;
         position: relative;
-        width: ${({porcentagem}) => porcentagem};
+        width: ${({porcentagem}) => porcentagem}%;
         height: 100%;
         background-color: #6dca6d;
         transition: .3s ease-in-out;

@@ -28,6 +28,19 @@ const PesquisaContainer = styled.div`
             outline: none;
         }
     }
+
+    @media screen and (min-width: 541px) {
+        width: 340px;
+        border-radius: 20px;
+        img {
+            width: 34px;
+            height: 34px;
+        }
+
+        input {
+            font-size: 16px;
+        }
+    }
 `
 
 export default PesquisaContainer;

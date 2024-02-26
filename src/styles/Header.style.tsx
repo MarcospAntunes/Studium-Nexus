@@ -35,6 +35,10 @@ const HeaderStyled = styled.header<HeaderStyledProps>`
             align-items: center;
         }
     }
+
+    @media screen and (min-width: 541px) {
+        justify-content: space-between;
+    }
 `
 
 const LineStyled = styled.hr`
