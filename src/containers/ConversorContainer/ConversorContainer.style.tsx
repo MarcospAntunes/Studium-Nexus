@@ -10,7 +10,7 @@ const ConversorContainerStyled = styled.section`
     gap: 15px;
 
     width: 350px;
-    height: 200px;
+    height: 220px;
     padding: 10px;
     border-radius: 15px;
 

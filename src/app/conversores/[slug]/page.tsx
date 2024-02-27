@@ -54,7 +54,6 @@ function Conversor({ params }: { params: { slug: string } }) {
           <FlexContainerAdapter>
             <ConversorContainer>
               <div className="divConversao container">
-                <label htmlFor="upload">Carregue o arquivo</label>
                 <InputConversor
                   type="file"
                   name="upload"
