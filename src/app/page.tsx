@@ -4,9 +4,9 @@ import {
   CaixaDePesquisa, 
   Header, 
   ListaDeConversores 
-} from "@/components/@index";
+} from "@/components";
 
-import { AppContainer, FlexContainerSpaceBTW } from '@/containers/@index';
+import { AppContainer, FlexContainerSpaceBTW } from '@/containers';
 
 export default function Home() {
   return (

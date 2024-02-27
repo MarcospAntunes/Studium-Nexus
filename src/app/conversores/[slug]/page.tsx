@@ -5,7 +5,7 @@ import {
   useConversorReducer, 
   useConverter, 
   useTheme 
-} from "@/hooks/@index";
+} from "@/hooks";
 
 import { darkTheme, lightTheme } from "@/themes";
 import { 
@@ -16,14 +16,14 @@ import {
   SelectUnidade, 
   LoadingConversao, 
   Resultado 
-} from '@/components/@index';
+} from '@/components';
 
 import { 
   AppContainer, 
   ConversorContainer, 
   FlexContainerAdapter, 
   FlexContainerCenter 
-} from "@/containers/@index";
+} from "@/containers";
 
 function Conversor({ params }: { params: { slug: string } }) {
   const slug = params.slug;

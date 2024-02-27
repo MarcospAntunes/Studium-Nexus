@@ -1,0 +1,18 @@
+/* eslint-disable @next/next/no-img-element */
+
+import { CardContainer } from "@/containers";
+import { useTheme } from "@/hooks";
+import { darkTheme, lightTheme } from "@/themes";
+import CardTypes from "./Card.type";
+
+function Card({img, title, onClick}: CardTypes) {
+    const { theme } = useTheme();  
+    return(
+        <CardContainer onClick={onClick} theme={theme === "light" ? lightTheme : darkTheme}>
+            <img src={img} alt={title} />
+            <p>{title}</p>
+        </CardContainer>
+    )
+}
+
+export default Card;
