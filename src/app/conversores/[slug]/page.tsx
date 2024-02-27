@@ -90,8 +90,10 @@ function Conversor({ params }: { params: { slug: string } }) {
                   </div>
                 </div>
               </div>
-              <Button onClick={() => pegarValor()} theme={theme === "light" ? lightTheme : darkTheme}>Converter</Button>
-              <Button theme={theme === "light" ? lightTheme : darkTheme}>Limpar</Button>
+              <div className="divConversao botoes">
+                <Button onClick={() => pegarValor()} theme={theme === "light" ? lightTheme : darkTheme}>Converter</Button>
+                <Button theme={theme === "light" ? lightTheme : darkTheme}>Limpar</Button>
+              </div>
             </ConversorContainer>
 
             <ConversorContainer>
