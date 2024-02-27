@@ -2,6 +2,7 @@ import GlobalStyles from "@/GlobalStyles";
 import type { Metadata } from "next";
 import { Montserrat_Alternates } from "next/font/google";
 import Providers from "./providers";
+import StyledComponentsRegistry from "@/lib/registry";
 
 const Montz = Montserrat_Alternates({ weight: '300', subsets: ["latin"] });
 
@@ -17,11 +18,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <GlobalStyles />
       <body className={Montz.className}>
-        <Providers>
-          {children}
-        </Providers>
+        <StyledComponentsRegistry>
+          <GlobalStyles />
+          <Providers>
+            {children}
+          </Providers>
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
