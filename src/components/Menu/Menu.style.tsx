@@ -14,6 +14,7 @@ const MenuStyled = styled.nav<MenuStyledProps>`
     top: 0;
     right: ${({ isopen }) => (isopen === "true" ? '0' : '-100vw')};
 
+    -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
     z-index: 2;
     transition: right .3s ease-in-out;
