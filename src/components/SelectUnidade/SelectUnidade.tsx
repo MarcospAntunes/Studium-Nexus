@@ -3,10 +3,10 @@ import SelectUnidadeProps from "./SelectUnidadeType";
 
 function SelectUnidade({arrayDeUnidades, name, id, onChange, theme}: SelectUnidadeProps) {
     return(
-        <SelectStyled name={name} id={id} onChange={onChange} theme={theme}>
+        <SelectStyled name={name} id={id} onChange={onChange} theme={theme} role="listbox">
             <option value="">{name}</option>
             {arrayDeUnidades.map((unidade, index) => (
-                <option key={index} value={unidade}>{unidade}</option>
+                <option key={index} value={unidade} role="option">{unidade}</option>
             ))}
         </SelectStyled>
     )

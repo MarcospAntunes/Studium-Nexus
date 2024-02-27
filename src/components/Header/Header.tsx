@@ -3,8 +3,9 @@
 import { StyleSheetManager } from "styled-components";
 import { useTheme } from "@/hooks";
 import { darkTheme, lightTheme } from "@/themes";
-import { MenuMobile } from "..";
+
 import { HeaderStyled, LineStyled } from "./Header.style";
+import { Menu } from "../index";
 
 function Header({ convertion = false }) {
     const { theme, themeToggler } = useTheme();
@@ -21,8 +22,13 @@ function Header({ convertion = false }) {
                     <div>
                         <h1>FC</h1>
                         <div>
-                            <img src={`../../images/icons/${source}`} alt="change theme" onClick={() => handleThemeToggle(invertTheme)}/>
-                            <MenuMobile />
+                            <img 
+                                src={`../../images/icons/${source}`} 
+                                alt="change theme" 
+                                onClick={() => handleThemeToggle(invertTheme)}
+                                role="button"
+                            />
+                            <Menu />
                         </div>
                     </div>
                     <LineStyled theme={theme === "light" ? lightTheme : darkTheme} />
@@ -36,7 +42,12 @@ function Header({ convertion = false }) {
                 <HeaderStyled convertion={convertion.toString()}>
                     <span></span>
                     <h1>Fast Converter</h1>
-                    <img src={`../../images/icons/${source}`} alt={`${theme} theme`} onClick={() => handleThemeToggle(invertTheme)}/>
+                    <img 
+                        src={`../../images/icons/${source}`} 
+                        alt={`${theme} theme`} 
+                        onClick={() => handleThemeToggle(invertTheme)} 
+                        role="button"
+                    />
                 </HeaderStyled>
             </StyleSheetManager>
             

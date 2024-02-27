@@ -8,7 +8,12 @@ function InputConversor({ type, name, id, placeholder, required, onChange, value
     if(type === "file") {
         return(
             <>
-            <LabelFileInput htmlFor={name} theme={theme} >Carregue o arquivo
+            <LabelFileInput 
+                htmlFor={name} 
+                theme={theme}
+                role="button" 
+                aria-label="Carregue o arquivo"
+            >Carregue o arquivo
             <InputConversorStyled 
                 type={type} 
                 name={name} 
@@ -20,7 +25,7 @@ function InputConversor({ type, name, id, placeholder, required, onChange, value
                 theme={theme} 
             />
             </LabelFileInput>
-            <p>{fileName}</p>
+            <p aria-live="polite">{fileName}</p>
             </>
         )
     }
@@ -33,7 +38,7 @@ function InputConversor({ type, name, id, placeholder, required, onChange, value
             value={value}
             onChange={onChange}
             required={required}
-            theme={theme} 
+            theme={theme}
         />
     )
 }

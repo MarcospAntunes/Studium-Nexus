@@ -9,8 +9,8 @@ function CaixaDePesquisa() {
     const { theme } = useTheme();
 
     return(
-        <PesquisaContainer theme={theme === "light" ? lightTheme : darkTheme}>
-            <img src="../../images/icons/buscar.png" alt="buscar" />
+        <PesquisaContainer theme={theme === "light" ? lightTheme : darkTheme} role="search">
+            <img src="../../images/icons/buscar.png" alt="buscar" role="img"/>
             <input 
                 type="text" 
                 value={busca}
@@ -18,6 +18,7 @@ function CaixaDePesquisa() {
                 name="buscar" 
                 id="buscar"
                 placeholder="Pesquisar"
+                role="searchbox"
             />
         </PesquisaContainer>
     )

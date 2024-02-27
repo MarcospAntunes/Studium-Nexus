@@ -9,7 +9,7 @@ function ListaDeItens() {
     }
 
     return(
-        <UlStyled>
+        <UlStyled role="navigation">
             <Card 
                 img="../../images/icons/tempo.png"
                 title="Tempo"

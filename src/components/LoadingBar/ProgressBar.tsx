@@ -3,8 +3,8 @@ import ProgressProps from "./ProgessBar.type";
 
 function LoadingConversao({porcentagem}: ProgressProps) {
     return(
-        <ProgressBar porcentagem={porcentagem}>
-            <span/>
+        <ProgressBar porcentagem={porcentagem} role="progressbar">
+            <span />
         </ProgressBar>
     )
 }

@@ -90,8 +90,8 @@ function Conversor({ params }: { params: { slug: string } }) {
                 </div>
               </div>
               <div className="divConversao botoes">
-                <Button onClick={() => pegarValor()} theme={theme === "light" ? lightTheme : darkTheme}>Converter</Button>
-                <Button theme={theme === "light" ? lightTheme : darkTheme}>Limpar</Button>
+                <Button onClick={() => pegarValor()} theme={theme === "light" ? lightTheme : darkTheme} type="button">Converter</Button>
+                <Button theme={theme === "light" ? lightTheme : darkTheme} type="button">Limpar</Button>
               </div>
             </ConversorContainer>
 
@@ -108,12 +108,14 @@ function Conversor({ params }: { params: { slug: string } }) {
                     <Button 
                       onClick={() => window.open(resultadoDaConversao[0], "_blank")} 
                       theme={theme === "light" ? lightTheme : darkTheme}
+                      type="button"
+                      aria-live="assertive"
                     >
                       Download
                     </Button>
                   </>
                   :
-                    <p>{texto}</p>
+                    <p aria-live="polite">{texto}</p>
                 } 
               </div>
             </ConversorContainer>
@@ -160,8 +162,8 @@ function Conversor({ params }: { params: { slug: string } }) {
                 </div>
               </div>
               <div className="divConversao botoes">
-                <Button onClick={() => pegarValor()} theme={theme === "light" ? lightTheme : darkTheme}>Converter</Button>
-                <Button theme={theme === "light" ? lightTheme : darkTheme}>Limpar</Button>
+                <Button onClick={() => pegarValor()} theme={theme === "light" ? lightTheme : darkTheme} type="button">Converter</Button>
+                <Button theme={theme === "light" ? lightTheme : darkTheme} type="button">Limpar</Button>
               </div>
             </ConversorContainer>
 
@@ -169,8 +171,8 @@ function Conversor({ params }: { params: { slug: string } }) {
               <div className="divConversao container">
                 <p>Resultado</p>
                 <div className="divConversao">
-                  <Resultado theme={theme === "light" ? lightTheme : darkTheme}>{resultadoDaConversao}</Resultado>
-                  <Resultado theme={theme === "light" ? lightTheme : darkTheme}>{unidade ? unidade[1] : ""}</Resultado>
+                  <Resultado theme={theme === "light" ? lightTheme : darkTheme} aria-live="polite">{resultadoDaConversao}</Resultado>
+                  <Resultado theme={theme === "light" ? lightTheme : darkTheme} aria-live="polite">{unidade ? unidade[1] : ""}</Resultado>
                 </div>
               </div>
             </ConversorContainer>

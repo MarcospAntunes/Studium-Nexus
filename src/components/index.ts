@@ -6,7 +6,7 @@ import Header from "./Header/Header";
 import InputConversor from "./InputConversor/InputConversor";
 import ListaDeConversores from "./ListaDeItens/ListaDeItens";
 import LoadingConversao from "./LoadingBar/ProgressBar";
-import MenuMobile from "./Menu/Menu";
+import Menu from "./Menu/Menu";
 import MenuButton from "./Menu/MenuButton/MenuButton";
 import Resultado from "./Resultado/Resultado";
 import SelectUnidade from "./SelectUnidade/SelectUnidade";
@@ -20,7 +20,7 @@ export {
     InputConversor,
     ListaDeConversores,
     LoadingConversao,
-    MenuMobile,
+    Menu,
     MenuButton,
     Resultado,
     SelectUnidade

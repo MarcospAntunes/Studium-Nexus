@@ -8,8 +8,8 @@ import CardTypes from "./Card.type";
 function Card({img, title, onClick}: CardTypes) {
     const { theme } = useTheme();  
     return(
-        <CardContainer onClick={onClick} theme={theme === "light" ? lightTheme : darkTheme}>
-            <img src={img} alt={title} />
+        <CardContainer onClick={onClick} theme={theme === "light" ? lightTheme : darkTheme} role="button">
+            <img src={img} alt={title} role="img"/>
             <p>{title}</p>
         </CardContainer>
     )
