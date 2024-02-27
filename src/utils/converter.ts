@@ -1,4 +1,4 @@
-import { ConverterProps } from "@/types/@index";
+import { ConverterProps } from "@/services/api/api.type";
 
 function converter({ unidade, valor, state }: ConverterProps): number {
     if(unidade) {
