@@ -14,7 +14,6 @@ const FlexContainerCenter = styled.main`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
 `
 
 const FlexContainerAdapter = styled.div`

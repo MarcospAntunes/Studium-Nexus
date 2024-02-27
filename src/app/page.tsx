@@ -14,7 +14,7 @@ export default function Home() {
       <Header />
       <main>
         <section>
-          <h2 style={{ marginBottom: '20px' }}>O seu Converor rápido e fácil de usar</h2>
+          <h2>O seu Converor rápido e fácil de usar</h2>
           <FlexContainerSpaceBTW>
             <h3>Conversores</h3>
             <CaixaDePesquisa />

@@ -11,6 +11,10 @@ const AppContainerStyled = styled.div`
     color: ${({theme}) => theme.text};
     background-color: ${({theme}) => theme.body};
     transition: .3s;
+
+    h2 {
+        margin-bottom: 20px;
+    }
 `
 
 export default AppContainerStyled;
