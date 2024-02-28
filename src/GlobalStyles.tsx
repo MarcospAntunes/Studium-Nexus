@@ -9,6 +9,11 @@ const GlobalStyles = createGlobalStyle`
         box-sizing: border-box;
     }
 
+    body { 
+        background-color: ${({theme}) => theme.body};
+        transition: .3s;
+    }
+
     p {
         font-size: 14px;
     }
