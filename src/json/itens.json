@@ -38,14 +38,14 @@
     },
     {
         "id": "7",
-        "img": "../../images/icons/Documento.png",
-        "title": "documento",
+        "img": "../../images/icons/documento.png",
+        "title": "Documento",
         "type": "conversor"
     },
     {
         "id": "8",
-        "img": "../../images/icons/Energia.png",
-        "title": "energia",
+        "img": "../../images/icons/energia.png",
+        "title": "Energia",
         "type": "conversor"
     },
     {
