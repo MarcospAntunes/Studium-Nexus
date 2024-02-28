@@ -6,8 +6,8 @@ const CardContainer = styled.li`
     justify-content: center;
     align-items: center;
     gap: 12px;
-    width: 105px;
-    height: 115px;
+    width: 100px;
+    height: 110px;
     border-radius: 15px;
 
     background-color: ${({theme}) => theme.bgCard};
@@ -17,10 +17,16 @@ const CardContainer = styled.li`
     font-size: 14px;
     transition: .3s;
     cursor: pointer;
+
     img {
         width: 32px;
         height: 32px;
         filter: invert(${({theme}) => theme.invert});
+    }
+
+    p {
+        width: 100%;
+        word-wrap: break-word;
     }
 
     &:hover {

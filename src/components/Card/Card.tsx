@@ -9,7 +9,7 @@ function Card({img, title, onClick}: CardTypes) {
     const { theme } = useTheme();  
     return(
         <CardContainer onClick={onClick} theme={theme === "light" ? lightTheme : darkTheme} role="button">
-            <img src={img} alt={title} role="img"/>
+            <img src={img} alt={`${title} icone`} role="img"/>
             <p>{title}</p>
         </CardContainer>
     )
