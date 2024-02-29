@@ -10,6 +10,7 @@ import Menu from "./Menu/Menu";
 import MenuButton from "./Menu/MenuButton/MenuButton";
 import Resultado from "./Resultado/Resultado";
 import SelectUnidade from "./SelectUnidade/SelectUnidade";
+import TitleNicoMoji from "./TitleNicoMoji/TitleNicoMoji";
 
 export {
     Arrow,
@@ -23,5 +24,6 @@ export {
     Menu,
     MenuButton,
     Resultado,
-    SelectUnidade
+    SelectUnidade,
+    TitleNicoMoji
 }

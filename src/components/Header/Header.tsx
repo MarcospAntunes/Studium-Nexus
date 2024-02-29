@@ -3,9 +3,8 @@
 import { StyleSheetManager } from "styled-components";
 import { useTheme } from "@/hooks";
 import { darkTheme, lightTheme } from "@/themes";
-
 import { HeaderStyled, LineStyled } from "./Header.style";
-import { Menu } from "../index";
+import { Menu, TitleNicoMoji } from "../index";
 
 function Header({ convertion = false }) {
     const { theme, themeToggler } = useTheme();
@@ -20,7 +19,7 @@ function Header({ convertion = false }) {
             <StyleSheetManager shouldForwardProp={(prop) => prop !== 'convertion'}>
                 <HeaderStyled convertion={convertion.toString()}>
                     <div>
-                        <h1>FC</h1>
+                        <TitleNicoMoji>FC</TitleNicoMoji>
                         <div>
                             <img 
                                 src={`../../images/icons/${source}`} 
@@ -41,7 +40,7 @@ function Header({ convertion = false }) {
             <StyleSheetManager shouldForwardProp={(prop) => prop !== 'convertion'}>
                 <HeaderStyled convertion={convertion.toString()}>
                     <span></span>
-                    <h1>Fast Converter</h1>
+                    <TitleNicoMoji>Fast Converter</TitleNicoMoji>
                     <img 
                         src={`../../images/icons/${source}`} 
                         alt={`${theme} theme`} 

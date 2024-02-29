@@ -2,18 +2,11 @@ import HeaderStyledProps from "@/components/Header/Header.style.type"
 import styled from "styled-components"
 
 const HeaderStyled = styled.header<HeaderStyledProps>`
-    @font-face {
-        font-family: 'NicoMoji';
-        src: url('../../fonts/NicoMoji-Regular.ttf') format('truetype');
-    }
-
     display: flex;
     flex-direction: ${({ convertion }) => (convertion === "true" ? 'column' : 'row')};
     justify-content: center;
     align-items: center;
     gap: 5px;
-
-    font-family: 'NicoMoji', sans-serif;
     text-align: center;
 
     & img {
