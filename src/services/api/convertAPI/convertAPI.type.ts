@@ -19,6 +19,7 @@ type ConverterProps = {
     unidade: string[]
     valor:  string
     state: any
+    slug: string
 }
 
 

@@ -9,11 +9,11 @@ function useConversorReducer(slug: string) {
     }, [])
   
     const nomesDasUnidades = Object.keys(state);
-    const abreviacaoDasUnidades = Object.values(state);
+    const valoresDasUnidades = Object.values(state);
 
     return {
         nomesDasUnidades,
-        abreviacaoDasUnidades,
+        valoresDasUnidades,
         state
     }
 }

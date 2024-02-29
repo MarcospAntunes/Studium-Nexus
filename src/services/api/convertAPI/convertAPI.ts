@@ -1,11 +1,10 @@
-import { CriaTrabalhoProps, ExportarArquivoProps, ImportarArquivoProps } from "./api.type";
+import { CriaTrabalhoProps, ExportarArquivoProps, ImportarArquivoProps } from "./convertAPI.type";
 
 async function criaTrabalho({unidade, upload, taskID, apiKey}: CriaTrabalhoProps) {
     const formatoOriginal = unidade[0];
     const formatoDestinado = unidade[1];
     if (formatoOriginal && formatoDestinado && upload) {
         try {
-            const apiKey = process.env.SECRET_KEY;
             const endpoint = 'https://api.cloudconvert.com/v2/jobs';
             const requestBody = {
                 "tasks": {

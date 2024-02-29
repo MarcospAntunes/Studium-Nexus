@@ -79,6 +79,20 @@ function conversoresReducer( state: any, action: ConversoresActionProps) {
                 "ppt": "ppt",
                 "pptx": "pptx",
                 "txt": "txt",
+            }
+        case "moeda":
+            return {
+                "USD": "Dólar Americano",
+                "AUD": "Dólar Australiano",
+                "EUR": "Euro",
+                "GBP": "Libra Esterlina",
+                "JPY": "Lene",
+                "CHF": "Franco Suíço",
+                "CAD": "Dólar Canadense",
+                "CNY": "Renminbi",
+                "ARS": "Peso Argentino",
+                "TRY": "Lira Turca",
+                "BRL": "Real"
             }   
         default:
             return state

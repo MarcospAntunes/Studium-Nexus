@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import converter from "@/utils/converter";
-import { criaTrabalho, exportarArquivo, importarArquivo } from "@/services/api/api";
+import { criaTrabalho, exportarArquivo, importarArquivo } from "@/services";
 import dotenv from 'dotenv';
 import { v4 as uuidv4 } from 'uuid';
 import { useUnidadesSelecionadasContext, useConversorReducer } from "@/hooks";
@@ -27,7 +27,7 @@ function useConverter(slug: string) {
             if(slug === "documento" || slug === "midia") {
                 setResultadoDaConversao(["", 15])
                 try {
-                    const apiKey = process.env.SECRET_KEY;
+                    const apiKey = process.env.CONVERT_KEY;
                     const resultadoCriaTrabalho = await criaTrabalho({unidade, upload, taskID, apiKey});
                     setResultadoDaConversao(resultadoCriaTrabalho);
 
@@ -46,7 +46,7 @@ function useConverter(slug: string) {
                     console.error('Erro durante a conversão:', error);
                 }
             } else {
-                const resultado = converter({ unidade, valor, state })
+                const resultado = await converter({ unidade, valor, state, slug })
                 setResultadoDaConversao(resultado);
             }
         } else {
@@ -62,8 +62,9 @@ function useConverter(slug: string) {
         
         setDestino("");
         setOrigem("");
-        setResultadoDaConversao("");
-        setUpload("")
+        setResultadoDaConversao(0);
+        setUpload("");
+        setValor("");
     }
 
     return {
