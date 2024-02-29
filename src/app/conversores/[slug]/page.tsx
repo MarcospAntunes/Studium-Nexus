@@ -33,17 +33,20 @@ function Conversor({ params }: { params: { slug: string } }) {
     setDestino, 
     setOrigem, 
     setUpload, 
-    setValor, 
+    setValor,
+    setResultadoDaConversao, 
     valor, 
     upload,
     resultadoDaConversao, 
     unidade, 
     pegarValor,
+    limpar
   } = useConverter(slug)
 
   const texto = resultadoDaConversao[1] === -1 ? "Erro ao converter arquivo" : "Clique em converter para inicar a conversão"
 
   const { theme } = useTheme();
+  const fileName = upload ? upload![1] : "";
 
   return (
     <>
@@ -61,7 +64,7 @@ function Conversor({ params }: { params: { slug: string } }) {
                     type="file"
                     name="upload"
                     id="upload"
-                    value={upload ? upload![1] : ""}
+                    value={fileName}
                     required={true}
                     onChange={(e) => setUpload([e.target.files![0], e.target.value])}
                     theme={theme === "light" ? lightTheme : darkTheme}
@@ -74,6 +77,7 @@ function Conversor({ params }: { params: { slug: string } }) {
                       <SelectUnidade
                         name="original"
                         id="original"
+                        defaultValue = {fileName.replace(/[A-Za-z].*[.]/, "")}
                         arrayDeUnidades={nomesDasUnidades}
                         onChange={e => setOrigem(e.target.value)}
                         theme={theme === "light" ? lightTheme : darkTheme}
@@ -85,6 +89,7 @@ function Conversor({ params }: { params: { slug: string } }) {
                       <SelectUnidade
                         name="destino"
                         id="destino"
+                        defaultValue={null}
                         arrayDeUnidades={nomesDasUnidades}
                         onChange={e => setDestino(e.target.value)}
                         theme={theme === "light" ? lightTheme : darkTheme}
@@ -94,7 +99,7 @@ function Conversor({ params }: { params: { slug: string } }) {
                 </div>
                 <div className="divConversao botoes">
                   <Button onClick={() => pegarValor()} theme={theme === "light" ? lightTheme : darkTheme} type="button">Converter</Button>
-                  <Button theme={theme === "light" ? lightTheme : darkTheme} type="button">Limpar</Button>
+                  <Button theme={theme === "light" ? lightTheme : darkTheme} type="button" onClick={() => limpar()}>Limpar</Button>
                 </div>
               </ConversorContainer>
 
@@ -146,6 +151,7 @@ function Conversor({ params }: { params: { slug: string } }) {
                       <SelectUnidade
                         name="origem"
                         id="origem"
+                        defaultValue={null}
                         arrayDeUnidades={nomesDasUnidades}
                         onChange={e => setOrigem(e.target.value)}
                         theme={theme === "light" ? lightTheme : darkTheme}
@@ -157,6 +163,7 @@ function Conversor({ params }: { params: { slug: string } }) {
                         <SelectUnidade
                           name="destino"
                           id="destino"
+                          defaultValue={null}
                           arrayDeUnidades={nomesDasUnidades}
                           onChange={e => setDestino(e.target.value)}
                           theme={theme === "light" ? lightTheme : darkTheme}
@@ -166,7 +173,7 @@ function Conversor({ params }: { params: { slug: string } }) {
                 </div>
                 <div className="divConversao botoes">
                   <Button onClick={() => pegarValor()} theme={theme === "light" ? lightTheme : darkTheme} type="button">Converter</Button>
-                  <Button theme={theme === "light" ? lightTheme : darkTheme} type="button">Limpar</Button>
+                  <Button theme={theme === "light" ? lightTheme : darkTheme} type="button" onClick={() => limpar()}>Limpar</Button>
                 </div>
               </ConversorContainer>
 

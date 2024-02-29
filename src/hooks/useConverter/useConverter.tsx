@@ -11,7 +11,7 @@ dotenv.config();
 function useConverter(slug: string) {
     const { state } = useConversorReducer(slug);
     const [valor, setValor] = useState<string>("");
-    const [upload, setUpload] = useState<[File, string]>();
+    const [upload, setUpload] = useState<any>();
     const { unidade, setUnidade } = useUnidadesSelecionadasContext();
     const [resultadoDaConversao, setResultadoDaConversao] = useState<any>(0);
     const [origem, setOrigem] = useState("");
@@ -54,16 +54,30 @@ function useConverter(slug: string) {
         }
     }
 
+    const limpar = () => {
+        const selecionados = document.querySelectorAll("select");
+        selecionados.forEach((selecionado) => {
+            selecionado.value = "";
+        })
+        
+        setDestino("");
+        setOrigem("");
+        setResultadoDaConversao("");
+        setUpload("")
+    }
+
     return {
         setOrigem,
         setValor,
         setDestino,
         setUpload,
+        setResultadoDaConversao,
         valor,
         unidade,
         resultadoDaConversao, 
         upload,
-        pegarValor
+        pegarValor,
+        limpar
     }
 }
 
