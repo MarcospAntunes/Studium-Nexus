@@ -28,6 +28,7 @@ function GeneralConvertScreen({ params }: { params: { slug: string } }) {
                 <InputConversor
                 type="number"
                 name="valor"
+                accept={undefined}
                 id="valor"
                 value={valor}
                 required={true}

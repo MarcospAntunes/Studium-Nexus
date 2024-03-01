@@ -2,7 +2,7 @@ import InputConversorStyled from "./InputConversor.style";
 import InputConversorProps from "./InputConversor.type";
 import LabelFileInput from "./LabelFileInput/LabelFileInput";
 
-function InputConversor({ type, name, id, placeholder, required, onChange, value, theme }: InputConversorProps) {
+function InputConversor({ type, name, id, placeholder, required, onChange, value, theme, accept }: InputConversorProps) {
     const regex = /^.*\\/
     const fileName = value.replace(regex, "")
     if(type === "file") {
@@ -15,7 +15,8 @@ function InputConversor({ type, name, id, placeholder, required, onChange, value
                 aria-label="Carregue o arquivo"
             >Carregue o arquivo
             <InputConversorStyled 
-                type={type} 
+                type={type}
+                accept={accept} 
                 name={name} 
                 id={id} 
                 placeholder={placeholder} 

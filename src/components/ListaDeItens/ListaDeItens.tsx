@@ -9,7 +9,7 @@ function ListaDeItens() {
     const { filtredItens } = useSearch();
     
     const handleClick = (title: string) => {
-        router.push(`/conversores/${title.toLowerCase()}`)
+        router.push(`/conversores/${title.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "")}`)
     }
 
     return(

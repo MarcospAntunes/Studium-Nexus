@@ -17,6 +17,9 @@ function DocMidiaConvertScreen({ params }: { params: { slug: string } }) {
     } = useConverter(params.slug)
     const { theme } = useTheme();
     const fileName = upload ? upload![1] : "";
+    const accept = nomesDasUnidades?.map((unidade) => (
+        `.${unidade}`
+    )).join(', ');
 
     const texto = resultadoDaConversao[1] === -1 ? "Erro ao converter arquivo" : "Clique em converter para inicar a conversão"
 
@@ -26,6 +29,7 @@ function DocMidiaConvertScreen({ params }: { params: { slug: string } }) {
             <div className="divConversao container">
                 <InputConversor
                 type="file"
+                accept={accept}
                 name="upload"
                 id="upload"
                 value={fileName}

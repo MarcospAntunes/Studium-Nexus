@@ -3,6 +3,7 @@ import { DefaultTheme } from "styled-components"
 
 type InputConversorProps = {
     type: string
+    accept: string | undefined
     name: string
     id: string
     placeholder?: string

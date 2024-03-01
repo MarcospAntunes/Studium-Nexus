@@ -93,7 +93,26 @@ function conversoresReducer( state: any, action: ConversoresActionProps) {
                 "ARS": "Peso Argentino",
                 "TRY": "Lira Turca",
                 "BRL": "Real"
-            }   
+            }
+        case "midia":
+            return {
+                "3gp": "3gp",
+                "mp4": "mp4",
+                "mkv": "mkv",
+                "mpeg": "mpeg",
+                "ogg": "ogg",
+                "webm": "webm",
+                "wmv": "wmv",
+                "mp3": "mp3",
+                "wav": "wav",
+                "m4a": "m4a",
+                "gif": "gif",
+                "jpeg": "jpeg",
+                "jpg": "jpg",
+                "png": "png",
+                "raw": "raw",
+                "webp": "webp"
+            }
         default:
             return state
     }
