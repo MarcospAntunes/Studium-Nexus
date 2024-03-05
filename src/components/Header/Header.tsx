@@ -19,7 +19,7 @@ function Header({ convertion = false }): JSX.Element {
             <StyleSheetManager shouldForwardProp={(prop) => prop !== 'convertion'}>
                 <HeaderStyled convertion={convertion.toString()}>
                     <div>
-                        <TitleNicoMoji>FC</TitleNicoMoji>
+                        <TitleNicoMoji>SN</TitleNicoMoji>
                         <div>
                             <img 
                                 src={`../../images/icons/${source}`} 
@@ -40,7 +40,7 @@ function Header({ convertion = false }): JSX.Element {
             <StyleSheetManager shouldForwardProp={(prop) => prop !== 'convertion'}>
                 <HeaderStyled convertion={convertion.toString()}>
                     <span></span>
-                    <TitleNicoMoji>Fast Converter</TitleNicoMoji>
+                    <TitleNicoMoji>Studium Nexus</TitleNicoMoji>
                     <img 
                         src={`../../images/icons/${source}`} 
                         alt={`${theme} theme`} 
