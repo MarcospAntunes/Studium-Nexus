@@ -14,7 +14,6 @@ import { darkTheme, lightTheme } from "@/themes";
 export default function Home() {
   const { theme } = useTheme();
 
-  console.log(theme);
   return (
     <>
       <GlobalStyles theme={theme === "light" ? lightTheme : darkTheme} />
