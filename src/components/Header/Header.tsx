@@ -6,7 +6,7 @@ import { darkTheme, lightTheme } from "@/themes";
 import { HeaderStyled, LineStyled } from "./Header.style";
 import { Menu, TitleNicoMoji } from "../index";
 
-function Header({ convertion = false }) {
+function Header({ convertion = false }): JSX.Element {
     const { theme, themeToggler } = useTheme();
     const handleThemeToggle = (target: string) => {
         themeToggler(target)

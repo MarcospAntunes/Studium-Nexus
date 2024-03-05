@@ -3,7 +3,7 @@ import { ConversorContainer, FlexContainerAdapter } from "@/containers";
 import { useConversorReducer, useConverter, useTheme } from "@/hooks";
 import { darkTheme, lightTheme } from "@/themes";
 
-function GeneralConvertScreen({ params }: { params: { slug: string } }) {
+function GeneralConvertScreen({ params }: { params: { slug: string } }): JSX.Element {
     const slug = params.slug
     const { nomesDasUnidades, valoresDasUnidades } = useConversorReducer(slug);
     const itens = slug === "moeda" ? valoresDasUnidades : nomesDasUnidades

@@ -1,13 +1,15 @@
-import { ReactNode, createContext, useState } from "react";
+import { createContext, useState } from "react";
+import ThemeContextProps from "./ThemeContext.type";
+import Children from "@/types/children.type";
 
-const ThemeContext = createContext<any>({});
+const ThemeContext = createContext<ThemeContextProps | any>("light");
 ThemeContext.displayName = "Theme";
 
-function ThemeProvider({children}: any) {
+function ThemeProvider({children}: Children) {
     const themeToggler = (target?: string) => {
         target === "light" ? setTheme("light") : setTheme("dark");
     }
-    const [theme, setTheme] = useState("light");
+    const [theme, setTheme] = useState<string>("light");
 
     return(
         <ThemeContext.Provider value={{themeToggler, theme, setTheme}}>

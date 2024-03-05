@@ -1,6 +1,6 @@
 import { CriaTrabalhoProps, ExportarArquivoProps, ImportarArquivoProps } from "./convertAPI.type";
 
-async function criaTrabalho({unidade, upload, taskID, apiKey}: CriaTrabalhoProps) {
+async function criaTrabalho({unidade, upload, taskID, apiKey}: CriaTrabalhoProps): Promise<any[] | undefined> {
     const formatoOriginal = unidade[0];
     const formatoDestinado = unidade[1];
     if (formatoOriginal && formatoDestinado && upload) {

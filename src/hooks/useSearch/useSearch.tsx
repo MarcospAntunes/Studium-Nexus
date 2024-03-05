@@ -1,8 +1,9 @@
-import { SearchContext } from "@/contexts/@index";
+import { SearchContext } from "@/contexts";
+import SearchContextProps from "@/contexts/SearchContext/SearchContext.type";
 import { useContext, useState } from "react";
 
 function useSearch() {
-    const { search, setSearch, filtredItens } = useContext(SearchContext);
+    const { search, setSearch, filtredItens }: SearchContextProps = useContext(SearchContext);
 
     return {
         search,

@@ -1,6 +1,6 @@
 import converterMoedaProps from "./exchangerateAPI.type";
 
-async function converterMoeda({ numero, moedaOrigem, moedaDestino }: converterMoedaProps) {
+async function converterMoeda({ numero, moedaOrigem, moedaDestino }: converterMoedaProps): Promise<string> {
     try {
         const apiKey = process.env.EXCHANGERATE_KEY
         const apiUrl = `https://v6.exchangerate-api.com/v6/${apiKey}/pair/${moedaOrigem}/${moedaDestino}`;

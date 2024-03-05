@@ -2,9 +2,8 @@ import { Card } from "..";
 import { useRouter } from "next/navigation";
 import UlStyled from "./ListaDeItens.style";
 import { useSearch } from "@/hooks";
-import { useMemo } from "react";
 
-function ListaDeItens() {
+function ListaDeItens(): JSX.Element {
     const router = useRouter();
     const { filtredItens } = useSearch();
     

@@ -2,9 +2,9 @@ import InputConversorStyled from "./InputConversor.style";
 import InputConversorProps from "./InputConversor.type";
 import LabelFileInput from "./LabelFileInput/LabelFileInput";
 
-function InputConversor({ type, name, id, placeholder, required, onChange, value, theme, accept }: InputConversorProps) {
+function InputConversor({ type, name, id, placeholder, required, onChange, value, theme, accept }: InputConversorProps): JSX.Element {
     const regex = /^.*\\/
-    const fileName = value.replace(regex, "")
+    const fileName = value?.replace(regex, "")
     if(type === "file") {
         return(
             <>
@@ -20,7 +20,7 @@ function InputConversor({ type, name, id, placeholder, required, onChange, value
                 name={name} 
                 id={id} 
                 placeholder={placeholder} 
-                value={value}
+                value={value ? value : ""}
                 onChange={onChange}
                 required={required}
                 theme={theme} 

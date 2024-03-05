@@ -8,8 +8,8 @@ function useConversorReducer(slug: string) {
       dispatch({type: slug})
     }, [])
   
-    const nomesDasUnidades = Object.keys(state);
-    const valoresDasUnidades = Object.values(state);
+    const nomesDasUnidades: string[] = Object.keys(state);
+    const valoresDasUnidades: string[] = Object.values(state);
 
     return {
         nomesDasUnidades,

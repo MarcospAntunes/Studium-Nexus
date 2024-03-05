@@ -5,7 +5,7 @@ import { useTheme } from "@/hooks";
 import { darkTheme, lightTheme } from "@/themes";
 import CardTypes from "./Card.type";
 
-function Card({img, title, onClick}: CardTypes) {
+function Card({img, title, onClick}: CardTypes): JSX.Element {
     const { theme } = useTheme();  
     return(
         <CardContainer onClick={onClick} theme={theme === "light" ? lightTheme : darkTheme} role="button">

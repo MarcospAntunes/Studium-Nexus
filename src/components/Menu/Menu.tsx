@@ -10,9 +10,9 @@ import MenuButton from "./MenuButton/MenuButton";
 
 const Montz = Montserrat_Alternates({ weight: '300', subsets: ["latin"] });
 
-function Menu() {
-    const pathname = usePathname();
-    const [isOpen, setIsOpen] = useState(false);
+function Menu(): JSX.Element {
+    const pathname: string = usePathname();
+    const [isOpen, setIsOpen] = useState<boolean>(false);
     const { theme } = useTheme();
 
     return(

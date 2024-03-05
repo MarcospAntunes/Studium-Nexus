@@ -1,8 +1,9 @@
 import { useContext } from "react";
-import { ThemeContext } from "@/contexts/@index";
+import { ThemeContext } from "@/contexts";
+import ThemeContextProps from "@/contexts/ThemeContext/ThemeContext.type";
 
 function useTheme() {
-    const { theme, setTheme, themeToggler }: any = useContext(ThemeContext);
+    const { theme, setTheme, themeToggler }: ThemeContextProps = useContext(ThemeContext);
 
     return {
         theme,

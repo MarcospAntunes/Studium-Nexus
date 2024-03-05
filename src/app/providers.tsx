@@ -1,6 +1,6 @@
 "use client"
 
-import { ThemeProvider, SearchProvider } from "@/contexts/@index";
+import { ThemeProvider, SearchProvider } from "@/contexts";
 
 function Providers({ children }: any) {
     return(

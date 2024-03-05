@@ -1,8 +1,9 @@
 import { useTheme } from "@/hooks";
 import { darkTheme, lightTheme } from "@/themes";
 import ConversorContainerStyled from "./ConversorContainer.style";
+import Children from "@/types/children.type";
 
-function ConversorContainer({children}: any) {
+function ConversorContainer({children}: Children): JSX.Element {
     const { theme } = useTheme();
 
     return(

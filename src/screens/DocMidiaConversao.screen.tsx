@@ -4,7 +4,7 @@ import { ConversorContainer, FlexContainerAdapter } from "@/containers";
 import { useConversorReducer, useConverter, useTheme } from "@/hooks";
 import { darkTheme, lightTheme } from "@/themes";
 
-function DocMidiaConvertScreen({ params }: { params: { slug: string } }) {
+function DocMidiaConvertScreen({ params }: { params: { slug: string } }): JSX.Element {
     const { nomesDasUnidades } = useConversorReducer(params.slug);
     const { 
         setDestino, 
@@ -45,7 +45,7 @@ function DocMidiaConvertScreen({ params }: { params: { slug: string } }) {
                     <SelectUnidade
                     name="original"
                     id="original"
-                    defaultValue = {fileName.replace(/[A-Za-z].*[.]/, "")}
+                    defaultValue = {fileName?.replace(/[A-Za-z].*[.]/, "")}
                     arrayDeUnidades={nomesDasUnidades}
                     onChange={e => setOrigem(e.target.value)}
                     setOrigem={setOrigem}

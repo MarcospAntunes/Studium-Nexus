@@ -11,12 +11,12 @@ dotenv.config();
 function useConverter(slug: string) {
     const { state } = useConversorReducer(slug);
     const [valor, setValor] = useState<string>("");
-    const [upload, setUpload] = useState<any>();
+    const [upload, setUpload] = useState<[File, string] | any>([]);
     const { unidade, setUnidade } = useUnidadesSelecionadasContext();
     const [resultadoDaConversao, setResultadoDaConversao] = useState<any>(0);
-    const [origem, setOrigem] = useState("");
-    const [destino, setDestino] = useState("");
-    const taskID = uuidv4();
+    const [origem, setOrigem] = useState<string>("");
+    const [destino, setDestino] = useState<string>("");
+    const taskID: string = uuidv4();
 
     useEffect(() => {
         setUnidade([origem, destino]);
@@ -63,7 +63,7 @@ function useConverter(slug: string) {
         setDestino("");
         setOrigem("");
         setResultadoDaConversao(0);
-        setUpload("");
+        setUpload([]);
         setValor("");
     }
 

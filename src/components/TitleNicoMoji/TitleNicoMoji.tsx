@@ -1,5 +1,6 @@
 import localFont from 'next/font/local';
 import Title from './TitleNicoMoji.style';
+import Children from '@/types/children.type';
 
 const NicoMoji = localFont({
     src: [
@@ -11,7 +12,7 @@ const NicoMoji = localFont({
     variable: '--font-NicoMoji'
   })
 
-function TitleNicoMoji({ children }: any) {
+function TitleNicoMoji({ children }: Children): JSX.Element {
     return (
         <Title className={NicoMoji.className}>
             {children}

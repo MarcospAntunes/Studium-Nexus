@@ -3,7 +3,7 @@ import { PesquisaContainer } from "@/containers";
 import { useSearch, useTheme } from "@/hooks";
 import { darkTheme, lightTheme } from "@/themes";
 
-function CaixaDePesquisa() {
+function CaixaDePesquisa(): JSX.Element {
     const { search, setSearch } = useSearch();
     const { theme } = useTheme();
 
