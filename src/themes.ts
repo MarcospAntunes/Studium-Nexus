@@ -8,7 +8,7 @@ const darkTheme = {
     bgInput: '#2D2D2D',
     bgSearch: "#282828",
     bgButton: '#2D2D2D',
-    bgConversor: "#292929",
+    bgConverter: "#292929",
     invert: 1,
     invertHover: 0
 }
@@ -23,7 +23,7 @@ const lightTheme = {
     bgInput: '#FFFFFF',
     bgSearch: "#EFEFEF",
     bgButton: '#D9D9D9',
-    bgConversor: "#EFEFEF",
+    bgConverter: "#EFEFEF",
     invert: 0,
     invertHover: 1
 }

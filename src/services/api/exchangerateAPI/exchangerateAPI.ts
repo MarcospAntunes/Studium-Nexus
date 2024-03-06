@@ -1,19 +1,19 @@
-import converterMoedaProps from "./exchangerateAPI.type";
+import ConvertCoinProps from "./exchangerateAPI.type";
 
-async function converterMoeda({ numero, moedaOrigem, moedaDestino }: converterMoedaProps): Promise<string> {
+async function convertCoin({ number, originCoin, destinyCoin }: ConvertCoinProps): Promise<string> {
     try {
         const apiKey = process.env.EXCHANGERATE_KEY
-        const apiUrl = `https://v6.exchangerate-api.com/v6/${apiKey}/pair/${moedaOrigem}/${moedaDestino}`;
+        const apiUrl = `https://v6.exchangerate-api.com/v6/${apiKey}/pair/${originCoin}/${destinyCoin}`;
 
         const req = await fetch(apiUrl);
         const res = await req.json();
 
         if(req.ok && res.result === "success") {
             const cambio = res.conversion_rate;
-            const valorConvertido = numero * cambio;
-            const resultado = `${valorConvertido.toLocaleString(moedaDestino,{
+            const valorConvertido = number * cambio;
+            const resultado = `${valorConvertido.toLocaleString(destinyCoin,{
                 style: 'currency',
-                currency: moedaDestino
+                currency: destinyCoin
             })}`;
 
             return resultado
@@ -28,4 +28,4 @@ async function converterMoeda({ numero, moedaOrigem, moedaDestino }: converterMo
     return "Algo errado :("
 }
 
-export default converterMoeda;
+export default convertCoin;

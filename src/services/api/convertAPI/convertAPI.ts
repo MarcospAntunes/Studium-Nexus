@@ -1,9 +1,9 @@
-import { CriaTrabalhoProps, ExportarArquivoProps, ImportarArquivoProps } from "./convertAPI.type";
+import { CreateJobProps, ExportArchiveProps, ImportArchiveProps } from "./convertAPI.type";
 
-async function criaTrabalho({unidade, upload, taskID, apiKey}: CriaTrabalhoProps): Promise<any[] | undefined> {
-    const formatoOriginal = unidade[0];
-    const formatoDestinado = unidade[1];
-    if (formatoOriginal && formatoDestinado && upload) {
+async function createJob({unit, upload, taskID, apiKey}: CreateJobProps): Promise<any[] | undefined> {
+    const originalFormat = unit[0];
+    const destinyFormat = unit[1];
+    if (originalFormat && destinyFormat && upload) {
         try {
             const endpoint = 'https://api.cloudconvert.com/v2/jobs';
             const requestBody = {
@@ -13,8 +13,8 @@ async function criaTrabalho({unidade, upload, taskID, apiKey}: CriaTrabalhoProps
                     },
                     [`task-${taskID}`]: {
                         "operation": "convert",
-                        "input_format": formatoOriginal,
-                        "output_format": formatoDestinado,
+                        "input_format": originalFormat,
+                        "output_format": destinyFormat,
                         "input": [
                             `import-${taskID}`
                         ],
@@ -53,7 +53,7 @@ async function criaTrabalho({unidade, upload, taskID, apiKey}: CriaTrabalhoProps
     }
 }
 
-async function importarArquivo({ data, file }: ImportarArquivoProps) {
+async function importArchive({ data, file }: ImportArchiveProps) {
     try {
         const importTask = data.data.tasks[0].result.form
         const importInfo = importTask;
@@ -74,7 +74,7 @@ async function importarArquivo({ data, file }: ImportarArquivoProps) {
     } 
 }
 
-async function exportarArquivo({data, apiKey}: ExportarArquivoProps) {
+async function exportArchive({data, apiKey}: ExportArchiveProps) {
     try {
         const inputTaskIds = data.data.tasks[2].id
         const endpoint = `https://sync.api.cloudconvert.com/v2/tasks/${inputTaskIds}?include=payload`
@@ -96,4 +96,4 @@ async function exportarArquivo({data, apiKey}: ExportarArquivoProps) {
     }
 }
 
-export { criaTrabalho, importarArquivo, exportarArquivo }
+export { createJob, importArchive, exportArchive }

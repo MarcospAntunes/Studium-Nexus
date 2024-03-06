@@ -1,13 +1,13 @@
-import useConversorReducer from "./useConversorReducer/useConversorReducer";
+import useConverterReducer from "./useConverterReducer/useConverterReducer";
 import useConverter from "./useConverter/useConverter";
 import useTheme from "./useTheme/useTheme";
-import useUnidadesSelecionadasContext from "./useUnidadesSelecionadasContext/useUnidadesSelecionadasContext";
+import useUnitsSelectedContext from "./useUnitsSelectedContext/useUnitsSelectedContext";
 import useSearch from "./useSearch/useSearch";
 
 export {
-    useConversorReducer,
+    useConverterReducer,
     useConverter,
     useTheme,
-    useUnidadesSelecionadasContext,
+    useUnitsSelectedContext,
     useSearch
 }

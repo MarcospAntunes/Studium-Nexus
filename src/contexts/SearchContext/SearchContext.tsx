@@ -11,9 +11,9 @@ function SearchProvider({ children }: Children) {
 
     const filtredItens = useMemo(() => {
         const lowerSearch = search.toLowerCase()
-        const filtraLista = itens.filter((item) => item.title.toLowerCase().includes(lowerSearch))
+        const filterList = itens.filter((item) => item.title.toLowerCase().includes(lowerSearch))
 
-        return filtraLista
+        return filterList
     }, [search])
 
     return (

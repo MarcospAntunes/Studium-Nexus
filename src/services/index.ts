@@ -1,9 +1,9 @@
-import { criaTrabalho, importarArquivo, exportarArquivo } from './api/convertAPI/convertAPI'
-import converterMoeda from './api/exchangerateAPI/exchangerateAPI'
+import { createJob, importArchive, exportArchive } from './api/convertAPI/convertAPI'
+import convertCoin from './api/exchangerateAPI/exchangerateAPI'
 
 export { 
-    criaTrabalho, 
-    importarArquivo, 
-    exportarArquivo,
-    converterMoeda
+    createJob, 
+    importArchive, 
+    exportArchive,
+    convertCoin
 }

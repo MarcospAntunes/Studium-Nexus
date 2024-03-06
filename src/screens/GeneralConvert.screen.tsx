@@ -1,38 +1,38 @@
-import { Arrow, Button, InputConversor, Resultado, SelectUnidade } from "@/components";
-import { ConversorContainer, FlexContainerAdapter } from "@/containers";
-import { useConversorReducer, useConverter, useTheme } from "@/hooks";
+import { Arrow, Button, InputConverter, Result, SelectUnit } from "@/components";
+import { ConverterContainer, FlexContainerAdapter } from "@/containers";
+import { useConverterReducer, useConverter, useTheme } from "@/hooks";
 import { darkTheme, lightTheme } from "@/themes";
 
 function GeneralConvertScreen({ params }: { params: { slug: string } }): JSX.Element {
     const slug = params.slug
-    const { nomesDasUnidades, valoresDasUnidades } = useConversorReducer(slug);
-    const itens = slug === "moeda" ? valoresDasUnidades : nomesDasUnidades
+    const { namesOfUnits, valuesOfUnits } = useConverterReducer(slug);
+    const itens = slug === "moeda" ? valuesOfUnits : namesOfUnits
     
     const { 
-        setDestino, 
-        setOrigem, 
-        setValor,
-        valor, 
-        resultadoDaConversao, 
-        unidade, 
-        pegarValor,
-        limpar
+        setDestiny, 
+        setOrigin, 
+        setValue,
+        value, 
+        resultOfConversion, 
+        unit, 
+        handleValue,
+        clear
     } = useConverter(params.slug)
     const { theme } = useTheme();
 
     return (
         <FlexContainerAdapter>
-            <ConversorContainer>
+            <ConverterContainer>
             <div className="divConversao container">
                 <label htmlFor="valor">Valor</label>
-                <InputConversor
+                <InputConverter
                 type="number"
                 name="valor"
                 accept={undefined}
                 id="valor"
-                value={valor}
+                value={value}
                 required={true}
-                onChange={(e) => setValor(e.target.value)}
+                onChange={(e) => setValue(e.target.value)}
                 placeholder="Digite o valor a ser convertido"
                 theme={theme === "light" ? lightTheme : darkTheme}
                 />
@@ -41,44 +41,44 @@ function GeneralConvertScreen({ params }: { params: { slug: string } }): JSX.Ele
                 <div className="divConversao">
                 <div className="divConversao container">
                     <label htmlFor="origem">Origem</label>
-                    <SelectUnidade
+                    <SelectUnit
                     name="origem"
                     id="origem"
                     defaultValue={null}
-                    arrayDeUnidades={itens}
-                    onChange={e => setOrigem(e.target.value)}
+                    arrayOfUnits={itens}
+                    onChange={e => setOrigin(e.target.value)}
                     theme={theme === "light" ? lightTheme : darkTheme}
                     />
                 </div>
                 <Arrow src={`../../images/icons/arrow.png`} alt="arrow" theme={theme === "light" ? lightTheme : darkTheme} />
                 <div className="divConversao container">
                     <label htmlFor="destino">Destino</label>
-                    <SelectUnidade
+                    <SelectUnit
                         name="destino"
                         id="destino"
                         defaultValue={null}
-                        arrayDeUnidades={itens}
-                        onChange={e => setDestino(e.target.value)}
+                        arrayOfUnits={itens}
+                        onChange={e => setDestiny(e.target.value)}
                         theme={theme === "light" ? lightTheme : darkTheme}
                     />
                 </div>
                 </div>
             </div>
             <div className="divConversao botoes">
-                <Button onClick={() => pegarValor()} theme={theme === "light" ? lightTheme : darkTheme} type="button">Converter</Button>
-                <Button theme={theme === "light" ? lightTheme : darkTheme} type="button" onClick={() => limpar()}>Limpar</Button>
+                <Button onClick={() => handleValue()} theme={theme === "light" ? lightTheme : darkTheme} type="button">Converter</Button>
+                <Button theme={theme === "light" ? lightTheme : darkTheme} type="button" onClick={() => clear()}>limpar</Button>
             </div>
-            </ConversorContainer>
+            </ConverterContainer>
 
-            <ConversorContainer>
+            <ConverterContainer>
             <div className="divConversao container">
                 <p>Resultado</p>
                 <div className="divConversao">
-                <Resultado theme={theme === "light" ? lightTheme : darkTheme} aria-live="polite">{resultadoDaConversao}</Resultado>
-                <Resultado theme={theme === "light" ? lightTheme : darkTheme} aria-live="polite">{unidade ? unidade[1] : ""}</Resultado>
+                <Result theme={theme === "light" ? lightTheme : darkTheme} aria-live="polite">{resultOfConversion}</Result>
+                <Result theme={theme === "light" ? lightTheme : darkTheme} aria-live="polite">{unit ? unit[1] : ""}</Result>
                 </div>
             </div>
-            </ConversorContainer>
+            </ConverterContainer>
         </FlexContainerAdapter>
     )
 }

@@ -2,9 +2,9 @@
 
 import GlobalStyles from "@/GlobalStyles";
 import { 
-  CaixaDePesquisa, 
+  SearchBox, 
   Header, 
-  ListaDeConversores 
+  ListConverter 
 } from "@/components";
 
 import { AppContainer, FlexContainerSpaceBTW } from '@/containers';
@@ -24,9 +24,9 @@ export default function Home() {
             <h2>O seu Converor rápido e fácil de usar</h2>
             <FlexContainerSpaceBTW>
               <h3>Conversores</h3>
-              <CaixaDePesquisa />
+              <SearchBox />
             </FlexContainerSpaceBTW>
-            <ListaDeConversores />
+            <ListConverter />
           </section>
         </main>
       </AppContainer>

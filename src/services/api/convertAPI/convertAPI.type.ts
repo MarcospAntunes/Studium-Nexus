@@ -1,26 +1,26 @@
-type CriaTrabalhoProps = {
-    unidade: string[]
+type CreateJobProps = {
+    unit: string[]
     upload: [File, string] | undefined
     taskID: string,
     apiKey: string | undefined
 }
 
-type ImportarArquivoProps = {
+type ImportArchiveProps = {
     data: any 
     file: File
 }
 
-type ExportarArquivoProps = {
+type ExportArchiveProps = {
     data: any
     apiKey: string | undefined
 }
 
-type ConverterProps = {
-    unidade: string[]
-    valor:  string
+type ConvertProps = {
+    unit: string[]
+    value:  string
     state: any
     slug: string
 }
 
 
-export type {CriaTrabalhoProps, ImportarArquivoProps, ExportarArquivoProps, ConverterProps};
+export type {CreateJobProps, ImportArchiveProps, ExportArchiveProps, ConvertProps};

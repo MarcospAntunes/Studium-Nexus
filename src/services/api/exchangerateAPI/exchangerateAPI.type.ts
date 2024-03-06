@@ -1,7 +1,7 @@
-type converterMoedaProps = {
-    numero: number 
-    moedaOrigem: string
-    moedaDestino: string
+type ConvertCoinProps = {
+    number: number 
+    originCoin: string
+    destinyCoin: string
 }
 
-export default converterMoedaProps;
+export default ConvertCoinProps;

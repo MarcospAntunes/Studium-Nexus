@@ -1,15 +1,15 @@
 import AppContainer from "./AppContainer/AppContainer";
 import CardContainer from "./CardContainer/CardContainer";
-import ConversorContainer from "./ConversorContainer/ConversorContainer";
+import ConverterContainer from "./ConverterContainer/ConverterContainer";
 import { FlexContainerCenter, FlexContainerSpaceBTW, FlexContainerAdapter } from "./FlexContainer/FlexContainer";
-import PesquisaContainer from "./PesquisaContainer/PesquisaContainer";
+import SearchContainer from "./SearchContainer/SearchContainer";
 
 export {
     AppContainer,
     CardContainer,
-    ConversorContainer,
+    ConverterContainer,
     FlexContainerCenter,
     FlexContainerSpaceBTW,
-    PesquisaContainer,
+    SearchContainer,
     FlexContainerAdapter
 }

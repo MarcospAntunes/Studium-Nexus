@@ -1,12 +1,12 @@
 import { ThemeContext, ThemeProvider } from "./ThemeContext/ThemeContext";
-import { UnidadeSelecionadaContext, UnidadeSelecionadaProvider } from "./UnidadeSelecionadasContext/UnidadesSelecionadasContext";
+import { UnitSelectedContext, UnitSelectedProvider } from "./UnitSelectedContext/UnitSelectedContext";
 import { SearchContext, SearchProvider } from "./SearchContext/SearchContext";
 
 export {
     ThemeContext,
     ThemeProvider,
-    UnidadeSelecionadaContext,
-    UnidadeSelecionadaProvider,
+    UnitSelectedContext,
+    UnitSelectedProvider,
     SearchContext, 
     SearchProvider
 }

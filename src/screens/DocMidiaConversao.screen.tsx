@@ -1,33 +1,33 @@
 /* eslint-disable @next/next/no-img-element */
-import { Arrow, Button, InputConversor, LoadingConversao, SelectUnidade } from "@/components";
-import { ConversorContainer, FlexContainerAdapter } from "@/containers";
-import { useConversorReducer, useConverter, useTheme } from "@/hooks";
+import { Arrow, Button, InputConverter, LoadingConversao, SelectUnit } from "@/components";
+import { ConverterContainer, FlexContainerAdapter } from "@/containers";
+import { useConverterReducer, useConverter, useTheme } from "@/hooks";
 import { darkTheme, lightTheme } from "@/themes";
 
 function DocMidiaConvertScreen({ params }: { params: { slug: string } }): JSX.Element {
-    const { nomesDasUnidades } = useConversorReducer(params.slug);
+    const { namesOfUnits } = useConverterReducer(params.slug);
     const { 
-        setDestino, 
-        setOrigem, 
+        setDestiny, 
+        setOrigin, 
         setUpload,
         upload,
-        resultadoDaConversao, 
-        pegarValor,
-        limpar
+        resultOfConversion, 
+        handleValue,
+        clear
     } = useConverter(params.slug)
     const { theme } = useTheme();
     const fileName = upload ? upload![1] : "";
-    const accept = nomesDasUnidades?.map((unidade) => (
-        `.${unidade}`
+    const accept = namesOfUnits?.map((unit) => (
+        `.${unit}`
     )).join(', ');
 
-    const texto = resultadoDaConversao[1] === -1 ? "Erro ao converter arquivo" : "Clique em converter para inicar a conversão"
+    const texto = resultOfConversion[1] === -1 ? "Erro ao converter arquivo" : "Clique em converter para inicar a conversão"
 
     return (
         <FlexContainerAdapter>
-            <ConversorContainer>
+            <ConverterContainer>
             <div className="divConversao container">
-                <InputConversor
+                <InputConverter
                 type="file"
                 accept={accept}
                 name="upload"
@@ -42,48 +42,48 @@ function DocMidiaConvertScreen({ params }: { params: { slug: string } }): JSX.El
                 <div className="divConversao">
                 <div className="divConversao container">
                     <label htmlFor="original">Formato original</label>
-                    <SelectUnidade
+                    <SelectUnit
                     name="original"
                     id="original"
                     defaultValue = {fileName?.replace(/[A-Za-z].*[.]/, "")}
-                    arrayDeUnidades={nomesDasUnidades}
-                    onChange={e => setOrigem(e.target.value)}
-                    setOrigem={setOrigem}
+                    arrayOfUnits={namesOfUnits}
+                    onChange={e => setOrigin(e.target.value)}
+                    setOrigin={setOrigin}
                     theme={theme === "light" ? lightTheme : darkTheme}
                     />
                 </div>
                 <Arrow src={`../../images/icons/arrow.png`} alt="arrow" theme={theme === "light" ? lightTheme : darkTheme}/>
                 <div className="divConversao container">
                     <label htmlFor="destino">Formato destinado</label>
-                    <SelectUnidade
+                    <SelectUnit
                     name="destino"
                     id="destino"
                     defaultValue={null}
-                    arrayDeUnidades={nomesDasUnidades}
-                    onChange={e => setDestino(e.target.value)}
+                    arrayOfUnits={namesOfUnits}
+                    onChange={e => setDestiny(e.target.value)}
                     theme={theme === "light" ? lightTheme : darkTheme}
                     />
                 </div>
                 </div>
             </div>
             <div className="divConversao botoes">
-                <Button onClick={() => pegarValor()} theme={theme === "light" ? lightTheme : darkTheme} type="button">Converter</Button>
-                <Button theme={theme === "light" ? lightTheme : darkTheme} type="button" onClick={() => limpar()}>Limpar</Button>
+                <Button onClick={() => handleValue()} theme={theme === "light" ? lightTheme : darkTheme} type="button">Converter</Button>
+                <Button theme={theme === "light" ? lightTheme : darkTheme} type="button" onClick={() => clear()}>limpar</Button>
             </div>
-            </ConversorContainer>
+            </ConverterContainer>
 
-            <ConversorContainer>
+            <ConverterContainer>
             <div className="divConversao container">
-                {resultadoDaConversao[1] > 0 && resultadoDaConversao[1] < 100 ?
-                    <LoadingConversao porcentagem={resultadoDaConversao[1]} />
+                {resultOfConversion[1] > 0 && resultOfConversion[1] < 100 ?
+                    <LoadingConversao percentage={resultOfConversion[1]} />
                 :
-                resultadoDaConversao[1] === 100 ?
+                resultOfConversion[1] === 100 ?
                 <>
                     <div className="divConversao">
                     <img src="../../../images/icons/convertido.png" alt="Convertido" className="convertido" />
                     </div>
                     <Button 
-                    onClick={() => window.open(resultadoDaConversao[0], "_blank")} 
+                    onClick={() => window.open(resultOfConversion[0], "_blank")} 
                     theme={theme === "light" ? lightTheme : darkTheme}
                     type="button"
                     aria-live="assertive"
@@ -95,7 +95,7 @@ function DocMidiaConvertScreen({ params }: { params: { slug: string } }): JSX.El
                     <p aria-live="polite">{texto}</p>
                 } 
             </div>
-            </ConversorContainer>
+            </ConverterContainer>
         </FlexContainerAdapter>
     )
 }

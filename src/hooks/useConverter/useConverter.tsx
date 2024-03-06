@@ -1,84 +1,84 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
-import converter from "@/utils/converter";
-import { criaTrabalho, exportarArquivo, importarArquivo } from "@/services";
+import convert from "@/utils/convert";
+import { createJob, exportArchive, importArchive } from "@/services";
 import dotenv from 'dotenv';
 import { v4 as uuidv4 } from 'uuid';
-import { useUnidadesSelecionadasContext, useConversorReducer } from "@/hooks";
+import { useUnitsSelectedContext, useConverterReducer } from "@/hooks";
 
 dotenv.config();
 
 function useConverter(slug: string) {
-    const { state } = useConversorReducer(slug);
-    const [valor, setValor] = useState<string>("");
+    const { state } = useConverterReducer(slug);
+    const [value, setValue] = useState<string>("");
     const [upload, setUpload] = useState<[File, string] | any>([]);
-    const { unidade, setUnidade } = useUnidadesSelecionadasContext();
-    const [resultadoDaConversao, setResultadoDaConversao] = useState<any>(0);
-    const [origem, setOrigem] = useState<string>("");
-    const [destino, setDestino] = useState<string>("");
+    const { unit, setUnit } = useUnitsSelectedContext();
+    const [resultOfConversion, setResultOfConversion] = useState<any>(0);
+    const [origin, setOrigin] = useState<string>("");
+    const [destiny, setDestiny] = useState<string>("");
     const taskID: string = uuidv4();
 
     useEffect(() => {
-        setUnidade([origem, destino]);
-    }, [destino, origem])
+        setUnit([origin, destiny]);
+    }, [destiny, origin])
 
-    const pegarValor = async () => {
-        if(origem && destino) {
+    const handleValue = async () => {
+        if(origin && destiny) {
             if(slug === "documento" || slug === "midia") {
-                setResultadoDaConversao(["", 15])
+                setResultOfConversion(["", 15])
                 try {
                     const apiKey = process.env.CONVERT_KEY;
-                    const resultadoCriaTrabalho = await criaTrabalho({unidade, upload, taskID, apiKey});
-                    setResultadoDaConversao(resultadoCriaTrabalho);
+                    const resultOfConversion = await createJob({unit, upload, taskID, apiKey});
+                    setResultOfConversion(resultOfConversion);
 
-                    if (resultadoCriaTrabalho && resultadoCriaTrabalho[1] !== -1) {
-                        const data = resultadoCriaTrabalho[0];
+                    if (resultOfConversion && resultOfConversion[1] !== -1) {
+                        const data = resultOfConversion[0];
                         const file = upload![0];
-                        const resultadoImportarArquivo = await importarArquivo({data, file});
-                        setResultadoDaConversao(resultadoImportarArquivo);
+                        const resultImportArchive = await importArchive({data, file});
+                        setResultOfConversion(resultImportArchive);
 
-                        if (resultadoImportarArquivo && resultadoImportarArquivo[1] !== -1) {
-                            const resultadoExportarArquivo = await exportarArquivo({data, apiKey});
-                            setResultadoDaConversao(resultadoExportarArquivo);
+                        if (resultImportArchive && resultImportArchive[1] !== -1) {
+                            const resultExportArchive = await exportArchive({data, apiKey});
+                            setResultOfConversion(resultExportArchive);
                         }
                     }
                 } catch (error) {
                     console.error('Erro durante a conversão:', error);
                 }
             } else {
-                const resultado = await converter({ unidade, valor, state, slug })
-                setResultadoDaConversao(resultado);
+                const resultado = await convert({ unit, value, state, slug })
+                setResultOfConversion(resultado);
             }
         } else {
             alert("Uma ou mais unidades não foram escolhidas");
         }
     }
 
-    const limpar = () => {
-        const selecionados = document.querySelectorAll("select");
-        selecionados.forEach((selecionado) => {
-            selecionado.value = "";
+    const clear = () => {
+        const selecteds = document.querySelectorAll("select");
+        selecteds.forEach((selected) => {
+            selected.value = "";
         })
         
-        setDestino("");
-        setOrigem("");
-        setResultadoDaConversao(0);
+        setDestiny("");
+        setOrigin("");
+        setResultOfConversion(0);
         setUpload([]);
-        setValor("");
+        setValue("");
     }
 
     return {
-        setOrigem,
-        setValor,
-        setDestino,
+        setOrigin,
+        setValue,
+        setDestiny,
         setUpload,
-        setResultadoDaConversao,
-        valor,
-        unidade,
-        resultadoDaConversao, 
+        setResultOfConversion,
+        value,
+        unit,
+        resultOfConversion, 
         upload,
-        pegarValor,
-        limpar
+        handleValue,
+        clear
     }
 }
 

@@ -1,5 +1,5 @@
-import conversoresReducer from './conversorReducer/conversoresReducer';
+import ConverterReducer from './converterReducer/ConverterReducer';
 
 export {
-    conversoresReducer,
+    ConverterReducer,
 }
