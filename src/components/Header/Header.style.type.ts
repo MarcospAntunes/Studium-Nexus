@@ -1,5 +1,5 @@
 type HeaderStyledProps = {
-    convertion: string
+    menu: string
 }
 
 export default HeaderStyledProps;

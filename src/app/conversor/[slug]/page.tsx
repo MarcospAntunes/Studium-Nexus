@@ -17,7 +17,7 @@ function Converter({ params }: { params: { slug: string } }) {
     <>
       <GlobalStyles theme={theme === "light" ? lightTheme : darkTheme} />
       <AppContainer>
-        <Header convertion={true}/>
+        <Header menu={true}/>
         <FlexContainerCenter>
           <h2>Converter {slug}</h2>
 

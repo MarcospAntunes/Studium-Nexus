@@ -6,7 +6,7 @@ import { darkTheme, lightTheme } from "@/themes";
 import { HeaderStyled, LineStyled } from "./Header.style";
 import { Menu, TitleNicoMoji } from "../index";
 
-function Header({ convertion = false }): JSX.Element {
+function Header({ menu = false }): JSX.Element {
     const { theme, themeToggler } = useTheme();
     const handleThemeToggle = (target: string) => {
         themeToggler(target)
@@ -14,10 +14,10 @@ function Header({ convertion = false }): JSX.Element {
     const invertTheme = theme === "dark" ? "light" : "dark"
     const source = theme === "light" ? "sol.png" : "lua.png"
 
-    if(convertion) {
+    if(menu) {
         return(
-            <StyleSheetManager shouldForwardProp={(prop) => prop !== 'convertion'}>
-                <HeaderStyled convertion={convertion.toString()}>
+            <StyleSheetManager shouldForwardProp={(prop) => prop !== 'menu'}>
+                <HeaderStyled menu={menu.toString()}>
                     <div>
                         <TitleNicoMoji>SN</TitleNicoMoji>
                         <div>
@@ -37,8 +37,8 @@ function Header({ convertion = false }): JSX.Element {
             
     } else {
         return(
-            <StyleSheetManager shouldForwardProp={(prop) => prop !== 'convertion'}>
-                <HeaderStyled convertion={convertion.toString()}>
+            <StyleSheetManager shouldForwardProp={(prop) => prop !== 'menu'}>
+                <HeaderStyled menu={menu.toString()}>
                     <span></span>
                     <TitleNicoMoji>Studium Nexus</TitleNicoMoji>
                     <img 

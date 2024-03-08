@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 const HeaderStyled = styled.header<HeaderStyledProps>`
     display: flex;
-    flex-direction: ${({ convertion }) => (convertion === "true" ? 'column' : 'row')};
+    flex-direction: ${({ menu }) => (menu === "true" ? 'column' : 'row')};
     justify-content: center;
     align-items: center;
     gap: 5px;
