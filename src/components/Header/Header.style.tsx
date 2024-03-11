@@ -7,6 +7,7 @@ const HeaderStyled = styled.header<HeaderStyledProps>`
     justify-content: center;
     align-items: center;
     gap: 5px;
+    width: 100%;
     text-align: center;
 
     & img {

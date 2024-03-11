@@ -1,4 +1,4 @@
-import { Arrow, Button, InputConverter, Result, SelectUnit } from "@/components";
+import { Arrow, Button, InputConverter, ResultConverter, SelectUnit } from "@/components";
 import { ConverterContainer, FlexContainerAdapter } from "@/containers";
 import { useConverterReducer, useConverter, useTheme } from "@/hooks";
 import { darkTheme, lightTheme } from "@/themes";
@@ -74,8 +74,8 @@ function GeneralConvertScreen({ params }: { params: { slug: string } }): JSX.Ele
             <div className="divConversao container">
                 <p>Resultado</p>
                 <div className="divConversao">
-                <Result theme={theme === "light" ? lightTheme : darkTheme} aria-live="polite">{resultOfConversion}</Result>
-                <Result theme={theme === "light" ? lightTheme : darkTheme} aria-live="polite">{unit ? unit[1] : ""}</Result>
+                <ResultConverter theme={theme === "light" ? lightTheme : darkTheme} aria-live="polite">{resultOfConversion}</ResultConverter>
+                <ResultConverter theme={theme === "light" ? lightTheme : darkTheme} aria-live="polite">{unit ? unit[1] : ""}</ResultConverter>
                 </div>
             </div>
             </ConverterContainer>

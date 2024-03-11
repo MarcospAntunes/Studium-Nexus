@@ -3,6 +3,8 @@ import styled from "styled-components"
 const AppContainerStyled = styled.div`
     display: flex;
     flex-direction: column;
+    
+    align-items: center;
     gap: 30px;
     padding: 5px;
     text-align: center;

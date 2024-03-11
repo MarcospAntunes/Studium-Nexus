@@ -8,9 +8,13 @@ import ListConverter from "./ListConverter/ListConverter";
 import LoadingConversao from "./LoadingBar/ProgressBar";
 import Menu from "./Menu/Menu";
 import MenuButton from "./Menu/MenuButton/MenuButton";
-import Result from "./Result/Result";
+import ResultFormula from "./ResultFormula/ResultFormula";
+import ResultConverter from "./ResultConverter/ResultConverter";
 import SelectUnit from "./SelectUnit/SelectUnit";
 import TitleNicoMoji from "./TitleNicoMoji/TitleNicoMoji";
+import FormulaInput from "./FormulaInput/FormulaInput";
+import FormulaFormat from "./FormulaFormat/FormulaFormat";
+import FormulaImage from "./FormulaImage/FormulaImage";
 
 export {
     Arrow,
@@ -23,7 +27,11 @@ export {
     LoadingConversao,
     Menu,
     MenuButton,
-    Result,
+    ResultConverter,
+    ResultFormula,
     SelectUnit,
-    TitleNicoMoji
+    TitleNicoMoji,
+    FormulaInput,
+    FormulaFormat,
+    FormulaImage
 }

@@ -1,15 +1,12 @@
 import styled from "styled-components";
 
-const Result = styled.p`
+const ResultContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 30px;
+    gap: 5px;
     font-size: 14px;
     text-align: center;
-    word-break: break-all;
-    padding: 20px;
     border-radius: 15px;
     background-color: ${({theme}) => theme.body};
     transition: .3s;
@@ -20,4 +17,4 @@ const Result = styled.p`
     }
 `
 
-export default Result;
+export default ResultContainer;
