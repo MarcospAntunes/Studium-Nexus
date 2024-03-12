@@ -53,5 +53,11 @@
         "img": "../../images/icons/midia.png",
         "title": "Mídia",
         "type": "conversor"
+    },
+    {
+        "id": "10",
+        "img": "../../images/FormulaImages/bhaskara/images/equation9.1.png",
+        "title": "Bhaskara",
+        "type": "formula"
     }
 ]

@@ -4,7 +4,8 @@ import GlobalStyles from "@/GlobalStyles";
 import { 
   SearchBox, 
   Header, 
-  ListConverter 
+  ListConverter, 
+  BackToTop
 } from "@/components";
 
 import { AppContainer, FlexContainerSpaceBTW } from '@/containers';
@@ -29,6 +30,7 @@ export default function Home() {
             <ListConverter />
           </section>
         </main>
+        <BackToTop />
       </AppContainer>
     </>
   );

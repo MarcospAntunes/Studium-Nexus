@@ -3,7 +3,7 @@
 
 import { useTheme } from "@/hooks";
 import { darkTheme, lightTheme } from "@/themes";
-import { Header } from '@/components';
+import { BackToTop, Header } from '@/components';
 import { AppContainer, FlexContainerCenter } from "@/containers";
 import GlobalStyles from "@/GlobalStyles";
 import DocMidiaConvertScreen from "@/screens/DocMidiaConversao.screen";
@@ -27,6 +27,7 @@ function Converter({ params }: { params: { slug: string } }) {
             <GeneralConvertScreen params={params} />  
           }
         </FlexContainerCenter>
+        <BackToTop />
       </AppContainer>
     </>
   );

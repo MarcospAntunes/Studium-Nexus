@@ -7,9 +7,13 @@ const BhaskaraSection = styled.section`
     align-items: center;
     gap: 15px;
     width: 100%;
+    text-align: justify;
+    text-indent: 10px;
 
     & h2 {
         font-size: 20px;
+        text-align: center;
+        text-indent: 0;
         width: 300px;
         margin: 0;
     }
@@ -18,14 +22,19 @@ const BhaskaraSection = styled.section`
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
         gap: 20px;
         max-width: 700px;
         text-align: left;
         list-style-position: inside;
 
         & li {
+            width: 100%;
+            text-indent: 0;
             font-size: 14px;
+        }
+
+        & ul {
+            padding-left: 20px;
         }
     }
 
@@ -51,7 +60,20 @@ const BhaskaraSection = styled.section`
         display: flex;
         justify-content: center;
         align-items: center;
-        text-align: center; 
+        text-align: center;
+        
+        & .container {
+            display: flex;
+        }
+
+        & .fraction {
+            display: flex;
+            flex-direction: column;
+
+            & .divider {
+                border-top: 1px solid ${({theme}) => theme.text};
+            }
+        }
     }
 
     & .botoes {

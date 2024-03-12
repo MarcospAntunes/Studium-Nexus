@@ -4,7 +4,7 @@ import { useCalculate, useTheme } from "@/hooks";
 import { darkTheme, lightTheme } from "@/themes";
 import { useParams } from "next/navigation";
 import BhaskaraSection from "./Bhaskara.style";
-import { HowHasCreated } from "./texts";
+import { HowHasCreated, HowToGetTheResult, RenderBhaskaraFormula } from "./components/texts";
 
 function Bhaskara() {
     const { slug } = useParams();
@@ -15,33 +15,20 @@ function Bhaskara() {
         addNewValue,
         clear 
     } = useCalculate()
-    const { theme } = useTheme();
+    const { theme } = useTheme();    
 
-    const verifyFormulaValues = (value: number | undefined, name: string, power?: number) => {
-        if(value){
-            const valueString = value.toString();
-
-            if(name.includes("^")) return (<>{value}<sup>{power}</sup></>);
-            
-            if(name === 'b' && !valueString.includes('-')) return `-${value}`;
-
-            return value;
-        };
-        if(name === 'b') return `-${name}`;
-        if(name.includes("^")) return (<>{name[0]}<sup>{power}</sup></>);
-        return name;
-    }
+    const [a, b, c] = values[0] !== undefined ? [values[0], values[1], values[2]] : ['a', 'b', 'c']
 
     return (
         <>
             <BhaskaraSection>
                 <div className="formula">
-                        <h2>Insira os coeficientes da equação</h2>
+                    <h2>Insira os coeficientes da equação</h2>
                     <InputContainer>
                         <FormulaInput
                             type="number"
                             placeholder="a"
-                            value={values[0] ? values[0] : ""}
+                            value={typeof a === 'number' ? a : ""}
                             onChange={e => addNewValue(0, Number(e.target.value))}
                             required = {true}
                             aria_label="Coeficiente a da equação quadrática"
@@ -49,7 +36,7 @@ function Bhaskara() {
                         <FormulaInput
                             type="number"
                             placeholder="b"
-                            value={values[1] ? values[1] : ""}
+                            value={typeof b  === 'number' ? b : ""}
                             onChange={e => addNewValue(1, Number(e.target.value))}
                             required = {true}
                             aria_label="Coeficiente b da equação quadrática"
@@ -57,7 +44,7 @@ function Bhaskara() {
                         <FormulaInput
                             type="number"
                             placeholder="c"
-                            value={values[2] ? values[2] : ""}
+                            value={typeof c  === 'number' ? c : ""}
                             onChange={e => addNewValue(2, Number(e.target.value))}
                             required = {true}
                             aria_label="Coeficiente c da equação quadrática"
@@ -65,10 +52,10 @@ function Bhaskara() {
                     </InputContainer>
                     <FormulaFormat aria-label="Formúla de Bhaskara" aria-live="polite" theme={theme === 'light' ? lightTheme : darkTheme}>
                         <span>
-                            x = {verifyFormulaValues(values[1], "b")} ± √{verifyFormulaValues(values[1], "b^2", 2)} - 4.{verifyFormulaValues(values[0], "a")}.{verifyFormulaValues(values[2], "c")}
+                            x = {RenderBhaskaraFormula(values[1], "b")} ± √{RenderBhaskaraFormula(values[1], "b^2", 2)} - 4.{RenderBhaskaraFormula(values[0], "a")}.{RenderBhaskaraFormula(values[2], "c")}
                         </span>
                         <span className="divider">
-                            2.{verifyFormulaValues(values[0], "a")}
+                            2.{RenderBhaskaraFormula(values[0], "a")}
                         </span>
                     </FormulaFormat>
                 </div>
@@ -84,7 +71,17 @@ function Bhaskara() {
                             }
                         </ResultFormula>
                     </ResultContainer>
-                : <ResultFormula aria-live="assertive">{result}</ResultFormula>}
+                :   <ResultFormula aria-live="assertive">
+                        {
+                            isNaN(result) 
+                                ? result 
+                                : <>x = {
+                                    result 
+                                        ? result 
+                                        : "?"}
+                                </>
+                        }
+                    </ResultFormula>}
                 <div className="botoes">
                     <Button
                         onClick={() => calculate(slug)}
@@ -105,7 +102,10 @@ function Bhaskara() {
                 </div>
             </BhaskaraSection>
             <BhaskaraSection>
-                <HowHasCreated />
+                <br />
+                <HowHasCreated/>
+                <br />
+                <HowToGetTheResult a={a} b={b} c={c}/>
             </BhaskaraSection>
         </>
     );

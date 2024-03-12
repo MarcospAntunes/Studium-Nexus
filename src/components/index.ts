@@ -15,6 +15,8 @@ import TitleNicoMoji from "./TitleNicoMoji/TitleNicoMoji";
 import FormulaInput from "./FormulaInput/FormulaInput";
 import FormulaFormat from "./FormulaFormat/FormulaFormat";
 import FormulaImage from "./FormulaImage/FormulaImage";
+import Navigation from "./Navigation/Navigation";
+import BackToTop from "./BackToTop/BackToTop";
 
 export {
     Arrow,
@@ -33,5 +35,7 @@ export {
     TitleNicoMoji,
     FormulaInput,
     FormulaFormat,
-    FormulaImage
+    FormulaImage,
+    Navigation,
+    BackToTop
 }
