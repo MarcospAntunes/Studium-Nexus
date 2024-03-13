@@ -1,6 +1,6 @@
-import HowHasCreated from "./HowHasCreated/HowHasCreated";
-import HowToGetTheResult from "./HowToGetTheResult/HowToGetTheResult";
-import RenderBhaskaraFormula from "../RenderBhaskaraFormula/RenderBhaskaraFormula";
+import HowHasCreated from "./HowHasCreated";
+import HowToGetTheResult from "./HowToGetTheResult";
+import RenderBhaskaraFormula from "../RenderBhaskaraFormula";
 
 export {
     HowHasCreated,

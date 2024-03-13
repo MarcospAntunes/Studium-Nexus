@@ -1,4 +1,4 @@
-import bhaskara from "@/utils/formulas/bhaskara";
+import { bhaskara } from "@/utils";
 import { useState } from "react";
 
 function useCalculate() {

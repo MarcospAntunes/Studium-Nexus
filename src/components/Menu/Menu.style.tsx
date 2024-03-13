@@ -13,6 +13,7 @@ const MenuStyled = styled.nav<MenuStyledProps>`
     height: 100vh;
     top: 0;
     right: ${({ isopen }) => (isopen === "true" ? '0' : '-100vw')};
+    font-family: inherit;
 
     -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
@@ -26,7 +27,7 @@ const MenuStyled = styled.nav<MenuStyledProps>`
     }
 
     .active {
-        text-decoration: underline;
+        text-decoration: underline !important;
     }
 `
 export default MenuStyled;

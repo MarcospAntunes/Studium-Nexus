@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
-import convert from "@/utils/convert";
+import { convertUnitsAndCoins } from "@/utils/";
 import { createJob, exportArchive, importArchive } from "@/services";
 import dotenv from 'dotenv';
 import { v4 as uuidv4 } from 'uuid';
@@ -46,7 +46,7 @@ function useConverter(slug: string) {
                     console.error('Erro durante a conversão:', error);
                 }
             } else {
-                const resultado = await convert({ unit, value, state, slug })
+                const resultado = await convertUnitsAndCoins({ unit, value, state, slug })
                 setResultOfConversion(resultado);
             }
         } else {

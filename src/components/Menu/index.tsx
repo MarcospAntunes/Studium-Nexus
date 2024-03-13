@@ -6,7 +6,7 @@ import { Montserrat_Alternates } from "next/font/google";
 import { useTheme } from "@/hooks";
 import { darkTheme, lightTheme } from "@/themes";
 import MenuStyled from "./Menu.style";
-import MenuButton from "./MenuButton/MenuButton";
+import MenuButton from "./MenuButton";
 
 const Montz = Montserrat_Alternates({ weight: '300', subsets: ["latin"] });
 

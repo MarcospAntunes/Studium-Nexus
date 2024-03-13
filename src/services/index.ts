@@ -1,5 +1,5 @@
-import { createJob, importArchive, exportArchive } from './api/convertAPI/convertAPI'
-import convertCoin from './api/exchangerateAPI/exchangerateAPI'
+import { createJob, importArchive, exportArchive } from './api/convertAPI'
+import convertCoin from './api/exchangerateAPI'
 
 export { 
     createJob, 

@@ -1,11 +1,11 @@
-import AppContainer from "./AppContainer/AppContainer";
-import CardContainer from "./CardContainer/CardContainer";
-import ConverterContainer from "./ConverterContainer/ConverterContainer";
-import { FlexContainerCenter, FlexContainerSpaceBTW, FlexContainerAdapter } from "./FlexContainer/FlexContainer";
-import SearchContainer from "./SearchContainer/SearchContainer";
-import InputContainer from "./InputContainer/InputContainer";
-import ResultContainer from "./ResultContainer/ResultContainer";
-import FormulaContainer from "./FormulaContainer/FormulaContainer";
+import AppContainer from "./AppContainer";
+import CardContainer from "./CardContainer";
+import ConverterContainer from "./ConverterContainer";
+import { FlexContainerCenter, FlexContainerSpaceBTW, FlexContainerAdapter } from "./FlexContainer";
+import SearchContainer from "./SearchContainer";
+import InputContainer from "./InputContainer";
+import ResultContainer from "./ResultContainer";
+import FormulaContainer from "./FormulaContainer";
 
 export {
     AppContainer,

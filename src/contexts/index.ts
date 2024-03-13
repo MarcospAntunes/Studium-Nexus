@@ -1,6 +1,6 @@
-import { ThemeContext, ThemeProvider } from "./ThemeContext/ThemeContext";
-import { UnitSelectedContext, UnitSelectedProvider } from "./UnitSelectedContext/UnitSelectedContext";
-import { SearchContext, SearchProvider } from "./SearchContext/SearchContext";
+import { ThemeContext, ThemeProvider } from "./ThemeContext";
+import { UnitSelectedContext, UnitSelectedProvider } from "./UnitSelectedContext";
+import { SearchContext, SearchProvider } from "./SearchContext";
 
 export {
     ThemeContext,

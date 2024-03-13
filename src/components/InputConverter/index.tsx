@@ -1,6 +1,6 @@
 import InputConverterStyled from "./InputConverter.style";
 import InputConverterProps from "./InputConverter.type";
-import LabelFileInput from "./LabelFileInput/LabelFileInput";
+import LabelFileInput from "./LabelFileInput";
 
 function InputConverter({ type, name, id, placeholder, required, onChange, value, theme, accept }: InputConverterProps): JSX.Element {
     const regex = /^.*\\/

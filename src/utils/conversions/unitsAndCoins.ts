@@ -1,7 +1,7 @@
 import { convertCoin } from "@/services";
 import { ConvertProps } from "@/services/api/convertAPI/convertAPI.type";
 
-async function convert({ unit, value, state, slug}: ConvertProps): Promise<string | number> {
+async function convertUnitsAndCoins({ unit, value, state, slug}: ConvertProps): Promise<string | number> {
     if(slug !== "moeda") {
         if(unit) {
             const [origin, destiny] = unit;
@@ -34,4 +34,4 @@ async function convert({ unit, value, state, slug}: ConvertProps): Promise<strin
     return 0;
 }
 
-export default convert;
+export default convertUnitsAndCoins;

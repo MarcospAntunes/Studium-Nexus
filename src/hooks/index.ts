@@ -1,10 +1,10 @@
-import useConverterReducer from "./useConverterReducer/useConverterReducer";
-import useConverter from "./useConverter/useConverter";
-import useTheme from "./useTheme/useTheme";
-import useUnitsSelectedContext from "./useUnitsSelectedContext/useUnitsSelectedContext";
-import useSearch from "./useSearch/useSearch";
-import useFormulaReducer from "./useFormulaReducer/useFormulaReducer";
-import useCalculate from "./useCalculate/useCalculate";
+import useConverterReducer from "./useConverterReducer";
+import useConverter from "./useConverter";
+import useTheme from "./useTheme";
+import useUnitsSelectedContext from "./useUnitsSelectedContext";
+import useSearch from "./useSearch";
+import useFormulaReducer from "./useFormulaReducer";
+import useCalculate from "./useCalculate";
 
 export {
     useConverterReducer,

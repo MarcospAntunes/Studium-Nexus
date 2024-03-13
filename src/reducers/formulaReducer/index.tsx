@@ -1,4 +1,4 @@
-import Bhaskara from "@/screens/bhaskaraScreen/Bhaskara.screen";
+import Bhaskara from "@/screens/bhaskaraScreen";
 import FormulaActionProps from "./FormulaReducer.type"
 
 function FormulaReducer( state: any, action: FormulaActionProps) {

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import RenderBhaskaraExplanation from "./RenderBhaskaraExplanation/RenderBhaskaraExplanation"
+import RenderBhaskaraExplanation from "./RenderBhaskaraExplanation"
 
 type HowToGetTheResultProps = {
     a: number | string
