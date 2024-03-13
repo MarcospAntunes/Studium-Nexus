@@ -9,7 +9,7 @@ function FormulaImage({ src, alt }: FormulaImageProps) {
     const { theme } = useTheme();
 
     return(
-        <ImgStyled src={src} alt={alt} theme={theme === "light" ? lightTheme : darkTheme} />
+        <ImgStyled src={src} alt={alt} theme={theme === "light" ? lightTheme : darkTheme} loading="lazy"/>
     )
 }
 
