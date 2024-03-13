@@ -1,5 +1,5 @@
 type FormulaActionProps = {
-    type: string
+    type: string | string[]
     payload?: any
 }
 

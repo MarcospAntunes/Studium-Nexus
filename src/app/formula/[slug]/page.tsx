@@ -10,7 +10,7 @@ import { AppContainer, FormulaContainer } from "@/containers";
 function Formula({ params }: { params: { slug: string } }): JSX.Element {
     const slug = params.slug;
     const { theme } = useTheme();
-    const {Component} = useFormulaReducer(slug);
+    const {Component} = useFormulaReducer();
     const title = slug.charAt(0).toUpperCase() + slug.slice(1);
 
     const scrollToSection = (id: string) => {
