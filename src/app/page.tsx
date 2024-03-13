@@ -5,7 +5,8 @@ import {
   SearchBox, 
   Header, 
   ListConverter, 
-  BackToTop
+  BackToTop,
+  Slogan
 } from "@/components";
 
 import { AppContainer, FlexContainerSpaceBTW } from '@/containers';
@@ -22,9 +23,9 @@ export default function Home() {
         <Header />
         <main>
           <section>
-            <h2>O seu Converor rápido e fácil de usar</h2>
+            <Slogan/>
             <FlexContainerSpaceBTW>
-              <h3>Conversores</h3>
+              <h3>Funcionalidades</h3>
               <SearchBox />
             </FlexContainerSpaceBTW>
             <ListConverter />

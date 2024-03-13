@@ -7,6 +7,7 @@ import { useTheme } from "@/hooks";
 import { darkTheme, lightTheme } from "@/themes";
 import MenuStyled from "./Menu.style";
 import MenuButton from "./MenuButton";
+import itens from '@/json/itens.json';
 
 const Montz = Montserrat_Alternates({ weight: '300', subsets: ["latin"] });
 
@@ -39,71 +40,17 @@ function Menu(): JSX.Element {
                 role="menu"
             >
                 <Link href={"/"}>Home</Link>
-                <Link 
-                    className={`link ${pathname === '/conversores/tempo' ? 'active' : ''}`} 
-                    href={"tempo"}
-                    role="menuitem"
-                >
-                    Conversor de Tempo
-                </Link>
-                <Link 
-                    className={`link ${pathname === '/conversores/peso' ? 'active' : ''}`} 
-                    href={"peso"}
-                    role="menuitem"
-                >
-                    Conversor de Peso
-                </Link>
 
-                <Link 
-                    className={`link ${pathname === '/conversores/temperatura' ? 'active' : ''}`} 
-                    href={"temperatura"}
-                    role="menuitem"
-                >
-                    Conversor de Temperatura
-                </Link>
-                <Link 
-                    className={`link ${pathname === '/conversores/moeda' ? 'active' : ''}`} 
-                    href={"moeda"}
-                    role="menuitem"
-                >
-                    Conversor de Moeda
-                </Link>
-
-                <Link 
-                    className={`link ${pathname === '/conversores/velocidade' ? 'active' : ''}`} 
-                    href={"velocidade"}
-                    role="menuitem"
-                >
-                    Conversor de Velocidade
-                </Link>
-                <Link 
-                    className={`link ${pathname === '/conversores/comprimento' ? 'active' : ''}`} 
-                    href={"comprimento"}
-                    role="menuitem"
-                >
-                    Conversor de Comprimento
-                </Link>
-                <Link 
-                    className={`link ${pathname === '/conversores/documento' ? 'active' : ''}`} 
-                    href={"documento"}
-                    role="menuitem"
-                >
-                    Conversor de Documento
-                </Link>
-                <Link 
-                    className={`link ${pathname === '/conversores/energia' ? 'active' : ''}`} 
-                    href={"energia"}
-                    role="menuitem"
-                >
-                    Conversor de Energia
-                </Link>
-                <Link 
-                    className={`link ${pathname === '/conversores/midia' ? 'active' : ''}`} 
-                    href={"midia"}
-                    role="menuitem"
-                >
-                    Conversor de Mídia
-                </Link>
+                {itens.map((item) => (
+                    <Link
+                        key={item.id}
+                        className={`link ${pathname === item.link ? 'active' : ''}`} 
+                        href={item.link}
+                        role="menuitem"
+                    >
+                        {item.title}
+                    </Link>
+                ))}
             </MenuStyled>
         </StyleSheetManager>  
     )

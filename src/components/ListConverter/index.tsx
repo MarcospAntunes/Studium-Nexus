@@ -7,8 +7,8 @@ function ListConverter(): JSX.Element {
     const router = useRouter();
     const { filtredItens } = useSearch();
     
-    const handleClick = (title: string, type: string) => {
-        router.push(`/${type}/${title.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "")}`)
+    const handleClick = (link: string) => {
+        router.push(link)
     }
 
     return(
@@ -18,7 +18,7 @@ function ListConverter(): JSX.Element {
                     key={item.id} 
                     img={item.img} 
                     title={item.title}
-                    onClick={() => handleClick(item.title, item.type)}
+                    onClick={() => handleClick(item.link)}
                 />
 
             )) : <li aria-live="assertive">Nenhum item encontrado!</li>}
