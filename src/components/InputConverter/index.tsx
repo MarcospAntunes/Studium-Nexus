@@ -1,16 +1,19 @@
+import { useTheme } from "@/hooks";
 import InputConverterStyled from "./InputConverter.style";
 import InputConverterProps from "./InputConverter.type";
 import LabelFileInput from "./LabelFileInput";
+import { darkTheme, lightTheme } from "@/themes";
 
-function InputConverter({ type, name, id, placeholder, required, onChange, value, theme, accept }: InputConverterProps): JSX.Element {
+function InputConverter({ type, name, id, placeholder, required, onChange, value, accept }: InputConverterProps): JSX.Element {
     const regex = /^.*\\/
     const fileName = value?.replace(regex, "")
+    const { theme } = useTheme();
+
     if(type === "file") {
         return(
             <>
                 <LabelFileInput 
                     htmlFor={name} 
-                    theme={theme}
                     role="button" 
                     aria-label="Carregue o arquivo"
                 >Carregue o arquivo
@@ -23,7 +26,7 @@ function InputConverter({ type, name, id, placeholder, required, onChange, value
                     value={value ? value : ""}
                     onChange={onChange}
                     required={required}
-                    theme={theme} 
+                    theme={theme === 'light'? lightTheme : darkTheme} 
                 />
                 </LabelFileInput>
                 <p aria-live="polite">{fileName}</p>
@@ -39,7 +42,7 @@ function InputConverter({ type, name, id, placeholder, required, onChange, value
             value={value}
             onChange={onChange}
             required={required}
-            theme={theme}
+            theme={theme === 'light'? lightTheme : darkTheme}
         />
     )
 }

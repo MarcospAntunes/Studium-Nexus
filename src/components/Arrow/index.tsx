@@ -1,20 +1,17 @@
-import styled from "styled-components";
+import { useTheme } from "@/hooks";
+import { darkTheme, lightTheme } from "@/themes";
+import ArrowStyled from "./Arrow.style";
 
-const Arrow = styled.img`
-    position: absolute;
-    top: 95%;
-    width: 24px;
-    height: 50px;
-    transform: rotate(180deg);
-    z-index: 1;
-    filter: invert(${({theme}) => theme.invert});
+function Arrow() {
+    const { theme } = useTheme();
 
-    @media screen and (min-width: 541px) {
-        width: 30px;
-        top: 25%;
-        left: 100%;
-        transform: rotate(90deg);
-    }
-`
+    return(
+        <ArrowStyled 
+            src={`../../images/icons/arrow.png`} 
+            alt="arrow" 
+            theme={theme === "light" ? lightTheme : darkTheme} 
+        />
+    )
+}
 
 export default Arrow;

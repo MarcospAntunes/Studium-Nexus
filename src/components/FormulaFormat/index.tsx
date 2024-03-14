@@ -1,20 +1,21 @@
-import styled from "styled-components";
+import { useTheme } from "@/hooks";
+import { darkTheme, lightTheme } from "@/themes";
+import FormulaFormatStyled from "./FormulaFormat.style";
+import FormulaFormatProps from "./FormulaFormat.type";
 
-const FormulaFormat = styled.p`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    text-indent: 0;
+function FormulaFormat({ children, aria_label, aria_live }: FormulaFormatProps) {
 
-    span {
-        width: 200px;
-    }
+    const { theme } = useTheme();
 
-    .divider {
-        border-top: 1px solid ${({theme}) => theme.text};
-    }
-`
+    return (
+        <FormulaFormatStyled
+        aria-label={aria_label} 
+        aria-live={aria_live}
+        theme={theme === 'light' ? lightTheme : darkTheme}
+        >
+            {children}
+        </FormulaFormatStyled>
+    )
+}
 
 export default FormulaFormat;

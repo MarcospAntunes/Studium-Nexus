@@ -1,13 +1,15 @@
 import styled from "styled-components";
 
-const ResultContainer = styled.div`
+const ResultFormulaStyled = styled.p`
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
     font-size: 14px;
     text-align: center;
+    word-break: normal;
     border-radius: 15px;
+    color: ${({theme}) => theme.text};
     transition: .3s;
 
     @media screen and (min-width: 541px) {
@@ -16,4 +18,4 @@ const ResultContainer = styled.div`
     }
 `
 
-export default ResultContainer;
+export default ResultFormulaStyled;

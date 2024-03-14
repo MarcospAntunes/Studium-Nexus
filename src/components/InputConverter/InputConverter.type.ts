@@ -10,7 +10,6 @@ type InputConverterProps = {
     required: boolean
     onChange: ChangeEventHandler<HTMLInputElement>
     value: any
-    theme?: DefaultTheme | undefined
 }
 
 export default InputConverterProps;

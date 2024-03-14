@@ -27,9 +27,9 @@ function Formula({ params }: { params: { slug: string } }): JSX.Element {
             <GlobalStyles theme={theme === "light" ? lightTheme : darkTheme}/>
             <AppContainer>
                 <Header menu={true} />
-                <FormulaContainer theme={theme === "light" ? lightTheme : darkTheme}>
+                <FormulaContainer>
                     <h1>Fórmula de {title}</h1>
-                    <Navigation theme={theme === "light" ? lightTheme : darkTheme}>
+                    <Navigation>
                         <a onClick={() => scrollToSection('como-foi-criada')}  href="#">Como foi criada</a>
                         <a onClick={() => scrollToSection('passo-a-passo')}  href="#">Como chegar no resultado</a>
                     </Navigation>

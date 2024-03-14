@@ -1,6 +1,9 @@
+import { useTheme } from "@/hooks";
+import { darkTheme, lightTheme } from "@/themes";
+import { AriaRole, ReactNode } from "react";
 import styled from "styled-components";
 
-const LabelFileInput = styled.label`
+const LabelFileInputStyled = styled.label`
     background-color: ${({theme}) => theme.bgCard};
     border: 1px solid ${({theme}) => theme.text};
     border-radius: 15px;
@@ -27,5 +30,27 @@ const LabelFileInput = styled.label`
         font-size: 18px;
     }
 `
+
+type LabelFileInputProps = {
+    children: ReactNode 
+    htmlFor:  string
+    role?: AriaRole | undefined
+}
+
+function LabelFileInput({ children, htmlFor, role }: LabelFileInputProps) {
+
+    const { theme } = useTheme();
+
+    return(
+    <LabelFileInputStyled 
+        htmlFor={htmlFor} 
+        theme={theme === 'light' ? lightTheme : darkTheme}
+        role={role} 
+        aria-label="Carregue o arquivo"
+    >
+        {children}
+    </LabelFileInputStyled>
+    )
+}
 
 export default LabelFileInput;

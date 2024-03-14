@@ -1,29 +1,13 @@
-import styled from "styled-components";
+import { useTheme } from "@/hooks";
+import { darkTheme, lightTheme } from "@/themes";
+import Children from "@/types/children.type";
+import FormulaContainerStyled from "./FormulaContainer.style";
 
-const FormulaContainer = styled.main`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-    max-width: 950px;
-    height: 100%;
-    padding: 10px;
-    border-radius: 15px;
-    font-size: 16px;
-    background-color: ${({theme}) => theme.bgCard};
-
-    h1 {
-        font-size: 24px;
-    }
-
-    & .botoes {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-    }
-`
+function FormulaContainer({ children }: Children) {
+    const { theme } = useTheme();
+    return(
+        <FormulaContainerStyled theme={theme === 'light' ? lightTheme : darkTheme}>{children}</FormulaContainerStyled>
+    )
+}
 
 export default FormulaContainer;

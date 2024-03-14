@@ -1,13 +1,17 @@
 import styled from "styled-components";
 
-const ResultContainer = styled.div`
+const ResultConverterStyled = styled.p`
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    width: 100%;
+    height: 30px;
     font-size: 14px;
     text-align: center;
+    word-break: break-all;
+    padding: 20px;
     border-radius: 15px;
+    background-color: ${({theme}) => theme.body};
     transition: .3s;
 
     @media screen and (min-width: 541px) {
@@ -16,4 +20,4 @@ const ResultContainer = styled.div`
     }
 `
 
-export default ResultContainer;
+export default ResultConverterStyled;

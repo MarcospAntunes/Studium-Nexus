@@ -1,8 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { Arrow, Button, InputConverter, LoadingConversao, SelectUnit } from "@/components";
 import { ConverterContainer, FlexContainerAdapter } from "@/containers";
-import { useConverterReducer, useConverter, useTheme } from "@/hooks";
-import { darkTheme, lightTheme } from "@/themes";
+import { useConverterReducer, useConverter } from "@/hooks";
 
 function DocMidiaConvertScreen({ params }: { params: { slug: string } }): JSX.Element {
     const { namesOfUnits } = useConverterReducer(params.slug);
@@ -15,7 +14,6 @@ function DocMidiaConvertScreen({ params }: { params: { slug: string } }): JSX.El
         handleValue,
         clear
     } = useConverter(params.slug)
-    const { theme } = useTheme();
 
     const fileName = upload ? upload![1] : "";
     
@@ -37,7 +35,6 @@ function DocMidiaConvertScreen({ params }: { params: { slug: string } }): JSX.El
                 value={fileName}
                 required={true}
                 onChange={(e) => setUpload([e.target.files![0], e.target.value])}
-                theme={theme === "light" ? lightTheme : darkTheme}
                 />
             </div>
             <div className="divConversao">
@@ -51,10 +48,9 @@ function DocMidiaConvertScreen({ params }: { params: { slug: string } }): JSX.El
                     arrayOfUnits={namesOfUnits}
                     onChange={e => setOrigin(e.target.value)}
                     setOrigin={setOrigin}
-                    theme={theme === "light" ? lightTheme : darkTheme}
                     />
                 </div>
-                <Arrow src={`../../images/icons/arrow.png`} alt="arrow" theme={theme === "light" ? lightTheme : darkTheme}/>
+                <Arrow />
                 <div className="divConversao container">
                     <label htmlFor="destino">Formato destinado</label>
                     <SelectUnit
@@ -63,14 +59,13 @@ function DocMidiaConvertScreen({ params }: { params: { slug: string } }): JSX.El
                     defaultValue={null}
                     arrayOfUnits={namesOfUnits}
                     onChange={e => setDestiny(e.target.value)}
-                    theme={theme === "light" ? lightTheme : darkTheme}
                     />
                 </div>
                 </div>
             </div>
             <div className="divConversao botoes">
-                <Button onClick={() => handleValue()} theme={theme === "light" ? lightTheme : darkTheme} type="button">Converter</Button>
-                <Button theme={theme === "light" ? lightTheme : darkTheme} type="button" onClick={() => clear()}>limpar</Button>
+                <Button onClick={() => handleValue()} type="button">Converter</Button>
+                <Button type="button" onClick={() => clear()}>limpar</Button>
             </div>
             </ConverterContainer>
 
@@ -82,15 +77,14 @@ function DocMidiaConvertScreen({ params }: { params: { slug: string } }): JSX.El
                 resultOfConversion[1] === 100 ?
                 <>
                     <div className="divConversao">
-                    <img src="../../../images/icons/convertido.png" alt="Convertido" className="convertido" />
+                        <img src="../../../images/icons/convertido.png" alt="Convertido" className="convertido" />
                     </div>
                     <Button 
-                    onClick={() => window.open(resultOfConversion[0], "_blank")} 
-                    theme={theme === "light" ? lightTheme : darkTheme}
-                    type="button"
-                    aria-live="assertive"
+                        onClick={() => window.open(resultOfConversion[0], "_blank")}
+                        type="button"
+                        aria-live="assertive"
                     >
-                    Download
+                        Download
                     </Button>
                 </>
                 :
