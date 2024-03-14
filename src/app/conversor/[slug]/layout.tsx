@@ -1,4 +1,3 @@
-import GlobalStyles from "@/GlobalStyles";
 import Providers from "./providers";
 import StyledComponentsRegistry from "@/lib/registry";
 

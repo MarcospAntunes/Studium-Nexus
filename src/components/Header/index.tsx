@@ -48,8 +48,7 @@ function Header({ menu = false }): JSX.Element {
                         role="button"
                     />
                 </HeaderStyled>
-            </StyleSheetManager>
-            
+            </StyleSheetManager>      
         )
     }
 }

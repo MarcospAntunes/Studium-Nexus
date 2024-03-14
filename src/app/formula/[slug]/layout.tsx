@@ -1,4 +1,3 @@
-import GlobalStyles from "@/GlobalStyles";
 import StyledComponentsRegistry from "@/lib/registry";
 
 export default function Layout({

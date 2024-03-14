@@ -7,7 +7,6 @@ import { BackToTop, Header, Navigation } from "@/components";
 import { AppContainer, FormulaContainer } from "@/containers";
 import { formulasPages } from "@/utils";
 
-
 function Formula({ params }: { params: { slug: string } }): JSX.Element {
     const slug = params.slug;
     const CurrentPage = formulasPages[slug]

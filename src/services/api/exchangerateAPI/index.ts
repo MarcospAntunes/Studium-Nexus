@@ -1,6 +1,6 @@
-import ConvertCoinProps from "./exchangerateAPI.type";
+import ConvertCoinAPIProps from "./exchangerateAPI.type";
 
-async function convertCoin({ number, originCoin, destinyCoin }: ConvertCoinProps): Promise<string> {
+async function convertCoinAPI({ number, originCoin, destinyCoin }: ConvertCoinAPIProps): Promise<string> {
     try {
         const apiKey = process.env.EXCHANGERATE_KEY
         const apiUrl = `https://v6.exchangerate-api.com/v6/${apiKey}/pair/${originCoin}/${destinyCoin}`;
@@ -28,4 +28,4 @@ async function convertCoin({ number, originCoin, destinyCoin }: ConvertCoinProps
     return "Algo errado :("
 }
 
-export default convertCoin;
+export default convertCoinAPI;

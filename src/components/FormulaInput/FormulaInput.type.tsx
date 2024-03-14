@@ -1,5 +1,4 @@
 import { ChangeEventHandler, HTMLInputTypeAttribute } from "react"
-import { DefaultTheme } from "styled-components"
 
 type FormulaInputProps = {
     type: HTMLInputTypeAttribute | undefined 

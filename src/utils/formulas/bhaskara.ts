@@ -21,7 +21,6 @@ function bhaskara(arrayOfNumbers: Array<number>) {
     }
 
     return `O discriminante é igual a ${delta} e, portanto, não pode ser calculado pois é menor que zero.`;
-
 }
 
 export default bhaskara

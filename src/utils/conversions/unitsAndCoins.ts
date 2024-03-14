@@ -1,4 +1,4 @@
-import { convertCoin } from "@/services";
+import { convertCoinAPI } from "@/services";
 import { ConvertProps } from "@/services/api/convertAPI/convertAPI.type";
 
 async function convertUnitsAndCoins({ unit, value, state, slug}: ConvertProps): Promise<string | number> {
@@ -28,7 +28,7 @@ async function convertUnitsAndCoins({ unit, value, state, slug}: ConvertProps): 
         const chavesDestino = Object.keys(state).filter(chave => state[chave] === destinyNameCoin);
         const destinyCoin = Object.keys(Object.fromEntries(chavesDestino.map(chave => [chave, state[chave]])))[0];
         
-        return await convertCoin({ number, originCoin, destinyCoin })
+        return await convertCoinAPI({ number, originCoin, destinyCoin })
     }
 
     return 0;

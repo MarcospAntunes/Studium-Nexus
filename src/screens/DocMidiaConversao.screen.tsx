@@ -16,7 +16,9 @@ function DocMidiaConvertScreen({ params }: { params: { slug: string } }): JSX.El
         clear
     } = useConverter(params.slug)
     const { theme } = useTheme();
+
     const fileName = upload ? upload![1] : "";
+    
     const accept = namesOfUnits?.map((unit) => (
         `.${unit}`
     )).join(', ');

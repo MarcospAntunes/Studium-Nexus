@@ -8,25 +8,25 @@ function InputConverter({ type, name, id, placeholder, required, onChange, value
     if(type === "file") {
         return(
             <>
-            <LabelFileInput 
-                htmlFor={name} 
-                theme={theme}
-                role="button" 
-                aria-label="Carregue o arquivo"
-            >Carregue o arquivo
-            <InputConverterStyled 
-                type={type}
-                accept={accept} 
-                name={name} 
-                id={id} 
-                placeholder={placeholder} 
-                value={value ? value : ""}
-                onChange={onChange}
-                required={required}
-                theme={theme} 
-            />
-            </LabelFileInput>
-            <p aria-live="polite">{fileName}</p>
+                <LabelFileInput 
+                    htmlFor={name} 
+                    theme={theme}
+                    role="button" 
+                    aria-label="Carregue o arquivo"
+                >Carregue o arquivo
+                <InputConverterStyled 
+                    type={type}
+                    accept={accept} 
+                    name={name} 
+                    id={id} 
+                    placeholder={placeholder} 
+                    value={value ? value : ""}
+                    onChange={onChange}
+                    required={required}
+                    theme={theme} 
+                />
+                </LabelFileInput>
+                <p aria-live="polite">{fileName}</p>
             </>
         )
     }
