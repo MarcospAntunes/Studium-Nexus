@@ -5,7 +5,7 @@ import FormulaImageProps from "./FormulaImage.type";
 import ImgStyled from "./FormulaImage.style";
 import { darkTheme, lightTheme } from "@/themes";
 
-function FormulaImage({ src, alt }: FormulaImageProps) {
+function FormulaImage({ src, alt }: FormulaImageProps): JSX.Element {
     const { theme } = useTheme();
 
     return(

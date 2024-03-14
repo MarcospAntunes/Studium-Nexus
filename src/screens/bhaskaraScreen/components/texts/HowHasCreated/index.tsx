@@ -3,7 +3,7 @@
 import { FormulaImage } from "@/components";
 import LazyLoadedText from "@/components/LazyLoadedText";
 
-function HowHasCreated() {
+function HowHasCreated(): JSX.Element {
     return(
         <>
             <h2 id="#como-foi-criada">Como Foi Criada?</h2>

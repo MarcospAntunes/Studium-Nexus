@@ -1,17 +1,17 @@
-function bhaskara(arrayOfNumbers: Array<number>) {
+function bhaskara(arrayOfNumbers: Array<number>): string | number | number[] {
     const [ a, b, c ] = arrayOfNumbers;
-    const delta = (b * b) - (4 * a * c);
+    const delta: number = (b * b) - (4 * a * c);
     
     if(delta === 0) {
-        const x1 = -b / (2 * a);
+        const x1: number = -b / (2 * a);
 
         return x1;
     }
 
     if(delta > 0) {
-        const raizDeDelta = Math.sqrt(delta)
-        const x1 = (-b + raizDeDelta) / (2 * a);
-        const x2 = (-b - raizDeDelta) / (2 * a);
+        const raizDeDelta: number = Math.sqrt(delta)
+        const x1: number = (-b + raizDeDelta) / (2 * a);
+        const x2: number = (-b - raizDeDelta) / (2 * a);
 
         return [x1, x2];
     }

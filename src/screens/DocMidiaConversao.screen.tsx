@@ -17,7 +17,7 @@ function DocMidiaConvertScreen({ params }: { params: { slug: string } }): JSX.El
 
     const fileName = upload ? upload![1] : "";
     
-    const accept = namesOfUnits?.map((unit) => (
+    const accept: string = namesOfUnits?.map((unit) => (
         `.${unit}`
     )).join(', ');
 

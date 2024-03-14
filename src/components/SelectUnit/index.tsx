@@ -6,7 +6,7 @@ import { darkTheme, lightTheme } from "@/themes";
 
 function SelectUnit({arrayOfUnits, name, id, onChange, defaultValue = null, setOrigin}: SelectUnitProps): JSX.Element {
     const unitDocumentAttached: string = defaultValue ? defaultValue : "";
-    const unitsFiltred = arrayOfUnits.filter((unit) => {
+    const unitsFiltred: unknown[] = arrayOfUnits.filter((unit) => {
         return unit !== unitDocumentAttached
     })
 

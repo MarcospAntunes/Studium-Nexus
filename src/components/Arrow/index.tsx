@@ -2,7 +2,7 @@ import { useTheme } from "@/hooks";
 import { darkTheme, lightTheme } from "@/themes";
 import ArrowStyled from "./Arrow.style";
 
-function Arrow() {
+function Arrow(): JSX.Element {
     const { theme } = useTheme();
 
     return(

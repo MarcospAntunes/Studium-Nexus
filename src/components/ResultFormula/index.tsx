@@ -3,8 +3,9 @@ import ResultFormulaStyled from "./ResultFormula";
 import { useTheme } from "@/hooks";
 import { darkTheme, lightTheme } from "@/themes";
 
-function ResultFormula({ children }: Children) {
+function ResultFormula({ children }: Children): JSX.Element {
     const { theme } = useTheme();
+    
     return(
         <ResultFormulaStyled 
             aria-live="assertive"

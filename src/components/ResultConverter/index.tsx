@@ -3,9 +3,8 @@ import ResultConverterStyled from "./ResultConverter.style";
 import ResultConverterProps from "./ResultConverter.type";
 import { darkTheme, lightTheme } from "@/themes";
 
-function ResultConverter({ children, aria_live }: ResultConverterProps) {
+function ResultConverter({ children, aria_live }: ResultConverterProps): JSX.Element {
     const { theme } = useTheme();
-
 
     return(
         <ResultConverterStyled 

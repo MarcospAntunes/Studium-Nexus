@@ -1,6 +1,6 @@
-function RenderBhaskaraFormula( value: number, name: string, power?: number ) {
+function RenderBhaskaraFormula( value: number, name: string, power?: number ): string | number | JSX.Element {
     if(value){
-        const valueString = value.toString();
+        const valueString: string = value.toString();
 
         if(name.includes("^")) return (<>{value}<sup>{power}</sup></>);
         

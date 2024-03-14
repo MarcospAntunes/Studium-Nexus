@@ -1,12 +1,12 @@
 import { CreateJobProps, ExportArchiveProps, ImportArchiveProps } from "./convertAPI.type";
 
 async function createJob({unit, upload, taskID, apiKey}: CreateJobProps): Promise<any[] | undefined> {
-    const originalFormat = unit[0];
-    const destinyFormat = unit[1];
+    const originalFormat: string = unit[0];
+    const destinyFormat: string = unit[1];
     if (originalFormat && destinyFormat && upload) {
         try {
-            const endpoint = 'https://api.cloudconvert.com/v2/jobs';
-            const requestBody = {
+            const endpoint: string = 'https://api.cloudconvert.com/v2/jobs';
+            const requestBody: Object = {
                 "tasks": {
                     [`import-${taskID}`]: {
                         "operation": `import/upload`,
@@ -34,7 +34,7 @@ async function createJob({unit, upload, taskID, apiKey}: CreateJobProps): Promis
                 "tag": "jobbuilder"
               }
     
-            const response = await fetch(endpoint, {
+            const response: Response = await fetch(endpoint, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${apiKey}`,
@@ -53,17 +53,17 @@ async function createJob({unit, upload, taskID, apiKey}: CreateJobProps): Promis
     }
 }
 
-async function importArchive({ data, file }: ImportArchiveProps) {
+async function importArchive({ data, file }: ImportArchiveProps): Promise<any[]> {
     try {
         const importTask = data.data.tasks[0].result.form
         const importInfo = importTask;
         const { url, parameters } = importInfo;
-        const formData = new FormData();
+        const formData: FormData = new FormData();
         for(const key in parameters) {
             formData.append(key, parameters[key]);
         }
         formData.append("file", file);
-        const responseImport = await fetch(url, {
+        const responseImport: Response = await fetch(url, {
             method: "POST",
             body: formData
         })
@@ -74,12 +74,12 @@ async function importArchive({ data, file }: ImportArchiveProps) {
     } 
 }
 
-async function exportArchive({data, apiKey}: ExportArchiveProps) {
+async function exportArchive({data, apiKey}: ExportArchiveProps): Promise<any[] | undefined> {
     try {
-        const inputTaskIds = data.data.tasks[2].id
-        const endpoint = `https://sync.api.cloudconvert.com/v2/tasks/${inputTaskIds}?include=payload`
+        const inputTaskIds: string = data.data.tasks[2].id
+        const endpoint: string = `https://sync.api.cloudconvert.com/v2/tasks/${inputTaskIds}?include=payload`
     
-        const request = await fetch(endpoint, {
+        const request: Response = await fetch(endpoint, {
             method: "GET",
             headers: {
             "Authorization": `Bearer ${apiKey}`,
@@ -87,7 +87,7 @@ async function exportArchive({data, apiKey}: ExportArchiveProps) {
         });
         if(request.ok) {
             const res = await request.json()
-            const url = res.data.result.files[0].url;
+            const url: string = res.data.result.files[0].url;
             return [url, 100]
         }
     } catch(error) {

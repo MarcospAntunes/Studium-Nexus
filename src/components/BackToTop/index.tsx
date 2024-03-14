@@ -3,8 +3,8 @@ import { BackToTopContainer, BackToTopButton } from "./BackToTop.style";
 import { useTheme } from "@/hooks";
 import { darkTheme, lightTheme } from "@/themes";
 
-function BackToTop() {
-    const [isVisible, setIsVisible] = useState(false);
+function BackToTop(): JSX.Element {
+    const [isVisible, setIsVisible] = useState<boolean>(false);
     const { theme } = useTheme();
     useEffect(() => {
         window.addEventListener('scroll', toggleVisibility);
@@ -13,7 +13,7 @@ function BackToTop() {
         }
     }, [])
 
-    const toggleVisibility = () => {
+    const toggleVisibility: VoidFunction = () => {
         if(window.scrollY > 100) {
             setIsVisible(true);
         } else {
@@ -21,7 +21,7 @@ function BackToTop() {
         }
     };
 
-    const scrollToTop = () => {
+    const scrollToTop: VoidFunction = () => {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'

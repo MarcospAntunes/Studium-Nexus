@@ -22,7 +22,7 @@ function useConverter(slug: string) {
         setUnit([origin, destiny]);
     }, [destiny, origin])
 
-    const handleValue = async () => {
+    const handleValue: () => Promise<void> = async () => {
         if(origin && destiny) {
             if(slug === "documento" || slug === "midia") {
                 setResultOfConversion(["", 15])
@@ -54,7 +54,7 @@ function useConverter(slug: string) {
         }
     }
 
-    const clear = () => {
+    const clear: VoidFunction = () => {
         const selecteds = document.querySelectorAll("select");
         selecteds.forEach((selected) => {
             selected.value = "";

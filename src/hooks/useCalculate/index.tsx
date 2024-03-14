@@ -22,7 +22,7 @@ function useCalculate() {
         }
     };
 
-    const clear = () => {
+    const clear: VoidFunction = () => {
         setResult("")
         setValues([])
     }

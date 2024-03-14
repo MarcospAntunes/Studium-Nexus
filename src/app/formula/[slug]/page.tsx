@@ -8,8 +8,8 @@ import { AppContainer, FormulaContainer } from "@/containers";
 import { formulasPages } from "@/utils";
 
 function Formula({ params }: { params: { slug: string } }): JSX.Element {
-    const slug = params.slug;
-    const CurrentPage = formulasPages[slug]
+    const slug: string = params.slug;
+    const CurrentPage: () => JSX.Element = formulasPages[slug]
 
     const { theme } = useTheme();
     const title = slug.charAt(0).toUpperCase() + slug.slice(1);

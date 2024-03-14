@@ -8,8 +8,8 @@ async function convertUnitsAndCoins({ unit, value, state, slug}: ConvertProps): 
     
             if(state) {
                 if (state.hasOwnProperty(origin) && state.hasOwnProperty(destiny)) {
-                    const valueToMultiply = state[destiny] / state[origin];
-                    const result = Number((valueToMultiply * Number(value)));
+                    const valueToMultiply: number = state[destiny] / state[origin];
+                    const result: number = Number((valueToMultiply * Number(value)));
     
                     return result;
                 } else {
@@ -20,13 +20,13 @@ async function convertUnitsAndCoins({ unit, value, state, slug}: ConvertProps): 
         }
     } else {
         const [originNameCoin, destinyNameCoin] = unit;
-        const number = Number(value)
+        const number: number = Number(value)
 
-        const chavesOrigem = Object.keys(state).filter(chave => state[chave] === originNameCoin);
-        const originCoin = Object.keys(Object.fromEntries(chavesOrigem.map(chave => [chave, state[chave]])))[0];
+        const chavesOrigem: string[] = Object.keys(state).filter(chave => state[chave] === originNameCoin);
+        const originCoin: string = Object.keys(Object.fromEntries(chavesOrigem.map(chave => [chave, state[chave]])))[0];
 
-        const chavesDestino = Object.keys(state).filter(chave => state[chave] === destinyNameCoin);
-        const destinyCoin = Object.keys(Object.fromEntries(chavesDestino.map(chave => [chave, state[chave]])))[0];
+        const chavesDestino: string[] = Object.keys(state).filter(chave => state[chave] === destinyNameCoin);
+        const destinyCoin:string = Object.keys(Object.fromEntries(chavesDestino.map(chave => [chave, state[chave]])))[0];
         
         return await convertCoinAPI({ number, originCoin, destinyCoin })
     }

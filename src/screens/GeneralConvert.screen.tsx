@@ -3,9 +3,9 @@ import { ConverterContainer, FlexContainerAdapter } from "@/containers";
 import { useConverterReducer, useConverter } from "@/hooks";
 
 function GeneralConvertScreen({ params }: { params: { slug: string } }): JSX.Element {
-    const slug = params.slug
+    const slug: string = params.slug
     const { namesOfUnits, valuesOfUnits } = useConverterReducer(slug);
-    const itens = slug === "moeda" ? valuesOfUnits : namesOfUnits
+    const itens: string[] = slug === "moeda" ? valuesOfUnits : namesOfUnits
     
     const { 
         setDestiny, 

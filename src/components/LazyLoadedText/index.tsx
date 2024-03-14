@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import LazyLoadedProps from "./LazyLoaded.type";
 
-function LazyLoadedText({ children, className }: LazyLoadedProps) {
-    const [isVisible, setIsVisible] = useState(false);
+function LazyLoadedText({ children, className }: LazyLoadedProps): JSX.Element {
+    const [isVisible, setIsVisible] = useState<boolean>(false);
     const paragraphRef = useRef(null);
   
     useEffect(() => {
-      const observer = new IntersectionObserver((entries) => {
+      const observer: IntersectionObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsVisible(true);

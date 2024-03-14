@@ -3,7 +3,7 @@ import { darkTheme, lightTheme } from "@/themes";
 import FormulaFormatStyled from "./FormulaFormat.style";
 import FormulaFormatProps from "./FormulaFormat.type";
 
-function FormulaFormat({ children, aria_label, aria_live }: FormulaFormatProps) {
+function FormulaFormat({ children, aria_label, aria_live }: FormulaFormatProps): JSX.Element {
 
     const { theme } = useTheme();
 

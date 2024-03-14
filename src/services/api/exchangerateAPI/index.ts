@@ -2,16 +2,16 @@ import ConvertCoinAPIProps from "./exchangerateAPI.type";
 
 async function convertCoinAPI({ number, originCoin, destinyCoin }: ConvertCoinAPIProps): Promise<string> {
     try {
-        const apiKey = process.env.EXCHANGERATE_KEY
-        const apiUrl = `https://v6.exchangerate-api.com/v6/${apiKey}/pair/${originCoin}/${destinyCoin}`;
+        const apiKey: string | undefined = process.env.EXCHANGERATE_KEY
+        const apiUrl: string = `https://v6.exchangerate-api.com/v6/${apiKey}/pair/${originCoin}/${destinyCoin}`;
 
-        const req = await fetch(apiUrl);
+        const req: Response = await fetch(apiUrl);
         const res = await req.json();
 
         if(req.ok && res.result === "success") {
-            const cambio = res.conversion_rate;
-            const valorConvertido = number * cambio;
-            const resultado = `${valorConvertido.toLocaleString(destinyCoin,{
+            const cambio: number = res.conversion_rate;
+            const valorConvertido: number = number * cambio;
+            const resultado: string = `${valorConvertido.toLocaleString(destinyCoin,{
                 style: 'currency',
                 currency: destinyCoin
             })}`;

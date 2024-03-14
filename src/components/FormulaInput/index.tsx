@@ -3,7 +3,7 @@ import FormulaInputStyled from "./FormulaInput.style";
 import FormulaInputProps from "./FormulaInput.type";
 import { darkTheme, lightTheme } from "@/themes";
 
-function FormulaInput({ type, placeholder, value, onChange, required = false, aria_label }: FormulaInputProps) {
+function FormulaInput({ type, placeholder, value, onChange, required = false, aria_label }: FormulaInputProps): JSX.Element {
     const { theme } = useTheme();
     return (
         <FormulaInputStyled 

@@ -10,7 +10,7 @@ export default function StyledComponentsRegistry({ children }: Children): JSX.El
   const [styledComponentsStyleSheet] = useState(() => new ServerStyleSheet())
  
   useServerInsertedHTML(() => {
-    const styles = styledComponentsStyleSheet.getStyleElement()
+    const styles: JSX.Element[] = styledComponentsStyleSheet.getStyleElement()
     styledComponentsStyleSheet.instance.clearTag()
     return <>{styles}</>
   })

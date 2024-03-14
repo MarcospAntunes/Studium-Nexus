@@ -3,7 +3,7 @@ import { darkTheme, lightTheme } from "@/themes";
 import LabelFileInputStyled from "./LabelFileInput.style";
 import LabelFileInputProps from "./LabelFileInput";
 
-function LabelFileInput({ children, htmlFor, role }: LabelFileInputProps) {
+function LabelFileInput({ children, htmlFor, role }: LabelFileInputProps): JSX.Element {
 
     const { theme } = useTheme();
 

@@ -11,8 +11,8 @@ function Header({ menu = false }): JSX.Element {
     const handleThemeToggle = (target: string) => {
         themeToggler(target)
     }
-    const invertTheme = theme === "dark" ? "light" : "dark"
-    const source = theme === "light" ? "sol.png" : "lua.png"
+    const invertTheme: string = theme === "dark" ? "light" : "dark"
+    const source: string = theme === "light" ? "sol.png" : "lua.png"
 
     if(menu) {
         return(

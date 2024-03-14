@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Montserrat_Alternates } from "next/font/google";
 import Providers from "./providers";
 import StyledComponentsRegistry from "@/lib/registry";
+import { NextFont } from "next/dist/compiled/@next/font";
 
-const Montz = Montserrat_Alternates({ weight: '300', subsets: ["latin"] });
+const Montz: NextFont = Montserrat_Alternates({ weight: '300', subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Studium Nexus",

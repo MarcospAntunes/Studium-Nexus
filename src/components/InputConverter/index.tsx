@@ -5,8 +5,8 @@ import LabelFileInput from "./LabelFileInput";
 import { darkTheme, lightTheme } from "@/themes";
 
 function InputConverter({ type, name, id, placeholder, required, onChange, value, accept }: InputConverterProps): JSX.Element {
-    const regex = /^.*\\/
-    const fileName = value?.replace(regex, "")
+    const regex: RegExp = /^.*\\/
+    const fileName: string = value?.replace(regex, "")
     const { theme } = useTheme();
 
     if(type === "file") {

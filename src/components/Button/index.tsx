@@ -3,7 +3,7 @@ import ButtonStyled from "./Button.style";
 import ButtonProps from "./Button.type";
 import { darkTheme, lightTheme } from "@/themes";
 
-function Button({ children, onClick, role, type }: ButtonProps) {
+function Button({ children, onClick, role, type }: ButtonProps): JSX.Element {
     const { theme } = useTheme();
 
     return(

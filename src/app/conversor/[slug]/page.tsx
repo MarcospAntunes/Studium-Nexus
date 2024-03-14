@@ -10,7 +10,7 @@ import DocMidiaConvertScreen from "@/screens/DocMidiaConversao.screen";
 import GeneralConvertScreen from "@/screens/GeneralConvert.screen";
 
 function Converter({ params }: { params: { slug: string } }) {
-  const slug = params.slug;
+  const slug: string = params.slug;
   const { theme } = useTheme();
 
   return (

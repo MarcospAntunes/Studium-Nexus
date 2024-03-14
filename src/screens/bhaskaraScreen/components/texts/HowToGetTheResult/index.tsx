@@ -7,7 +7,7 @@ type HowToGetTheResultProps = {
     c: number | string
 }
 
-function HowToGetTheResult({a, b, c}: HowToGetTheResultProps) {
+function HowToGetTheResult({a, b, c}: HowToGetTheResultProps): JSX.Element {
     const [delta, setDelta] = useState<number>();
 
     useEffect(() => {

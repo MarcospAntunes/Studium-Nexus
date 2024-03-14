@@ -3,7 +3,7 @@ import { darkTheme, lightTheme } from "@/themes";
 import Children from "@/types/children.type";
 import NavigationStyled from "./Navigation.style";
 
-function Navigation({ children }: Children) {
+function Navigation({ children }: Children): JSX.Element {
     const { theme } = useTheme();
 
     return(

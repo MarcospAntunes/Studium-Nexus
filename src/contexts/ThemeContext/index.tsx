@@ -5,7 +5,7 @@ import Children from "@/types/children.type";
 const ThemeContext = createContext<ThemeContextProps | any>("light");
 ThemeContext.displayName = "Theme";
 
-function ThemeProvider({children}: Children) {
+function ThemeProvider({children}: Children): JSX.Element {
     const themeToggler = (target?: string) => {
         target === "light" ? setTheme("light") : setTheme("dark");
     }

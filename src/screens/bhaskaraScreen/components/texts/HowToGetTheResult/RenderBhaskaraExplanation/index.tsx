@@ -4,9 +4,9 @@ type renderBhaskaraExplanationProps = {
     delta: number | undefined
 }
 
-function RenderBhaskaraExplanation({ a, b, delta }: renderBhaskaraExplanationProps){
+function RenderBhaskaraExplanation({ a, b, delta }: renderBhaskaraExplanationProps): JSX.Element | undefined {
     if(typeof a === 'number' && typeof b === 'number' && delta !== undefined) {
-        const deltaRoot = Math.sqrt(delta)
+        const deltaRoot: number = Math.sqrt(delta)
         if(delta === 0 ) {
             return (
                 <>
