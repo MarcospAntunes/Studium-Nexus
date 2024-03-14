@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-const CardContainer = styled.li`
+const CardStyled = styled.li`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,4 +52,4 @@ const CardContainer = styled.li`
     
 `
 
-export default CardContainer;
+export default CardStyled;

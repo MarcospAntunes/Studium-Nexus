@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const SearchContainer = styled.div`
+const SearchBoxStyled = styled.div`
     display: flex;
     flex-wrap: nowrap;
     gap: 5px;
@@ -43,4 +43,4 @@ const SearchContainer = styled.div`
     }
 `
 
-export default SearchContainer;
+export default SearchBoxStyled;
