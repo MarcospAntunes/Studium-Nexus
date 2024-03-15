@@ -4,17 +4,25 @@ const FormulaFormatStyled = styled.p`
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    text-align: center;
-    text-indent: 0;
+    gap: 10px;
 
-    span {
-        width: 200px;
+    .indentFormula {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        text-align: center;
+        text-indent: 0;
+        & span {
+            width: 200px;
+        }
+    
+        & .divider {
+            border-top: 1px solid ${({theme}) => theme.text};
+        }
     }
 
-    .divider {
-        border-top: 1px solid ${({theme}) => theme.text};
-    }
 `
 
 export default FormulaFormatStyled;

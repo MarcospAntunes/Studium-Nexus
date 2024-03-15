@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const FormulaContainerStyled = styled.main`
+const PageFormulaContainerStyled = styled.main`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,7 +23,8 @@ const FormulaContainerStyled = styled.main`
         justify-content: center;
         align-items: center;
         gap: 10px;
+        width: 100%;
     }
 `
 
-export default FormulaContainerStyled;
+export default PageFormulaContainerStyled;

@@ -7,6 +7,7 @@ type FormulaInputProps = {
     onChange: ChangeEventHandler<HTMLInputElement> | undefined 
     required: boolean | undefined
     aria_label: string | undefined
+    width: number
 }
 
 export default FormulaInputProps;

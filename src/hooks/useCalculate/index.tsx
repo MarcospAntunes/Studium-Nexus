@@ -1,15 +1,16 @@
-import { bhaskara } from "@/utils";
+import { arithmeticAverage, bhaskara } from "@/utils";
 import { useState } from "react";
 
 function useCalculate() {
     const [result, setResult] = useState<any>();
-    const [values, setValues] = useState<number[]>([]);
+    const [values, setValues] = useState<any[]>([]);
 
     const operations: any = {
         'bhaskara': () => bhaskara([values[0], values[1], values[2]]),
+        'media-aritmetica': () => arithmeticAverage(values[0]),
     }
 
-    const addNewValue = (index: number, newValue: number) => {
+    const addNewValue = (index: number, newValue: any) => {
         const newArray = [...values];
         newArray[index] = newValue
         setValues(newArray);

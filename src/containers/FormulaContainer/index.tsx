@@ -1,13 +1,9 @@
-import { useTheme } from "@/hooks";
-import { darkTheme, lightTheme } from "@/themes";
-import Children from "@/types/children.type";
-import FormulaContainerStyled from "./FormulaContainer.style";
+import styled from "styled-components";
 
-function FormulaContainer({ children }: Children): JSX.Element {
-    const { theme } = useTheme();
-    return(
-        <FormulaContainerStyled theme={theme === 'light' ? lightTheme : darkTheme}>{children}</FormulaContainerStyled>
-    )
-}
+const FormulaContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+`
 
 export default FormulaContainer;

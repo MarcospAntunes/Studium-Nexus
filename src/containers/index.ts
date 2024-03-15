@@ -3,6 +3,7 @@ import ConverterContainer from "./ConverterContainer";
 import { FlexContainerCenter, FlexContainerSpaceBTW, FlexContainerAdapter } from "./FlexContainer";
 import InputContainer from "./InputContainer";
 import ResultContainer from "./ResultContainer";
+import PageFormulaContainer from "./PageFormulaContainer";
 import FormulaContainer from "./FormulaContainer";
 
 export {
@@ -13,5 +14,6 @@ export {
     FlexContainerAdapter,
     InputContainer,
     ResultContainer,
+    PageFormulaContainer,
     FormulaContainer
 }

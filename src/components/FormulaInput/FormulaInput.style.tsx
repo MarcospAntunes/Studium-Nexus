@@ -4,7 +4,7 @@ const FormulaInputStyled = styled.input`
     border: none;
     border-radius: 15px;
 
-    width: 60px;
+    width: ${({width}) => width}px;
     padding: 8px;
     background-color: ${({theme}) => theme.bgInput};
     font-family: inherit;

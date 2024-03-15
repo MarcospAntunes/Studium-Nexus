@@ -1,5 +1,5 @@
 import { FormulaInput, Button, ResultFormula, FormulaFormat } from "@/components";
-import { InputContainer, ResultContainer } from "@/containers";
+import { FormulaContainer, InputContainer, ResultContainer } from "@/containers";
 import { useCalculate } from "@/hooks";
 import { useParams } from "next/navigation";
 import BhaskaraSection from "./Bhaskara.style";
@@ -20,8 +20,8 @@ function Bhaskara() {
     return (
         <>
             <BhaskaraSection>
-                <div className="formula">
-                    <h2>Insira os coeficientes da equação</h2>
+                <FormulaContainer>
+                    <h3>Insira os coeficientes da equação</h3>
                     <InputContainer>
                         <FormulaInput
                             type="number"
@@ -30,6 +30,7 @@ function Bhaskara() {
                             onChange={e => addNewValue(0, Number(e.target.value))}
                             required = {true}
                             aria_label="Coeficiente a da equação quadrática"
+                            width={60}
                         />
                         <FormulaInput
                             type="number"
@@ -38,6 +39,7 @@ function Bhaskara() {
                             onChange={e => addNewValue(1, Number(e.target.value))}
                             required = {true}
                             aria_label="Coeficiente b da equação quadrática"
+                            width={60}
                         />
                         <FormulaInput
                             type="number"
@@ -46,17 +48,21 @@ function Bhaskara() {
                             onChange={e => addNewValue(2, Number(e.target.value))}
                             required = {true}
                             aria_label="Coeficiente c da equação quadrática"
+                            width={60}
                         />
                     </InputContainer>
                     <FormulaFormat aria_label="Formúla de Bhaskara" aria_live="polite">
-                        <span>
-                            x = {RenderBhaskaraFormula(values[1], "b")} ± √{RenderBhaskaraFormula(values[1], "b^2", 2)} - 4.{RenderBhaskaraFormula(values[0], "a")}.{RenderBhaskaraFormula(values[2], "c")}
-                        </span>
-                        <span className="divider">
-                            2.{RenderBhaskaraFormula(values[0], "a")}
+                        x =
+                        <span className="indentFormula">
+                            <span>
+                                {RenderBhaskaraFormula(values[1], "b")} ± √{RenderBhaskaraFormula(values[1], "b^2", 2)} - 4.{RenderBhaskaraFormula(values[0], "a")}.{RenderBhaskaraFormula(values[2], "c")}
+                            </span>
+                            <span className="divider">
+                                2.{RenderBhaskaraFormula(values[0], "a")}
+                            </span>
                         </span>
                     </FormulaFormat>
-                </div>
+                </FormulaContainer>
                 {typeof result === 'object' ?
                     <ResultContainer aria-label="Resultado da equação" >
                         <ResultFormula aria-live="assertive">

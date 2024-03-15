@@ -10,11 +10,11 @@ const BhaskaraSection = styled.section`
     text-align: justify;
     text-indent: 10px;
 
-    & h2 {
+    & h3 {
         font-size: 20px;
         text-align: center;
         text-indent: 0;
-        width: 300px;
+        width: 100%;
         margin: 0;
     }
     
@@ -74,10 +74,6 @@ const BhaskaraSection = styled.section`
                 border-top: 1px solid ${({theme}) => theme.text};
             }
         }
-    }
-
-    & .botoes {
-        width: 100%;
     }
 
     @media screen and (min-width: 541px) {
