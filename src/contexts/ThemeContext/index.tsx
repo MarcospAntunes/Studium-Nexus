@@ -1,6 +1,8 @@
 import { createContext, useState } from "react";
 import ThemeContextProps from "./ThemeContext.type";
 import Children from "@/types/children.type";
+import GlobalStyles from "@/GlobalStyles";
+import { darkTheme, lightTheme } from "@/themes";
 
 const ThemeContext = createContext<ThemeContextProps | any>("light");
 ThemeContext.displayName = "Theme";
@@ -13,6 +15,7 @@ function ThemeProvider({children}: Children): JSX.Element {
 
     return(
         <ThemeContext.Provider value={{themeToggler, theme, setTheme}}>
+            <GlobalStyles theme={theme === "light" ? lightTheme : darkTheme} />
             {children}
         </ThemeContext.Provider>
     )
