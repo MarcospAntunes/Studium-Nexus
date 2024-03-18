@@ -1,3 +1,5 @@
+"use client"
+
 import { useTheme } from "@/hooks";
 import { darkTheme, lightTheme } from "@/themes";
 import Children from "@/types/children.type";

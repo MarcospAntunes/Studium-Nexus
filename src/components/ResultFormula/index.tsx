@@ -1,5 +1,5 @@
 import Children from "@/types/children.type";
-import ResultFormulaStyled from "./ResultFormula";
+import ResultFormulaStyled from "./ResultFormula.style";
 import { useTheme } from "@/hooks";
 import { darkTheme, lightTheme } from "@/themes";
 

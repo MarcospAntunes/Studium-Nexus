@@ -1,3 +1,5 @@
+"use client"
+
 import HeaderStyledProps from "@/components/Header/Header.style.type"
 import styled from "styled-components"
 

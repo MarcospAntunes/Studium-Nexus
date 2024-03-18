@@ -1,3 +1,5 @@
+"use client"
+
 import { useCalculate } from "@/hooks";
 import ArithmeticAverageSection from "./ArithmeticAverage.style";
 import { Button, FormulaFormat, FormulaInput, ResultFormula } from "@/components";

@@ -1,3 +1,5 @@
+"use client"
+
 import { FormulaInput, Button, ResultFormula, FormulaFormat } from "@/components";
 import { FormulaContainer, InputContainer, ResultContainer } from "@/containers";
 import { useCalculate } from "@/hooks";

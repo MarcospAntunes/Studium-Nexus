@@ -1,3 +1,5 @@
+"use client"
+
 import { useEffect, useState } from "react";
 import { BackToTopContainer, BackToTopButton } from "./BackToTop.style";
 import { useTheme } from "@/hooks";

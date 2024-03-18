@@ -1,3 +1,5 @@
+"use client"
+
 import { SearchContext } from "@/contexts";
 import SearchContextProps from "@/contexts/SearchContext/SearchContext.type";
 import { useContext } from "react";

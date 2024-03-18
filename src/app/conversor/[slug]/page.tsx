@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-"use client"
 
 import { BackToTop, Header } from '@/components';
 import { AppContainer, FlexContainerCenter } from "@/containers";

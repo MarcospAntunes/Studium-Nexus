@@ -1,3 +1,5 @@
+"use client"
+
 import MenuStyledProps from "@/components/Menu/Menu.style.type";
 import styled from "styled-components";
 

@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
+"use client"
+
 import { useSearch, useTheme } from "@/hooks";
 import { darkTheme, lightTheme } from "@/themes";
 import SearchBoxStyled from "./SearchBox.style";

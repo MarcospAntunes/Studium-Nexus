@@ -1,3 +1,5 @@
+"use client"
+
 import styled from "styled-components"
 
 const CardStyled = styled.li`

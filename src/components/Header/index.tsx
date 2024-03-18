@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
+"use client"
+
 import { StyleSheetManager } from "styled-components";
 import { useTheme } from "@/hooks";
 import { darkTheme, lightTheme } from "@/themes";

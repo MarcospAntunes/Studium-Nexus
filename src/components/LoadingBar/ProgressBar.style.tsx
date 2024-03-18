@@ -1,3 +1,5 @@
+"use client"
+
 import ProgressProps from "@/components/LoadingBar/ProgessBar.type";
 import styled from "styled-components";
 

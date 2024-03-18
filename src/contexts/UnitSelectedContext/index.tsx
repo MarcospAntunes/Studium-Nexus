@@ -1,3 +1,5 @@
+"use client"
+
 import UnitSelectedContextProps from "@/hooks/useUnitsSelectedContext/useUnidadesSelecionadasContext.type";
 import Children from "@/types/children.type";
 import { createContext, useState } from "react";

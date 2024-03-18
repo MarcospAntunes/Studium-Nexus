@@ -1,3 +1,5 @@
+"use client"
+
 import { arithmeticAverage, bhaskara } from "@/utils";
 import { useState } from "react";
 

@@ -1,3 +1,5 @@
+"use client"
+
 import itens from '../../json/itens.json'
 import { useMemo, useState, createContext } from 'react';
 import SearchContextProps from './SearchContext.type';

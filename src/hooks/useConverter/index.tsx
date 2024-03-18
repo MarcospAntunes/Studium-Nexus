@@ -1,4 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+"use client"
+
 import { useEffect, useState } from "react";
 import { convertUnitsAndCoins } from "@/utils/";
 import { createJob, exportArchive, importArchive } from "@/services";

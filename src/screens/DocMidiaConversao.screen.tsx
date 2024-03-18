@@ -1,4 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
+"use client"
+
 import { Arrow, Button, InputConverter, LoadingConversao, SelectUnit } from "@/components";
 import { ConverterContainer, FlexContainerAdapter } from "@/containers";
 import { useConverterReducer, useConverter } from "@/hooks";

@@ -1,3 +1,5 @@
+"use client"
+
 import ProgressBar from "./ProgressBar.style";
 import ProgressProps from "./ProgessBar.type";
 import { StyleSheetManager } from "styled-components";

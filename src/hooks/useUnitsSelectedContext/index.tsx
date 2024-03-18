@@ -1,3 +1,5 @@
+"use client"
+
 import { useContext } from "react";
 import { UnitSelectedContext } from "@/contexts";
 import UnitSelectedContextProps from "./useUnidadesSelecionadasContext.type";

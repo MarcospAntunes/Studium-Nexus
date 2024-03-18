@@ -1,3 +1,4 @@
+
 import ArithmeticAverage from "@/screens/arithmeticAverage";
 import Bhaskara from "@/screens/bhaskaraScreen";
 import React from "react";

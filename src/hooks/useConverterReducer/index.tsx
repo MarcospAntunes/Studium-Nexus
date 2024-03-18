@@ -1,4 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+"use client"
+
 import { ConverterReducer } from "@/reducers/index";
 import { useEffect, useReducer } from "react";
 

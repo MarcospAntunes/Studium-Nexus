@@ -1,3 +1,5 @@
+"use client"
+
 import { useEffect } from "react";
 import SelectStyled from "./SelectUnit.style";
 import SelectUnitProps from "./SelectUnitType";

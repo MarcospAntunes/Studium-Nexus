@@ -1,3 +1,5 @@
+"use client"
+
 import { Card } from "..";
 import { useRouter } from "next/navigation";
 import UlStyled from "./ListConverter.style";

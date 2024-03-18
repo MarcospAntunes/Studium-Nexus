@@ -1,5 +1,3 @@
-"use client"
-
 import { 
   SearchBox, 
   Header, 
@@ -10,7 +8,7 @@ import {
 
 import { AppContainer, FlexContainerSpaceBTW } from '@/containers';
 
-export default function Home() {
+export default async function Home() {
 
   return (
     <AppContainer>
