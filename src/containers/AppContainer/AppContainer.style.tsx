@@ -16,6 +16,7 @@ const AppContainerStyled = styled.div`
 
     h2 {
         margin-bottom: 20px;
+        text-align: center;
     }
 `
 
