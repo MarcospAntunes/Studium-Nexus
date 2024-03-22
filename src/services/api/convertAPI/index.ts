@@ -1,6 +1,6 @@
 import { CreateJobProps, ExportArchiveProps, ImportArchiveProps } from "./convertAPI.type";
 
-async function createJob({unit, upload, taskID, apiKey}: CreateJobProps): Promise<any[] | undefined> {
+async function createJob({ unit, upload, taskID, apiKey }: CreateJobProps): Promise<any[] | undefined> {
     const originalFormat: string = unit[0];
     const destinyFormat: string = unit[1];
     if (originalFormat && destinyFormat && upload) {
@@ -32,8 +32,8 @@ async function createJob({unit, upload, taskID, apiKey}: CreateJobProps): Promis
                     }
                 },
                 "tag": "jobbuilder"
-              }
-    
+            }
+
             const response: Response = await fetch(endpoint, {
                 method: 'POST',
                 headers: {
@@ -45,8 +45,8 @@ async function createJob({unit, upload, taskID, apiKey}: CreateJobProps): Promis
             const data = await response.json();
 
             return [data, 35]
-        
-        } catch(error) {
+
+        } catch (error) {
             console.log("Erro ao criar trabalho", error)
             return ["", -1]
         }
@@ -59,7 +59,7 @@ async function importArchive({ data, file }: ImportArchiveProps): Promise<any[]>
         const importInfo = importTask;
         const { url, parameters } = importInfo;
         const formData: FormData = new FormData();
-        for(const key in parameters) {
+        for (const key in parameters) {
             formData.append(key, parameters[key]);
         }
         formData.append("file", file);
@@ -68,29 +68,29 @@ async function importArchive({ data, file }: ImportArchiveProps): Promise<any[]>
             body: formData
         })
         return [data, 90]
-    } catch(error) {
+    } catch (error) {
         console.log("Erro ao importar arquivo", error)
         return ["", -1]
-    } 
+    }
 }
 
-async function exportArchive({data, apiKey}: ExportArchiveProps): Promise<any[] | undefined> {
+async function exportArchive({ data, apiKey }: ExportArchiveProps): Promise<any[] | undefined> {
     try {
         const inputTaskIds: string = data.data.tasks[2].id
         const endpoint: string = `https://sync.api.cloudconvert.com/v2/tasks/${inputTaskIds}?include=payload`
-    
+
         const request: Response = await fetch(endpoint, {
             method: "GET",
             headers: {
-            "Authorization": `Bearer ${apiKey}`,
+                "Authorization": `Bearer ${apiKey}`,
             },
         });
-        if(request.ok) {
+        if (request.ok) {
             const res = await request.json()
             const url: string = res.data.result.files[0].url;
             return [url, 100]
         }
-    } catch(error) {
+    } catch (error) {
         console.log("Erro ao fornecer link de download", error)
         return ["", -1]
     }

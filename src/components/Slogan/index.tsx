@@ -1,7 +1,7 @@
 import SloganStyled from "./Slogan.style";
 
 function Slogan(): JSX.Element {
-    return(
+    return (
         <SloganStyled>
             Studium Nexus, a plataforma de estudos para auxiliar você nos estudos!
         </SloganStyled>

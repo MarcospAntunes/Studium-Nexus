@@ -12,6 +12,6 @@ function useTheme() {
         setTheme,
         themeToggler
     }
-}   
+}
 
 export default useTheme;

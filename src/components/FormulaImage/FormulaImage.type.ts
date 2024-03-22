@@ -1,5 +1,5 @@
 type FormulaImageProps = {
-    src: string 
+    src: string
     alt: string
 }
 

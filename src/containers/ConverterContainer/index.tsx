@@ -3,10 +3,10 @@ import { darkTheme, lightTheme } from "@/themes";
 import ConversorContainerStyled from "./ConverterContainer.style";
 import Children from "@/types/children.type";
 
-function ConversorContainer({children}: Children): JSX.Element {
+function ConversorContainer({ children }: Children): JSX.Element {
     const { theme } = useTheme();
 
-    return(
+    return (
         <ConversorContainerStyled theme={theme === "light" ? lightTheme : darkTheme}>
             {children}
         </ConversorContainerStyled>

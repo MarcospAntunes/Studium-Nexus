@@ -7,7 +7,7 @@ export default function Layout({
 }>) {
   return (
     <StyledComponentsRegistry>
-        {children}
+      {children}
     </StyledComponentsRegistry>
   );
 }

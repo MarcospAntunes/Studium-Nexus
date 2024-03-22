@@ -20,4 +20,4 @@ const formulaRoutes = {
 }
 
 
-export {converterRoutes, formulaRoutes}
+export { converterRoutes, formulaRoutes }

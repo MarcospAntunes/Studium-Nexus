@@ -19,8 +19,8 @@ const MenuButton = styled.button<MenuStyledProps>`
     
 
     .lines {
-        background-color: ${({theme}) => theme.text};
-        border: 1px solid ${({theme}) => theme.text};
+        background-color: ${({ theme }) => theme.text};
+        border: 1px solid ${({ theme }) => theme.text};
         border-radius: 15px;
         z-index: 3;
     }

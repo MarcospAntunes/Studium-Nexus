@@ -7,11 +7,11 @@ import { createContext, useState } from "react";
 const UnitSelectedContext = createContext<UnitSelectedContextProps | any>("");
 UnitSelectedContext.displayName = "UnidadeSelecionada";
 
-function UnitSelectedProvider ({ children }: Children): JSX.Element {
+function UnitSelectedProvider({ children }: Children): JSX.Element {
     const [unit, setUnit] = useState<string[]>([]);
 
-    return(
-        <UnitSelectedContext.Provider value={{unit, setUnit}}>
+    return (
+        <UnitSelectedContext.Provider value={{ unit, setUnit }}>
             {children}
         </UnitSelectedContext.Provider>
     )

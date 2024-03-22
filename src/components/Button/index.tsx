@@ -6,9 +6,9 @@ import { darkTheme, lightTheme } from "@/themes";
 function Button({ children, onClick, role, type }: ButtonProps): JSX.Element {
     const { theme } = useTheme();
 
-    return(
-        <ButtonStyled 
-            onClick={onClick} 
+    return (
+        <ButtonStyled
+            onClick={onClick}
             theme={theme === 'light' ? lightTheme : darkTheme}
             role={role}
             type={type}

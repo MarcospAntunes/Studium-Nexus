@@ -12,10 +12,10 @@ const CardStyled = styled.li`
     height: 110px;
     border-radius: 15px;
 
-    background-color: ${({theme}) => theme.bgCard};
-    box-shadow: -2px 2px 4px 1px ${({theme}) => theme.shadown};
+    background-color: ${({ theme }) => theme.bgCard};
+    box-shadow: -2px 2px 4px 1px ${({ theme }) => theme.shadown};
 
-    color: ${({theme}) => theme.text};
+    color: ${({ theme }) => theme.text};
     font-size: 14px;
     transition: .3s;
     cursor: pointer;
@@ -23,7 +23,7 @@ const CardStyled = styled.li`
     img {
         width: 32px;
         height: 32px;
-        filter: invert(${({theme}) => theme.invert});
+        filter: invert(${({ theme }) => theme.invert});
     }
 
     p {
@@ -32,12 +32,12 @@ const CardStyled = styled.li`
     }
 
     &:hover {
-        background-color: ${({theme}) => theme.bgCardHover};
-        color: ${({theme}) => theme.textHover};
+        background-color: ${({ theme }) => theme.bgCardHover};
+        color: ${({ theme }) => theme.textHover};
         transition: .3s;
 
         & img {
-            filter: invert(${({theme}) => theme.invertHover}); 
+            filter: invert(${({ theme }) => theme.invertHover}); 
         }       
     }
 

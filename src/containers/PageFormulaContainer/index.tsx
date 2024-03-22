@@ -7,7 +7,7 @@ import PageFormulaContainerStyled from "./PageFormulaContainer.style";
 
 function PageFormulaContainer({ children }: Children): JSX.Element {
     const { theme } = useTheme();
-    return(
+    return (
         <PageFormulaContainerStyled theme={theme === 'light' ? lightTheme : darkTheme}>{children}</PageFormulaContainerStyled>
     )
 }

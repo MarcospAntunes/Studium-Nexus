@@ -13,7 +13,7 @@ const ResultConverterStyled = styled.p`
     word-break: break-all;
     padding: 20px;
     border-radius: 15px;
-    background-color: ${({theme}) => theme.body};
+    background-color: ${({ theme }) => theme.body};
     transition: .3s;
 
     @media screen and (min-width: 541px) {

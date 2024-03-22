@@ -7,6 +7,6 @@ export {
     ThemeProvider,
     UnitSelectedContext,
     UnitSelectedProvider,
-    SearchContext, 
+    SearchContext,
     SearchProvider
 }

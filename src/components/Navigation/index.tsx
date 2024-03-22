@@ -10,15 +10,15 @@ function Navigation(): JSX.Element {
     const scrollToSection = (id: string) => {
         const section = document.getElementById(id);
 
-        if(section) {
+        if (section) {
             section.scrollIntoView({ behavior: 'smooth' })
         }
     }
 
-    return(
+    return (
         <NavigationStyled theme={theme === "light" ? lightTheme : darkTheme}>
-            <a onClick={() => scrollToSection('como-foi-criada')}  href="#">Como foi criada</a>
-            <a onClick={() => scrollToSection('passo-a-passo')}  href="#">Como chegar no resultado</a>
+            <a onClick={() => scrollToSection('como-foi-criada')} href="#">Como foi criada</a>
+            <a onClick={() => scrollToSection('passo-a-passo')} href="#">Como chegar no resultado</a>
         </NavigationStyled>
     )
 }

@@ -15,7 +15,7 @@ const darkTheme = {
 
 const lightTheme = {
     body: '#FFFFFF',
-    text:  '#000000',
+    text: '#000000',
     textHover: '#FFFFFF',
     bgCard: '#f6f6f6',
     bgCardHover: "#292929",

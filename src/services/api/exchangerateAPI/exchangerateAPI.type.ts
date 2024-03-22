@@ -1,5 +1,5 @@
 type ConvertCoinAPIProps = {
-    number: number 
+    number: number
     originCoin: string
     destinyCoin: string
 }

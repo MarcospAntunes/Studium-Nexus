@@ -25,22 +25,22 @@ function useConverter(slug: string) {
     }, [destiny, origin])
 
     const handleValue: () => Promise<void> = async () => {
-        if(origin && destiny) {
-            if(slug === "documento" || slug === "midia") {
+        if (origin && destiny) {
+            if (slug === "documento" || slug === "midia") {
                 setResultOfConversion(["", 15])
                 try {
                     const apiKey = process.env.CONVERT_KEY;
-                    const resultOfConversion = await createJob({unit, upload, taskID, apiKey});
+                    const resultOfConversion = await createJob({ unit, upload, taskID, apiKey });
                     setResultOfConversion(resultOfConversion);
 
                     if (resultOfConversion && resultOfConversion[1] !== -1) {
                         const data = resultOfConversion[0];
                         const file = upload![0];
-                        const resultImportArchive = await importArchive({data, file});
+                        const resultImportArchive = await importArchive({ data, file });
                         setResultOfConversion(resultImportArchive);
 
                         if (resultImportArchive && resultImportArchive[1] !== -1) {
-                            const resultExportArchive = await exportArchive({data, apiKey});
+                            const resultExportArchive = await exportArchive({ data, apiKey });
                             setResultOfConversion(resultExportArchive);
                         }
                     }
@@ -61,7 +61,7 @@ function useConverter(slug: string) {
         selecteds.forEach((selected) => {
             selected.value = "";
         })
-        
+
         setDestiny("");
         setOrigin("");
         setResultOfConversion(0);
@@ -77,7 +77,7 @@ function useConverter(slug: string) {
         setResultOfConversion,
         value,
         unit,
-        resultOfConversion, 
+        resultOfConversion,
         upload,
         handleValue,
         clear

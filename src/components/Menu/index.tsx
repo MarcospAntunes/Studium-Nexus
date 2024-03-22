@@ -18,11 +18,11 @@ function Menu(): JSX.Element {
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const { theme } = useTheme();
 
-    return(
+    return (
         <StyleSheetManager shouldForwardProp={(prop) => prop !== 'isopen'}>
-            <MenuButton 
-                isopen={isOpen.toString()} 
-                onClick={() => setIsOpen(!isOpen)} 
+            <MenuButton
+                isopen={isOpen.toString()}
+                onClick={() => setIsOpen(!isOpen)}
                 theme={theme === "light" ? lightTheme : darkTheme}
                 aria-label="menu de navegação"
                 type="button"
@@ -34,9 +34,9 @@ function Menu(): JSX.Element {
                 <div className="lines line3"></div>
             </MenuButton>
 
-            <MenuStyled 
-                isopen={isOpen.toString()} 
-                className={Montz.className} 
+            <MenuStyled
+                isopen={isOpen.toString()}
+                className={Montz.className}
                 id="menuNav"
                 theme={theme === "light" ? lightTheme : darkTheme}
                 role="menu"
@@ -46,7 +46,7 @@ function Menu(): JSX.Element {
                 {itens.map((item) => (
                     <Link
                         key={item.id}
-                        className={`link ${pathname === item.link ? 'active' : ''}`} 
+                        className={`link ${pathname === item.link ? 'active' : ''}`}
                         href={item.link}
                         role="menuitem"
                     >
@@ -54,7 +54,7 @@ function Menu(): JSX.Element {
                     </Link>
                 ))}
             </MenuStyled>
-        </StyleSheetManager>  
+        </StyleSheetManager>
     )
 }
 

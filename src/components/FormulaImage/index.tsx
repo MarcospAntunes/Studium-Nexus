@@ -8,8 +8,8 @@ import { darkTheme, lightTheme } from "@/themes";
 function FormulaImage({ src, alt }: FormulaImageProps): JSX.Element {
     const { theme } = useTheme();
 
-    return(
-        <ImgStyled src={src} alt={alt} theme={theme === "light" ? lightTheme : darkTheme} loading="lazy"/>
+    return (
+        <ImgStyled src={src} alt={alt} theme={theme === "light" ? lightTheme : darkTheme} loading="lazy" />
     )
 }
 

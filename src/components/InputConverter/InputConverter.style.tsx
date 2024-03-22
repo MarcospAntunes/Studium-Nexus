@@ -10,9 +10,9 @@ const InputConverterStyled = styled.input`
 
     width: 230px;
     padding: 8px;
-    background-color: ${({theme}) => theme.bgInput};
+    background-color: ${({ theme }) => theme.bgInput};
     font-size: 14px;
-    color: ${({theme}) => theme.text};
+    color: ${({ theme }) => theme.text};
     transition: .3s;
 
     &:focus {

@@ -10,7 +10,7 @@ function ExistingRoutes({ children, routes, slug }: ExistingRoutesProps) {
     const result = verifyRoutes(routes, slug)
 
     useEffect(() => {
-        if(!result) {
+        if (!result) {
             push(`/?404=not-found_${slug}`)
         }
 

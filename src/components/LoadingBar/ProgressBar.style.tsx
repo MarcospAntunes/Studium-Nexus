@@ -11,7 +11,7 @@ const ProgressBar = styled.div<ProgressProps>`
     span {
         display: block;
         position: relative;
-        width: ${({percentage}) => percentage}%;
+        width: ${({ percentage }) => percentage}%;
         height: 100%;
         background-color: #6dca6d;
         transition: .3s ease-in-out;

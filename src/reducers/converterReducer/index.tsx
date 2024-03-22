@@ -1,10 +1,10 @@
 import ConverterActionProps from "./ConverterReducer.type"
 
-function ConverterReducer( state: any, action: ConverterActionProps) {
-    switch(state.slug) {
+function ConverterReducer(state: any, action: ConverterActionProps) {
+    switch (state.slug) {
         case "tempo":
             return {
-                seculo: 0.01, 
+                seculo: 0.01,
                 ano: 1,
                 mes: 12,
                 semana: 52.143,
@@ -14,11 +14,11 @@ function ConverterReducer( state: any, action: ConverterActionProps) {
                 segundo: 31622400,
                 milessegundo: 31536000000
             }
-        
+
         case "peso":
             return {
-                quilograma: 1, 
-                hectograma:10,
+                quilograma: 1,
+                hectograma: 10,
                 decagrama: 100,
                 grama: 1000,
                 decigrama: 10000,
@@ -27,10 +27,10 @@ function ConverterReducer( state: any, action: ConverterActionProps) {
                 onca: 35.274,
                 libra: 2.205
             }
-        
+
         case "temperatura":
             return {
-                celsius: 1, 
+                celsius: 1,
                 Kelvin: 274.15,
                 fahrenheit: 32
             }
@@ -58,7 +58,7 @@ function ConverterReducer( state: any, action: ConverterActionProps) {
                 pes: 3281,
                 polegada: 39370
             }
-        
+
         case "energia":
             return {
                 gigawatts: 0.000000001,

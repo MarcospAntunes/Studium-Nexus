@@ -9,7 +9,7 @@ const ArrowStyled = styled.img`
     height: 50px;
     transform: rotate(180deg);
     z-index: 1;
-    filter: invert(${({theme}) => theme.invert});
+    filter: invert(${({ theme }) => theme.invert});
 
     @media screen and (min-width: 541px) {
         width: 30px;

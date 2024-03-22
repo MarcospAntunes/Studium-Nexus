@@ -1,7 +1,7 @@
-import { 
-  SearchBox, 
-  Header, 
-  ListConverter, 
+import {
+  SearchBox,
+  Header,
+  ListConverter,
   BackToTop,
   Slogan
 } from "@/components";
@@ -15,7 +15,7 @@ export default async function Home() {
       <Header />
       <main>
         <section>
-          <Slogan/>
+          <Slogan />
           <FlexContainerSpaceBTW>
             <h3>Funcionalidades</h3>
             <SearchBox />

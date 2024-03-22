@@ -11,11 +11,11 @@ function Bhaskara() {
     const { slug } = useParams();
     const {
         values,
-        result, 
+        result,
         calculate,
         addNewValue,
-        clear 
-    } = useCalculate() 
+        clear
+    } = useCalculate()
 
     const [a, b, c] = values[0] !== undefined ? [values[0], values[1], values[2]] : ['a', 'b', 'c']
 
@@ -30,25 +30,25 @@ function Bhaskara() {
                             placeholder="a"
                             value={typeof a === 'number' ? a : ""}
                             onChange={e => addNewValue(0, Number(e.target.value))}
-                            required = {true}
+                            required={true}
                             aria_label="Coeficiente a da equação quadrática"
                             width={60}
                         />
                         <FormulaInput
                             type="number"
                             placeholder="b"
-                            value={typeof b  === 'number' ? b : ""}
+                            value={typeof b === 'number' ? b : ""}
                             onChange={e => addNewValue(1, Number(e.target.value))}
-                            required = {true}
+                            required={true}
                             aria_label="Coeficiente b da equação quadrática"
                             width={60}
                         />
                         <FormulaInput
                             type="number"
                             placeholder="c"
-                            value={typeof c  === 'number' ? c : ""}
+                            value={typeof c === 'number' ? c : ""}
                             onChange={e => addNewValue(2, Number(e.target.value))}
-                            required = {true}
+                            required={true}
                             aria_label="Coeficiente c da equação quadrática"
                             width={60}
                         />
@@ -77,13 +77,13 @@ function Bhaskara() {
                             }
                         </ResultFormula>
                     </ResultContainer>
-                :   <ResultFormula aria-live="assertive">
+                    : <ResultFormula aria-live="assertive">
                         {
-                            isNaN(result) 
-                                ? result 
+                            isNaN(result)
+                                ? result
                                 : <>x = {
-                                    result 
-                                        ? result 
+                                    result
+                                        ? result
                                         : "?"}
                                 </>
                         }
@@ -97,9 +97,9 @@ function Bhaskara() {
                         Calcular
                     </Button>
                     <Button
-                    onClick={() => clear()}
-                    role="button"
-                    aria-label="Limpar valores fornecidos e resultados."
+                        onClick={() => clear()}
+                        role="button"
+                        aria-label="Limpar valores fornecidos e resultados."
                     >
                         Limpar
                     </Button>
@@ -107,9 +107,9 @@ function Bhaskara() {
             </BhaskaraSection>
             <BhaskaraSection>
                 <br />
-                <HowHasCreated/>
+                <HowHasCreated />
                 <br />
-                <HowToGetTheResult a={a} b={b} c={c}/>
+                <HowToGetTheResult a={a} b={b} c={c} />
             </BhaskaraSection>
         </>
     );

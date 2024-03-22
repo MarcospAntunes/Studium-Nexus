@@ -9,9 +9,9 @@ function FormulaFormat({ children, aria_label, aria_live }: FormulaFormatProps):
 
     return (
         <FormulaFormatStyled
-        aria-label={aria_label} 
-        aria-live={aria_live}
-        theme={theme === 'light' ? lightTheme : darkTheme}
+            aria-label={aria_label}
+            aria-live={aria_live}
+            theme={theme === 'light' ? lightTheme : darkTheme}
         >
             {children}
         </FormulaFormatStyled>

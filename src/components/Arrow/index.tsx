@@ -5,11 +5,11 @@ import ArrowStyled from "./Arrow.style";
 function Arrow(): JSX.Element {
     const { theme } = useTheme();
 
-    return(
-        <ArrowStyled 
-            src={`../../images/icons/arrow.png`} 
-            alt="arrow" 
-            theme={theme === "light" ? lightTheme : darkTheme} 
+    return (
+        <ArrowStyled
+            src={`../../images/icons/arrow.png`}
+            alt="arrow"
+            theme={theme === "light" ? lightTheme : darkTheme}
         />
     )
 }

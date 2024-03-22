@@ -5,16 +5,16 @@ type renderBhaskaraExplanationProps = {
 }
 
 function RenderBhaskaraExplanation({ a, b, delta }: renderBhaskaraExplanationProps): JSX.Element | undefined {
-    if(typeof a === 'number' && typeof b === 'number' && delta !== undefined) {
+    if (typeof a === 'number' && typeof b === 'number' && delta !== undefined) {
         const deltaRoot: number = Math.sqrt(delta)
-        if(delta === 0 ) {
+        if (delta === 0) {
             return (
                 <>
                     <li>
                         Neste caso, terá apenas uma raíz que devemos calcular da seguinte forma:
                         <div className="formulaContent">
                             <span className="container">
-                                x = 
+                                x =
                                 <p className="fraction">
                                     <span className="denominator"> -({b})</span><span className="divider">2.{a}</span>
                                 </p>
@@ -22,20 +22,20 @@ function RenderBhaskaraExplanation({ a, b, delta }: renderBhaskaraExplanationPro
                         </div>
                     </li>
                     <li>
-                        Com isso, obtemos o valor da raíz única que é: 
-                        <p className="formulaContent">x = {-b /(2*a)}</p>
+                        Com isso, obtemos o valor da raíz única que é:
+                        <p className="formulaContent">x = {-b / (2 * a)}</p>
                     </li>
                 </>
             )
         }
 
-        if(delta > 0) {
+        if (delta > 0) {
             const x1 = (-b + deltaRoot) / (2 * a);
             const x2 = (-b - deltaRoot) / (2 * a);
             return (
                 <>
                     <li>
-                        Neste caso, terá <strong>duas raízes</strong> que devemos calcular da seguinte forma: 
+                        Neste caso, terá <strong>duas raízes</strong> que devemos calcular da seguinte forma:
                         <div className="formulaContent">
                             <p className="fraction">
                                 <br />

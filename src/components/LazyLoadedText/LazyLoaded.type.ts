@@ -1,7 +1,7 @@
 import { ReactNode } from "react"
 
 type LazyLoadedProps = {
-    children: ReactNode 
+    children: ReactNode
     className?: string | undefined
 }
 

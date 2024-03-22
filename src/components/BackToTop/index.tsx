@@ -16,7 +16,7 @@ function BackToTop(): JSX.Element {
     }, [])
 
     const toggleVisibility: VoidFunction = () => {
-        if(window.scrollY > 100) {
+        if (window.scrollY > 100) {
             setIsVisible(true);
         } else {
             setIsVisible(false);
@@ -32,8 +32,8 @@ function BackToTop(): JSX.Element {
 
     return (
         <BackToTopContainer>
-            {isVisible && 
-                <BackToTopButton 
+            {isVisible &&
+                <BackToTopButton
                     onClick={scrollToTop}
                     theme={theme === 'light' ? lightTheme : darkTheme}
                 >

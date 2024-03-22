@@ -6,7 +6,7 @@ type CreateJobProps = {
 }
 
 type ImportArchiveProps = {
-    data: any 
+    data: any
     file: File
 }
 
@@ -17,10 +17,10 @@ type ExportArchiveProps = {
 
 type ConvertProps = {
     unit: string[]
-    value:  string
+    value: string
     state: any
     slug: string
 }
 
 
-export type {CreateJobProps, ImportArchiveProps, ExportArchiveProps, ConvertProps};
+export type { CreateJobProps, ImportArchiveProps, ExportArchiveProps, ConvertProps };

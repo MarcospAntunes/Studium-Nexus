@@ -8,10 +8,10 @@ async function convertCoinAPI({ number, originCoin, destinyCoin }: ConvertCoinAP
         const req: Response = await fetch(apiUrl);
         const res = await req.json();
 
-        if(req.ok && res.result === "success") {
+        if (req.ok && res.result === "success") {
             const cambio: number = res.conversion_rate;
             const valorConvertido: number = number * cambio;
-            const resultado: string = `${valorConvertido.toLocaleString(destinyCoin,{
+            const resultado: string = `${valorConvertido.toLocaleString(destinyCoin, {
                 style: 'currency',
                 currency: destinyCoin
             })}`;
@@ -19,9 +19,9 @@ async function convertCoinAPI({ number, originCoin, destinyCoin }: ConvertCoinAP
             return resultado
         }
 
-    } catch(err) {
+    } catch (err) {
         console.log("Não foi possível realizar a conversão de moedas", err)
-        
+
         return "Não foi possível realizar a conversão de moedas"
     }
 

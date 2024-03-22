@@ -10,8 +10,8 @@ const AppContainerStyled = styled.div`
     gap: 30px;
     padding: 5px;
     text-align: center;
-    color: ${({theme}) => theme.text};
-    background-color: ${({theme}) => theme.body};
+    color: ${({ theme }) => theme.text};
+    background-color: ${({ theme }) => theme.body};
     transition: .3s;
 
     h2 {

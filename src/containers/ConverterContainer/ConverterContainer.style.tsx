@@ -16,11 +16,11 @@ const ConverterContainerStyled = styled.section`
     padding: 10px;
     border-radius: 15px;
 
-    background-color: ${({theme}) => theme.bgConverter};
-    box-shadow: -2px 2px 4px 1px ${({theme}) => theme.shadown};
+    background-color: ${({ theme }) => theme.bgConverter};
+    box-shadow: -2px 2px 4px 1px ${({ theme }) => theme.shadown};
     font-size: 14px;
     text-align: center;
-    color: ${({theme}) => theme.text};
+    color: ${({ theme }) => theme.text};
     transition: .3s;
 
     & .divConversao {
@@ -48,7 +48,7 @@ const ConverterContainerStyled = styled.section`
         & img {
             width: 64px;
             height: 64px;
-            filter: invert(${({theme}) => theme.invert});
+            filter: invert(${({ theme }) => theme.invert});
         }
 
         & .convertido {

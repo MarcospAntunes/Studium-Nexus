@@ -10,14 +10,14 @@ function SearchBox(): JSX.Element {
     const { search, setSearch } = useSearch();
     const { theme } = useTheme();
 
-    return(
+    return (
         <SearchBoxStyled theme={theme === "light" ? lightTheme : darkTheme} role="search">
-            <img src="../../images/icons/buscar.png" alt="buscar" role="img"/>
-            <input 
-                type="text" 
+            <img src="../../images/icons/buscar.png" alt="buscar" role="img" />
+            <input
+                type="text"
                 value={search}
-                onChange={e => setSearch(e.target.value)} 
-                name="buscar" 
+                onChange={e => setSearch(e.target.value)}
+                name="buscar"
                 id="buscar"
                 placeholder="Pesquisar"
                 role="searchbox"

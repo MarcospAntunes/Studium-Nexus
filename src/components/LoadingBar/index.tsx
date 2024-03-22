@@ -5,11 +5,11 @@ import ProgressProps from "./ProgessBar.type";
 import { StyleSheetManager } from "styled-components";
 
 function LoadingConversao({ percentage }: ProgressProps): JSX.Element {
-    return(
+    return (
         <StyleSheetManager shouldForwardProp={(prop) => prop !== 'percentage'}>
-        <ProgressBar percentage={percentage} role="progressbar">
-            <span />
-        </ProgressBar>
+            <ProgressBar percentage={percentage} role="progressbar">
+                <span />
+            </ProgressBar>
         </StyleSheetManager>
     )
 }

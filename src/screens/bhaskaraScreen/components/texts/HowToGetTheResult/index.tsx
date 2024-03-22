@@ -9,11 +9,11 @@ type HowToGetTheResultProps = {
     c: number | string
 }
 
-function HowToGetTheResult({a, b, c}: HowToGetTheResultProps): JSX.Element {
+function HowToGetTheResult({ a, b, c }: HowToGetTheResultProps): JSX.Element {
     const [delta, setDelta] = useState<number>();
 
     useEffect(() => {
-        if(typeof a === 'number' && typeof b === 'number' && typeof c === 'number') {
+        if (typeof a === 'number' && typeof b === 'number' && typeof c === 'number') {
             const result = (b * b) - (4 * a * c);
             setDelta(result)
         } else {
@@ -21,7 +21,7 @@ function HowToGetTheResult({a, b, c}: HowToGetTheResultProps): JSX.Element {
         }
     }, [a, b, c, delta])
 
-    return(
+    return (
         <>
             <h2 id="passo-a-passo">Como Chegar no Resultado</h2>
             <ol type="1">
@@ -37,7 +37,7 @@ function HowToGetTheResult({a, b, c}: HowToGetTheResultProps): JSX.Element {
 
                 </li>
 
-                {delta !== undefined ? 
+                {delta !== undefined ?
                     <>
                         <li>
                             Agora, antes de continuar, precisamos verificar o valor de delta
@@ -52,11 +52,11 @@ function HowToGetTheResult({a, b, c}: HowToGetTheResultProps): JSX.Element {
                         </li>
                         {delta < 0
                             ? <li>Já que temos o valor menor que zero, não será necessário prosseguir com o calculo</li>
-                            : RenderBhaskaraExplanation({a, b, delta})
+                            : RenderBhaskaraExplanation({ a, b, delta })
                         }
                     </>
-                    : 
-                        <li>Para continuar certifique-se de fornecer os coeficientes da função</li>
+                    :
+                    <li>Para continuar certifique-se de fornecer os coeficientes da função</li>
                 }
             </ol>
         </>

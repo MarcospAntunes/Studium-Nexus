@@ -16,16 +16,16 @@ function Header({ menu = false }): JSX.Element {
     const invertTheme: string = theme === "dark" ? "light" : "dark"
     const source: string = theme === "light" ? "sol.png" : "lua.png"
 
-    if(menu) {
-        return(
+    if (menu) {
+        return (
             <StyleSheetManager shouldForwardProp={(prop) => prop !== 'menu'}>
                 <HeaderStyled menu={menu.toString()}>
                     <div>
                         <TitleNicoMoji>SN</TitleNicoMoji>
                         <div>
-                            <img 
-                                src={`../../images/icons/${source}`} 
-                                alt="change theme" 
+                            <img
+                                src={`../../images/icons/${source}`}
+                                alt="change theme"
                                 onClick={() => handleThemeToggle(invertTheme)}
                                 role="button"
                             />
@@ -33,24 +33,24 @@ function Header({ menu = false }): JSX.Element {
                         </div>
                     </div>
                     <LineStyled theme={theme === "light" ? lightTheme : darkTheme} />
-                </HeaderStyled> 
+                </HeaderStyled>
             </StyleSheetManager>
         )
-            
+
     } else {
-        return(
+        return (
             <StyleSheetManager shouldForwardProp={(prop) => prop !== 'menu'}>
                 <HeaderStyled menu={menu.toString()}>
                     <span></span>
                     <TitleNicoMoji>Studium Nexus</TitleNicoMoji>
-                    <img 
-                        src={`../../images/icons/${source}`} 
-                        alt={`${theme} theme`} 
-                        onClick={() => handleThemeToggle(invertTheme)} 
+                    <img
+                        src={`../../images/icons/${source}`}
+                        alt={`${theme} theme`}
+                        onClick={() => handleThemeToggle(invertTheme)}
                         role="button"
                     />
                 </HeaderStyled>
-            </StyleSheetManager>      
+            </StyleSheetManager>
         )
     }
 }

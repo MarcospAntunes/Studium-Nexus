@@ -19,7 +19,7 @@ function useCalculate() {
     }
 
     const calculate = (operation: any) => {
-        if(operation) {
+        if (operation) {
             const calculation = operations[operation]
             setResult(calculation);
         }

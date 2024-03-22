@@ -8,11 +8,11 @@ export default function Layout({
 }>) {
   return (
     <>
-    <StyledComponentsRegistry>
-      <Providers>
-        {children}
-      </Providers>
-    </StyledComponentsRegistry>
+      <StyledComponentsRegistry>
+        <Providers>
+          {children}
+        </Providers>
+      </StyledComponentsRegistry>
     </>
   );
 }

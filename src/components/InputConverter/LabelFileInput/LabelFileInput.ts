@@ -1,8 +1,8 @@
 import { AriaRole, ReactNode } from "react";
 
 type LabelFileInputProps = {
-    children: ReactNode 
-    htmlFor:  string
+    children: ReactNode
+    htmlFor: string
     role?: AriaRole | undefined
 }
 

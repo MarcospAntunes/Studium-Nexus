@@ -13,14 +13,14 @@ function Converter({ params }: { params: { slug: string } }) {
   return (
     <ExistingRoutes slug={slug} routes={converterRoutes}>
       <AppContainer>
-        <Header menu={true}/>
+        <Header menu={true} />
         <FlexContainerCenter>
           <h2>Converter {slug}</h2>
 
-          {slug === "documento" || slug === "midia" ? 
+          {slug === "documento" || slug === "midia" ?
             <DocMidiaConvertScreen params={params} />
-          :
-            <GeneralConvertScreen params={params} />  
+            :
+            <GeneralConvertScreen params={params} />
           }
         </FlexContainerCenter>
         <BackToTop />
@@ -28,5 +28,5 @@ function Converter({ params }: { params: { slug: string } }) {
     </ExistingRoutes>
   );
 }
-  
+
 export default Converter;

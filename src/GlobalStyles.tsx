@@ -10,7 +10,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body { 
-        background-color: ${({theme}) => theme.body};
+        background-color: ${({ theme }) => theme.body};
         transition: .3s;
     }
 

@@ -5,9 +5,9 @@ import { darkTheme, lightTheme } from "@/themes";
 import AppContainerStyled from "./AppContainer.style";
 import Children from "@/types/children.type";
 
-function AppContainer({children}: Children): JSX.Element {
+function AppContainer({ children }: Children): JSX.Element {
     const { theme } = useTheme();
-    return(
+    return (
         <AppContainerStyled theme={theme === "light" ? lightTheme : darkTheme}>
             {children}
         </AppContainerStyled>

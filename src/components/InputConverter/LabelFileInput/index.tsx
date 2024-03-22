@@ -7,15 +7,15 @@ function LabelFileInput({ children, htmlFor, role }: LabelFileInputProps): JSX.E
 
     const { theme } = useTheme();
 
-    return(
-    <LabelFileInputStyled 
-        htmlFor={htmlFor} 
-        theme={theme === 'light' ? lightTheme : darkTheme}
-        role={role} 
-        aria-label="Carregue o arquivo"
-    >
-        {children}
-    </LabelFileInputStyled>
+    return (
+        <LabelFileInputStyled
+            htmlFor={htmlFor}
+            theme={theme === 'light' ? lightTheme : darkTheme}
+            role={role}
+            aria-label="Carregue o arquivo"
+        >
+            {children}
+        </LabelFileInputStyled>
     )
 }
 
