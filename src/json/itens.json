@@ -65,14 +65,14 @@
     },
     {
         "id": "10",
-        "img": "../../images/formulaImages/bhaskara/images/equation9.1.png",
+        "img": "../../images/icons/bhaskara.png",
         "title": "Formula de Bhaskara",
         "link": "/formula/bhaskara",
         "type": "formula"
     },
     {
         "id": "11",
-        "img": "../../images/formulaImages/media-aritmetica/mediaAritmeticaIcon.png",
+        "img": "../../images/icons/mediaAritmetica.png",
         "title": "Média Aritmética",
         "link": "/formula/media-aritmetica",
         "type": "formula"
