@@ -23,7 +23,7 @@ function HowToGetTheResult({ a, b, c }: HowToGetTheResultProps): JSX.Element {
 
     return (
         <>
-            <h2 id="passo-a-passo">Como Chegar no Resultado</h2>
+            <h3 id="passo-a-passo">Como Chegar no Resultado</h3>
             <ol type="1">
                 <li>
                     Primeiro precisamos calcular o descriminante (delta) como base nos coeficientes fornecidos (a, b e c):

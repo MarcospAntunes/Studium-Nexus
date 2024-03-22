@@ -23,7 +23,7 @@ function Bhaskara() {
         <>
             <BhaskaraSection>
                 <FormulaContainer>
-                    <h3>Insira os coeficientes da equação</h3>
+                    <h2>Insira os coeficientes da equação</h2>
                     <InputContainer>
                         <FormulaInput
                             type="number"

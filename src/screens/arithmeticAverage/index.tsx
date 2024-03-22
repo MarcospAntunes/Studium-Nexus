@@ -5,6 +5,7 @@ import ArithmeticAverageSection from "./ArithmeticAverage.style";
 import { Button, FormulaFormat, FormulaInput, ResultFormula } from "@/components";
 import { FormulaContainer, ResultContainer } from "@/containers";
 import { useParams } from "next/navigation";
+import { HowHasCreated, HowToGetTheResult } from "./components";
 
 function ArithmeticAverage() {
     const { slug } = useParams();
@@ -27,7 +28,7 @@ function ArithmeticAverage() {
         <>
             <ArithmeticAverageSection>
                 <FormulaContainer>
-                    <h3>Insira a soma dos números</h3>
+                    <h2>Insira a soma dos números</h2>
                     <FormulaInput
                         type="text"
                         placeholder="Insira a soma dos números (a1 + a2 + a3...)"
@@ -83,6 +84,12 @@ function ArithmeticAverage() {
                         Limpar
                     </Button>
                 </div>
+            </ArithmeticAverageSection>
+            <ArithmeticAverageSection>
+                <br />
+                <HowHasCreated />
+                <br />
+                <HowToGetTheResult values = {verifiedSumArray} />
             </ArithmeticAverageSection>
         </>
     )

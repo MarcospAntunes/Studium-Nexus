@@ -12,6 +12,11 @@ const BhaskaraSection = styled.section`
     text-align: justify;
     text-indent: 10px;
 
+    h2 {
+        text-indent: 0;
+        margin-bottom: 0;
+    }
+    
     & h3 {
         font-size: 20px;
         text-align: center;

@@ -6,7 +6,7 @@ import LazyLoadedText from "@/components/LazyLoadedText";
 function HowHasCreated(): JSX.Element {
     return (
         <>
-            <h2 id="#como-foi-criada">Como Foi Criada?</h2>
+            <h3 id="#como-foi-criada">Como Foi Criada?</h3>
             <LazyLoadedText className="explantion">A fórmula de Bhaskara foi <strong>demonstrada</strong> pelo matemático <strong>Bhaskara II no século XII</strong>. Ele era um renomado matemático e astrônomo que contribuiu significativamente para a matemática e ciências astronômicas da Índia medieval. Vale ressaltar que, embora tenha a fórmula tenha seu nome como homenagem, <strong>não</strong> foi Bhaskara II que a criou, pois acredita-se que a fórmula ja era conhecida antes.</LazyLoadedText>
             <LazyLoadedText>A fórmula de Bhaskara é derivada principalmente de uma técnica conhecida como <strong>complementar o quadrado</strong>. Abaixo está um resumo do processo até chegar na fórmula que conhecemos atualmente:</LazyLoadedText>
             <ol type="1">

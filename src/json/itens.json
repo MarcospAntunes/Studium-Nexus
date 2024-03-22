@@ -69,5 +69,12 @@
         "title": "Formula de Bhaskara",
         "link": "/formula/bhaskara",
         "type": "formula"
+    },
+    {
+        "id": "11",
+        "img": "../../images/formulaImages/media-aritmetica/mediaAritmeticaIcon.png",
+        "title": "Média Aritmética",
+        "link": "/formula/media-aritmetica",
+        "type": "formula"
     }
 ]
