@@ -5,7 +5,7 @@ import { FormulaContainer, InputContainer, ResultContainer } from "@/containers"
 import { useCalculate } from "@/hooks";
 import { useParams } from "next/navigation";
 import BhaskaraSection from "./Bhaskara.style";
-import { HowHasCreated, HowToGetTheResult, RenderBhaskaraFormula } from "./components/texts";
+import { HowHasCreated, HowToGetTheResult, RenderBhaskaraFormula } from "./components";
 
 function Bhaskara() {
     const { slug } = useParams();

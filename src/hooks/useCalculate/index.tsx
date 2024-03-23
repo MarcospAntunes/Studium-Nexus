@@ -1,6 +1,6 @@
 "use client"
 
-import { arithmeticAverage, bhaskara } from "@/utils";
+import { arithmeticAverage, bhaskara, simpleInterest } from "@/utils";
 import { useState } from "react";
 
 function useCalculate() {
@@ -10,6 +10,7 @@ function useCalculate() {
     const operations: any = {
         'bhaskara': () => bhaskara([values[0], values[1], values[2]]),
         'media-aritmetica': () => arithmeticAverage(values[0]),
+        'juros-simples': () => simpleInterest(values)
     }
 
     const addNewValue = (index: number, newValue: any) => {

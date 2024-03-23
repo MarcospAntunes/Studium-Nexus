@@ -76,5 +76,12 @@
         "title": "Média Aritmética",
         "link": "/formula/media-aritmetica",
         "type": "formula"
+    },
+    {
+        "id": "12",
+        "img": "../../images/icons/jurosSimples.png",
+        "title": "Juros Simples",
+        "link": "/formula/juros-simples",
+        "type": "formula"
     }
 ]
