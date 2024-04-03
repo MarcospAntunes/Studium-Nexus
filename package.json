@@ -1,27 +1,29 @@
 {
-  "name": "fast-converter",
+  "name": "studium-nexus",
   "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "apps/*",
+    "commons/*",
+    "config/*"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "main-app": "yarn workspace @studium-nexus/main-app",
+    "dev:main-app": "yarn main-app dev",
+    "build:main-app": "yarn main-app build",
+    "start:main-app": "yarn main-app start",
+    "lint:main-app": "yarn main-app lint"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
-    "next": "14.1.0",
-    "react": "^18",
-    "react-dom": "^18",
     "styled-components": "^6.1.8",
-    "uuid": "^9.0.1"
+    "eslint": "^8.14.0"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "@types/uuid": "^9.0.8",
-    "eslint": "^8",
+    "eslint": "^8.14.0",
     "eslint-config-next": "14.1.0",
     "typescript": "^5"
   }

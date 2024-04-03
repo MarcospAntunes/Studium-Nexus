@@ -1,0 +1,22 @@
+{
+  "name": "@studium-nexus/types-commons",
+  "version": "0.1.0",
+  "scripts": {
+    "lint": "eslint ./**/*.{ts,tsx}"
+  },
+  "dependencies": {
+    "react": "^18",
+    "react-dom": "^18",
+    "styled-components": "^6.1.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "typescript": "^5"
+  },
+  "files": [
+    "index.ts"
+  ]
+}

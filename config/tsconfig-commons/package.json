@@ -1,0 +1,15 @@
+{
+    "name": "@studium-nexus/tsconfig-commons",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "lint": "echo 'Not necessary'"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "files": [
+      "base.json"
+    ]
+  }
