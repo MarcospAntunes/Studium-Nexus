@@ -7,7 +7,7 @@ function Arrow(): JSX.Element {
 
     return (
         <ArrowStyled
-            src={`../../images/icons/arrow.png`}
+            src={`/icons/arrow.png`}
             alt="arrow"
             theme={theme === "light" ? lightTheme : darkTheme}
         />
