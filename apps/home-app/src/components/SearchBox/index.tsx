@@ -12,7 +12,7 @@ function SearchBox(): JSX.Element {
 
     return (
         <SearchBoxStyled theme={theme === "light" ? lightTheme : darkTheme} role="search">
-            <img src="../../images/icons/buscar.png" alt="buscar" role="img" />
+            <img src="/icons/buscar.png" alt="buscar" role="img" />
             <input
                 type="text"
                 value={search}

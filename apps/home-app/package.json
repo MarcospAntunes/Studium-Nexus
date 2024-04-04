@@ -1,7 +1,6 @@
 {
-  "name": "@studium-nexus/main-app",
+  "name": "@studium-nexus/home-app",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,7 +8,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@studium-nexus/formula-app": "*",
     "@studium-nexus/components-commons": "*",
     "@studium-nexus/constants-commons": "*",
     "@studium-nexus/containers-commons": "*",

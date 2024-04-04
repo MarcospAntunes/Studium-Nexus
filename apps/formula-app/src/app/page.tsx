@@ -5,7 +5,7 @@ import { formulasPages } from "../utils";
 
 function Formula({ params }: { params: { slug: string } }): JSX.Element {
     const slug: string = params.slug;
-    const { title, Page } = formulasPages[slug] || [null, null];
+    const { title, Page } = formulasPages[slug] || { title: null, Page: null };
 
     return (
         <ExistingRoutes slug={slug} routes={formulaRoutes}>

@@ -25,7 +25,7 @@ function Header({ menu = false }): JSX.Element {
                         <TitleNicoMoji>SN</TitleNicoMoji>
                         <div>
                             <img
-                                src={`../../images/icons/${source}`}
+                                src={`/icons/${source}`}
                                 alt="change theme"
                                 onClick={() => handleThemeToggle(invertTheme)}
                                 role="button"
@@ -45,7 +45,7 @@ function Header({ menu = false }): JSX.Element {
                     <span></span>
                     <TitleNicoMoji>Studium Nexus</TitleNicoMoji>
                     <img
-                        src={`../../images/icons/${source}`}
+                        src={`/icons/${source}`}
                         alt={`${theme} theme`}
                         onClick={() => handleThemeToggle(invertTheme)}
                         role="button"

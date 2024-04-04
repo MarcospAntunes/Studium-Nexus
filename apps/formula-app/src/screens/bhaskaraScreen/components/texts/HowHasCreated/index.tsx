@@ -1,20 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { LazyLoadedText, FormulaImage} from "../../../../../components";
-import Image from "next/image";
-
-import equation1 from '../../../../../../public/formulaImages/bhaskara/images/equation1.png';
-import equation2 from '../../../../../../public/formulaImages/bhaskara/images/equation2.png';
-import equation3 from '../../../../../../public/formulaImages/bhaskara/images/equation3.png';
-import equation4 from '../../../../../../public/formulaImages/bhaskara/images/equation4.png';
-import equation5 from '../../../../../../public/formulaImages/bhaskara/images/equation5.png';
-import equation6 from '../../../../../../public/formulaImages/bhaskara/images/equation6.png';
-import equation7 from '../../../../../../public/formulaImages/bhaskara/images/equation7.png';
-import equation8 from '../../../../../../public/formulaImages/bhaskara/images/equation8.png';
-import equation8_1 from '../../../../../../public/formulaImages/bhaskara/images/equation8.1.png';
-import equation9 from '../../../../../../public/formulaImages/bhaskara/images/equation9.png';
-import equation9_1 from '../../../../../../public/formulaImages/bhaskara/images/equation9.1.png';
-import simpleEquation from '../../../../../../public/formulaImages/bhaskara/images/simpleEquation.png';
 
 function HowHasCreated(): JSX.Element {
     return (
@@ -26,11 +12,8 @@ function HowHasCreated(): JSX.Element {
                 <li>
                     Começamos com a forma geral de uma equação quadrática:
                     <LazyLoadedText className="formulaContent">
-                        <Image 
-                            src={equation1} alt="equação quadrática"  
-                            width={0} 
-                            height={0}
-                            className="formulaImage"
+                        <FormulaImage 
+                            src="/images/equation1.png" alt="equação quadrática"
                         />
                     </LazyLoadedText>
                 </li>
@@ -38,12 +21,9 @@ function HowHasCreated(): JSX.Element {
                 <li>
                     Após isso, movemos o termo constante <i>c</i> para outro lado da equação:
                     <LazyLoadedText className="formulaContent">
-                        <Image 
-                            src={equation2} 
-                            alt="constate no outro lado da equação"  
-                            width={0} 
-                            height={0}
-                            className="formulaImage"
+                        <FormulaImage 
+                            src="/images/equation2.png"
+                            alt="constate no outro lado da equação"
                         />
                     </LazyLoadedText>
                 </li>
@@ -51,12 +31,9 @@ function HowHasCreated(): JSX.Element {
                 <li>
                     Agora iremos dividir ambos os lados da equação por <i>a</i> para simplificar futuros cálculos, assumindo que <i>a</i> seja diferente de zero:
                     <LazyLoadedText className="formulaContent">
-                        <Image 
-                            src={equation3} 
-                            alt="dividir ambos os lados por a"  
-                            width={0} 
-                            height={0}
-                            className="formulaImage"
+                        <FormulaImage 
+                            src="/images/equation3.png" 
+                            alt="dividir ambos os lados por a"
                         />
                     </LazyLoadedText>
                 </li>
@@ -64,12 +41,9 @@ function HowHasCreated(): JSX.Element {
                 <li>
                     Para completar o quadrado, adicionamos o quadrado do quarto do coeficiente de <i>x</i> elevado ao quadrado nos dois lados da equação:
                     <LazyLoadedText className="formulaContent">
-                        <Image 
-                            src={equation4} 
-                            alt="completar o quadrado"  
-                            width={0} 
-                            height={0}
-                            className="formulaImage"
+                        <FormulaImage 
+                            src="/images/equation4.png" 
+                            alt="completar o quadrado"
                         />
                     </LazyLoadedText>
                 </li>
@@ -77,12 +51,9 @@ function HowHasCreated(): JSX.Element {
                 <li>
                     Feito isso, o lado esquerdo da equação pode ser reescrito como um quadrado perfeito:
                     <LazyLoadedText className="formulaContent">
-                        <Image 
-                            src={equation5} 
-                            alt="quadrado perfeito"  
-                            width={0} 
-                            height={0}
-                            className="formulaImage"
+                        <FormulaImage 
+                            src="/images/equation5.png"
+                            alt="quadrado perfeito"
                         />
                     </LazyLoadedText>
                 </li>
@@ -90,12 +61,9 @@ function HowHasCreated(): JSX.Element {
                 <li>
                     Agora, iremos extrair a raíz quadrada em ambos os lados:
                     <LazyLoadedText className="formulaContent">
-                        <Image 
-                            src={equation6} 
-                            alt="Extrair a raíz quadrada em ambos os lados"  
-                            width={0} 
-                            height={0}
-                            className="formulaImage"
+                        <FormulaImage 
+                            src="/images/equation6.png" 
+                            alt="Extrair a raíz quadrada em ambos os lados"
                         />
                     </LazyLoadedText>
                 </li>
@@ -103,12 +71,9 @@ function HowHasCreated(): JSX.Element {
                 <li>
                     Na raíz iremos calcular o múltiplo comum dos denominadores e teremos o este resultado:
                     <LazyLoadedText className="formulaContent">
-                        <Image 
-                            src={equation7} 
-                            alt="Calcular o múltiplo comum dos denominadores"  
-                            width={0} 
-                            height={0}
-                            className="formulaImage"
+                        <FormulaImage 
+                            src="/images/equation7.png" 
+                            alt="Calcular o múltiplo comum dos denominadores"
                         />
                     </LazyLoadedText>
                 </li>
@@ -116,22 +81,16 @@ function HowHasCreated(): JSX.Element {
                 <li>
                     Usando o a propriedade de radiação (extrair raíz quadrada de uma divisão é a mesma coisa que fazer a raíz quadrada do numerador pelo denominador):
                     <LazyLoadedText className="formulaContent">
-                        <Image 
-                            src={equation8} 
-                            alt="Fazer a raíz quadrada do numerador pelo denominador"  
-                            width={0} 
-                            height={0}
-                            className="formulaImage"
+                        <FormulaImage 
+                            src="/images/equation8.png" 
+                            alt="Fazer a raíz quadrada do numerador pelo denominador"
                         />
                     </LazyLoadedText>
                     Porém, nota-se que <i>4a<sup>2</sup></i> é um quadrado perfeito e com isso podemos tirar a raíz, resultando em:
                     <LazyLoadedText className="formulaContent">
-                        <Image 
-                            src={equation8_1} 
-                            alt="Tirar a raíz"  
-                            width={0} 
-                            height={0}
-                            className="formulaImage"
+                        <FormulaImage 
+                            src="/images/equation8.1.png" 
+                            alt="Tirar a raíz"
                         />
                     </LazyLoadedText>
                 </li>
@@ -139,22 +98,16 @@ function HowHasCreated(): JSX.Element {
                 <li>
                     Feito isso, iremos passar <i>b/2a</i> para o lado direito da equação, deixando apenas o x no lado esquerdo:
                     <LazyLoadedText className="formulaContent">
-                        <Image 
-                            src={equation9} 
-                            alt="Tirar a raíz"  
-                            width={0} 
-                            height={0}
-                            className="formulaImage"
+                        <FormulaImage 
+                            src="/images/equation9.png"
+                            alt="Tirar a raíz"
                         />
                     </LazyLoadedText>
                     Para ficar mais organizado, iremos deixar tudo no mesmo denomidador e, finalmente, teremos nossa fórmula de bhaskara!
                     <LazyLoadedText className="formulaContent">
-                        <Image 
-                            src={equation9_1} 
-                            alt="Tirar a raíz"  
-                            width={0} 
-                            height={0}
-                            className="formulaImage"
+                        <FormulaImage 
+                            src="/images/equation9.1.png"
+                            alt="Tirar a raíz"
                         />
                     </LazyLoadedText>
                 </li>
