@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@studium-nexus/tsconfig-commons": "*",
     "@studium-nexus/components-commons": "*",
     "@studium-nexus/constants-commons": "*",
     "@studium-nexus/containers-commons": "*",
