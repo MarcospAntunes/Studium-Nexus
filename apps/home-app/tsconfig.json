@@ -1,17 +1,3 @@
 {
-  "compilerOptions": {
-    "plugins": [
-      { 
-        "name": "next" 
-        }
-      ]
-  },
   "extends": "@studium-nexus/tsconfig-commons/base.json",
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "../commons/components/index.ts",
-    ".next/types/**/*.ts"
-, "../../commons/utils/themes.ts"  ]
 }

@@ -14,7 +14,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@studium-nexus/home-app": "*",
+    "@studium-nexus/tsconfig-commons": "*",    "@studium-nexus/home-app": "*",
     "@studium-nexus/formula-app": "*",
     "@studium-nexus/converter-app": "*",
     "next": "14.1.0",
