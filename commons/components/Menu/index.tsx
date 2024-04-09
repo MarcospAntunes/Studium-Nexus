@@ -49,6 +49,7 @@ function Menu(): JSX.Element {
                         className={`link ${pathname === item.link ? 'active' : ''}`}
                         href={item.link}
                         role="menuitem"
+                        prefetch={false}
                     >
                         {item.title}
                     </Link>
