@@ -4,22 +4,29 @@ import { useTheme } from "@studium-nexus/hooks-commons";
 import { darkTheme, lightTheme } from "@studium-nexus/utils-commons";
 import CardTypes from "./Card.type";
 import CardStyled from "./Card.style";
+import Link from 'next/link'
 
-function Card({ img, title, onClick }: CardTypes): JSX.Element {
+function Card({ img, title, link}: CardTypes): JSX.Element {
     const { theme } = useTheme();
     return (
-        <CardStyled
-            onClick={onClick}
-            theme={theme === "light" ? lightTheme : darkTheme}
-            role="button"
+        <Link 
+            href={link} 
+            style={{textDecoration: 'none'}}
+            prefetch={true}
+            role="navigation"
         >
-            <img
-                src={img}
-                alt={`${title} icone`}
-                role="img"
-            />
-            <p>{title}</p>
-        </CardStyled>
+            <CardStyled
+                theme={theme === "light" ? lightTheme : darkTheme}
+                role="button"
+            >
+                <img
+                    src={img}
+                    alt={`${title} icone`}
+                    role="img"
+                />
+                <p>{title}</p>
+            </CardStyled>
+        </Link>
     )
 }
 

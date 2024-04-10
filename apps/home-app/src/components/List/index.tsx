@@ -10,10 +10,6 @@ function List(): JSX.Element {
     const router: AppRouterInstance = useRouter();
     const { filtredItens } = useSearch();
 
-    const handleClick = (link: string) => {
-        router.push(link)
-    }
-
     return (
         <UlStyled role="navigation">
             {filtredItens.length > 0 ? filtredItens.map((item: any) => (
@@ -21,7 +17,7 @@ function List(): JSX.Element {
                     key={item.id}
                     img={item.img}
                     title={item.title}
-                    onClick={() => handleClick(item.link)}
+                    link={item.link}
                 />
 
             )) : <li aria-live="assertive">Nenhum item encontrado!</li>}
