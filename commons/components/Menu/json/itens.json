@@ -83,5 +83,12 @@
         "title": "Juros Simples",
         "link": "/formula/juros-simples",
         "type": "formula"
+    },
+    {
+        "id": "13",
+        "img": "/icons/jurosCompostos.png",
+        "title": "Juros Compostos",
+        "link": "/formula/juros-compostos",
+        "type": "formula"
     }
 ]

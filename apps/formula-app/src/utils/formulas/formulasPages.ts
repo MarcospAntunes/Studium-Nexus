@@ -1,5 +1,5 @@
 import React from "react";
-import { ArithmeticAverage, Bhaskara, SimpleInterest } from '../../screens'
+import { ArithmeticAverage, Bhaskara, SimpleInterest, CompoundInterest } from '../../screens'
 
 
 type Pages = {
@@ -22,6 +22,10 @@ const formulasPages: Pages = {
         title: 'Juros Simples',
         Page: SimpleInterest
     },
+    "juros-compostos": {
+        title: "Juros Compostos",
+        Page: CompoundInterest
+    }
 }
 
 export default formulasPages

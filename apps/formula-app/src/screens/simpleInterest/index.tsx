@@ -82,7 +82,7 @@ function SimpleInterest(): JSX.Element {
                 </div>
             </SimplesInterestSection>
             <SimplesInterestSection>
-            <br />
+                <br />
                 <HowHasCreated />
                 <br />
                 <HowToGetTheResult values={values} result={result || []} />

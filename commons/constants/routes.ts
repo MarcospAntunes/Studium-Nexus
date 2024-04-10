@@ -18,6 +18,7 @@ const formulaRoutes = {
     bhaskara: 'bhaskara',
     'media-aritmetica': 'media-aritmetica',
     'juros-simples': 'juros-simples',
+    'juros-compostos': 'juros-compostos'
 }
 
 
