@@ -1,8 +1,6 @@
-
-import ArithmeticAverage from "../../screens/arithmeticAverage";
-import Bhaskara from "../../screens/bhaskaraScreen";
 import React from "react";
-import SimpleInterest from '../../screens/simpleInterest'
+import { ArithmeticAverage, Bhaskara, SimpleInterest } from '../../screens'
+
 
 type Pages = {
     [key: string]: {
