@@ -3,16 +3,15 @@
 import { FormulaInput, Button, ResultFormula, FormulaFormat } from "../../components";
 import { FormulaContainer, InputContainer, ResultContainer } from "../../containers";
 import { useCalculate } from "../../hooks";
-import { useParams } from "next/navigation";
 import BhaskaraSection from "./Bhaskara.style";
 import { HowHasCreated, HowToGetTheResult, RenderBhaskaraFormula } from "./components";
+import { bhaskara } from "../../utils";
 
 function Bhaskara() {
-    const { slug } = useParams();
     const {
         values,
         result,
-        calculate,
+        setResult,
         addNewValue,
         clear
     } = useCalculate()
@@ -90,7 +89,7 @@ function Bhaskara() {
                     </ResultFormula>}
                 <div className="botoes">
                     <Button
-                        onClick={() => calculate(slug)}
+                        onClick={() => setResult(bhaskara([values[0], values[1], values[2]]))}
                         role="button"
                         aria-label="Calcular raíz(es) da equação quadrática"
                     >

@@ -4,15 +4,14 @@ import { useCalculate } from "../../hooks";
 import ArithmeticAverageSection from "./ArithmeticAverage.style";
 import { Button, FormulaFormat, FormulaInput, ResultFormula } from "../../components";
 import { FormulaContainer } from "../../containers";
-import { useParams } from "next/navigation";
 import { HowHasCreated, HowToGetTheResult } from "./components";
+import { arithmeticAverage } from "../../utils";
 
 function ArithmeticAverage() {
-    const { slug } = useParams();
     const {
         values,
         result,
-        calculate,
+        setResult,
         addNewValue,
         clear
     } = useCalculate()
@@ -70,7 +69,7 @@ function ArithmeticAverage() {
                 </ResultFormula>
                 <div className="botoes">
                     <Button
-                        onClick={() => calculate(slug)}
+                        onClick={() => setResult(arithmeticAverage(values[0]))}
                         role="button"
                         aria-label="Calcular raíz(es) da equação quadrática"
                     >

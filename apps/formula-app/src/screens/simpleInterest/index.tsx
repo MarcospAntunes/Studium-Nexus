@@ -1,18 +1,17 @@
 "use client"
 
 import { useCalculate } from "../../hooks";
-import { useParams } from "next/navigation";
 import SimplesInterestSection from "./SimpleInterest.style";
 import { Button, FormulaFormat, FormulaInput, ResultFormula } from "../../components";
 import { FormulaContainer, InputContainer, ResultContainer } from "../../containers";
 import { HowHasCreated, HowToGetTheResult } from "./components";
+import { simpleInterest } from "../../utils";
 
 function SimpleInterest(): JSX.Element {
-    const { slug } = useParams();
     const {
         values,
         result,
-        calculate,
+        setResult,
         addNewValue,
         clear
     } = useCalculate()
@@ -66,7 +65,7 @@ function SimpleInterest(): JSX.Element {
                 </ResultContainer>
                 <div className="botoes">
                     <Button
-                        onClick={() => calculate(slug)}
+                        onClick={() => setResult(simpleInterest(values))}
                         role="button"
                         aria-label="Calcular juros simples"
                     >

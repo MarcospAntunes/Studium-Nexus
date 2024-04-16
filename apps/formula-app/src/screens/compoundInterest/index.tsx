@@ -1,18 +1,17 @@
 "use client"
 
-import { useParams } from "next/navigation";
 import CompoundInterestSection from "./CompoundInterest.style";
 import { useCalculate } from "../../hooks";
 import { FormulaContainer, InputContainer, ResultContainer } from "../../containers";
 import { Button, FormulaFormat, FormulaInput, ResultFormula } from "../../components";
 import { HowHasCreated, HowToGetTheResult } from "./components";
+import { compoundInterest } from "../../utils";
 
 function CompoundInterest(): JSX.Element {
-    const { slug } = useParams();
     const {
         values,
         result,
-        calculate,
+        setResult,
         addNewValue,
         clear
     } = useCalculate()
@@ -75,7 +74,7 @@ function CompoundInterest(): JSX.Element {
                     </ResultContainer>
                     <div className="botoes">
                         <Button
-                            onClick={() => calculate(slug)}
+                            onClick={() => setResult(compoundInterest(values))}
                             role="button"
                             aria-label="Calcular juros simples"
                         >
