@@ -1,4 +1,4 @@
-# [Studium Nexus](https://studium-nexus.vercel.app/) ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) [![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE)
+# [Studium Nexus](https://studium-nexus.vercel.app/) ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
 Bem-vindo ao Studium Nexus! Este é um projeto pessoal desenvolvido por [Marcos Antunes](https://github.com/MarcospAntunes) para auxiliar estudantes em seus estudos.
 
@@ -38,4 +38,4 @@ Este é um projeto pessoal e, portanto, fique avontade para deixar sua contribui
 
 ## Licença
 
-Studium Nexus está licensiado com a [MIT license](./LICENSE)
+Studium Nexus é um projeto privado e qualquer cópia do código-fonte, design ou estrátegia de negócio não autorizada é estritamente proibida.
