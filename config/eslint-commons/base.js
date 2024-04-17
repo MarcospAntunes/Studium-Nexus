@@ -1,10 +1,12 @@
+// eslint-disable-next-line no-undef
 module.exports = {
-    "extends": [
-      "next",
-      "eslint:recommended",
-    ],
-    "rules": {
-      "no-console": "error",
-      "@next/next/no-html-link-for-pages": "off"
-    }
+  "extends": [
+    "eslint:recommended",
+    "next",
+    "next/core-web-vitals",
+  ],
+  "rules": {
+    "no-console": "error",
+    "@next/next/no-html-link-for-pages": "off"
+  }
   }

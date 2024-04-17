@@ -8,13 +8,14 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@studium-nexus/tsconfig-commons": "*",
-    "@studium-nexus/components-commons": "*",
+    "@studium-nexus/components-commons": "*",    
     "@studium-nexus/constants-commons": "*",
     "@studium-nexus/containers-commons": "*",
     "@studium-nexus/contexts-commons": "*",
     "@studium-nexus/hooks-commons": "*",
     "@studium-nexus/lib-commons": "*",
+    "@studium-nexus/tsconfig-commons": "*",
+    "@studium-nexus/eslint-commons": "*",
     "@studium-nexus/types-commons": "*",
     "@studium-nexus/utils-commons": "*",
     "dotenv": "^16.4.5",
@@ -27,8 +28,8 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.1.0",
+    "eslint": "^8.0.0",
+    "eslint-plugin-react": "^7.34.1",
     "typescript": "^5"
   }
 }

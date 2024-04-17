@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@studium-nexus/tsconfig-commons": "*",
+    "@studium-nexus/eslint-commons": "*",
     "@studium-nexus/components-commons": "*",
     "@studium-nexus/constants-commons": "*",
     "@studium-nexus/containers-commons": "*",
@@ -21,15 +22,15 @@
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
-    "styled-components": "^6.1.8",
-    "uuid": "^9.0.1"
+    "styled-components": "^6.1.8"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.1.0",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^14.2.1",
+    "eslint-plugin-react": "^7.34.1",
     "typescript": "^5"
   }
 }

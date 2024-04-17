@@ -1,19 +1,19 @@
 {
-    "name": "@studium-nexus/eslint-commons",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-      "lint": "echo 'Not necessary'"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "files": [
-      "base.js"
-    ],
-    "dependencies": {
-      "eslint-config-next": "12.1.5",
-      "eslint-plugin-react": "7.29.4"
-    }
+  "name": "@studium-nexus/eslint-commons",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "echo 'Not necessary'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "files": [
+    "base.json"
+  ],
+  "devDependencies": {
+    "eslint-config-next": "^14.2.1",
+    "eslint-plugin-react": "^7.34.1"
   }
+}
