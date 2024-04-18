@@ -11,14 +11,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "yarn workspaces run lint"
   },
   "dependencies": {
-    "@studium-nexus/tsconfig-commons": "*",
-    "@studium-nexus/eslint-commons": "*",    
-    "@studium-nexus/home-app": "*",
-    "@studium-nexus/formula-app": "*",
     "@studium-nexus/converter-app": "*",
+    "@studium-nexus/eslint-commons": "*",
+    "@studium-nexus/formula-app": "*",
+    "@studium-nexus/home-app": "*",
+    "@studium-nexus/tsconfig-commons": "*",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
@@ -31,6 +31,7 @@
     "eslint": "^8.0.0",
     "eslint-config-next": "^14.2.1",
     "eslint-plugin-react": "^7.34.1",
+    "@typescript-eslint/eslint-plugin": "^7.7.0",
     "typescript": "^5"
   }
 }
