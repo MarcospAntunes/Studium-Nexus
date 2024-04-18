@@ -4,7 +4,7 @@ import InputConverterProps from "./InputConverter.type";
 import LabelFileInput from "./LabelFileInput";
 import { darkTheme, lightTheme } from "@studium-nexus/utils-commons";
 
-function InputConverter({ type, name, id, placeholder, required, onChange, value, accept }: InputConverterProps): JSX.Element {
+function InputConverter({ type, name, id, placeholder, required, onChange, value, accept, multiple = false }: InputConverterProps): JSX.Element {
     const regex: RegExp = /^.*\\/
     const fileName: string = value?.replace(regex, "")
     const { theme } = useTheme();
@@ -26,6 +26,7 @@ function InputConverter({ type, name, id, placeholder, required, onChange, value
                         value={value ? value : ""}
                         onChange={onChange}
                         required={required}
+                        multiple = {multiple}
                         theme={theme === 'light' ? lightTheme : darkTheme}
                     />
                 </LabelFileInput>

@@ -35,8 +35,9 @@ function DocMidiaConvertScreen({ params }: { params: { slug: string } }): JSX.El
                         name="upload"
                         id="upload"
                         value={fileName}
+                        multiple = {true}
                         required={true}
-                        onChange={(e) => setUpload([e.target.files![0], e.target.value])}
+                        onChange={(e) => setUpload([e.target.files, e.target.value])}
                     />
                 </div>
                 <div className="divConversao">

@@ -1,13 +1,13 @@
 type CreateJobProps = {
     unit: string[]
-    upload: [File, string] | undefined
+    upload: [File[] | File, String] | any | undefined
     taskID: string,
     apiKey: string | undefined
 }
 
 type ImportArchiveProps = {
     data: any
-    file: File
+    files: [File[]] | File[] | any
 }
 
 type ExportArchiveProps = {

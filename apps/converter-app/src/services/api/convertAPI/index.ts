@@ -4,36 +4,46 @@ async function createJob({ unit, upload, taskID, apiKey }: CreateJobProps): Prom
     const originalFormat: string = unit[0];
     const destinyFormat: string = unit[1];
     if (originalFormat && destinyFormat && upload) {
+        
         try {
             const endpoint: string = 'https://api.cloudconvert.com/v2/jobs';
-            const requestBody: Object = {
-                "tasks": {
-                    [`import-${taskID}`]: {
-                        "operation": `import/upload`,
-                    },
-                    [`task-${taskID}`]: {
-                        "operation": "convert",
-                        "input_format": originalFormat,
-                        "output_format": destinyFormat,
-                        "input": [
-                            `import-${taskID}`
-                        ],
-                        "optimize_print": true,
-                        "include_markup": false,
-                        "bookmarks": false
-                    },
-                    [`export-${taskID}`]: {
-                        "operation": "export/url",
-                        "input": [
-                            `task-${taskID}`
-                        ],
-                        "inline": false,
-                        "archive_multiple_files": false
-                    }
-                },
-                "tag": "jobbuilder"
+            const tasks: Record<string, any> = {};
+            
+            // Crie uma task de import para cada arquivo
+            for (let i = 0; i < upload.length; i++) {
+                tasks[`import-${taskID}-${i}`] = {
+                    "operation": `import/upload`,
+                };
             }
 
+            tasks[`task-${taskID}`] = {
+                "operation": "convert",
+                "input_format": originalFormat,
+                "output_format": destinyFormat,
+                "input": [],
+                "optimize_print": true,
+                "include_markup": false,
+                "bookmarks": false
+            };
+
+            // Adicione os inputs de todas as tasks de import à task de conversão
+            for (let i = 0; i < upload.length; i++) {
+                tasks[`task-${taskID}`].input.push(`import-${taskID}-${i}`);
+            }
+
+            tasks[`export-${taskID}`] = {
+                "operation": "export/url",
+                "input": [
+                    `task-${taskID}`
+                ],
+                "inline": false,
+                "archive_multiple_files": true
+            };
+
+            const requestBody: Object = {
+                "tasks": tasks,
+                "tag": "jobbuilder"
+            };
             const response: Response = await fetch(endpoint, {
                 method: 'POST',
                 headers: {
@@ -53,20 +63,43 @@ async function createJob({ unit, upload, taskID, apiKey }: CreateJobProps): Prom
     }
 }
 
-async function importArchive({ data, file }: ImportArchiveProps): Promise<any[]> {
+async function importArchive({ data, files }: ImportArchiveProps): Promise<any[]> {
     try {
-        const importTask = data.data.tasks[0].result.form
-        const importInfo = importTask;
-        const { url, parameters } = importInfo;
-        const formData: FormData = new FormData();
-        for (const key in parameters) {
-            formData.append(key, parameters[key]);
+        if (Array.isArray(files)) {
+            for(let i = 0; i < files.length; i ++) {
+                const formData: FormData = new FormData();
+                const importTask = data.data.tasks[i].result.form
+                const importInfo = importTask;
+                console.log(importInfo)
+                const { url, parameters } = importInfo;
+                
+                for (const key in parameters) {
+                    formData.append(key, parameters[key]);
+                }
+                formData.append("file", files[0][i]);
+                console.log(files[0][i])
+
+                await fetch(url, {
+                    method: "POST",
+                    body: formData
+                });
+            }
+        } else {
+            const formData: FormData = new FormData();
+            const importTask = data.data.tasks[0].result.form
+            const importInfo = importTask;
+            const { url, parameters } = importInfo;
+            for (const key in parameters) {
+                formData.append(key, parameters[key]);
+            }
+            formData.append("file", files[0])
+
+            await fetch(url, {
+                method: "POST",
+                body: formData
+            });
         }
-        formData.append("file", file);
-        const responseImport: Response = await fetch(url, {
-            method: "POST",
-            body: formData
-        })
+        
         return [data, 90]
     } catch (error) {
         console.log("Erro ao importar arquivo", error)
@@ -76,7 +109,8 @@ async function importArchive({ data, file }: ImportArchiveProps): Promise<any[]>
 
 async function exportArchive({ data, apiKey }: ExportArchiveProps): Promise<any[] | undefined> {
     try {
-        const inputTaskIds: string = data.data.tasks[2].id
+        const inputTaskIds: string = data.data.tasks.filter((obj: {name: string}) => obj.name.includes("export"));
+       // const inputTaskIds: string = data.data.tasks[3].id
         const endpoint: string = `https://sync.api.cloudconvert.com/v2/tasks/${inputTaskIds}?include=payload`
 
         const request: Response = await fetch(endpoint, {
@@ -87,6 +121,7 @@ async function exportArchive({ data, apiKey }: ExportArchiveProps): Promise<any[
         });
         if (request.ok) {
             const res = await request.json()
+            
             const url: string = res.data.result.files[0].url;
             return [url, 100]
         }

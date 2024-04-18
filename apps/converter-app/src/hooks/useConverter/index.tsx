@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 "use client"
 
 import { useEffect, useState } from "react";
@@ -13,7 +12,7 @@ dotenv.config();
 function useConverter(slug: string) {
     const { state } = useConverterReducer(slug);
     const [value, setValue] = useState<string>("");
-    const [upload, setUpload] = useState<[File, string] | any>([]);
+    const [upload, setUpload] = useState<[File[] | File, String] | any>([]);
     const { unit, setUnit } = useUnitsSelectedContext();
     const [resultOfConversion, setResultOfConversion] = useState<any>(0);
     const [origin, setOrigin] = useState<string>("");
@@ -22,7 +21,7 @@ function useConverter(slug: string) {
 
     useEffect(() => {
         setUnit([origin, destiny]);
-    }, [destiny, origin])
+    }, [destiny, origin, setUnit])
 
     const handleValue: () => Promise<void> = async () => {
         if (origin && destiny) {
@@ -35,8 +34,7 @@ function useConverter(slug: string) {
 
                     if (resultOfConversion && resultOfConversion[1] !== -1) {
                         const data = resultOfConversion[0];
-                        const file = upload![0];
-                        const resultImportArchive = await importArchive({ data, file });
+                        const resultImportArchive = await importArchive({ data, files: upload });
                         setResultOfConversion(resultImportArchive);
 
                         if (resultImportArchive && resultImportArchive[1] !== -1) {
