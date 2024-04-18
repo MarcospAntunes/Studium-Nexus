@@ -59,8 +59,14 @@ function SimpleInterest(): JSX.Element {
                 </FormulaContainer>
                 <ResultContainer aria-label="Resultado da equação" >
                     <ResultFormula aria-live="assertive">
-                        <span>M = {amount.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
-                        <span>J = {fees.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
+                    <span>M = {
+                                !isNaN(amount) ? amount.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+                                : "Valor invalído!"
+                            }</span>
+                            <span>J = {
+                                !isNaN(fees) ? fees.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+                                : "Valor invalído!"
+                            }</span>
                     </ResultFormula>
                 </ResultContainer>
                 <div className="botoes">
