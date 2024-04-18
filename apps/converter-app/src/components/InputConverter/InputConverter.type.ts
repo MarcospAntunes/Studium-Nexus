@@ -10,7 +10,7 @@ type InputConverterProps = {
     required: boolean
     onChange: ChangeEventHandler<HTMLInputElement>
     value: any
-    multiple: boolean | undefined
+    multiple?: boolean | undefined
 }
 
 export default InputConverterProps;
