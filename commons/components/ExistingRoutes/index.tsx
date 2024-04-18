@@ -6,22 +6,22 @@ import ExistingRoutesProps from "./ExistingRoutes.type";
 import React, { useEffect } from "react";
 
 function ExistingRoutes({ children, routes, slug }: ExistingRoutesProps) {
-    const { push } = useRouter();
-    const result = verifyRoutes(routes, slug)
+  const { push } = useRouter();
+  const result = verifyRoutes(routes, slug)
 
-    useEffect(() => {
-        if (!result) {
-            push(`/?404=not-found_${slug}`)
-        }
+  useEffect(() => {
+    if (!result) {
+      push(`/?404=not-found_${slug}`)
+    }
 
-    }, [push, result, slug])
+  }, [push, result, slug])
 
-    return (
-        <>
-            {!result && null}
-            {result && children}
-        </>
-    )
+  return (
+    <>
+      {!result && null}
+      {result && children}
+    </>
+  )
 }
 
 export default ExistingRoutes;

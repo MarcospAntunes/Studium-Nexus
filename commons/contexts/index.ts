@@ -1,6 +1,6 @@
-import {ThemeContext, ThemeProvider} from './ThemeContext';
+import { ThemeContext, ThemeProvider } from './ThemeContext';
 
 export {
-    ThemeContext,
-    ThemeProvider
+  ThemeContext,
+  ThemeProvider
 }

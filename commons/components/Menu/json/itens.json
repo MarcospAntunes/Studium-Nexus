@@ -1,94 +1,93 @@
 [
-    {
-        "id": "1",
-        "img": "/icons/tempo.png",
-        "title": "Conversor de Tempo",
-        "link": "/conversor/tempo",
-        "type": "conversor"
-        
-    },
-    {
-        "id": "2",
-        "img": "/icons/peso.png",
-        "title": "Conversor de Peso",
-        "link": "/conversor/peso",
-        "type": "conversor"
-    },
-    {
-        "id": "3",
-        "img": "/icons/temperatura.png",
-        "title": "Conversor de Temperatura",
-        "link": "/conversor/temperatura",
-        "type": "conversor"
-    },
-    {
-        "id": "4",
-        "img": "/icons/moeda.png",
-        "title": "Conversor de Moeda",
-        "link": "/conversor/moeda",
-        "type": "conversor"
-    },
-    {
-        "id": "5",
-        "img": "/icons/velocidade.png",
-        "title": "Conversor de Velocidade",
-        "link": "/conversor/velocidade",
-        "type": "conversor"
-    },
-    {
-        "id": "6",
-        "img": "/icons/comprimento.png",
-        "title": "Conversor de Comprimento",
-        "link": "/conversor/comprimento",
-        "type": "conversor"
-    },
-    {
-        "id": "7",
-        "img": "/icons/documento.png",
-        "title": "Conversor de Documento",
-        "link": "/conversor/documento",
-        "type": "conversor"
-    },
-    {
-        "id": "8",
-        "img": "/icons/energia.png",
-        "title": "Conversor de Energia",
-        "link": "/conversor/energia",
-        "type": "conversor"
-    },
-    {
-        "id": "9",
-        "img": "/icons/midia.png",
-        "title": "Conversor de Mídia",
-        "link": "/conversor/midia",
-        "type": "conversor"
-    },
-    {
-        "id": "10",
-        "img": "/icons/bhaskara.png",
-        "title": "Formula de Bhaskara",
-        "link": "/formula/bhaskara",
-        "type": "formula"
-    },
-    {
-        "id": "11",
-        "img": "/icons/mediaAritmetica.png",
-        "title": "Média Aritmética",
-        "link": "/formula/media-aritmetica",
-        "type": "formula"
-    },
-    {
-        "id": "12",
-        "img": "/icons/jurosSimples.png",
-        "title": "Juros Simples",
-        "link": "/formula/juros-simples",
-        "type": "formula"
-    },
-    {
-        "id": "13",
-        "img": "/icons/jurosCompostos.png",
-        "title": "Juros Compostos",
-        "link": "/formula/juros-compostos",
-        "type": "formula"
-    }
+  {
+    "id": "1",
+    "img": "/icons/tempo.png",
+    "title": "Conversor de Tempo",
+    "link": "/conversor/tempo",
+    "type": "conversor"
+  },
+  {
+    "id": "2",
+    "img": "/icons/peso.png",
+    "title": "Conversor de Peso",
+    "link": "/conversor/peso",
+    "type": "conversor"
+  },
+  {
+    "id": "3",
+    "img": "/icons/temperatura.png",
+    "title": "Conversor de Temperatura",
+    "link": "/conversor/temperatura",
+    "type": "conversor"
+  },
+  {
+    "id": "4",
+    "img": "/icons/moeda.png",
+    "title": "Conversor de Moeda",
+    "link": "/conversor/moeda",
+    "type": "conversor"
+  },
+  {
+    "id": "5",
+    "img": "/icons/velocidade.png",
+    "title": "Conversor de Velocidade",
+    "link": "/conversor/velocidade",
+    "type": "conversor"
+  },
+  {
+    "id": "6",
+    "img": "/icons/comprimento.png",
+    "title": "Conversor de Comprimento",
+    "link": "/conversor/comprimento",
+    "type": "conversor"
+  },
+  {
+    "id": "7",
+    "img": "/icons/documento.png",
+    "title": "Conversor de Documento",
+    "link": "/conversor/documento",
+    "type": "conversor"
+  },
+  {
+    "id": "8",
+    "img": "/icons/energia.png",
+    "title": "Conversor de Energia",
+    "link": "/conversor/energia",
+    "type": "conversor"
+  },
+  {
+    "id": "9",
+    "img": "/icons/midia.png",
+    "title": "Conversor de Mídia",
+    "link": "/conversor/midia",
+    "type": "conversor"
+  },
+  {
+    "id": "10",
+    "img": "/icons/bhaskara.png",
+    "title": "Formula de Bhaskara",
+    "link": "/formula/bhaskara",
+    "type": "formula"
+  },
+  {
+    "id": "11",
+    "img": "/icons/mediaAritmetica.png",
+    "title": "Média Aritmética",
+    "link": "/formula/media-aritmetica",
+    "type": "formula"
+  },
+  {
+    "id": "12",
+    "img": "/icons/jurosSimples.png",
+    "title": "Juros Simples",
+    "link": "/formula/juros-simples",
+    "type": "formula"
+  },
+  {
+    "id": "13",
+    "img": "/icons/jurosCompostos.png",
+    "title": "Juros Compostos",
+    "link": "/formula/juros-compostos",
+    "type": "formula"
+  }
 ]

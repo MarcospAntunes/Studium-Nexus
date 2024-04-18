@@ -1,3 +1,3 @@
-import Layout  from "@studium-nexus/converter-app/src/app/layout";
+import Layout from "@studium-nexus/converter-app/src/app/layout";
 
 export default Layout

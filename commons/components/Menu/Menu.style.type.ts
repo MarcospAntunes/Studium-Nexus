@@ -1,5 +1,5 @@
 type MenuStyledProps = {
-    isopen: string
+  isopen: string
 }
 
 export default MenuStyledProps;

@@ -1,5 +1,5 @@
 type HeaderStyledProps = {
-    menu: string
+  menu: string
 }
 
 export default HeaderStyledProps;

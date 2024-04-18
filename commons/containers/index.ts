@@ -4,9 +4,9 @@ import ResultContainer from './ResultContainer'
 
 
 export {
-    AppContainer,
-    FlexContainerAdapter,
-    FlexContainerCenter,
-    FlexContainerSpaceBTW,
-    ResultContainer    
+  AppContainer,
+  FlexContainerAdapter,
+  FlexContainerCenter,
+  FlexContainerSpaceBTW,
+  ResultContainer
 }

@@ -7,12 +7,12 @@ import { Children } from "../../types";
 import React from "react";
 
 function AppContainer({ children }: Children): JSX.Element {
-    const { theme } = useTheme();
-    return (
-        <AppContainerStyled theme={theme === "light" ? lightTheme : darkTheme}>
-            {children}
-        </AppContainerStyled>
-    )
+  const { theme } = useTheme();
+  return (
+    <AppContainerStyled theme={theme === "light" ? lightTheme : darkTheme}>
+      {children}
+    </AppContainerStyled>
+  )
 }
 
 export default AppContainer;
