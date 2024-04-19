@@ -25,11 +25,11 @@ O Studium Nexus é uma aplicação web desenvolvida para facilitar os estudos da
 Para executar o Studium Nexus localmente, siga estas etapas:
 
 1. Clone este repositório em sua máquina local com `git clone https://github.com/MarcospAntunes/Fast-Converter-2.0.git`.
-2. Certifique-se de ter o **Node.js** e o **Git** instalados em sua máquina.
+2. Certifique-se de ter o **Node.js**, o **Git** e o **Yarn** instalados em sua máquina.
 3. No terminal, navegue até o diretório do projeto.
-4. Instale as dependências utilizando o comando `npm install`.
+4. Instale as dependências utilizando o comando `yarn`.
 5. Configure as variáveis de ambiente conforme necessário.
-6. Inicie o servidor usando o comando `npm run dev`.
+6. Inicie o servidor usando o comando `yarn dev`.
 7. Acesse a aplicação em seu navegador através do endereço `http://localhost:3000`.
 
 ## Contribuição
