@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 
-import { ExistingRoutes, Header, BackToTop } from '../components';
-import { converterRoutes } from '@studium-nexus/constants-commons';
+import { ExistingRoutes, Header, BackToTop } from "../components";
+import { converterRoutes } from "@studium-nexus/constants-commons";
 import { AppContainer, FlexContainerCenter } from "../containers";
-import { DocMidiaConvertScreen, GeneralConvertScreen } from '../screens'
+import { DocMidiaConvertScreen, GeneralConvertScreen } from "../screens";
 
 function Converter({ params }: { params: { slug: string } }) {
   const slug: string = params.slug;
@@ -15,11 +15,11 @@ function Converter({ params }: { params: { slug: string } }) {
         <FlexContainerCenter>
           <h2>Converter {slug}</h2>
 
-          {slug === "documento" || slug === "midia" ?
+          {slug === "documento" || slug === "midia" ? (
             <DocMidiaConvertScreen params={params} />
-            :
+          ) : (
             <GeneralConvertScreen params={params} />
-          }
+          )}
         </FlexContainerCenter>
         <BackToTop />
       </AppContainer>

@@ -3,19 +3,22 @@ import { darkTheme, lightTheme } from "@studium-nexus/utils-commons";
 import FormulaFormatStyled from "./FormulaFormat.style";
 import FormulaFormatProps from "./FormulaFormat.type";
 
-function FormulaFormat({ children, aria_label, aria_live }: FormulaFormatProps): JSX.Element {
+function FormulaFormat({
+  children,
+  aria_label,
+  aria_live,
+}: FormulaFormatProps): JSX.Element {
+  const { theme } = useTheme();
 
-    const { theme } = useTheme();
-
-    return (
-        <FormulaFormatStyled
-            aria-label={aria_label}
-            aria-live={aria_live}
-            theme={theme === 'light' ? lightTheme : darkTheme}
-        >
-            {children}
-        </FormulaFormatStyled>
-    )
+  return (
+    <FormulaFormatStyled
+      aria-label={aria_label}
+      aria-live={aria_live}
+      theme={theme === "light" ? lightTheme : darkTheme}
+    >
+      {children}
+    </FormulaFormatStyled>
+  );
 }
 
 export default FormulaFormat;

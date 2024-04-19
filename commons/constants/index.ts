@@ -1,6 +1,3 @@
-import { formulaRoutes, converterRoutes } from './routes';
+import { formulaRoutes, converterRoutes } from "./routes";
 
-export {
-  formulaRoutes,
-  converterRoutes
-}
+export { formulaRoutes, converterRoutes };

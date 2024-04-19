@@ -1,29 +1,29 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 
 function useCalculate() {
-    const [result, setResult] = useState<any>();
-    const [values, setValues] = useState<any[]>([]);
+  const [result, setResult] = useState<any>();
+  const [values, setValues] = useState<any[]>([]);
 
-    const addNewValue = (index: number, newValue: any) => {
-        const newArray = [...values];
-        newArray[index] = newValue
-        setValues(newArray);
-    }
+  const addNewValue = (index: number, newValue: any) => {
+    const newArray = [...values];
+    newArray[index] = newValue;
+    setValues(newArray);
+  };
 
-    const clear: VoidFunction = () => {
-        setResult("")
-        setValues([])
-    }
+  const clear: VoidFunction = () => {
+    setResult("");
+    setValues([]);
+  };
 
-    return {
-        values,
-        result,
-        setResult,
-        addNewValue,
-        clear
-    }
+  return {
+    values,
+    result,
+    setResult,
+    addNewValue,
+    clear,
+  };
 }
 
-export default useCalculate
+export default useCalculate;

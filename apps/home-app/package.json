@@ -8,7 +8,7 @@
     "lint": "eslint ./**/*.{ts,tsx}"
   },
   "dependencies": {
-    "@studium-nexus/components-commons": "*",    
+    "@studium-nexus/components-commons": "*",
     "@studium-nexus/constants-commons": "*",
     "@studium-nexus/containers-commons": "*",
     "@studium-nexus/contexts-commons": "*",

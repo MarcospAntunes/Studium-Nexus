@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import styled from "styled-components";
 
@@ -10,12 +10,12 @@ const ResultContainer = styled.div`
   font-size: 14px;
   text-align: center;
   border-radius: 15px;
-  transition: .3s;
+  transition: 0.3s;
 
   @media screen and (min-width: 541px) {
     max-width: 350px;
     font-size: 16px;
   }
-`
+`;
 
 export default ResultContainer;

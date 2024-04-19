@@ -6,11 +6,16 @@ import ImgStyled from "./FormulaImage.style";
 import { darkTheme, lightTheme } from "@studium-nexus/utils-commons";
 
 function FormulaImage({ src, alt }: FormulaImageProps): JSX.Element {
-    const { theme } = useTheme();
+  const { theme } = useTheme();
 
-    return (
-        <ImgStyled src={src} alt={alt} theme={theme === "light" ? lightTheme : darkTheme} loading="lazy" />
-    )
+  return (
+    <ImgStyled
+      src={src}
+      alt={alt}
+      theme={theme === "light" ? lightTheme : darkTheme}
+      loading="lazy"
+    />
+  );
 }
 
 export default FormulaImage;

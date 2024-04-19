@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import MenuStyledProps from "./Menu.style.type";
 import styled from "styled-components";
@@ -14,13 +14,13 @@ const MenuStyled = styled.nav<MenuStyledProps>`
   width: 100vw;
   height: 100vh;
   top: 0;
-  right: ${({ isopen }) => (isopen === "true" ? '0' : '-100vw')};
+  right: ${({ isopen }) => (isopen === "true" ? "0" : "-100vw")};
   font-family: inherit;
 
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   z-index: 2;
-  transition: right .3s ease-in-out;
+  transition: right 0.3s ease-in-out;
 
   a {
     text-decoration: none;
@@ -31,5 +31,5 @@ const MenuStyled = styled.nav<MenuStyledProps>`
   .active {
     text-decoration: underline !important;
   }
-`
+`;
 export default MenuStyled;

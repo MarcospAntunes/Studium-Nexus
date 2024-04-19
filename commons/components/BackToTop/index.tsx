@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useEffect, useState } from "react";
 import { BackToTopContainer, BackToTopButton } from "./BackToTop.style";
@@ -9,11 +9,11 @@ function BackToTop(): JSX.Element {
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const { theme } = useTheme();
   useEffect(() => {
-    window.addEventListener('scroll', toggleVisibility);
+    window.addEventListener("scroll", toggleVisibility);
     return () => {
-      window.removeEventListener('scroll', toggleVisibility);
-    }
-  }, [])
+      window.removeEventListener("scroll", toggleVisibility);
+    };
+  }, []);
 
   const toggleVisibility: VoidFunction = () => {
     if (window.scrollY > 100) {
@@ -26,22 +26,22 @@ function BackToTop(): JSX.Element {
   const scrollToTop: VoidFunction = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
-    })
-  }
+      behavior: "smooth",
+    });
+  };
 
   return (
     <BackToTopContainer>
-      {isVisible &&
+      {isVisible && (
         <BackToTopButton
           onClick={scrollToTop}
-          theme={theme === 'light' ? lightTheme : darkTheme}
+          theme={theme === "light" ? lightTheme : darkTheme}
         >
           ^
         </BackToTopButton>
-      }
+      )}
     </BackToTopContainer>
-  )
+  );
 }
 
 export default BackToTop;

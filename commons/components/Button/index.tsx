@@ -10,13 +10,13 @@ function Button({ children, onClick, role, type }: ButtonProps): JSX.Element {
   return (
     <ButtonStyled
       onClick={onClick}
-      theme={theme === 'light' ? lightTheme : darkTheme}
+      theme={theme === "light" ? lightTheme : darkTheme}
       role={role}
       type={type}
     >
       {children}
     </ButtonStyled>
-  )
+  );
 }
 
 export default Button;

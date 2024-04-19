@@ -1,5 +1,5 @@
 type ProgressProps = {
-    percentage: number
-}
+  percentage: number;
+};
 
 export default ProgressProps;

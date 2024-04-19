@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
 import HeaderStyledProps from "./Header.style.type";
 import styled from "styled-components";
 
 const HeaderStyled = styled.header<HeaderStyledProps>`
   display: flex;
-  flex-direction: ${({ menu }) => (menu === "true" ? 'column' : 'row')};
+  flex-direction: ${({ menu }) => (menu === "true" ? "column" : "row")};
   justify-content: center;
   align-items: center;
   gap: 5px;
@@ -35,7 +35,7 @@ const HeaderStyled = styled.header<HeaderStyledProps>`
   @media screen and (min-width: 541px) {
     justify-content: space-between;
   }
-`
+`;
 
 const LineStyled = styled.hr`
   width: 100%;
@@ -44,6 +44,6 @@ const LineStyled = styled.hr`
   border: none;
   color: ${({ theme }) => theme.text};
   background-color: ${({ theme }) => theme.text};
-`
+`;
 
-export { HeaderStyled, LineStyled }
+export { HeaderStyled, LineStyled };

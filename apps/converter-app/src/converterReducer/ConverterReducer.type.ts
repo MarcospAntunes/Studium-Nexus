@@ -1,6 +1,6 @@
 type ConverterActionProps = {
-    type: string
-    payload?: any
-}
+  type: string;
+  payload?: any;
+};
 
 export default ConverterActionProps;

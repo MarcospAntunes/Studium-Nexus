@@ -1,5 +1,3 @@
-import ConverterReducer from './converterReducer';
+import ConverterReducer from "./converterReducer";
 
-export {
-    ConverterReducer,
-}
+export { ConverterReducer };

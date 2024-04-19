@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
-"use client"
+"use client";
 
 import { StyleSheetManager } from "styled-components";
 import { useTheme } from "../../hooks";
@@ -12,14 +12,14 @@ import React from "react";
 function Header({ menu = false }): JSX.Element {
   const { theme, themeToggler } = useTheme();
   const handleThemeToggle = (target: string) => {
-    themeToggler(target)
-  }
-  const invertTheme: string = theme === "dark" ? "light" : "dark"
-  const source: string = theme === "light" ? "sol.png" : "lua.png"
+    themeToggler(target);
+  };
+  const invertTheme: string = theme === "dark" ? "light" : "dark";
+  const source: string = theme === "light" ? "sol.png" : "lua.png";
 
   if (menu) {
     return (
-      <StyleSheetManager shouldForwardProp={(prop) => prop !== 'menu'}>
+      <StyleSheetManager shouldForwardProp={(prop) => prop !== "menu"}>
         <HeaderStyled menu={menu.toString()}>
           <div>
             <TitleNicoMoji>SN</TitleNicoMoji>
@@ -36,11 +36,10 @@ function Header({ menu = false }): JSX.Element {
           <LineStyled theme={theme === "light" ? lightTheme : darkTheme} />
         </HeaderStyled>
       </StyleSheetManager>
-    )
-
+    );
   } else {
     return (
-      <StyleSheetManager shouldForwardProp={(prop) => prop !== 'menu'}>
+      <StyleSheetManager shouldForwardProp={(prop) => prop !== "menu"}>
         <HeaderStyled menu={menu.toString()}>
           <span></span>
           <TitleNicoMoji>Studium Nexus</TitleNicoMoji>
@@ -52,7 +51,7 @@ function Header({ menu = false }): JSX.Element {
           />
         </HeaderStyled>
       </StyleSheetManager>
-    )
+    );
   }
 }
 

@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-"use client"
+"use client";
 
 import { ConverterReducer } from "../../reducers";
 import { useEffect, useReducer } from "react";
@@ -7,8 +7,8 @@ import { useEffect, useReducer } from "react";
 function useConverterReducer(slug: string) {
   const [state, dispatch] = useReducer(ConverterReducer, { slug });
   useEffect(() => {
-    dispatch({ type: slug })
-  }, [])
+    dispatch({ type: slug });
+  }, []);
 
   const namesOfUnits: string[] = Object.keys(state);
   const valuesOfUnits: string[] = Object.values(state);
@@ -16,8 +16,8 @@ function useConverterReducer(slug: string) {
   return {
     namesOfUnits,
     valuesOfUnits,
-    state
-  }
+    state,
+  };
 }
 
 export default useConverterReducer;

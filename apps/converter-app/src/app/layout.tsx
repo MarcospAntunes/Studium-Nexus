@@ -9,9 +9,7 @@ export default function Layout({
   return (
     <>
       <StyledComponentsRegistry>
-        <Providers>
-          {children}
-        </Providers>
+        <Providers>{children}</Providers>
       </StyledComponentsRegistry>
     </>
   );

@@ -1,7 +1,4 @@
 import useCalculate from "./useCalculate";
-import { useTheme } from '@studium-nexus/hooks-commons';
+import { useTheme } from "@studium-nexus/hooks-commons";
 
-export {
-    useCalculate,
-    useTheme
-}
+export { useCalculate, useTheme };

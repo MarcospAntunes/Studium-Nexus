@@ -15,7 +15,7 @@ O Studium Nexus é uma aplicação web desenvolvida para facilitar os estudos da
 
 ## Tecnologias Utilizadas
 
-1. Frontend: 
+1. Frontend:
    - Next.Js v14.1.0
    - Styled-components v6.1.8
    - TypeScript v^5

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -9,9 +9,9 @@ import { useTheme } from "../../hooks";
 import { darkTheme, lightTheme } from "../../utils";
 import MenuStyled from "./Menu.style";
 import MenuButton from "./MenuButton";
-import itens from './json/itens.json';
+import itens from "./json/itens.json";
 
-const Montz = Montserrat_Alternates({ weight: '300', subsets: ["latin"] });
+const Montz = Montserrat_Alternates({ weight: "300", subsets: ["latin"] });
 
 function Menu(): JSX.Element {
   const pathname: string = usePathname();
@@ -19,7 +19,7 @@ function Menu(): JSX.Element {
   const { theme } = useTheme();
 
   return (
-    <StyleSheetManager shouldForwardProp={(prop) => prop !== 'isopen'}>
+    <StyleSheetManager shouldForwardProp={(prop) => prop !== "isopen"}>
       <MenuButton
         isopen={isOpen.toString()}
         onClick={() => setIsOpen(!isOpen)}
@@ -46,7 +46,7 @@ function Menu(): JSX.Element {
         {itens.map((item) => (
           <Link
             key={item.id}
-            className={`link ${pathname === item.link ? 'active' : ''}`}
+            className={`link ${pathname === item.link ? "active" : ""}`}
             href={item.link}
             role="menuitem"
             prefetch={false}
@@ -56,7 +56,7 @@ function Menu(): JSX.Element {
         ))}
       </MenuStyled>
     </StyleSheetManager>
-  )
+  );
 }
 
 export default Menu;

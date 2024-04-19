@@ -1,4 +1,4 @@
 type HowToGetTheResultProps = {
-    values: number[]
-    result: number[]
-}
+  values: number[];
+  result: number[];
+};

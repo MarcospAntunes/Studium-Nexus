@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import UnitSelectedContextProps from "../../hooks/useUnitsSelectedContext/useUnidadesSelecionadasContext.type";
 import { Children } from "@studium-nexus/types-commons";
@@ -8,13 +8,13 @@ const UnitSelectedContext = createContext<UnitSelectedContextProps | any>("");
 UnitSelectedContext.displayName = "UnidadeSelecionada";
 
 function UnitSelectedProvider({ children }: Children): JSX.Element {
-    const [unit, setUnit] = useState<string[]>([]);
+  const [unit, setUnit] = useState<string[]>([]);
 
-    return (
-        <UnitSelectedContext.Provider value={{ unit, setUnit }}>
-            {children}
-        </UnitSelectedContext.Provider>
-    )
+  return (
+    <UnitSelectedContext.Provider value={{ unit, setUnit }}>
+      {children}
+    </UnitSelectedContext.Provider>
+  );
 }
 
-export { UnitSelectedContext, UnitSelectedProvider }
+export { UnitSelectedContext, UnitSelectedProvider };

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import styled from "styled-components";
 import MenuStyledProps from "../Menu.style.type";
@@ -16,7 +16,7 @@ const MenuButton = styled.button<MenuStyledProps>`
   border: none;
   cursor: pointer;
   z-index: 9999;
-    
+
   .lines {
     background-color: ${({ theme }) => theme.text};
     border: 1px solid ${({ theme }) => theme.text};
@@ -25,30 +25,24 @@ const MenuButton = styled.button<MenuStyledProps>`
   }
 
   .line1 {
-    width: ${({ isopen }) => (isopen === "true" ? '40px' : '35px')};
-    transform: rotate(
-      ${({ isopen }) => (isopen === "true" ? '45deg' : '0')}
-    ) translate(
-      ${({ isopen }) => (isopen === "true" ? '4px' : '0')}
-    );
-    transition: .3s ease-in-out;
+    width: ${({ isopen }) => (isopen === "true" ? "40px" : "35px")};
+    transform: rotate(${({ isopen }) => (isopen === "true" ? "45deg" : "0")})
+      translate(${({ isopen }) => (isopen === "true" ? "4px" : "0")});
+    transition: 0.3s ease-in-out;
   }
 
   .line2 {
-    display: ${({ isopen }) => (isopen === "true" ? 'none' : 'block')};
+    display: ${({ isopen }) => (isopen === "true" ? "none" : "block")};
     width: 30px;
-    transition: .3s ease-in-out;
+    transition: 0.3s ease-in-out;
   }
 
   .line3 {
     width: 40px;
-    transform: rotate(
-      ${({ isopen }) => (isopen === "true" ? '-45deg' : '0')}
-    ) translate(
-      ${({ isopen }) => (isopen === "true" ? '4px' : '0')}
-    );
-    transition: .3s ease-in-out;
+    transform: rotate(${({ isopen }) => (isopen === "true" ? "-45deg" : "0")})
+      translate(${({ isopen }) => (isopen === "true" ? "4px" : "0")});
+    transition: 0.3s ease-in-out;
   }
-`
+`;
 
 export default MenuButton;

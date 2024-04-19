@@ -5,9 +5,5 @@ export default function Layout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <StyledComponentsRegistry>
-        {children}
-    </StyledComponentsRegistry>
-  );
+  return <StyledComponentsRegistry>{children}</StyledComponentsRegistry>;
 }

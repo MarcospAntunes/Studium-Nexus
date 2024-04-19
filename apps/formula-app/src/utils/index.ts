@@ -5,9 +5,9 @@ import simpleInterest from "./formulas/simpleInterest";
 import compoundInterest from "./formulas/compoundInterest";
 
 export {
-    arithmeticAverage,
-    bhaskara,
-    formulasPages,
-    simpleInterest,
-    compoundInterest
-}
+  arithmeticAverage,
+  bhaskara,
+  formulasPages,
+  simpleInterest,
+  compoundInterest,
+};

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { createGlobalStyle } from "styled-components";
 
@@ -31,6 +31,6 @@ const GlobalStyles = createGlobalStyle`
       font-size: 18px;
     }
   }
-`
+`;
 
 export default GlobalStyles;

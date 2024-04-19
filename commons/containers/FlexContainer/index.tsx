@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import styled from "styled-components";
 
@@ -7,17 +7,17 @@ const FlexContainerSpaceBTW = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-`
+`;
 
 const FlexContainerCenter = styled.main`
-  display: flex; 
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`
+`;
 
 const FlexContainerAdapter = styled.div`
-  display: flex; 
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -26,6 +26,6 @@ const FlexContainerAdapter = styled.div`
   @media screen and (min-width: 541px) {
     flex-direction: row;
   }
-`
+`;
 
 export { FlexContainerSpaceBTW, FlexContainerCenter, FlexContainerAdapter };

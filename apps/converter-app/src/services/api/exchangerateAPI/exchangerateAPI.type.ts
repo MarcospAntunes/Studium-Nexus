@@ -1,7 +1,7 @@
 type ConvertCoinAPIProps = {
-    number: number
-    originCoin: string
-    destinyCoin: string
-}
+  number: number;
+  originCoin: string;
+  destinyCoin: string;
+};
 
 export default ConvertCoinAPIProps;

@@ -1,6 +1,6 @@
-import { UnitSelectedContext, UnitSelectedProvider } from "./UnitSelectedContext";
+import {
+  UnitSelectedContext,
+  UnitSelectedProvider,
+} from "./UnitSelectedContext";
 
-export {
-    UnitSelectedContext,
-    UnitSelectedProvider
-}
+export { UnitSelectedContext, UnitSelectedProvider };

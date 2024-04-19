@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import styled from "styled-components";
 
@@ -12,7 +12,7 @@ const ButtonStyled = styled.button`
   font-size: 14px;
   color: ${({ theme }) => theme.text};
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
 
   &:hover {
     background-color: ${({ theme }) => theme.bgCardHover};
@@ -24,6 +24,6 @@ const ButtonStyled = styled.button`
     max-width: 300px;
     font-size: 18px;
   }
-`
+`;
 
 export default ButtonStyled;

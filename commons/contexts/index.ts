@@ -1,6 +1,3 @@
-import { ThemeContext, ThemeProvider } from './ThemeContext';
+import { ThemeContext, ThemeProvider } from "./ThemeContext";
 
-export {
-  ThemeContext,
-  ThemeProvider
-}
+export { ThemeContext, ThemeProvider };

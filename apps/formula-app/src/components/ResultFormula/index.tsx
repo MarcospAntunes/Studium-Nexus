@@ -4,16 +4,16 @@ import { useTheme } from "../../hooks";
 import { darkTheme, lightTheme } from "@studium-nexus/utils-commons";
 
 function ResultFormula({ children }: Children): JSX.Element {
-    const { theme } = useTheme();
+  const { theme } = useTheme();
 
-    return (
-        <ResultFormulaStyled
-            aria-live="assertive"
-            theme={theme === 'light' ? lightTheme : darkTheme}
-        >
-            {children}
-        </ResultFormulaStyled>
-    )
+  return (
+    <ResultFormulaStyled
+      aria-live="assertive"
+      theme={theme === "light" ? lightTheme : darkTheme}
+    >
+      {children}
+    </ResultFormulaStyled>
+  );
 }
 
 export default ResultFormula;

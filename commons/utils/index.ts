@@ -1,8 +1,4 @@
 import verifyRoutes from "./verifyRoutes";
-import { darkTheme, lightTheme } from './themes'
+import { darkTheme, lightTheme } from "./themes";
 
-export {
-  verifyRoutes,
-  darkTheme,
-  lightTheme
-}
+export { verifyRoutes, darkTheme, lightTheme };

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useTheme } from "../../hooks";
 import { darkTheme, lightTheme } from "../../utils";
@@ -12,7 +12,7 @@ function AppContainer({ children }: Children): JSX.Element {
     <AppContainerStyled theme={theme === "light" ? lightTheme : darkTheme}>
       {children}
     </AppContainerStyled>
-  )
+  );
 }
 
 export default AppContainer;
