@@ -95,7 +95,7 @@ function DocMidiaConvertScreen({
             <>
               <div className="divConversao">
                 <img
-                  src="../../../images/icons/convertido.png"
+                  src="/icons/convertido.png"
                   alt="Convertido"
                   className="convertido"
                 />
