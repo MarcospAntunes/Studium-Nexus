@@ -23,7 +23,7 @@ async function convertCoinAPI({
       return resultado;
     }
   } catch (error: any) {
-    throw new Error("Não foi possível realizar a conversão de moedas", error);
+    return "Não foi possível realizar a conversão de moedas";
   }
 
   return "Algo errado :(";

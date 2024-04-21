@@ -51,7 +51,7 @@ function useConverter(slug: string) {
             }
           }
         } catch (error: any) {
-          throw new Error("Erro durante a conversão:", error);
+          setResultOfConversion(["Erro durante a conversão:", -1]);
         }
       } else {
         const resultado = await convertUnitsAndCoins({

@@ -19,7 +19,7 @@ async function convertUnitsAndCoins({
 
           return result;
         } else {
-          throw new Error("Unidades de origem ou destino não encontradas.");
+          return "Unidades de origem ou destino não encontradas.";
         }
       }
     }

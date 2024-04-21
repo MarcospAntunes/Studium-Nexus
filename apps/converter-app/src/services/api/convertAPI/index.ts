@@ -62,7 +62,7 @@ async function createJob({
 
       return [data, 35];
     } catch (error: any) {
-      throw new error("Erro ao criar trabalho", error);
+      return ["Erro ao criar trabalho", -1];
     }
   }
 }
@@ -107,7 +107,7 @@ async function importArchive({
 
     return [data, 90];
   } catch (error: any) {
-    throw new Error("Erro ao importar arquivo", error);
+    return ["Erro ao importar arquivo", -1];
   }
 }
 
@@ -135,7 +135,7 @@ async function exportArchive({
       return [url, 100];
     }
   } catch (error: any) {
-    throw new Error("Erro ao fornecer link de download", error);
+    return ["Erro ao fornecer link de download", -1];
   }
 }
 

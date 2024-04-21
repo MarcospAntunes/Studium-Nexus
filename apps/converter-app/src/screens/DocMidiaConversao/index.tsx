@@ -33,7 +33,7 @@ function DocMidiaConvertScreen({
 
   const texto =
     resultOfConversion[1] === -1
-      ? "Erro ao converter arquivo"
+      ? resultOfConversion[0]
       : "Clique em converter para inicar a conversão";
 
   return (
