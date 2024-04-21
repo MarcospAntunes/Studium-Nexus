@@ -78,14 +78,12 @@ async function importArchive({
         const formData: FormData = new FormData();
         const importTask = data.data.tasks[i].result.form;
         const importInfo = importTask;
-        console.log(importInfo);
         const { url, parameters } = importInfo;
 
         for (const key in parameters) {
           formData.append(key, parameters[key]);
         }
         formData.append("file", files[0][i]);
-        console.log(files[0][i]);
 
         await fetch(url, {
           method: "POST",
@@ -120,11 +118,11 @@ async function exportArchive({
   apiKey,
 }: ExportArchiveProps): Promise<any[] | undefined> {
   try {
-    const inputTaskIds: string = data.data.tasks.filter(
+    const inputTask: [{id: string}] = data.data.tasks.filter(
       (obj: { name: string }) => obj.name.includes("export")
     );
-    // const inputTaskIds: string = data.data.tasks[3].id
-    const endpoint: string = `https://sync.api.cloudconvert.com/v2/tasks/${inputTaskIds}?include=payload`;
+    const taskId: string = inputTask[0].id
+    const endpoint: string = `https://sync.api.cloudconvert.com/v2/tasks/${taskId}?include=payload`;
 
     const request: Response = await fetch(endpoint, {
       method: "GET",
