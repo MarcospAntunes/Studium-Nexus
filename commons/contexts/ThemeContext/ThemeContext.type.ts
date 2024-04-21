@@ -1,7 +1,8 @@
+/* eslint-disable no-unused-vars */
 import { Dispatch, SetStateAction } from "react";
 
 type ThemeContextProps = {
-  themeToggler: () => void;
+  themeToggler: (target?: string) => void;
   theme: string;
   setTheme: Dispatch<SetStateAction<string>>;
 };
