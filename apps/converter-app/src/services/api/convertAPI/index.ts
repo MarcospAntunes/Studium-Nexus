@@ -61,9 +61,8 @@ async function createJob({
       const data = await response.json();
 
       return [data, 35];
-    } catch (error) {
-      console.log("Erro ao criar trabalho", error);
-      return ["", -1];
+    } catch (error: any) {
+      throw new error("Erro ao criar trabalho", error);
     }
   }
 }
@@ -107,9 +106,8 @@ async function importArchive({
     }
 
     return [data, 90];
-  } catch (error) {
-    console.log("Erro ao importar arquivo", error);
-    return ["", -1];
+  } catch (error: any) {
+    throw new Error("Erro ao importar arquivo", error);
   }
 }
 
@@ -136,9 +134,8 @@ async function exportArchive({
       const url: string = res.data.result.files[0].url;
       return [url, 100];
     }
-  } catch (error) {
-    console.log("Erro ao fornecer link de download", error);
-    return ["", -1];
+  } catch (error: any) {
+    throw new Error("Erro ao fornecer link de download", error);
   }
 }
 

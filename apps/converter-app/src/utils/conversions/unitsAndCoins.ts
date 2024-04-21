@@ -12,14 +12,14 @@ async function convertUnitsAndCoins({
       const [origin, destiny] = unit;
 
       if (state) {
-        if (state.hasOwnProperty(origin) && state.hasOwnProperty(destiny)) {
+        
+        if (Object.prototype.hasOwnProperty.call(state, origin) && Object.prototype.hasOwnProperty.call(state, destiny)) {
           const valueToMultiply: number = state[destiny] / state[origin];
           const result: number = Number(valueToMultiply * Number(value));
 
           return result;
         } else {
-          console.log("Unidades de origem ou destino não encontradas.");
-          return 0;
+          throw new Error("Unidades de origem ou destino não encontradas.");
         }
       }
     }

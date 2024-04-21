@@ -7,7 +7,7 @@ import { useEffect, useReducer } from "react";
 function useConverterReducer(slug: string) {
   const [state, dispatch] = useReducer(ConverterReducer, { slug });
   useEffect(() => {
-    dispatch({ type: slug });
+    dispatch();
   }, []);
 
   const namesOfUnits: string[] = Object.keys(state);

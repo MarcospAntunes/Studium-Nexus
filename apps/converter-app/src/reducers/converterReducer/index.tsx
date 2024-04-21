@@ -1,6 +1,4 @@
-import ConverterActionProps from "./ConverterReducer.type";
-
-function ConverterReducer(state: any, action: ConverterActionProps) {
+function ConverterReducer(state: any) {
   switch (state.slug) {
     case "tempo":
       return {

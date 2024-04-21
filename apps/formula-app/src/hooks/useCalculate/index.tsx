@@ -12,7 +12,7 @@ function useCalculate() {
     setValues(newArray);
   };
 
-  const clear: VoidFunction = () => {
+  const clear: () => void = () => {
     setResult("");
     setValues([]);
   };

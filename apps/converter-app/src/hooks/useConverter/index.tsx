@@ -50,8 +50,8 @@ function useConverter(slug: string) {
               setResultOfConversion(resultExportArchive);
             }
           }
-        } catch (error) {
-          console.error("Erro durante a conversão:", error);
+        } catch (error: any) {
+          throw new Error("Erro durante a conversão:", error);
         }
       } else {
         const resultado = await convertUnitsAndCoins({
@@ -67,7 +67,7 @@ function useConverter(slug: string) {
     }
   };
 
-  const clear: VoidFunction = () => {
+  const clear: () => void = () => {
     const selecteds = document.querySelectorAll("select");
     selecteds.forEach((selected) => {
       selected.value = "";

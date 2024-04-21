@@ -1,5 +1,4 @@
 import { ChangeEventHandler } from "react";
-import { DefaultTheme } from "styled-components";
 
 type InputConverterProps = {
   type: string;

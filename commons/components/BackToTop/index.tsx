@@ -15,7 +15,7 @@ function BackToTop(): JSX.Element {
     };
   }, []);
 
-  const toggleVisibility: VoidFunction = () => {
+  const toggleVisibility: () => void = () => {
     if (window.scrollY > 100) {
       setIsVisible(true);
     } else {
@@ -23,7 +23,7 @@ function BackToTop(): JSX.Element {
     }
   };
 
-  const scrollToTop: VoidFunction = () => {
+  const scrollToTop: () => void = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",

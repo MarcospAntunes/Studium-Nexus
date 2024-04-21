@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from "react";
 
 type ThemeContextProps = {
-  themeToggler: (target: string) => void;
+  themeToggler: () => void;
   theme: string;
   setTheme: Dispatch<SetStateAction<string>>;
 };
