@@ -18,6 +18,7 @@
     "@studium-nexus/eslint-commons": "*",
     "@studium-nexus/formula-app": "*",
     "@studium-nexus/home-app": "*",
+    "@studium-nexus/screens-commons": "*",
     "@studium-nexus/tsconfig-commons": "*",
     "next": "14.1.0",
     "react": "^18",

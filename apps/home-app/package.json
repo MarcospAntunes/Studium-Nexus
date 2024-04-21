@@ -13,6 +13,7 @@
     "@studium-nexus/containers-commons": "*",
     "@studium-nexus/contexts-commons": "*",
     "@studium-nexus/hooks-commons": "*",
+    "@studium-nexus/screens-commons": "*",
     "@studium-nexus/lib-commons": "*",
     "@studium-nexus/tsconfig-commons": "*",
     "@studium-nexus/eslint-commons": "*",

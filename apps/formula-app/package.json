@@ -16,6 +16,7 @@
     "@studium-nexus/contexts-commons": "*",
     "@studium-nexus/hooks-commons": "*",
     "@studium-nexus/lib-commons": "*",
+    "@studium-nexus/screens-commons": "*",
     "@studium-nexus/types-commons": "*",
     "@studium-nexus/utils-commons": "*",
     "dotenv": "^16.4.5",
