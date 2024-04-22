@@ -72,7 +72,10 @@ async function importArchive({
   files,
 }: ImportArchiveProps): Promise<any[]> {
   try {
-    if (Array.isArray(files)) {
+
+    //corrigir erro não converter apenas um arquivo
+    if (Array.isArray(files[0])) {
+      console.log("multiplos")
       for (let i = 0; i < files.length; i++) {
         const formData: FormData = new FormData();
         const importTask = data.data.tasks[i].result.form;
@@ -90,6 +93,7 @@ async function importArchive({
         });
       }
     } else {
+      console.log("único")
       const formData: FormData = new FormData();
       const importTask = data.data.tasks[0].result.form;
       const importInfo = importTask;

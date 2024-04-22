@@ -1,8 +1,10 @@
 {
   "name": "@studium-nexus/constants-commons",
   "version": "0.1.0",
+
   "scripts": {
-    "lint": "eslint ./**/*.{ts,tsx}"
+    "lint": "eslint ./**/*.{ts,tsx}",
+    "test": "jest"
   },
   "files": [
     "index.ts"
