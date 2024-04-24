@@ -18,7 +18,7 @@ async function createJob({
       const tasks: Record<string, any> = {};
 
       // Crie uma task de import para cada arquivo
-      for (let i = 0; i < upload.length; i++) {
+      for (let i = 0; i < upload[0].length; i++) {
         tasks[`import-${taskID}-${i}`] = {
           operation: `import/upload`,
         };
@@ -35,7 +35,7 @@ async function createJob({
       };
 
       // Adicione os inputs de todas as tasks de import à task de conversão
-      for (let i = 0; i < upload.length; i++) {
+      for (let i = 0; i < upload[0].length; i++) {
         tasks[`task-${taskID}`].input.push(`import-${taskID}-${i}`);
       }
 
@@ -74,9 +74,8 @@ async function importArchive({
   try {
 
     //corrigir erro não converter apenas um arquivo
-    if (Array.isArray(files[0])) {
-      console.log("multiplos")
-      for (let i = 0; i < files.length; i++) {
+    if (Array.isArray(files)) {
+      for (let i = 0; i < files[0].length; i++) {
         const formData: FormData = new FormData();
         const importTask = data.data.tasks[i].result.form;
         const importInfo = importTask;
@@ -92,21 +91,6 @@ async function importArchive({
           body: formData,
         });
       }
-    } else {
-      console.log("único")
-      const formData: FormData = new FormData();
-      const importTask = data.data.tasks[0].result.form;
-      const importInfo = importTask;
-      const { url, parameters } = importInfo;
-      for (const key in parameters) {
-        formData.append(key, parameters[key]);
-      }
-      formData.append("file", files[0]);
-
-      await fetch(url, {
-        method: "POST",
-        body: formData,
-      });
     }
 
     return [data, 90];
