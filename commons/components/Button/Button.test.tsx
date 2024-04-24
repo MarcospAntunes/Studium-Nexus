@@ -1,10 +1,11 @@
 import { fireEvent, render } from '@testing-library/react';
 import Button from "./index";
 import "@testing-library/jest-dom";
+import { toBeInTheDocument } from '../../tests';
 
 const handleClick = jest.fn();
 
-const Component = render(
+const Element = render(
   <Button
     key=""
     role="button"
@@ -14,13 +15,18 @@ const Component = render(
     Button
   </Button>
 );
-const button = Component.getByText("Button");
+const button = Element.getByText("Button");
 fireEvent.click(button);
 
+toBeInTheDocument({ 
+  Element, 
+  fn: "getByText", 
+  tag: "button", 
+  text: "Button", 
+  describeText: "Button component" 
+})
+
 describe("Button component", () => {
-  test("should be in the document", () => {
-    expect(button).toBeInTheDocument();
-  });
   test("should event callend", () => {
     expect(handleClick).toHaveBeenCalled();
   });
