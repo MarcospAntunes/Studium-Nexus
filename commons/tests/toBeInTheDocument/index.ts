@@ -4,12 +4,13 @@ import toBeInTheDocumentProps from "./toBeInTheDocument.type";
 
 function toBeInTheDocument({
   Element,
+  describeText,
   fn,
   text = "",
   tag = "",
-  describeText,
+  id = "",
 }: toBeInTheDocumentProps) {
-  const reqMethod = getByFn({ Element, fn, text, tag });
+  const reqMethod = getByFn({ Element, fn, text, tag, id });
 
   describe(describeText, () => {
     test("should be in the document", () => {

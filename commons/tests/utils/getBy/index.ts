@@ -1,14 +1,15 @@
 import getByFnProps from "./getByFn.type";
 
-function getByFn({ Element, fn, text, tag = "" }: getByFnProps) {
+function getByFn({ Element, fn, text, tag, id }: getByFnProps) {
   const getBy = {
     getByText: text ? Element.getByText(text) : "",
-    container: Element.container.querySelector(tag)
-  }
+    container: tag ? Element.container.querySelector(tag) : "",
+    getByTestId: id ? Element.getByTestId(id) : "",
+  };
 
-  const currentOperation = getBy[fn]
+  const currentOperation = getBy[fn];
 
-  return currentOperation
+  return currentOperation;
 }
 
 export default getByFn;
