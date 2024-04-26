@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@studium-nexus/components-commons": "*",
+    "@studium-nexus/tests-commons": "*",
     "@studium-nexus/constants-commons": "*",
     "@studium-nexus/containers-commons": "*",
     "@studium-nexus/contexts-commons": "*",
