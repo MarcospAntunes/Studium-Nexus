@@ -1,7 +1,7 @@
 import { useTheme } from "../../../hooks";
 import { darkTheme, lightTheme } from "@studium-nexus/utils-commons";
 import LabelFileInputStyled from "./LabelFileInput.style";
-import LabelFileInputProps from "./LabelFileInput";
+import LabelFileInputProps from "./LabelFileInput.type";
 
 function LabelFileInput({
   children,

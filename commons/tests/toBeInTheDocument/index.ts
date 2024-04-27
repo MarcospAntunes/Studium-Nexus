@@ -9,8 +9,11 @@ function toBeInTheDocument({
   text = "",
   tag = "",
   id = "",
+  alt = "",
+  placeholder = "",
+  role = ""
 }: toBeInTheDocumentProps) {
-  const reqMethod = getByFn({ Element, fn, text, tag, id });
+  const reqMethod = getByFn({ Element, fn, text, tag, id, alt, placeholder, role });
 
   describe(describeText, () => {
     test("should be in the document", () => {
