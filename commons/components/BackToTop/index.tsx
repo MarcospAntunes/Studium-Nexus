@@ -36,7 +36,7 @@ function BackToTop(): JSX.Element {
         <BackToTopButton
           onClick={scrollToTop}
           theme={theme === "light" ? lightTheme : darkTheme}
-          data-testid="backToTop"
+          role="button"
         >
           ^
         </BackToTopButton>
