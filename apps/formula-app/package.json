@@ -17,6 +17,7 @@
     "@studium-nexus/lib-commons": "*",
     "@studium-nexus/types-commons": "*",
     "@studium-nexus/utils-commons": "*",
+    "@studium-nexus/tests-commons": "*",
     "dotenv": "^16.4.5"
   }
 }
