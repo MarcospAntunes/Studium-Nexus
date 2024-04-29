@@ -19,6 +19,13 @@ O Studium Nexus é uma aplicação web desenvolvida para facilitar os estudos da
    - Next.Js v14.1.0
    - Styled-components v6.1.8
    - TypeScript v^5
+2. Formatação de código
+   - ESLint v8.0.0
+   - Prettier v3.2.5
+3. Testes
+   - Jest v29.7.0
+   - React Testing Library v15.0.2
+   - Jest-dom Testing-library v6.4.2
 
 ## Como Executar
 
@@ -34,7 +41,7 @@ Para executar o Studium Nexus localmente, siga estas etapas:
 
 ## Contribuição
 
-Este é um projeto pessoal e, portanto, fique avontade para deixar sua contribuição no projeto ou sugerir melhorias.
+No presente momento este projeto não aceita contribuições externas sem a devida autorização.
 
 ## Licença
 
