@@ -12,8 +12,10 @@ async function convertUnitsAndCoins({
       const [origin, destiny] = unit;
 
       if (state) {
-        
-        if (Object.prototype.hasOwnProperty.call(state, origin) && Object.prototype.hasOwnProperty.call(state, destiny)) {
+        if (
+          Object.prototype.hasOwnProperty.call(state, origin) &&
+          Object.prototype.hasOwnProperty.call(state, destiny)
+        ) {
           const valueToMultiply: number = state[destiny] / state[origin];
           const result: number = Number(valueToMultiply * Number(value));
 
@@ -28,17 +30,17 @@ async function convertUnitsAndCoins({
     const number: number = Number(value);
 
     const chavesOrigem: string[] = Object.keys(state).filter(
-      (chave) => state[chave] === originNameCoin
+      (chave) => state[chave] === originNameCoin,
     );
     const originCoin: string = Object.keys(
-      Object.fromEntries(chavesOrigem.map((chave) => [chave, state[chave]]))
+      Object.fromEntries(chavesOrigem.map((chave) => [chave, state[chave]])),
     )[0];
 
     const chavesDestino: string[] = Object.keys(state).filter(
-      (chave) => state[chave] === destinyNameCoin
+      (chave) => state[chave] === destinyNameCoin,
     );
     const destinyCoin: string = Object.keys(
-      Object.fromEntries(chavesDestino.map((chave) => [chave, state[chave]]))
+      Object.fromEntries(chavesDestino.map((chave) => [chave, state[chave]])),
     )[0];
 
     return await convertCoinAPI({ number, originCoin, destinyCoin });

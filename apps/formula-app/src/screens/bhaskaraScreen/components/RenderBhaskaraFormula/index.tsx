@@ -1,7 +1,7 @@
 function RenderBhaskaraFormula(
   value: number,
   name: string,
-  power?: number
+  power?: number,
 ): string | number | JSX.Element {
   if (value) {
     const valueString: string = value.toString();

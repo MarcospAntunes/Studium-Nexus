@@ -1,3 +1,6 @@
+/* eslint-disable jest/no-export */
+/* eslint-disable jest/valid-title */
+
 import "@testing-library/jest-dom";
 import { getByFn } from "../utils";
 import toBeInTheDocumentProps from "./toBeInTheDocument.type";
@@ -11,9 +14,18 @@ function toBeInTheDocument({
   id = "",
   alt = "",
   placeholder = "",
-  role = ""
+  role = "",
 }: toBeInTheDocumentProps) {
-  const reqMethod = getByFn({ Element, fn, text, tag, id, alt, placeholder, role });
+  const reqMethod = getByFn({
+    Element,
+    fn,
+    text,
+    tag,
+    id,
+    alt,
+    placeholder,
+    role,
+  });
 
   describe(describeText, () => {
     test("should be in the document", () => {
@@ -21,5 +33,4 @@ function toBeInTheDocument({
     });
   });
 }
-
 export default toBeInTheDocument;

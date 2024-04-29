@@ -8,5 +8,5 @@ toBeInTheDocument({
   Element: Component,
   describeText: "FormulaFormatComponent",
   fn: "getByText",
-  text: "1 + 1"
+  text: "1 + 1",
 });

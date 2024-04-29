@@ -3,4 +3,4 @@ type HowToGetTheResultProps = {
   result: number[];
 };
 
-export default HowToGetTheResultProps
+export default HowToGetTheResultProps;

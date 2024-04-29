@@ -1,15 +1,13 @@
-import { render } from '@testing-library/react';
-import Header from './index';
-import '@testing-library/jest-dom'
-import { toBeInTheDocument } from '../../tests';
+import { render } from "@testing-library/react";
+import Header from "./index";
+import "@testing-library/jest-dom";
+import { toBeInTheDocument } from "../../tests";
 
-const Component = render(
-  <Header />
-)
+const Component = render(<Header />);
 
-toBeInTheDocument({ 
+toBeInTheDocument({
   Element: Component,
   fn: "container",
   tag: "header",
   describeText: "Header Component Test",
-})
+});

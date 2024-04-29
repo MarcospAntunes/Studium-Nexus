@@ -3,9 +3,4 @@ import ArithmeticAverage from "./arithmeticAverage";
 import SimpleInterest from "./simpleInterest";
 import CompoundInterest from "./compoundInterest";
 
-export {
-    Bhaskara,
-    ArithmeticAverage,
-    SimpleInterest,
-    CompoundInterest
-}
+export { Bhaskara, ArithmeticAverage, SimpleInterest, CompoundInterest };

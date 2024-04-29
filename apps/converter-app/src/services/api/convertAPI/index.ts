@@ -72,7 +72,6 @@ async function importArchive({
   files,
 }: ImportArchiveProps): Promise<any[]> {
   try {
-
     //corrigir erro não converter apenas um arquivo
     if (Array.isArray(files)) {
       for (let i = 0; i < files[0].length; i++) {
@@ -104,10 +103,10 @@ async function exportArchive({
   apiKey,
 }: ExportArchiveProps): Promise<any[] | undefined> {
   try {
-    const inputTask: [{id: string}] = data.data.tasks.filter(
-      (obj: { name: string }) => obj.name.includes("export")
+    const inputTask: [{ id: string }] = data.data.tasks.filter(
+      (obj: { name: string }) => obj.name.includes("export"),
     );
-    const taskId: string = inputTask[0].id
+    const taskId: string = inputTask[0].id;
     const endpoint: string = `https://sync.api.cloudconvert.com/v2/tasks/${taskId}?include=payload`;
 
     const request: Response = await fetch(endpoint, {

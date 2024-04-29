@@ -17,7 +17,7 @@ function LazyLoadedText({ children, className }: LazyLoadedProps): JSX.Element {
             observer.unobserve(entry.target);
           }
         });
-      }
+      },
     );
 
     if (paragraphRef.current) {

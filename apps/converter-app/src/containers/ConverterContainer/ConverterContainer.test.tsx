@@ -5,13 +5,12 @@ import { toBeInTheDocument } from "@studium-nexus/tests-commons";
 const Component = render(
   <ConverterContainer>
     <p>test</p>
-  </ConverterContainer>
-)
-
+  </ConverterContainer>,
+);
 
 toBeInTheDocument({
   Element: Component,
   describeText: "ConverterContainer component",
-  fn: 'getByText',
-  text: "test"
-})
+  fn: "getByText",
+  text: "test",
+});

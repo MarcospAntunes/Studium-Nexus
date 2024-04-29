@@ -52,10 +52,10 @@ describe("InputConverter Component", () => {
           onChange={onChange}
           placeholder={placeholder}
           required={required}
-        />
+        />,
       );
 
       expect(getByPlaceholderText(placeholder)).toBeInTheDocument();
-    }
+    },
   );
 });

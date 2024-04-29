@@ -1,7 +1,7 @@
-import { ReactNode } from "react"
+import { ReactNode } from "react";
 
 type ErrorScreenProps = {
-  children: ReactNode
-}
+  children: ReactNode;
+};
 
 export default ErrorScreenProps;

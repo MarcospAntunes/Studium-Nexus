@@ -14,7 +14,7 @@ function SearchProvider({ children }: Children): JSX.Element {
   const filtredItens = useMemo(() => {
     const lowerSearch: string = search.toLowerCase();
     const filterList = itens.filter((item) =>
-      item.title.toLowerCase().includes(lowerSearch)
+      item.title.toLowerCase().includes(lowerSearch),
     );
 
     return filterList;

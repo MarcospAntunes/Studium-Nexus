@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import styled from "styled-components";
 
@@ -18,7 +18,8 @@ const ErrorScreenStyled = styled.div`
     text-align: center;
   }
 
-  p, a {
+  p,
+  a {
     max-width: 500px;
     font-size: 14px;
     text-align: center;
@@ -31,10 +32,11 @@ const ErrorScreenStyled = styled.div`
       font-size: 24px;
     }
 
-    p, a {
+    p,
+    a {
       font-size: 18px;
     }
   }
-`
+`;
 
-export default ErrorScreenStyled
+export default ErrorScreenStyled;

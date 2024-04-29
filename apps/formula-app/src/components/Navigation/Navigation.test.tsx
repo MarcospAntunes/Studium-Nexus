@@ -2,7 +2,7 @@ import { fireEvent, render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import Navigation from "./index";
 
-const scrollToSection = jest.fn()
+const scrollToSection = jest.fn();
 
 describe("Navigation Component", () => {
   test("Should be in the document", () => {
@@ -16,9 +16,9 @@ describe("Navigation Component", () => {
     const link = Component.getByText("Como foi criada");
     link.addEventListener("click", () => {
       scrollToSection();
-    })
+    });
 
     fireEvent.click(link);
     expect(scrollToSection).toHaveBeenCalled();
-  })
-})
+  });
+});

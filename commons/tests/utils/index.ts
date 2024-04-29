@@ -1,3 +1,3 @@
 import getByFn from "./getBy";
 
-export { getByFn }
+export { getByFn };

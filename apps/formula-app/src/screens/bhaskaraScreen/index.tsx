@@ -89,7 +89,7 @@ function Bhaskara() {
                   <span key={index}>
                     x<sub>{index + 1}</sub> = {number},
                   </span>
-                )
+                ),
               )}
             </ResultFormula>
           </ResultContainer>

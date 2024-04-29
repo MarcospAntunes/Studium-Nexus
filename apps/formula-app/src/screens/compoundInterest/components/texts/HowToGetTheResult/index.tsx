@@ -1,4 +1,4 @@
-import HowToGetTheResultProps from './HowToGetTheResult.type'
+import HowToGetTheResultProps from "./HowToGetTheResult.type";
 
 function HowToGetTheResult({
   values,

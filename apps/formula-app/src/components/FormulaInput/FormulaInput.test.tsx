@@ -11,12 +11,12 @@ const Component = render(
     onChange={() => "test"}
     required={false}
     aria_label="input test"
-  />
-)
+  />,
+);
 
 toBeInTheDocument({
   Element: Component,
   describeText: "FormulaInput Component",
   fn: "getByPlaceholderText",
-  placeholder: "Input test"
-})
+  placeholder: "Input test",
+});
