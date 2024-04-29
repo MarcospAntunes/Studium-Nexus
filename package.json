@@ -21,33 +21,32 @@
     "@studium-nexus/home-app": "*",
     "@studium-nexus/screens-commons": "*",
     "@studium-nexus/tsconfig-commons": "*",
-
+    
     "next": "14.1.0",
+    "prettier": "^3.2.5",
     "react": "^18",
     "react-dom": "^18",
-    
     "styled-components": "^6.1.8"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^15.0.2",
-
     "@types/jest": "^29.5.12",
     "@types/node": "^20.12.7",
     "@types/react": "^18.2.79",
     "@types/react-dom": "^18",
-
+    "@typescript-eslint/eslint-plugin": "^7.7.0",
+    "@typescript-eslint/parser": "^7.0.0",
     "eslint": "^8.0.0",
     "eslint-config-next": "^14.2.1",
     "eslint-plugin-react": "^7.34.1",
-
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
-
-    "typescript": "^5",
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
-    "@typescript-eslint/eslint-plugin": "^7.7.0",
-    "@typescript-eslint/parser": "^7.0.0"
+    "typescript": "^5",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jest": "^28.3.0",
+    "eslint-plugin-prettier": "^5.1.3"
   }
 }

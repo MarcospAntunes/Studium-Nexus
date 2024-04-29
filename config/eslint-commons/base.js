@@ -1,6 +1,12 @@
 // eslint-disable-next-line no-undef
 module.exports = {
-  extends: ["eslint:recommended", "next", "next/core-web-vitals"],
+  extends: [ 
+    "next", 
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:jest/recommended",
+    "plugin:prettier/recommended"
+  ],
   globals: {
     React: true,
     google: true,
