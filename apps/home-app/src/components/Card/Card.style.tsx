@@ -1,22 +1,28 @@
 "use client";
 
 import styled from "styled-components";
+import CadStyledProps from "./CadStyled.type";
 
-const CardStyled = styled.li`
+const CardStyled = styled.li<CadStyledProps>`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: ${({ layout }) => (layout === "true" ? "column" : "row")};
+  justify-content: ${({ layout }) => (layout === "true" ? "center" : "left")};
   align-items: center;
   gap: 12px;
-  width: 100px;
-  height: 110px;
-  border-radius: 15px;
+
+  width: ${({ layout }) => (layout === "true" ? "100px" : "95vw")};
+  max-width: 800px;
+  height: ${({ layout }) => (layout === "true" ? "110px" : "50px")};
+
+  padding-left: ${({ layout }) => (layout === "true" ? "0" : "10px")};
+  border-radius: ${({ layout }) => (layout === "true" ? "15px" : "10px")};
 
   background-color: ${({ theme }) => theme.bgCard};
   box-shadow: -2px 2px 4px 1px ${({ theme }) => theme.shadown};
 
   color: ${({ theme }) => theme.text};
   font-size: 14px;
+
   transition: 0.3s;
   cursor: pointer;
 
@@ -27,7 +33,8 @@ const CardStyled = styled.li`
   }
 
   p {
-    width: 100%;
+    width: ${({ layout }) => (layout === "true" ? "100%" : "250px")};
+    text-align: ${({ layout }) => (layout === "true" ? "center" : "left")};
     word-wrap: break-word;
   }
 
@@ -42,13 +49,13 @@ const CardStyled = styled.li`
   }
 
   @media screen and (min-width: 541px) {
-    width: 205px;
-    height: 215px;
+    width: ${({ layout }) => (layout === "true" ? "205px" : "90vw")};
+    height: ${({ layout }) => (layout === "true" ? "215px" : "50px")};
     font-size: 18px;
 
     img {
-      width: 64px;
-      height: 64px;
+      width: ${({ layout }) => (layout === "true" ? "64px" : "32px")};
+      height: ${({ layout }) => (layout === "true" ? "64px" : "32px")};
     }
   }
 `;

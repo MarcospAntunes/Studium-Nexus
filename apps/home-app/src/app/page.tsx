@@ -1,26 +1,27 @@
 import { Header, BackToTop } from "@studium-nexus/components-commons";
 
-import { SearchBox, List, Slogan } from "../components/";
+import { SearchBox, List, Slogan, ChangeLayout } from "../components/";
 
 import {
   AppContainer,
   FlexContainerSpaceBTW,
 } from "@studium-nexus/containers-commons";
+import { MainContainer } from "../containers";
 
 export default async function Home() {
   return (
     <AppContainer>
       <Header />
-      <main>
+      <MainContainer>
         <section>
           <Slogan />
           <FlexContainerSpaceBTW>
-            <h3>Funcionalidades</h3>
+            <ChangeLayout />
             <SearchBox />
           </FlexContainerSpaceBTW>
           <List />
         </section>
-      </main>
+      </MainContainer>
       <BackToTop />
     </AppContainer>
   );
