@@ -10,18 +10,25 @@ SearchContext.displayName = "search";
 
 function SearchProvider({ children }: Children): JSX.Element {
   const [search, setSearch] = useState<string>("");
+  const [filter, setFilter] = useState<string>("");
 
   const filtredItens = useMemo(() => {
+    const lowerFilter: string = filter.toLowerCase();
+    let filterList = itens.filter((item) =>
+      item.type.toLowerCase().includes(lowerFilter),
+    );
     const lowerSearch: string = search.toLowerCase();
-    const filterList = itens.filter((item) =>
+    filterList = filterList.filter((item) =>
       item.title.toLowerCase().includes(lowerSearch),
     );
 
     return filterList;
-  }, [search]);
+  }, [filter, search]);
 
   return (
-    <SearchContext.Provider value={{ search, setSearch, filtredItens }}>
+    <SearchContext.Provider
+      value={{ search, setSearch, filter, setFilter, filtredItens }}
+    >
       {children}
     </SearchContext.Provider>
   );
