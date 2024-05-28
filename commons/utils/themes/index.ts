@@ -9,6 +9,8 @@ const darkTheme = {
   bgSearch: "#282828",
   bgButton: "#2D2D2D",
   bgConverter: "#292929",
+  disabled: "#8f8f8f",
+  textDisabled: "white",
   invert: 1,
   invertHover: 0,
 };
@@ -24,6 +26,8 @@ const lightTheme = {
   bgSearch: "#EFEFEF",
   bgButton: "#D9D9D9",
   bgConverter: "#EFEFEF",
+  disabled: "#8f8f8f",
+  textDisabled: "white",
   invert: 0,
   invertHover: 1,
 };
