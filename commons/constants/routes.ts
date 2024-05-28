@@ -21,4 +21,8 @@ const formulaRoutes = {
   "juros-compostos": "juros-compostos",
 };
 
-export { converterRoutes, formulaRoutes };
+const productivityRoutes = {
+  pomodoro: "pomodoro",
+};
+
+export { converterRoutes, formulaRoutes, productivityRoutes };

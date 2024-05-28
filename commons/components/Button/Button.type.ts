@@ -5,6 +5,7 @@ type ButtonProps = {
   onClick: MouseEventHandler<HTMLButtonElement> | undefined;
   role?: AriaRole | undefined;
   type?: "button" | "submit" | "reset" | undefined;
+  disabled?: boolean;
 };
 
 export default ButtonProps;

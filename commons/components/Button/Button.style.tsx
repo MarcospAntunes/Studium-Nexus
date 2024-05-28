@@ -14,6 +14,12 @@ const ButtonStyled = styled.button`
   cursor: pointer;
   transition: 0.3s;
 
+  &:disabled {
+    background-color: ${({ theme }) => theme.disabled};
+    color: ${({ theme }) => theme.textDisabled};
+    cursor: not-allowed;
+  }
+
   &:hover {
     background-color: ${({ theme }) => theme.bgCardHover};
     color: ${({ theme }) => theme.textHover};

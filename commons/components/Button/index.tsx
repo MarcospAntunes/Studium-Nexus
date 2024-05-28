@@ -4,7 +4,13 @@ import ButtonProps from "./Button.type";
 import { darkTheme, lightTheme } from "../../utils";
 import React from "react";
 
-function Button({ children, onClick, role, type }: ButtonProps): JSX.Element {
+function Button({
+  children,
+  onClick,
+  role,
+  type,
+  disabled,
+}: ButtonProps): JSX.Element {
   const { theme } = useTheme();
 
   return (
@@ -13,6 +19,7 @@ function Button({ children, onClick, role, type }: ButtonProps): JSX.Element {
       theme={theme === "light" ? lightTheme : darkTheme}
       role={role}
       type={type}
+      disabled={disabled}
     >
       {children}
     </ButtonStyled>

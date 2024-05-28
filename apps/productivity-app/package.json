@@ -1,0 +1,23 @@
+{
+  "name": "@studium-nexus/productivity-app",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint ./**/*.{ts,tsx}",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@studium-nexus/components-commons": "*",
+    "@studium-nexus/constants-commons": "*",
+    "@studium-nexus/containers-commons": "*",
+    "@studium-nexus/contexts-commons": "*",
+    "@studium-nexus/hooks-commons": "*",
+    "@studium-nexus/screens-commons": "*",
+    "@studium-nexus/lib-commons": "*",
+    "@studium-nexus/types-commons": "*",
+    "@studium-nexus/utils-commons": "*",
+    "@studium-nexus/tests-commons": "*"
+  }
+}
