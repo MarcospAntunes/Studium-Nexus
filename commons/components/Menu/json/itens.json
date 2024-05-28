@@ -89,5 +89,12 @@
     "title": "Juros Compostos",
     "link": "/formula/juros-compostos",
     "type": "formula"
+  },
+  {
+    "id": "14",
+    "img": "/icons/pomodoro.png",
+    "title": "Pomodoro",
+    "link": "/produtividade/pomodoro",
+    "type": "produtividade"
   }
 ]
