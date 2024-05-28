@@ -29,7 +29,7 @@ const MainPomodoro = styled.main`
   }
 
   #pomodoroTimerContainer span {
-    color: yellow;
+    color: ${({ theme }) => theme.text};
     font-size: 24px;
   }
   #pomodoroTimerContainer #buttons button {
@@ -47,10 +47,10 @@ const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
 
   & button {
-    width: 100px;
+    width: 110px;
   }
 
   @media screen and (min-width: 541px) {
