@@ -30,7 +30,8 @@ const SelectStyled = styled.select<SelectStyledProps>`
   }
 
   @media screen and (min-width: 541px) {
-    left: 0;
+    left: 15px;
+    top: 60px;
     & option {
       font-size: 18px;
     }

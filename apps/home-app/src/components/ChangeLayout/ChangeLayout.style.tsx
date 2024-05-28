@@ -24,8 +24,7 @@ const ChangeLayoutStyled = styled.button<ChangeLayoutStyledProps>`
     width: 10px;
     height: ${({ layout }) => (layout === "true" ? "10px" : "4px")};
     border-radius: 2px;
-
-    background-color: ${({ theme }) => theme.text};
+    border: 1px solid ${({ theme }) => theme.text};
   }
 
   .first {
@@ -42,6 +41,29 @@ const ChangeLayoutStyled = styled.button<ChangeLayoutStyledProps>`
 
   .last {
     display: ${({ layout }) => (layout === "true" ? "block" : "none")};
+  }
+
+  @media screen and (min-width: 541px) {
+    width: ${({ layout }) => (layout === "true" ? "60px" : "75px")};
+    height: 60px;
+
+    & div {
+      width: ${({ layout }) =>
+        layout === "true" ? "15px !important" : "15px"};
+      height: ${({ layout }) => (layout === "true" ? "15px" : "4px")};
+    }
+
+    & .first {
+      width: ${({ layout }) => (layout === "true" ? "10px" : "50px")};
+    }
+
+    & .second {
+      width: ${({ layout }) => (layout === "true" ? "50px" : "30px")};
+    }
+
+    & .third {
+      width: ${({ layout }) => (layout === "true" ? "10px" : "75px")};
+    }
   }
 `;
 
