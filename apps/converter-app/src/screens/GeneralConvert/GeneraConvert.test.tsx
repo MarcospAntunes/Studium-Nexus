@@ -11,12 +11,12 @@ const unitContextValue = {
 const Component = render(
   <UnitSelectedContext.Provider value={unitContextValue}>
     <GeneraConvert params={{ slug: "comprimento" }} />
-  </UnitSelectedContext.Provider>
+  </UnitSelectedContext.Provider>,
 );
 
 toBeInTheDocument({
   Element: Component,
   describeText: "DocMidiaConverter Screen",
   fn: "getByText",
-  text: "limpar"
-})
+  text: "limpar",
+});
