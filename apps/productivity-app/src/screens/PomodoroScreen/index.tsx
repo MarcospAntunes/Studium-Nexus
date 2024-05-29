@@ -4,18 +4,12 @@ import { Button } from "@studium-nexus/components-commons";
 import { MainPomodoro, ButtonContainer } from "./PomodoroScreen.style";
 import { darkTheme, lightTheme } from "@studium-nexus/utils-commons";
 import { useTimer, useTheme } from "../../hooks";
+import { formatTime } from "../../utils";
 
 function PomodoroScreen(): JSX.Element {
   const { theme } = useTheme();
 
   const { isActive, setIsActive, timer, changeTime, resetTime } = useTimer();
-
-  const formatTime = (seconds: number) => {
-    const minutes = Math.floor(seconds / 60);
-    const secs = seconds % 60;
-
-    return `${minutes < 10 ? "0" : ""}${minutes}:${secs < 10 ? "0" : ""}${secs}`;
-  };
 
   return (
     <MainPomodoro theme={theme === "light" ? lightTheme : darkTheme}>
