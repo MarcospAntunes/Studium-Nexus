@@ -15,6 +15,7 @@ function ChangeLayout() {
         onClick={() => setLayout(!layout)}
         theme={theme === "light" ? lightTheme : darkTheme}
         layout={layout?.toString()}
+        title="Clique aqui para mudar o layout dos itens"
         role="button"
       >
         <div className="first" />

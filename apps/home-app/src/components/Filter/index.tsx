@@ -41,6 +41,7 @@ function Filter(): JSX.Element {
       <FilterButtonStyled
         theme={theme === "dark" ? darkTheme : lightTheme}
         onClick={() => openSelect()}
+        title="Clique aqui para filtrar os itens"
       >
         <img src="/icons/filter-icon.png" alt="Filter" />
       </FilterButtonStyled>

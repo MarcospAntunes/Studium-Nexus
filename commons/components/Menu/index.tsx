@@ -41,7 +41,9 @@ function Menu(): JSX.Element {
         theme={theme === "light" ? lightTheme : darkTheme}
         role="menu"
       >
-        <Link href={"/"}>Home</Link>
+        <Link href={"/"} role="menuitem" prefetch={false}>
+          Home
+        </Link>
 
         {itens.map((item) => (
           <Link

@@ -25,6 +25,7 @@ function Card({ img, title, link }: CardTypes): JSX.Element {
         <CardStyled
           theme={theme === "light" ? lightTheme : darkTheme}
           role="button"
+          title={`CLique aqui para ir até o ${title}`}
           layout={layout.toString()}
         >
           <img src={img} alt={`${title} icone`} role="img" />
