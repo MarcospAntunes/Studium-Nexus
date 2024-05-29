@@ -23,5 +23,6 @@ describe("SelectUnit Component", () => {
         value: "cm",
       },
     });
+    expect(element.value).toBe("cm");
   });
 });
