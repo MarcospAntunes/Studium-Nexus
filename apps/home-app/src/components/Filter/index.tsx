@@ -8,6 +8,7 @@ import { darkTheme, lightTheme } from "@studium-nexus/utils-commons";
 import db from "@studium-nexus/components-commons/Menu/json/itens.json";
 import { useSearch, useTheme } from "../../hooks";
 import { useRef, useState } from "react";
+import { StyleSheetManager } from "styled-components";
 
 function Filter(): JSX.Element {
   const { theme } = useTheme();
@@ -43,24 +44,26 @@ function Filter(): JSX.Element {
       >
         <img src="/icons/filter-icon.png" alt="Filter" />
       </FilterButtonStyled>
-
-      <SelectStyled
-        name="filter options"
-        id="filter"
-        ref={selectRef}
-        theme={theme === "dark" ? darkTheme : lightTheme}
-        isActive={isActive.toString()}
-        onChange={(e) => setFilter(e.target.value)}
-      >
-        <option value="" defaultChecked>
-          Todos
-        </option>
-        {options.map((value: string, index) => (
-          <option key={index} value={value}>
-            {value}
+      <StyleSheetManager shouldForwardProp={(prop) => prop !== "isActive"}>
+        <SelectStyled
+          name="filter options"
+          id="filter"
+          title="Filter options"
+          ref={selectRef}
+          theme={theme === "dark" ? darkTheme : lightTheme}
+          isActive={isActive.toString()}
+          onChange={(e) => setFilter(e.target.value)}
+        >
+          <option value="" defaultChecked>
+            Todos
           </option>
-        ))}
-      </SelectStyled>
+          {options.map((value: string, index) => (
+            <option key={index} value={value}>
+              {value}
+            </option>
+          ))}
+        </SelectStyled>
+      </StyleSheetManager>
     </>
   );
 }
