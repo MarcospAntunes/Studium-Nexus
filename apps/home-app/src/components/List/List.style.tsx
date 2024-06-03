@@ -6,7 +6,7 @@ import UlStyledProps from "./UlStyled.type";
 const UlStyled = styled.ul<UlStyledProps>`
   display: flex;
   flex-direction: ${({ layout }) => (layout === "true" ? "row" : "column")};
-  align-items: ${({ layout }) => (layout === "true" ? "center" : "flex-start")};
+  align-items: center;
   justify-content: ${({ layout }) => (layout === "true" ? "center" : "left")};
   flex-wrap: wrap;
   gap: 15px;
