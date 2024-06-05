@@ -1,4 +1,5 @@
 import StyledComponentsRegistry from "@studium-nexus/lib-commons/registry";
+import Providers from "./providers";
 
 export default function Layout({
   children,
@@ -7,7 +8,9 @@ export default function Layout({
 }>) {
   return (
     <>
-      <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+      <StyledComponentsRegistry>
+        <Providers>{children}</Providers>
+      </StyledComponentsRegistry>
     </>
   );
 }

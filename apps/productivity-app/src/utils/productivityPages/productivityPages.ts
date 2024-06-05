@@ -1,5 +1,5 @@
 import React from "react";
-import { PomodoroScreen } from "../../screens/";
+import { PomodoroScreen, TodoList } from "../../screens/";
 
 type Pages = {
   [key: string]: {
@@ -12,6 +12,10 @@ const productivityPages: Pages = {
   pomodoro: {
     title: "Pomodoro",
     Page: PomodoroScreen,
+  },
+  "to-do-list": {
+    title: "To do List",
+    Page: TodoList,
   },
 };
 

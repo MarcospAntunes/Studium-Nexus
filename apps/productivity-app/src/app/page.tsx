@@ -6,6 +6,7 @@ import { productivityPages } from "../utils";
 function Productivity({ params }: { params: { slug: string } }): JSX.Element {
   const { slug } = params;
   const { Page } = productivityPages[slug];
+
   return (
     <ExistingRoutes slug={slug} routes={productivityRoutes}>
       <AppContainer>
