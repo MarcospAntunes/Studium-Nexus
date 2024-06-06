@@ -1,10 +1,7 @@
 "use client";
 
 import styled from "styled-components";
-
-type SelectStyledProps = {
-  isActive: string;
-};
+import { SelectStyledProps } from "./SelectStyled.type";
 
 const SelectStyled = styled.select<SelectStyledProps>`
   position: absolute;

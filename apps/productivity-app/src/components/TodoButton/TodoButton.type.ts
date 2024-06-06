@@ -5,4 +5,8 @@ type TodoButtonProps = {
   checked?: string;
 };
 
-export default TodoButtonProps;
+type TodoButtonStyledProps = {
+  checked: string;
+};
+
+export type { TodoButtonProps, TodoButtonStyledProps };

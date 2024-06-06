@@ -1,25 +1,6 @@
 import { Children } from "@studium-nexus/types-commons";
-import {
-  Dispatch,
-  SetStateAction,
-  createContext,
-  useState,
-  useEffect,
-} from "react";
-
-interface Item {
-  item: string;
-  status: string;
-}
-
-interface itensProps {
-  itens: Item[];
-}
-
-interface TodoContextProps {
-  itens: Item[];
-  setItens: Dispatch<SetStateAction<itensProps>>;
-}
+import { createContext, useState, useEffect } from "react";
+import { TodoContextProps, itensProps } from "./TodoContext.type";
 
 const TodoContext = createContext<TodoContextProps>({
   itens: [],

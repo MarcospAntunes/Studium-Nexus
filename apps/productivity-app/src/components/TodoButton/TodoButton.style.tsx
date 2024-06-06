@@ -1,10 +1,7 @@
 "use client";
 
 import styled from "styled-components";
-
-type TodoButtonStyledProps = {
-  checked: string;
-};
+import { TodoButtonStyledProps } from "./TodoButton.type";
 
 const TodoButtonStyled = styled.button<TodoButtonStyledProps>`
   background-color: ${({ checked }) =>

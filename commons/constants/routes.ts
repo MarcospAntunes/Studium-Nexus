@@ -1,6 +1,4 @@
-type routes = {
-  [key: string]: Object;
-};
+import { routes } from "./routes.type";
 
 const converterRoutes: routes = {
   tempo: "tempo",

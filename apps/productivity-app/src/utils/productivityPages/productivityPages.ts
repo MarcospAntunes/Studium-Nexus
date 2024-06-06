@@ -1,12 +1,5 @@
-import React from "react";
 import { PomodoroScreen, TodoList } from "../../screens/";
-
-type Pages = {
-  [key: string]: {
-    title: string;
-    Page: () => React.JSX.Element;
-  };
-};
+import { Pages } from "./productivityPages.type";
 
 const productivityPages: Pages = {
   pomodoro: {

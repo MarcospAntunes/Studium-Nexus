@@ -1,10 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
-type currentTimerProps = {
-  currentTimer: "pomodoro" | "shortBreak" | "longBreak";
-};
+import { currentTimerProps } from "./useTimer.type";
 
 function useTimer() {
   const [timer, setTimer] = useState(25 * 60);
