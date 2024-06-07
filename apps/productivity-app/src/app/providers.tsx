@@ -1,9 +1,14 @@
 "use client";
 
+import { ThemeProvider } from "@studium-nexus/contexts-commons";
 import { TodoProvider } from "../contexts";
 
 function Providers({ children }: any) {
-  return <TodoProvider>{children}</TodoProvider>;
+  return (
+    <ThemeProvider>
+      <TodoProvider>{children}</TodoProvider>
+    </ThemeProvider>
+  );
 }
 
 export default Providers;

@@ -46,12 +46,12 @@ const MainTodo = styled.main`
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 90%;
+    width: 90vw;
     max-width: 500px;
     min-height: 40px;
 
     & button {
-      width: 110px;
+      width: 105px;
     }
   }
 
@@ -71,6 +71,7 @@ const MainTodo = styled.main`
   #listContainer {
     background-color: ${({ theme }) => theme.bgConverter};
     border-radius: 10px;
+    width: 100%;
 
     & ul {
       display: flex;
@@ -94,6 +95,8 @@ const MainTodo = styled.main`
         gap: 10px;
         width: 100%;
         padding: 5px;
+        text-align: left;
+        line-break: anywhere;
         border-bottom: 1px solid ${({ theme }) => theme.shadown};
       }
       & .checked {
@@ -106,6 +109,7 @@ const MainTodo = styled.main`
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 5px;
     width: 100%;
     height: 100%;
@@ -113,6 +117,12 @@ const MainTodo = styled.main`
     padding: 15px;
     border-radius: 10px;
     background-color: ${({ theme }) => theme.bgConverter};
+  }
+
+  @media screen and (min-width: 541px) {
+    #mainContainer button {
+      width: 150px;
+    }
   }
 `;
 

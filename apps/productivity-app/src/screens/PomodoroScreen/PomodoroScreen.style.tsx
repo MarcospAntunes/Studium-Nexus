@@ -47,7 +47,8 @@ const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  flex-wrap: wrap;
+  gap: 5px;
 
   & button {
     width: 110px;

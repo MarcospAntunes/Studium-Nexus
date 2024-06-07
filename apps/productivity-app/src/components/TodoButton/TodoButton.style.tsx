@@ -15,6 +15,7 @@ const TodoButtonStyled = styled.button<TodoButtonStyledProps>`
   border-radius: 50%;
   width: 25px !important;
   height: 25px !important;
+  flex-shrink: 0;
   cursor: pointer;
 `;
 
