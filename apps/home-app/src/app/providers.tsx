@@ -1,9 +1,9 @@
 "use client";
 
 import {
-  ThemeProvider,
   SearchProvider,
   ChangeLayoutProvider,
+  ThemeProvider,
 } from "../contexts";
 
 function Providers({ children }: any) {
