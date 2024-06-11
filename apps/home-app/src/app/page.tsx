@@ -1,4 +1,4 @@
-import { Header, BackToTop } from "@studium-nexus/components-commons";
+import { Header, BackToTop, Footer } from "@studium-nexus/components-commons";
 
 import { SearchBox, List, Slogan, ChangeLayout, Filter } from "../components/";
 
@@ -25,6 +25,7 @@ export default async function Home() {
           <List />
         </section>
       </MainContainer>
+      <Footer />
       <BackToTop />
     </AppContainer>
   );
