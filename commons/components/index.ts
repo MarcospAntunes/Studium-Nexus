@@ -7,6 +7,7 @@ import BackToTop from "./BackToTop";
 import ExistingRoutes from "./ExistingRoutes";
 import LazyLoadedText from "./LazyLoadedText";
 import itens from "../components/Menu/json/itens.json";
+import Footer from "../components/Footer";
 
 export {
   Button,
@@ -18,4 +19,5 @@ export {
   ExistingRoutes,
   LazyLoadedText,
   itens,
+  Footer,
 };
