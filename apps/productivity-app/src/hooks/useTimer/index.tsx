@@ -19,7 +19,8 @@ function useTimer() {
         setTimer((prev) => {
           if (prev <= 0) {
             clearInterval(interval);
-            return 0;
+            resetTime();
+            return timer;
           }
           return prev - 1;
         });
