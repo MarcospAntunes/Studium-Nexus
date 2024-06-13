@@ -17,6 +17,11 @@ const FooterStyled = styled.footer`
     flex-wrap: wrap;
     gap: 10px;
     list-style: none;
+
+    & li {
+      text-align: left;
+      font-size: 14px;
+    }
   }
 
   a {
@@ -30,6 +35,10 @@ const FooterStyled = styled.footer`
 
     ul {
       flex-direction: row;
+
+      & li {
+        font-size: 18px;
+      }
     }
   }
 `;
