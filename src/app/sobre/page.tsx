@@ -21,8 +21,8 @@ function Sobre(): JSX.Element {
           as ajudem em seus estudos.
         </LazyLoadedText>
         <LazyLoadedText>
-          Atualmente a plataforma ainda está em desenvolvimento e, por
-          importância!
+          Atualmente a plataforma ainda está em desenvolvimento e, por isso, seu
+          feedback tem importância para nôs!
         </LazyLoadedText>
       </SobreStyled>
       <Footer />
