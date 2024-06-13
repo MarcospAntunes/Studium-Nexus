@@ -5,6 +5,8 @@ import styled from "styled-components";
 const AppContainerStyled = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 
   align-items: center;
   gap: 30px;
@@ -13,6 +15,7 @@ const AppContainerStyled = styled.div`
   color: ${({ theme }) => theme.text};
   background-color: ${({ theme }) => theme.body};
   transition: 0.3s;
+  overflow-x: hidden;
 
   h2 {
     margin-bottom: 20px;
