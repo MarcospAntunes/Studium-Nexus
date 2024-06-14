@@ -1,14 +1,9 @@
-"use client";
-
 import { Footer } from "@studium-nexus/components-commons";
 import { Header } from "@studium-nexus/converter-app/src/components";
 import { AppContainer } from "@studium-nexus/converter-app/src/containers";
 import FeedbackStyled from "./Feedback.style";
-import { useRouter } from "next/navigation";
 
 function Feedback() {
-  const router = useRouter();
-  router.back();
   return (
     <AppContainer>
       <Header menu />
