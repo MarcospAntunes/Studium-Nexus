@@ -20,6 +20,8 @@ function useTimer() {
           if (prev <= 0) {
             clearInterval(interval);
             resetTime();
+            const audio = new Audio("/sounds/pomodoro-alarm.wav");
+            audio.play();
             return timer;
           }
           return prev - 1;
