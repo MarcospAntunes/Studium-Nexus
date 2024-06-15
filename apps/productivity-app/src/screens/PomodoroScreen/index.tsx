@@ -22,13 +22,19 @@ function PomodoroScreen(): JSX.Element {
       <section id="pomodoroSelectTimer">
         <h3>Selecione o Temporizador desejado.</h3>
         <ButtonContainer>
-          <Button onClick={() => changeTime(25 * 60, "pomodoro")}>
+          <Button onClick={() => changeTime(25 * 60, "pomodoro")} role="button">
             Pomodoro
           </Button>
-          <Button onClick={() => changeTime(5 * 60, "shortBreak")}>
+          <Button
+            onClick={() => changeTime(5 * 60, "shortBreak")}
+            role="button"
+          >
             Pausa curta
           </Button>
-          <Button onClick={() => changeTime(30 * 60, "longBreak")}>
+          <Button
+            onClick={() => changeTime(30 * 60, "longBreak")}
+            role="button"
+          >
             Pausa longa
           </Button>
         </ButtonContainer>

@@ -17,6 +17,7 @@ function TodoButton({
         theme={theme === "light" ? lightTheme : darkTheme}
         onClick={onClick}
         checked={checked.toString()}
+        role="button"
       />
     </StyleSheetManager>
   );

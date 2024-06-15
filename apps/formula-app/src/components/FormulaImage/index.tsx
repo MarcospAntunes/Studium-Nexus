@@ -14,6 +14,7 @@ function FormulaImage({ src, alt }: FormulaImageProps): JSX.Element {
       alt={alt}
       theme={theme === "light" ? lightTheme : darkTheme}
       loading="lazy"
+      role="img"
     />
   );
 }

@@ -29,7 +29,7 @@ function TodoList(): JSX.Element {
           <h3>Adicione aqui suas tarefas a serem feitas</h3>
         </section>
         <section>
-          <form onSubmit={(e) => e.preventDefault()}>
+          <form onSubmit={(e) => e.preventDefault()} role="form">
             <fieldset>
               <TodoButton onClick={() => addNewItem()} />
 
@@ -41,10 +41,11 @@ function TodoList(): JSX.Element {
                 placeholder="Crie uma nova tarefa..."
                 onChange={(e) => setItem(e.target.value)}
                 required
+                aria-label="Nome da nova tarefa"
               />
             </fieldset>
           </form>
-          <div id="mainContainer">
+          <div id="mainContainer" role="separator">
             <div id="listContainer">
               <div id="controls">
                 <p>
@@ -59,9 +60,9 @@ function TodoList(): JSX.Element {
                   Apagar tudo
                 </Button>
               </div>
-              <ul>
+              <ul role="list">
                 {filtredList.map((value, index) => (
-                  <li key={index} className={value.status}>
+                  <li key={index} className={value.status} role="listitem">
                     <TodoButton
                       onClick={() =>
                         changeStatus(itens.findIndex((item) => item === value))
@@ -74,9 +75,15 @@ function TodoList(): JSX.Element {
               </ul>
             </div>
             <div id="listControlsContainer">
-              <Button onClick={() => filterList("")}>Todos</Button>
-              <Button onClick={() => filterList("active")}>Ativos</Button>
-              <Button onClick={() => filterList("checked")}>Completados</Button>
+              <Button onClick={() => filterList("")} role="button">
+                Todos
+              </Button>
+              <Button onClick={() => filterList("active")} role="button">
+                Ativos
+              </Button>
+              <Button onClick={() => filterList("checked")} role="button">
+                Completados
+              </Button>
             </div>
           </div>
         </section>
