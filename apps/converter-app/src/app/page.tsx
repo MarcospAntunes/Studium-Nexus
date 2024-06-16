@@ -4,6 +4,7 @@ import { ExistingRoutes, Header, BackToTop } from "../components";
 import { converterRoutes } from "@studium-nexus/constants-commons";
 import { AppContainer, FlexContainerCenter } from "../containers";
 import { DocMidiaConvertScreen, GeneralConvertScreen } from "../screens";
+import { Footer } from "@studium-nexus/components-commons";
 
 function Converter({ params }: { params: { slug: string } }) {
   const slug: string = params.slug;
@@ -21,6 +22,7 @@ function Converter({ params }: { params: { slug: string } }) {
             <GeneralConvertScreen params={params} />
           )}
         </FlexContainerCenter>
+        <Footer />
         <BackToTop />
       </AppContainer>
     </ExistingRoutes>

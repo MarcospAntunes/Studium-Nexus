@@ -2,6 +2,7 @@ import { BackToTop, Header, Navigation, ExistingRoutes } from "../components";
 import { formulaRoutes } from "@studium-nexus/constants-commons";
 import { AppContainer, PageFormulaContainer } from "../containers";
 import { formulasPages } from "../utils";
+import { Footer } from "@studium-nexus/components-commons";
 
 function Formula({ params }: { params: { slug: string } }): JSX.Element {
   const slug: string = params.slug;
@@ -16,6 +17,7 @@ function Formula({ params }: { params: { slug: string } }): JSX.Element {
           <Navigation />
           <Page />
         </PageFormulaContainer>
+        <Footer />
         <BackToTop />
       </AppContainer>
     </ExistingRoutes>

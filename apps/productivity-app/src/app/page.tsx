@@ -1,4 +1,4 @@
-import { ExistingRoutes, Header } from "@studium-nexus/components-commons";
+import { ExistingRoutes, Footer, Header } from "@studium-nexus/components-commons";
 import { productivityRoutes } from "@studium-nexus/constants-commons";
 import { AppContainer } from "@studium-nexus/containers-commons";
 import { productivityPages } from "../utils";
@@ -12,6 +12,7 @@ function Productivity({ params }: { params: { slug: string } }): JSX.Element {
       <AppContainer>
         <Header menu={true} />
         <Page />
+        <Footer />
       </AppContainer>
     </ExistingRoutes>
   );
