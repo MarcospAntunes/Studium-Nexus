@@ -1,4 +1,4 @@
-function formatTime(seconds: number) {
+function formatTime(seconds: number): string {
   const minutes = Math.floor(seconds / 60);
   const secs = seconds % 60;
 

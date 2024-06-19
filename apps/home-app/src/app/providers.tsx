@@ -1,12 +1,13 @@
 "use client";
 
+import { Children } from "@studium-nexus/types-commons";
 import {
   SearchProvider,
   ChangeLayoutProvider,
   ThemeProvider,
 } from "../contexts";
 
-function Providers({ children }: any) {
+function Providers({ children }: Children) {
   return (
     <ThemeProvider>
       <SearchProvider>

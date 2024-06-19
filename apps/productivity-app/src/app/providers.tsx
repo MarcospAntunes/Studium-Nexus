@@ -2,8 +2,9 @@
 
 import { ThemeProvider } from "@studium-nexus/contexts-commons";
 import { TodoProvider } from "../contexts";
+import { Children } from "@studium-nexus/types-commons";
 
-function Providers({ children }: any) {
+function Providers({ children }: Children) {
   return (
     <ThemeProvider>
       <TodoProvider>{children}</TodoProvider>
