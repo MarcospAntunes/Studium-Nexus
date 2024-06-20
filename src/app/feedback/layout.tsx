@@ -1,14 +1,3 @@
-import StyledComponentsRegistry from "@studium-nexus/lib-commons/registry";
-import Providers from "./providers";
+import Layout from "@studium-nexus/converter-app/src/app/layout";
 
-export default function Layout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <StyledComponentsRegistry>
-      <Providers>{children}</Providers>
-    </StyledComponentsRegistry>
-  );
-}
+export default Layout;

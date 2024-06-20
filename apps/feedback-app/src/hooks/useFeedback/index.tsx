@@ -1,7 +1,7 @@
 "use client";
 
 import { useContext } from "react";
-import { FeedbackContext } from "../../app/contexts";
+import { FeedbackContext } from "../../contexts";
 
 function useFeedback() {
   const {

@@ -8,7 +8,6 @@ import ExistingRoutes from "./ExistingRoutes";
 import LazyLoadedText from "./LazyLoadedText";
 import itens from "../components/Menu/json/itens.json";
 import Footer from "../components/Footer";
-import CustomCheckbox from "./CustomCheckbox";
 
 export {
   Button,
@@ -21,5 +20,4 @@ export {
   LazyLoadedText,
   itens,
   Footer,
-  CustomCheckbox,
 };
