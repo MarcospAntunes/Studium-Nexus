@@ -45,7 +45,7 @@ function Footer(): JSX.Element {
           </a>
         </li>
         <li>
-          <a href={dinamicHref[1]}>{dinamicText[1]}</a>
+          <Link href={dinamicHref[1]}>{dinamicText[1]}</Link>
         </li>
       </ul>
     </FooterStyled>
