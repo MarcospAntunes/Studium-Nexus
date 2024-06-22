@@ -18,6 +18,7 @@
     "@studium-nexus/converter-app": "*",
     "@studium-nexus/productivity-app": "*",
     "@studium-nexus/eslint-commons": "*",
+    "@studium-nexus/feedback-app": "*",
     "@studium-nexus/formula-app": "*",
     "@studium-nexus/home-app": "*",
     "@studium-nexus/screens-commons": "*",
