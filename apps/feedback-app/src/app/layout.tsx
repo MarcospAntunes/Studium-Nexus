@@ -1,4 +1,5 @@
 import StyledComponentsRegistry from "@studium-nexus/lib-commons/registry";
+import { FeedbackProvider } from "../contexts";
 
 export default function Layout({
   children,
@@ -6,6 +7,8 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   return (
-    <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+    <StyledComponentsRegistry>
+      <FeedbackProvider>{children}</FeedbackProvider>
+    </StyledComponentsRegistry>
   );
 }
