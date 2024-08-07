@@ -7,10 +7,8 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
-      <StyledComponentsRegistry>
-        <Providers>{children}</Providers>
-      </StyledComponentsRegistry>
-    </>
+    <StyledComponentsRegistry>
+      <Providers>{children}</Providers>
+    </StyledComponentsRegistry>
   );
 }
