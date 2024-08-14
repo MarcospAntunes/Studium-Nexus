@@ -6,5 +6,5 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "@studium-nexus/tsconfig-commons/base.json"
-  ]
+, "next-sitemap.config.js"  ]
 }
