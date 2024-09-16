@@ -1,4 +1,4 @@
-import { PomodoroScreen, TodoList } from "../../screens/";
+import { ChartScreen, PomodoroScreen, TodoList } from "../../screens/";
 import { Pages } from "./productivityPages.type";
 
 const productivityPages: Pages = {
@@ -9,6 +9,10 @@ const productivityPages: Pages = {
   "to-do-list": {
     title: "To do List",
     Page: TodoList,
+  },
+  graficos: {
+    title: "Gráficos",
+    Page: ChartScreen,
   },
 };
 

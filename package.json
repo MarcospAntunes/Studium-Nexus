@@ -24,7 +24,7 @@
     "@studium-nexus/productivity-app": "*",
     "@studium-nexus/screens-commons": "*",
     "@studium-nexus/tsconfig-commons": "*",
-    "next": "14.1.0",
+    "next": "^14.2.9",
     "next-sitemap": "^4.2.3",
     "prettier": "^3.2.5",
     "react": "^18",

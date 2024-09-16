@@ -18,6 +18,7 @@
     "@studium-nexus/lib-commons": "*",
     "@studium-nexus/types-commons": "*",
     "@studium-nexus/utils-commons": "*",
-    "@studium-nexus/tests-commons": "*"
+    "@studium-nexus/tests-commons": "*",
+    "chart.js": "^4.4.4"
   }
 }

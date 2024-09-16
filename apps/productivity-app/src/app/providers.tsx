@@ -1,10 +1,14 @@
 "use client";
 
-import { TodoProvider } from "../contexts";
+import { ChartProvider, TodoProvider } from "../contexts";
 import { Children } from "@studium-nexus/types-commons";
 
 function Providers({ children }: Children) {
-  return <TodoProvider>{children}</TodoProvider>;
+  return (
+    <TodoProvider>
+      <ChartProvider>{children}</ChartProvider>
+    </TodoProvider>
+  );
 }
 
 export default Providers;
