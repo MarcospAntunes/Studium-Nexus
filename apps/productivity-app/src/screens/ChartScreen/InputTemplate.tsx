@@ -1,7 +1,6 @@
 "use client";
 
 import { useChart } from "../../hooks";
-import { useState, useEffect } from "react";
 
 export type typeChart = {
   chart:
@@ -17,27 +16,7 @@ export type typeChart = {
 };
 
 function InputTemplates({ chart }: typeChart): JSX.Element {
-  const { data, setData, value, setValue } = useChart();
-
-  useEffect(() => {
-    if (value.includes("|")) {
-      const coords: Array<{ x: string; y: string; r: string }> = value
-        .split("|")
-        .map((coord) => {
-          const [x, y, r] = coord.split(",");
-          return { x, y, r };
-        });
-      setData({
-        datasets: coords,
-        labels: data.labels,
-      });
-    } else {
-      setData({
-        datasets: value.split(","),
-        labels: data.labels,
-      });
-    }
-  }, [data.labels, setData, value]);
+  const { value, setValue } = useChart();
 
   const commonInput = (
     <>
