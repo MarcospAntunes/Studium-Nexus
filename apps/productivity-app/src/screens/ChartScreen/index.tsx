@@ -9,7 +9,17 @@ import { useChart } from "../../hooks";
 
 function ChartScreen(): JSX.Element {
   const { theme } = useTheme();
-  const { chart, clear, dataType, generateChart, labels, selectedChart, setDataType, setLabels, setSelectedChart } = useChart();
+  const {
+    chart,
+    clear,
+    dataType,
+    generateChart,
+    labels,
+    selectedChart,
+    setDataType,
+    setLabels,
+    setSelectedChart,
+  } = useChart();
 
   return (
     <MainChartScreen theme={theme === "light" ? lightTheme : darkTheme}>

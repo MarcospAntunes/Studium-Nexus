@@ -1,5 +1,11 @@
 import { Children } from "@studium-nexus/types-commons";
-import { createContext, useState, MutableRefObject, useEffect, useRef, } from "react";
+import {
+  createContext,
+  useState,
+  MutableRefObject,
+  useEffect,
+  useRef,
+} from "react";
 import { Chart, ChartType } from "chart.js/auto";
 import ChartContextProps from "./ChartContext.type";
 
@@ -9,17 +15,17 @@ const ChartContext = createContext<ChartContextProps>({
     datasets: [],
   },
   setData: () => {},
-  value: "", 
+  value: "",
   setValue: () => "",
-  labels: "", 
-  setLabels: () => "", 
-  dataType: "", 
-  setDataType: () => "", 
-  selectedChart: "", 
+  labels: "",
+  setLabels: () => "",
+  dataType: "",
+  setDataType: () => "",
+  selectedChart: "",
   setSelectedChart: () => "",
-  generateChart: () => null, 
-  clear: () => null, 
-  chart: null
+  generateChart: () => null,
+  clear: () => null,
+  chart: null,
 });
 
 ChartContext.displayName = "Todo List";
@@ -91,15 +97,15 @@ function ChartProvider({ children }: Children) {
 
   const clear = () => {
     if (chartInstanceRef.current) chartInstanceRef.current.destroy();
-    setCtx(null)
+    setCtx(null);
     setData({
       datasets: [""],
-      labels: [""]
-    })
+      labels: [""],
+    });
     setLabels("");
     setDataType("");
-    setValue("")
-  }
+    setValue("");
+  };
 
   useEffect(() => {
     if (value.includes("|")) {
@@ -121,9 +127,24 @@ function ChartProvider({ children }: Children) {
     }
   }, [data.labels, setData, value]);
 
-
   return (
-    <ChartContext.Provider value={{ data, setData, value, setValue, labels, setLabels, dataType, setDataType, selectedChart, setSelectedChart, generateChart, clear, chart }}>
+    <ChartContext.Provider
+      value={{
+        data,
+        setData,
+        value,
+        setValue,
+        labels,
+        setLabels,
+        dataType,
+        setDataType,
+        selectedChart,
+        setSelectedChart,
+        generateChart,
+        clear,
+        chart,
+      }}
+    >
       {children}
     </ChartContext.Provider>
   );
