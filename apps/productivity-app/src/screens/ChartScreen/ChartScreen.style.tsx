@@ -62,6 +62,17 @@ const MainChartScreen = styled.main`
   .buttons button {
     max-width: 350px;
   }
+
+  @media screen and (min-width: 541px) {
+    p,
+    input,
+    span,
+    p,
+    label,
+    select {
+      font-size: 16px;
+    }
+  }
 `;
 
 export default MainChartScreen;

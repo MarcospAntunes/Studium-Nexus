@@ -23,6 +23,7 @@ function ChartScreen(): JSX.Element {
 
   return (
     <MainChartScreen theme={theme === "light" ? lightTheme : darkTheme}>
+      <h1>Gráficos</h1>
       <form onSubmit={(e) => e.preventDefault()}>
         <div>
           <fieldset>
