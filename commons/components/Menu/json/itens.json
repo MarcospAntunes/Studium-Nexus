@@ -103,5 +103,12 @@
     "title": "To do List",
     "link": "/produtividade/to-do-list",
     "type": "Produtividade"
+  },
+  {
+    "id": "16",
+    "img": "/icons/chart.png",
+    "title": "Gráficos",
+    "link": "/produtividade/graficos",
+    "type": "Produtividade"
   }
 ]
