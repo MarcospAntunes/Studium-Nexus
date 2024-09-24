@@ -3,6 +3,7 @@ import { Montserrat_Alternates } from "next/font/google";
 import Providers from "./providers";
 import StyledComponentsRegistry from "@studium-nexus/lib-commons/registry";
 import { NextFont } from "next/dist/compiled/@next/font";
+import Script from "next/script";
 
 const Montz: NextFont = Montserrat_Alternates({
   weight: "300",
@@ -26,6 +27,11 @@ export default function RootLayout({
         <StyledComponentsRegistry>
           <Providers>{children}</Providers>
         </StyledComponentsRegistry>
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4555608257448575"
+          crossOrigin="anonymous"
+        />
       </body>
     </html>
   );
