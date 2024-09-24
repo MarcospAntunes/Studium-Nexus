@@ -1,4 +1,4 @@
-# [Studium Nexus](https://studium-nexus.vercel.app/) ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+# [Studium Nexus](https://www.studium-nexus.com.br/) ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
 Bem-vindo ao Studium Nexus! Este é um projeto pessoal desenvolvido por [Marcos Antunes](https://github.com/MarcospAntunes) para auxiliar estudantes em seus estudos.
 
