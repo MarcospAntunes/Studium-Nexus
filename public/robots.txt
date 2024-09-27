@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://studium-nexus.vercel.app/
+Host: https://www.studium-nexus.com.br/
 
 # Sitemaps
-Sitemap: https://studium-nexus.vercel.app/sitemap.xml
+Sitemap: https://www.studium-nexus.com.br/sitemap.xml

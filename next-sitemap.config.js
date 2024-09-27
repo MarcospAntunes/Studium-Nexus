@@ -1,5 +1,5 @@
 /**@type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://studium-nexus.vercel.app/",
+  siteUrl: "https://www.studium-nexus.com.br/",
   generateRobotsTxt: true,
 };
