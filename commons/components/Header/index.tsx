@@ -8,12 +8,14 @@ import { darkTheme, lightTheme } from "../../utils";
 import { HeaderStyled, LineStyled } from "./Header.style";
 import { Menu, TitleNicoMoji } from "../index";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 function Header({ menu = false }): JSX.Element {
   const { theme, themeToggler } = useTheme();
   const handleThemeToggle = (target: string) => {
     themeToggler(target);
   };
+  const { push } = useRouter();
   const invertTheme: string = theme === "dark" ? "light" : "dark";
   const source: string = theme === "light" ? "sol.png" : "lua.png";
 
@@ -22,7 +24,9 @@ function Header({ menu = false }): JSX.Element {
       <StyleSheetManager shouldForwardProp={(prop) => prop !== "menu"}>
         <HeaderStyled menu={menu.toString()}>
           <div>
-            <TitleNicoMoji>SN</TitleNicoMoji>
+            <TitleNicoMoji onClick={() => push("/")} nav="true">
+              SN
+            </TitleNicoMoji>
             <div>
               <img
                 src={`/icons/${source}`}
