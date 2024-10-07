@@ -7,3 +7,4 @@ Host: https://www.studium-nexus.com.br/
 
 # Sitemaps
 Sitemap: https://www.studium-nexus.com.br/sitemap.xml
+Sitemap: https://www.studium-nexus.com.br/sitemap-1.xml
