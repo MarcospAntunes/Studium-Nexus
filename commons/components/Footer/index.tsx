@@ -8,10 +8,12 @@ function Footer(): JSX.Element {
   const [dinamicText, setDinamicText] = useState<string[]>([
     "Sobre",
     "FeedBack",
+    "Política de Privacidade",
   ]);
   const [dinamicHref, setDinamicHref] = useState<string[]>([
     "/sobre",
     "/feedback",
+    "/politica-de-privacidade",
   ]);
 
   useEffect(() => {
@@ -30,6 +32,13 @@ function Footer(): JSX.Element {
       setDinamicText(["Sobre", "Feedback"]);
       setDinamicHref(["/sobre", "/feedback"]);
     }
+    if (window.location.href.includes("politica-de-privacidade")) {
+      setDinamicText(["Sobre", "Feedback", "Home"]);
+      setDinamicHref(["/sobre", "/feedback", "/"]);
+    } else if (!window.location.href.includes("sobre")) {
+      setDinamicText(["Sobre", "Feedback", "Política de Privacidade"]);
+      setDinamicHref(["/sobre", "/feedback", "/politica-de-privacidade"]);
+    }
   }, []);
 
   return (
@@ -46,6 +55,9 @@ function Footer(): JSX.Element {
         </li>
         <li>
           <Link href={dinamicHref[1]}>{dinamicText[1]}</Link>
+        </li>
+        <li>
+          <Link href={dinamicHref[2]}>{dinamicText[2]}</Link>
         </li>
       </ul>
     </FooterStyled>
