@@ -16,21 +16,23 @@ function Footer(): JSX.Element {
     "/politica-de-privacidade",
   ]);
 
+  console.log(dinamicHref, dinamicText)
+
   useEffect(() => {
     if (window.location.href.includes("sobre")) {
-      setDinamicText(["Home", "Feedback"]);
-      setDinamicHref(["/", "/feedback"]);
+      setDinamicText(["Home", "Feedback", "Política de Privacidade"]);
+      setDinamicHref(["/", "/feedback", "/politica-de-privacidade"]);
     } else if (!window.location.href.includes("feedback")) {
-      setDinamicText(["Sobre", "Feedback"]);
-      setDinamicHref(["/sobre", "/feedback"]);
+      setDinamicText(["Sobre", "Feedback", "Política de Privacidade"]);
+      setDinamicHref(["/sobre", "/feedback", "/politica-de-privacidade"]);
     }
 
     if (window.location.href.includes("feedback")) {
       setDinamicText(["Sobre", "Home"]);
       setDinamicHref(["/sobre", "/"]);
     } else if (!window.location.href.includes("sobre")) {
-      setDinamicText(["Sobre", "Feedback"]);
-      setDinamicHref(["/sobre", "/feedback"]);
+      setDinamicText(["Sobre", "Feedback", "Política de Privacidade"]);
+      setDinamicHref(["/sobre", "/feedback", "/politica-de-privacidade"]);
     }
     if (window.location.href.includes("politica-de-privacidade")) {
       setDinamicText(["Sobre", "Feedback", "Home"]);
