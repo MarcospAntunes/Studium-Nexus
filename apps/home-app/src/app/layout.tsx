@@ -22,9 +22,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <head>
-        <meta name="google-adsense-account" content="ca-pub-4555608257448575" />
-      </head>
       <body className={Montz.className}>
         <StyledComponentsRegistry>
           <Providers>{children}</Providers>
