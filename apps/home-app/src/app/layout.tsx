@@ -22,6 +22,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4555608257448575"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className={Montz.className}>
         <StyledComponentsRegistry>
           <Providers>{children}</Providers>
