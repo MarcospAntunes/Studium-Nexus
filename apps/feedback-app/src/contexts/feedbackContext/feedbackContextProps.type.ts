@@ -9,6 +9,7 @@ interface FeedbackContextProps {
   setDescribeBug?: Dispatch<SetStateAction<string>>;
   suggestionsForImprovements: string;
   setSuggestionsForImprovements?: Dispatch<SetStateAction<string>>;
+  formData: {};
 }
 
 export default FeedbackContextProps;

@@ -16,8 +16,6 @@ function Footer(): JSX.Element {
     "/politica-de-privacidade",
   ]);
 
-  console.log(dinamicHref, dinamicText)
-
   useEffect(() => {
     if (window.location.href.includes("sobre")) {
       setDinamicText(["Home", "Feedback", "Política de Privacidade"]);

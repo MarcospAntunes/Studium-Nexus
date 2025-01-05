@@ -1,3 +1,12 @@
-import Page from "@studium-nexus/feedback-app/src/app/page";
+import dynamic from "next/dynamic";
 
-export default Page;
+const FeedbackPage = dynamic(
+  () => import("@studium-nexus/feedback-app/src/app/page"),
+  {
+    ssr: false,
+  },
+);
+
+export default function Page() {
+  return <FeedbackPage />;
+}

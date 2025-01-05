@@ -13,6 +13,7 @@ function useFeedback() {
     setDescribeBug,
     suggestionsForImprovements,
     setSuggestionsForImprovements,
+    formData,
   } = useContext(FeedbackContext);
 
   const clear = () => {
@@ -32,6 +33,7 @@ function useFeedback() {
     suggestionsForImprovements,
     setSuggestionsForImprovements,
     clear,
+    formData,
   };
 }
 
