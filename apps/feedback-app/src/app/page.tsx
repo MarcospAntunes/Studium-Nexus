@@ -9,7 +9,8 @@ import { darkTheme, lightTheme } from "@studium-nexus/utils-commons";
 import { useFeedback } from "../hooks";
 import { CustomCheckbox } from "../components";
 import { gapi } from "gapi-script";
-import { FormEvent, useEffect, useState } from "react";
+import { useEffect } from "react";
+import { handleSubmit } from "../utils";
 
 function Feedback(): JSX.Element {
   const { theme } = useTheme();
@@ -25,8 +26,6 @@ function Feedback(): JSX.Element {
     clear,
   } = useFeedback();
 
-  const [date, setDate] = useState<Date>();
-
   const handleClick = (name: string) => {
     if (selectedfunctionalities.includes(name)) {
       const temp = selectedfunctionalities.filter((value) => value !== name);
@@ -37,80 +36,66 @@ function Feedback(): JSX.Element {
   };
 
   useEffect(() => {
-    gapi.load("client:auth2", async () => {
-      try {
-        await gapi.client.init({
-          apiKey: "",
-          clientId:
-            "333316478964-1r63ngfnokkgpuvpclai1jo1hvi3824b.apps.googleusercontent.com",
-          discoveryDocs: [
-            "https://sheets.googleapis.com/$discovery/rest?version=v4",
-          ],
-          scope: "https://www.googleapis.com/auth/spreadsheets",
-        });
+    if (typeof window !== "undefined") {
+      const loadGapi = async () => {
+        try {
+          await gapi.load("client:auth2", async () => {
+            await gapi.client.init({
+              apiKey: "",
+              clientId:
+                "333316478964-1r63ngfnokkgpuvpclai1jo1hvi3824b.apps.googleusercontent.com",
+              discoveryDocs: [
+                "https://sheets.googleapis.com/$discovery/rest?version=v4",
+              ],
+              scope: "https://www.googleapis.com/auth/spreadsheets",
+            });
 
-        const authInstance = gapi.auth2.getAuthInstance();
-        const isSignedIn = authInstance.isSignedIn.get();
-        if (!isSignedIn) {
-          await authInstance.signIn();
-        }
+            const authInstance = gapi.auth2.getAuthInstance();
+            const isSignedIn = authInstance.isSignedIn.get();
+            if (!isSignedIn) {
+              await authInstance.signIn();
+            }
 
-        const grantedScopes = authInstance.currentUser.get().getGrantedScopes();
-
-        if (
-          !grantedScopes.includes(
-            "https://www.googleapis.com/auth/spreadsheets",
-          )
-        ) {
-          await authInstance.signIn({
-            scope: "https://www.googleapis.com/auth/spreadsheets",
+            const grantedScopes = authInstance.currentUser
+              .get()
+              .getGrantedScopes();
+            if (
+              !grantedScopes.includes(
+                "https://www.googleapis.com/auth/spreadsheets",
+              )
+            ) {
+              await authInstance.signIn({
+                scope: "https://www.googleapis.com/auth/spreadsheets",
+              });
+            }
           });
+        } catch (error) {
+          // eslint-disable-next-line no-console
+          console.error("Erro ao inicializar gapi:", error);
         }
-
-        setDate(new Date());
-      } catch (error) {
-        // eslint-disable-next-line no-console
-        console.error("Erro ao inicializar gapi:", error);
-      }
-    });
-  }, []);
-
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    try {
-      const response = await gapi.client.sheets.spreadsheets.values.append({
-        spreadsheetId: "1P20dmxBjrmQl6xI6Pax-hWAlP7Dy5EgKFMPjuZuGr6Q",
-        range: "Respostas!A1:D3",
-        valueInputOption: "USER_ENTERED",
-        resource: {
-          values: [
-            [
-              feedbackType,
-              selectedfunctionalities.join(", "),
-              describeBug,
-              suggestionsForImprovements,
-              `${date?.getDate()}/${date?.getMonth()! + 1}/${date?.getFullYear()}`,
-            ],
-          ],
-        },
-      });
-
-      if (response.status === 200) {
-        alert("Dados enviados com sucesso!");
-        clear();
-      }
-    } catch (error) {
-      alert("Erro ao enviar dados, tente novamente mais tarde");
+      };
+      loadGapi();
     }
-  };
+  }, []);
 
   return (
     <AppContainer>
       <Header menu />
       <FeedbackStyled theme={theme === "dark" ? darkTheme : lightTheme}>
         <h1>Nos deixe saber sua opinião preenchendo o forms abaixo!</h1>
-        <form action="#" onSubmit={(e) => handleSubmit(e)}>
+        <form
+          action="#"
+          onSubmit={(e) =>
+            handleSubmit({
+              e,
+              describeBug,
+              feedbackType,
+              selectedfunctionalities,
+              suggestionsForImprovements,
+              clear,
+            })
+          }
+        >
           <fieldset className="radio-group">
             <legend>Tipo de feedback</legend>
             <div>
