@@ -23,6 +23,7 @@ const productivityRoutes = {
   pomodoro: "pomodoro",
   "to-do-list": "to-do-list",
   graficos: "graficos",
+  calendario: "calendario",
 };
 
 export { converterRoutes, formulaRoutes, productivityRoutes };

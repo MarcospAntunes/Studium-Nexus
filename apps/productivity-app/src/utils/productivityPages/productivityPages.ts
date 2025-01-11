@@ -1,4 +1,9 @@
-import { ChartScreen, PomodoroScreen, TodoList } from "../../screens/";
+import {
+  CalendarScreen,
+  ChartScreen,
+  PomodoroScreen,
+  TodoList,
+} from "../../screens/";
 import { Pages } from "./productivityPages.type";
 
 const productivityPages: Pages = {
@@ -13,6 +18,10 @@ const productivityPages: Pages = {
   graficos: {
     title: "Gráficos",
     Page: ChartScreen,
+  },
+  calendario: {
+    title: "Calendário",
+    Page: CalendarScreen,
   },
 };
 

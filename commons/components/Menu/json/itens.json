@@ -110,5 +110,12 @@
     "title": "Gráficos",
     "link": "/produtividade/graficos",
     "type": "Produtividade"
+  },
+  {
+    "id": "17",
+    "img": "/icons/calendario.png",
+    "title": "Calendário",
+    "link": "/produtividade/calendario",
+    "type": "Produtividade"
   }
 ]
