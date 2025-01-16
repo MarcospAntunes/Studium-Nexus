@@ -34,6 +34,9 @@ const CalendarContainer = styled.div`
       border-radius: 5px;
       color: ${({ theme }) => theme.textHover};
       background-color: ${({ theme }) => theme.bgDays};
+      background-position: bottom right;
+      background-repeat: no-repeat;
+      background-size: 45%;
       cursor: pointer;
 
       &:hover {

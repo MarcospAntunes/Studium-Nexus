@@ -5,7 +5,7 @@ import CalendarContextProps from "./CalendarContext.Type";
 
 const CalendarContext = createContext<CalendarContextProps>({
   getDaysLeft: () => null,
-  calendar: [{ month: "", days: [""] }],
+  calendar: [{ month: "", days: [] }],
   year: "",
   countDays: undefined,
   futureDateFormatted: undefined,
@@ -56,9 +56,19 @@ function CalendarProvider({ children }: Children) {
 
   const calendar = months.map((month, index) => {
     const daysInMonth = new Date(Number(year), index + 1, 0).getDate();
-    const days = Array.from({ length: daysInMonth }, (_, day) => day + 1)
-      .join(" ")
-      .split(" ");
+
+    const days = Array.from({ length: daysInMonth }, (_, day) => {
+      const dayFormatted = String(day + 1).padStart(2, "0");
+      const monthFormatted = String(index + 1).padStart(2, "0");
+      const holiday = formattedHolidays.find(
+        (holiday) =>
+          holiday.formattedDate === `${dayFormatted}/${monthFormatted}/${year}`,
+      );
+      return {
+        day: day + 1,
+        holidayName: holiday?.localName || null,
+      };
+    });
 
     return { month, days };
   });
@@ -121,22 +131,24 @@ function CalendarProvider({ children }: Children) {
   };
 
   return (
-    <CalendarContext.Provider value={{
-      getDaysLeft,
-      calendar,
-      year,
-      countDays,
-      futureDateFormatted,
-      setData,
-      currentYear,
-      valueInput,
-      handleYearChange,
-      isLoading,
-      yearData,
-    }}>
+    <CalendarContext.Provider
+      value={{
+        getDaysLeft,
+        calendar,
+        year,
+        countDays,
+        futureDateFormatted,
+        setData,
+        currentYear,
+        valueInput,
+        handleYearChange,
+        isLoading,
+        yearData,
+      }}
+    >
       {children}
     </CalendarContext.Provider>
-  )
+  );
 }
 
-export { CalendarContext, CalendarProvider }
+export { CalendarContext, CalendarProvider };

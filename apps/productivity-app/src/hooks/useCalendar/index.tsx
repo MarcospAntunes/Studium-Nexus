@@ -2,20 +2,19 @@ import { useContext } from "react";
 import { CalendarContext } from "../../contexts";
 
 function useCalendar() {
-
-  const { 
-    calendar, 
-    countDays, 
-    currentYear, 
-    futureDateFormatted, 
+  const {
+    calendar,
+    countDays,
+    currentYear,
+    futureDateFormatted,
     getDaysLeft,
-    handleYearChange, 
-    setData, 
-    valueInput, 
+    handleYearChange,
+    setData,
+    valueInput,
     year,
     isLoading,
     yearData,
-  } = useContext(CalendarContext)
+  } = useContext(CalendarContext);
 
   return {
     getDaysLeft,
@@ -24,8 +23,8 @@ function useCalendar() {
     countDays,
     futureDateFormatted,
     currentYear,
-    handleYearChange, 
-    setData, 
+    handleYearChange,
+    setData,
     valueInput,
     isLoading,
     yearData,
