@@ -33,7 +33,7 @@ const lightTheme = {
   disabled: "#8f8f8f",
   textDisabled: "white",
   bgCalendar: "#2D2D2D",
-  bgDays: "#424242", 
+  bgDays: "#424242",
   invert: 0,
   invertHover: 1,
 };
