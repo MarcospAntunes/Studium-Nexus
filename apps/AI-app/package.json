@@ -1,0 +1,25 @@
+{
+  "name": "@studium-nexus/AI-app",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint ./**/*.{ts,tsx}",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@studium-nexus/components-commons": "*",
+    "@studium-nexus/constants-commons": "*",
+    "@studium-nexus/containers-commons": "*",
+    "@studium-nexus/contexts-commons": "*",
+    "@studium-nexus/hooks-commons": "*",
+    "@studium-nexus/lib-commons": "*",
+    "@studium-nexus/tests-commons": "*",
+    "@studium-nexus/types-commons": "*",
+    "@studium-nexus/utils-commons": "*",
+    "@tensorflow-models/handpose": "^0.1.0",
+    "@tensorflow/tfjs": "^4.22.0",
+    "react-webcam": "^7.2.0"
+  }
+}

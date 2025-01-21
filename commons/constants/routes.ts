@@ -26,4 +26,8 @@ const productivityRoutes = {
   calendario: "calendario",
 };
 
-export { converterRoutes, formulaRoutes, productivityRoutes };
+const AIRoutes = {
+  "tradutor-linguagem-de-sinais": "tradutor-linguagem-de-sinais",
+};
+
+export { converterRoutes, formulaRoutes, productivityRoutes, AIRoutes };

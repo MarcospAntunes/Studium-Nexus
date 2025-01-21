@@ -1,3 +1,3 @@
-import { formulaRoutes, converterRoutes, productivityRoutes } from "./routes";
+import { formulaRoutes, converterRoutes, productivityRoutes, AIRoutes } from "./routes";
 
-export { formulaRoutes, converterRoutes, productivityRoutes };
+export { formulaRoutes, converterRoutes, productivityRoutes, AIRoutes };
