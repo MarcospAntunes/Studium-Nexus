@@ -16,6 +16,7 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
+    "@studium-nexus/AI-app": "*",
     "@studium-nexus/converter-app": "*",
     "@studium-nexus/eslint-commons": "*",
     "@studium-nexus/feedback-app": "*",

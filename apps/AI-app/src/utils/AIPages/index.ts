@@ -1,4 +1,5 @@
 import React from "react";
+import { LibrasTranslatorScreen } from "../../screens";
 
 type Pages = {
   [key: string]: {
@@ -7,6 +8,11 @@ type Pages = {
   };
 };
 
-const AiPages: Pages = {};
+const AiPages: Pages = {
+  "libras-translator": {
+    title: "Tradutor de Libras",
+    Page: LibrasTranslatorScreen,
+  }
+};
 
 export default AiPages;

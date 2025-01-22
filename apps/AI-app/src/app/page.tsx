@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+"use client"
 
 import { ExistingRoutes, Header, BackToTop, Footer } from "@studium-nexus/components-commons";
 import { AIRoutes } from "@studium-nexus/constants-commons";

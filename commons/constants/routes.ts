@@ -27,7 +27,7 @@ const productivityRoutes = {
 };
 
 const AIRoutes = {
-  "tradutor-linguagem-de-sinais": "tradutor-linguagem-de-sinais",
+  "libras-translator": "libras-translator",
 };
 
 export { converterRoutes, formulaRoutes, productivityRoutes, AIRoutes };
