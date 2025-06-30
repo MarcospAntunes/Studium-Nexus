@@ -7,6 +7,7 @@ import React, { useEffect } from "react";
 
 function ExistingRoutes({ children, routes, slug }: ExistingRoutesProps) {
   const { push } = useRouter();
+  console.log(slug, routes)
   const result = verifyRoutes(routes, slug);
 
   useEffect(() => {
