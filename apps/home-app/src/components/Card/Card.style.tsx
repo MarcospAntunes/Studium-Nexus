@@ -17,10 +17,10 @@ const CardStyled = styled.li<CadStyledProps>`
   padding-left: ${({ layout }) => (layout === "true" ? "0" : "10px")};
   border-radius: ${({ layout }) => (layout === "true" ? "15px" : "10px")};
 
-  background-color: ${({ theme }) => theme.bgCard};
-  box-shadow: -2px 2px 4px 1px ${({ theme }) => theme.shadown};
+  background-color: ${({ theme }: any) => theme.bgCard};
+  box-shadow: -2px 2px 4px 1px ${({ theme }: any) => theme.shadown};
 
-  color: ${({ theme }) => theme.text};
+  color: ${({ theme }: any) => theme.text};
   font-size: 14px;
 
   transition: 0.3s;
@@ -29,7 +29,7 @@ const CardStyled = styled.li<CadStyledProps>`
   img {
     width: 32px;
     height: 32px;
-    filter: invert(${({ theme }) => theme.invert});
+    filter: invert(${({ theme }: any) => theme.invert});
   }
 
   p {
@@ -39,12 +39,12 @@ const CardStyled = styled.li<CadStyledProps>`
   }
 
   &:hover {
-    background-color: ${({ theme }) => theme.bgCardHover};
-    color: ${({ theme }) => theme.textHover};
+    background-color: ${({ theme }: any) => theme.bgCardHover};
+    color: ${({ theme }: any) => theme.textHover};
     transition: 0.3s;
 
     & img {
-      filter: invert(${({ theme }) => theme.invertHover});
+      filter: invert(${({ theme }: any) => theme.invertHover});
     }
   }
 

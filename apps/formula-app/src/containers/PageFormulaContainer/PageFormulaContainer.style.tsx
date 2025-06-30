@@ -8,7 +8,7 @@ const PageFormulaContainerStyled = styled.main`
   padding: 10px;
   border-radius: 15px;
   font-size: 16px;
-  background-color: ${({ theme }) => theme.bgCard};
+  background-color: ${({ theme }: any) => theme.bgCard};
 
   h1 {
     font-size: 24px;

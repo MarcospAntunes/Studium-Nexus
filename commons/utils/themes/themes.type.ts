@@ -1,0 +1,20 @@
+type typeThemes = {
+  body: string,
+  text: string,
+  textHover: string,
+  bgCard: string,
+  bgCardHover: string,
+  shadown: string,
+  bgInput: string,
+  bgSearch: string,
+  bgButton: string,
+  buttonTudo: string,
+  bgConverter: string,
+  disabled: string,
+  textDisabled: string,
+  bgCalendar: string,
+  bgDays: string,
+  invert: 0 | 1,
+  invertHover: 0 | 1,
+}
+export default typeThemes;

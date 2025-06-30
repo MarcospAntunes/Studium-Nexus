@@ -40,14 +40,14 @@ const MainChartScreen = styled.main`
     min-width: 200px;
     max-width: 500px;
     background-color: transparent;
-    color: ${({ theme }) => theme.text};
+    color: ${({ theme }: any) => theme.text};
     padding: 5px;
-    border: 1px solid ${({ theme }) => theme.text};
+    border: 1px solid ${({ theme }: any) => theme.text};
     border-radius: 15px;
   }
 
   & form select option {
-    background-color: ${({ theme }) => theme.body};
+    background-color: ${({ theme }: any) => theme.body};
   }
 
   .buttons {

@@ -17,14 +17,14 @@ const ChangeLayoutStyled = styled.button<ChangeLayoutStyledProps>`
   transition: 0.3s;
 
   &:hover {
-    background-color: ${({ theme }) => theme.bgCard};
+    background-color: ${({ theme }: any) => theme.bgCard};
   }
 
   div {
     width: 10px;
     height: ${({ layout }) => (layout === "true" ? "10px" : "4px")};
     border-radius: 2px;
-    border: 1px solid ${({ theme }) => theme.text};
+    border: 1px solid ${({ theme }: any) => theme.text};
   }
 
   .first {

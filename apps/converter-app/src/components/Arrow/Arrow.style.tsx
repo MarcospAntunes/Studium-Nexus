@@ -1,6 +1,7 @@
 "use client";
 
 import styled from "styled-components";
+import typeThemes from "@studium-nexus/utils-commons/themes/themes.type"
 
 const ArrowStyled = styled.img`
   position: absolute;
@@ -9,7 +10,7 @@ const ArrowStyled = styled.img`
   height: 50px;
   transform: rotate(180deg);
   z-index: 1;
-  filter: invert(${({ theme }) => theme.invert});
+  filter: invert(${({ theme }: any) => theme.invert});
 
   @media screen and (min-width: 541px) {
     width: 30px;

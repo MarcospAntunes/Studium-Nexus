@@ -10,7 +10,7 @@ const FilterButtonStyled = styled.button`
   img {
     width: 24px;
     height: 24px;
-    filter: invert(${({ theme }) => theme.invert});
+    filter: invert(${({ theme }: any) => theme.invert});
   }
 
   @media screen and (min-width: 541px) {

@@ -78,7 +78,7 @@ const BhaskaraSection = styled.section`
       flex-direction: column;
 
       & .divider {
-        border-top: 1px solid ${({ theme }) => theme.text};
+        border-top: 1px solid ${({ theme }: any) => theme.text};
       }
     }
   }

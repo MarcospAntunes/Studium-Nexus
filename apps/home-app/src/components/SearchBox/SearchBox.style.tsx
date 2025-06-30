@@ -10,21 +10,21 @@ const SearchBoxStyled = styled.div`
   padding: 5px;
   border-radius: 15px;
 
-  background-color: ${({ theme }) => theme.bgSearch};
+  background-color: ${({ theme }: any) => theme.bgSearch};
   transition: 0.3s;
 
   img {
     width: 24px;
     height: 24px;
-    filter: invert(${({ theme }) => theme.invert});
-    filter: invert(${({ theme }) => theme.invert});
+    filter: invert(${({ theme }: any) => theme.invert});
+    filter: invert(${({ theme }: any) => theme.invert});
   }
 
   input {
     width: 100%;
     border: none;
     background-color: transparent;
-    color: ${({ theme }) => theme.text};
+    color: ${({ theme }: any) => theme.text};
     font-size: 14px;
 
     &:focus {

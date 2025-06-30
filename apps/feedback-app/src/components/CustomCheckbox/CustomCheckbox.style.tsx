@@ -6,7 +6,7 @@ const CustomCheckboxStyled = styled.label`
   & label {
     width: 24px;
     height: 24px;
-    border: 1px solid ${({ theme }) => theme.text};
+    border: 1px solid ${({ theme }: any) => theme.text};
     cursor: pointer;
   }
 
@@ -15,7 +15,7 @@ const CustomCheckboxStyled = styled.label`
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-color: ${({ theme }) => theme.text};
+    background-color: ${({ theme }: any) => theme.text};
   }
 `;
 

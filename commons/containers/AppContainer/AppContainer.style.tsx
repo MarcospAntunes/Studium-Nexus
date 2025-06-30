@@ -12,8 +12,8 @@ const AppContainerStyled = styled.div`
   gap: 30px;
   padding: 5px;
   text-align: center;
-  color: ${({ theme }) => theme.text};
-  background-color: ${({ theme }) => theme.body};
+  color: ${({ theme }: any) => theme.text};
+  background-color: ${({ theme }: any) => theme.body};
   transition: 0.3s;
   overflow-x: hidden;
 

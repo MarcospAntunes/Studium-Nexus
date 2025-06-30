@@ -10,9 +10,9 @@ const InputStyled = styled.input`
 
   width: 230px;
   padding: 8px;
-  background-color: ${({ theme }) => theme.bgCalendar};
+  background-color: ${({ theme }: any) => theme.bgCalendar};
   font-size: 14px;
-  color: ${({ theme }) => theme.textHover};
+  color: ${({ theme }: any) => theme.textHover};
   transition: 0.3s;
 
   &:focus {

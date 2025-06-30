@@ -9,10 +9,10 @@ const SelectStyled = styled.select<SelectStyledProps>`
   left: 10px;
   top: 40px;
   padding: 10px;
-  background-color: ${({ theme }) => theme.bgCard};
-  color: ${({ theme }) => theme.text};
+  background-color: ${({ theme }: any) => theme.bgCard};
+  color: ${({ theme }: any) => theme.text};
   border-radius: 10px;
-  border: 1px solid ${({ theme }) => theme.text};
+  border: 1px solid ${({ theme }: any) => theme.text};
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;

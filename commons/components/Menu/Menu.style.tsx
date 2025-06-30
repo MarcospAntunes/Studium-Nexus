@@ -24,7 +24,7 @@ const MenuStyled = styled.nav<MenuStyledProps>`
 
   a {
     text-decoration: none;
-    color: ${({ theme }) => theme.text};
+    color: ${({ theme }: any) => theme.text};
     cursor: pointer;
   }
 

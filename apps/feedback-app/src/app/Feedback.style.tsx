@@ -24,7 +24,7 @@ const FeedbackStyled = styled.main`
     border-radius: 15px;
     width: 100%;
     max-width: 800px;
-    background-color: ${({ theme }) => theme.bgCard};
+    background-color: ${({ theme }: any) => theme.bgCard};
   }
 
   fieldset {
@@ -43,9 +43,9 @@ const FeedbackStyled = styled.main`
       height: 100px;
       padding: 5px;
       background-color: transparent;
-      border: 1px solid ${({ theme }) => theme.text};
+      border: 1px solid ${({ theme }: any) => theme.text};
       border-radius: 10px;
-      color: ${({ theme }) => theme.text};
+      color: ${({ theme }: any) => theme.text};
     }
   }
 

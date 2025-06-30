@@ -42,8 +42,8 @@ const LineStyled = styled.hr`
   height: 1px;
   margin-bottom: 30px;
   border: none;
-  color: ${({ theme }) => theme.text};
-  background-color: ${({ theme }) => theme.text};
+  color: ${({ theme }: any) => theme.text};
+  background-color: ${({ theme }: any) => theme.text};
 `;
 
 export { HeaderStyled, LineStyled };

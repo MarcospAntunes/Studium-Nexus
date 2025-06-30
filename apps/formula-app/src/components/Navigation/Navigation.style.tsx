@@ -18,10 +18,10 @@ const NavigationStyled = styled.nav`
     height: 50px;
     padding: 10px;
     border-radius: 15px;
-    background-color: ${({ theme }) => theme.body};
+    background-color: ${({ theme }: any) => theme.body};
     font-size: 14px;
     text-decoration: none;
-    color: ${({ theme }) => theme.text};
+    color: ${({ theme }: any) => theme.text};
     cursor: pointer;
     transition: 0.3s;
 
@@ -33,7 +33,7 @@ const NavigationStyled = styled.nav`
     &::after {
       content: "▸";
       margin-left: 5px;
-      filter: ${({ theme }) => theme.invert};
+      filter: ${({ theme }: any) => theme.invert};
     }
   }
 

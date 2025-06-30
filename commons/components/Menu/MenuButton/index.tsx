@@ -18,8 +18,8 @@ const MenuButton = styled.button<MenuStyledProps>`
   z-index: 9999;
 
   .lines {
-    background-color: ${({ theme }) => theme.text};
-    border: 1px solid ${({ theme }) => theme.text};
+    background-color: ${({ theme }: any) => theme.text};
+    border: 1px solid ${({ theme }: any) => theme.text};
     border-radius: 15px;
     z-index: 3;
   }

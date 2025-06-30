@@ -11,7 +11,7 @@ const ResultFormulaStyled = styled.p`
   text-align: center;
   word-break: normal;
   border-radius: 15px;
-  color: ${({ theme }) => theme.text};
+  color: ${({ theme }: any) => theme.text};
   transition: 0.3s;
 
   @media screen and (min-width: 541px) {

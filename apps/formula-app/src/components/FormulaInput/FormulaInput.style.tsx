@@ -8,11 +8,11 @@ const FormulaInputStyled = styled.input`
 
   width: ${({ width }) => width}px;
   padding: 8px;
-  background-color: ${({ theme }) => theme.bgInput};
+  background-color: ${({ theme }: any) => theme.bgInput};
   font-family: inherit;
   font-size: 14px;
   text-align: center;
-  color: ${({ theme }) => theme.text};
+  color: ${({ theme }: any) => theme.text};
   transition: 0.3s;
 
   &:focus {

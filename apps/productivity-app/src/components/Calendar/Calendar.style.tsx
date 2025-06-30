@@ -16,8 +16,8 @@ const CalendarContainer = styled.div`
     max-width: 500px;
     padding: 10px;
     border-radius: 15px;
-    background-color: ${({ theme }) => theme.bgCalendar};
-    color: ${({ theme }) => theme.body};
+    background-color: ${({ theme }: any) => theme.bgCalendar};
+    color: ${({ theme }: any) => theme.body};
   }
 
   & #days {
@@ -32,16 +32,16 @@ const CalendarContainer = styled.div`
       width: 50px;
       height: 50px;
       border-radius: 5px;
-      color: ${({ theme }) => theme.textHover};
-      background-color: ${({ theme }) => theme.bgDays};
+      color: ${({ theme }: any) => theme.textHover};
+      background-color: ${({ theme }: any) => theme.bgDays};
       background-position: bottom right;
       background-repeat: no-repeat;
       background-size: 45%;
       cursor: pointer;
 
       &:hover {
-        color: ${({ theme }) => theme.text};
-        background-color: ${({ theme }) => theme.body};
+        color: ${({ theme }: any) => theme.text};
+        background-color: ${({ theme }: any) => theme.body};
       }
     }
   }

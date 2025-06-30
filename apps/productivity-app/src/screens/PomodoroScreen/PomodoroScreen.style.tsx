@@ -25,11 +25,11 @@ const MainPomodoro = styled.main`
     gap: 30px;
     padding: 10px;
     border-radius: 15px;
-    background-color: ${({ theme }) => theme.bgConverter};
+    background-color: ${({ theme }: any) => theme.bgConverter};
   }
 
   #pomodoroTimerContainer span {
-    color: ${({ theme }) => theme.text};
+    color: ${({ theme }: any) => theme.text};
     font-size: 24px;
   }
   #pomodoroTimerContainer #buttons button {

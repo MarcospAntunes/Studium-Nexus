@@ -19,7 +19,7 @@ const MainTodo = styled.main`
     gap: 25px;
     margin-top: 10px;
     border-radius: 15px;
-    background-color: ${({ theme }) => theme.bgSearch};
+    background-color: ${({ theme }: any) => theme.bgSearch};
 
     & fieldset {
       display: flex;
@@ -38,7 +38,7 @@ const MainTodo = styled.main`
       border: none;
       outline: none;
       font-size: 16px;
-      color: ${({ theme }) => theme.text};
+      color: ${({ theme }: any) => theme.text};
     }
   }
 
@@ -65,11 +65,11 @@ const MainTodo = styled.main`
     height: 100%;
     border-radius: 0px 0px 5px 5px;
     padding: 10px;
-    border-bottom: 1px solid ${({ theme }) => theme.shadown};
+    border-bottom: 1px solid ${({ theme }: any) => theme.shadown};
   }
 
   #listContainer {
-    background-color: ${({ theme }) => theme.bgConverter};
+    background-color: ${({ theme }: any) => theme.bgConverter};
     border-radius: 10px;
     width: 100%;
 
@@ -97,7 +97,7 @@ const MainTodo = styled.main`
         padding: 5px;
         text-align: left;
         line-break: anywhere;
-        border-bottom: 1px solid ${({ theme }) => theme.shadown};
+        border-bottom: 1px solid ${({ theme }: any) => theme.shadown};
       }
       & .checked {
         text-decoration: line-through;
@@ -116,7 +116,7 @@ const MainTodo = styled.main`
     border-radius: 0px 0px 5px 5px;
     padding: 15px;
     border-radius: 10px;
-    background-color: ${({ theme }) => theme.bgConverter};
+    background-color: ${({ theme }: any) => theme.bgConverter};
   }
 
   @media screen and (min-width: 541px) {

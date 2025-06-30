@@ -21,7 +21,7 @@ const FormulaFormatStyled = styled.p`
     }
 
     & .divider {
-      border-top: 1px solid ${({ theme }) => theme.text};
+      border-top: 1px solid ${({ theme }: any) => theme.text};
     }
   }
 `;

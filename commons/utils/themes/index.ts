@@ -1,4 +1,6 @@
-const darkTheme = {
+import typeThemes from "./themes.type";
+
+const darkTheme: typeThemes = {
   body: "#2D2D2D",
   text: "#FFFFFF",
   textHover: "#000000",
@@ -18,7 +20,7 @@ const darkTheme = {
   invertHover: 0,
 };
 
-const lightTheme = {
+const lightTheme: typeThemes = {
   body: "#FFFFFF",
   text: "#000000",
   textHover: "#FFFFFF",

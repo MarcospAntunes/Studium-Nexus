@@ -9,8 +9,8 @@ const SelectStyled = styled.select`
   padding: 8px;
   font-family: inherit;
   font-size: 14px;
-  background-color: ${({ theme }) => theme.body};
-  color: ${({ theme }) => theme.text};
+  background-color: ${({ theme }: any) => theme.body};
+  color: ${({ theme }: any) => theme.text};
   transition: 0.3s;
   cursor: pointer;
 
